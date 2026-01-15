@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'Destinations', href: '#destinations' },
-  { name: 'Hidden Gems', href: '#gems' },
-  { name: 'About', href: '#about' },
+  { name: 'Home', href: '/#home' },
+  { name: 'Destinations', href: '/#destinations' },
+  { name: 'Hidden Gems', href: '/#gems' },
+  { name: 'About', href: '/#about' },
 ];
 
 const Header = () => {
@@ -23,12 +24,12 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <MapPin className="w-6 h-6 text-primary" />
             <span className="font-serif text-xl lg:text-2xl font-semibold text-foreground">
               TheArchives
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">

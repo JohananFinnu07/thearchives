@@ -1,32 +1,6 @@
 import { motion } from 'framer-motion';
 import DestinationCard from './DestinationCard';
-import arakuImage from '@/assets/araku-card.jpg';
-import lambasingiImage from '@/assets/lambasingi-card.jpg';
-import vanajangiImage from '@/assets/vanajangi-card.jpg';
-import paderuImage from '@/assets/paderu-card.jpg';
-
-const destinations = [
-  {
-    name: 'Araku Valley',
-    tagline: 'Coffee Haven in the Hills',
-    image: arakuImage,
-  },
-  {
-    name: 'Lambasingi',
-    tagline: 'Kashmir of Andhra',
-    image: lambasingiImage,
-  },
-  {
-    name: 'Vanajangi',
-    tagline: 'Meadows Above the Clouds',
-    image: vanajangiImage,
-  },
-  {
-    name: 'Paderu',
-    tagline: 'Tribal Heritage Gateway',
-    image: paderuImage,
-  },
-];
+import { destinations } from '@/data/destinations';
 
 const Destinations = () => {
   return (
@@ -55,7 +29,8 @@ const Destinations = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {destinations.map((destination, index) => (
             <DestinationCard
-              key={destination.name}
+              key={destination.id}
+              id={destination.id}
               name={destination.name}
               tagline={destination.tagline}
               image={destination.image}
