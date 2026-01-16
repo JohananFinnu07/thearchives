@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'Home', href: '/#home' },
-  { name: 'Destinations', href: '/#destinations' },
-  { name: 'Hidden Gems', href: '/#gems' },
-  { name: 'About', href: '/#about' },
+  { name: 'Home', href: '/' },
+  { name: 'Destinations', href: '/destinations' },
+  { name: 'Hidden Gems', href: '/hidden-gems' },
+  { name: 'About', href: '/about' },
 ];
 
 const Header = () => {
@@ -34,13 +34,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm tracking-wide"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -74,14 +74,14 @@ const Header = () => {
           >
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="text-foreground py-2 font-medium"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <Button variant="default" className="gradient-forest text-primary-foreground border-0 mt-2">
                 Plan Your Trip

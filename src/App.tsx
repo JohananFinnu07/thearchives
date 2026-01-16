@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import DestinationDetail from "./pages/DestinationDetail";
+import DestinationsPage from "./pages/DestinationsPage";
+import HiddenGemsPage from "./pages/HiddenGemsPage";
+import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -17,6 +20,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/destinations" element={<DestinationsPage />} />
+          <Route path="/hidden-gems" element={<HiddenGemsPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/destination/:id" element={<DestinationDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
