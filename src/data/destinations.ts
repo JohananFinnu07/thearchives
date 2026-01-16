@@ -2,6 +2,7 @@ import arakuImage from '@/assets/araku-card.jpg';
 import lambasingiImage from '@/assets/lambasingi-card.jpg';
 import vanajangiImage from '@/assets/vanajangi-card.jpg';
 import paderuImage from '@/assets/paderu-card.jpg';
+import maredumilliImage from '@/assets/maredumilli-card.jpg';
 
 export interface Product {
   name: string;
@@ -211,6 +212,59 @@ export const destinations: Destination[] = [
         significance: 'The Mahua tree is considered sacred and provides food security during lean seasons. Flowers are a traditional sweetener and important income source for forest-dwelling communities.',
         makingProcess: 'Flowers fall naturally in early summer and are collected before dawn while still moist. They\'re spread on clean ground to sun-dry for 4-5 days, turning regularly. Dried flowers are stored in breathable sacks for year-round use.',
         uses: ['Traditional liquor', 'Natural sweetener', 'Medicine', 'Cooking oil (from seeds)', 'Animal feed']
+      }
+    ]
+  },
+  {
+    id: 'maredumilli',
+    name: 'Maredumilli',
+    tagline: 'Eco-Tourism Paradise',
+    image: maredumilliImage,
+    heroDescription: 'A pristine forest destination in the heart of the Eastern Ghats, renowned for its eco-tourism initiatives and rich biodiversity.',
+    elevation: '500m',
+    bestTime: 'October - March',
+    temperature: '18°C - 32°C',
+    about: 'Maredumilli is a biodiversity hotspot located in the East Godavari district, surrounded by dense deciduous forests. Known as one of the best eco-tourism destinations, it offers trekking trails, waterfalls, and an immersive experience of tribal life. The area is home to the Koya and Konda Reddi tribes who have lived in harmony with the forests for centuries.',
+    products: [
+      {
+        name: 'Wild Forest Honey',
+        type: 'famous',
+        description: 'Pure, unprocessed honey harvested from wild bee colonies deep within the Maredumilli forests by tribal honey hunters.',
+        significance: 'Maredumilli wild honey is considered among the purest in India due to the untouched forest ecosystem. The bees forage on diverse medicinal plants, giving the honey unique therapeutic properties. It supports the livelihood of forest-dwelling communities.',
+        makingProcess: 'Skilled tribal honey hunters identify wild hives in ancient trees. Using smoke from forest herbs to calm bees, they climb using traditional rope techniques. Honeycomb is carefully extracted, leaving enough for the colony. The honey is strained through muslin and stored in earthen pots.',
+        uses: ['Natural medicine', 'Immunity booster', 'Wound healing', 'Ayurvedic preparations', 'Premium sweetener']
+      },
+      {
+        name: 'Bamboo Chicken',
+        type: 'famous',
+        description: 'Iconic tribal dish where chicken is slow-cooked inside fresh bamboo stems over an open fire, infusing it with a unique smoky flavor.',
+        significance: 'This ancient cooking technique is unique to the tribal regions of Andhra Pradesh. The bamboo imparts a distinctive flavor and keeps the meat incredibly tender. It has become synonymous with Maredumilli tourism.',
+        makingProcess: 'Fresh green bamboo is cut into hollow sections. Marinated chicken with local spices is stuffed inside and sealed with leaves. The bamboo is placed over slow-burning wood fire for 2-3 hours. The bamboo chars outside while the chicken steams perfectly inside.',
+        uses: ['Traditional cuisine', 'Tourist specialty', 'Ceremonial feasts', 'Cultural experience']
+      },
+      {
+        name: 'Forest Tamarind',
+        type: 'underrated',
+        description: 'Wild tamarind collected from forest trees, prized for its superior sourness and complex flavor compared to cultivated varieties.',
+        significance: 'Forest tamarind is more potent and aromatic than farm-grown varieties. Tribal communities have sustainably harvested it for generations, using it in traditional medicine and cuisine.',
+        makingProcess: 'Ripe tamarind pods are collected from forest trees during summer. Pods are sun-dried, then the outer shell is cracked open. Pulp is separated, sometimes mixed with salt for preservation, and stored in clay containers for year-round use.',
+        uses: ['Culinary seasoning', 'Traditional drinks', 'Digestive medicine', 'Metal polishing', 'Chutneys and sauces']
+      },
+      {
+        name: 'Adda Leaf Plates (Adda Aaku)',
+        type: 'underrated',
+        description: 'Biodegradable plates and bowls stitched from adda tree leaves, an eco-friendly alternative to plastic.',
+        significance: 'These leaf plates represent sustainable tribal wisdom. They decompose naturally, provide income to forest communities, and are making a comeback as eco-conscious alternatives gain popularity.',
+        makingProcess: 'Large adda leaves are collected fresh from the forest. Multiple leaves are layered and stitched together using thin bamboo pins or grass threads. They are pressed and sun-dried to form sturdy, waterproof plates of various sizes.',
+        uses: ['Serving food', 'Festival occasions', 'Eco-friendly packaging', 'Export to urban markets', 'Religious offerings']
+      },
+      {
+        name: 'Konda Pachcha Herbs',
+        type: 'underrated',
+        description: 'A collection of rare medicinal herbs found only in the dense forests of Maredumilli, used by tribal healers.',
+        significance: 'The forests are a living pharmacy for the Koya and Konda Reddi tribes. These herbs treat ailments from common colds to chronic conditions, and their knowledge is preserved through oral tradition.',
+        makingProcess: 'Herbs are identified and harvested by tribal vaidyas (healers) who know the specific timing and methods. Different parts - leaves, roots, bark - are collected seasonally. They are dried in shade to preserve potency and stored in bamboo tubes.',
+        uses: ['Traditional medicine', 'Fever remedies', 'Bone healing', 'Skin treatments', 'Spiritual rituals']
       }
     ]
   }
