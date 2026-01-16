@@ -21,7 +21,7 @@ const AboutPage = () => {
               About <span className="text-primary">TheArchives</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Preserving and sharing the untold stories of Eastern Ghats — 
+              Preserving and sharing the untold stories of hidden destinations worldwide — 
               where ancient traditions meet breathtaking landscapes.
             </p>
           </motion.div>
@@ -38,16 +38,16 @@ const AboutPage = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="text-primary font-medium mb-4 block">Our Story</span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Documenting the Soul of the Eastern Ghats
-              </h2>
-              <div className="space-y-4 text-muted-foreground">
-                <p>
-                  TheArchives was born from a deep passion for exploring the unexplored and 
-                  documenting the rich cultural heritage of India's Eastern Ghats. What started 
-                  as personal journeys through misty hills and tribal villages has evolved into 
-                  a mission to share these hidden treasures with the world.
-                </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Documenting the Soul of Hidden Places
+            </h2>
+            <div className="space-y-4 text-muted-foreground">
+              <p>
+                TheArchives was born from a deep passion for exploring the unexplored and 
+                documenting the rich cultural heritage of hidden destinations around the world. 
+                What started as personal journeys through misty hills and remote villages has 
+                evolved into a mission to share these treasures with travelers everywhere.
+              </p>
                 <p>
                   We believe that every destination has stories waiting to be told — stories of 
                   ancient coffee traditions, handcrafted textiles, wild honey harvested from 

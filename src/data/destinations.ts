@@ -68,6 +68,14 @@ export const destinations: Destination[] = [
         significance: 'This natural beverage is central to tribal ceremonies and social gatherings. It\'s rich in probiotics and was traditionally consumed for its digestive benefits.',
         makingProcess: 'Sap is collected at dawn from incisions made in palm flowers using clay pots. The fresh sap (sweet neera) ferments naturally within hours due to wild yeasts. It\'s consumed the same day or within 24 hours while still mildly alcoholic.',
         uses: ['Traditional ceremonies', 'Social gatherings', 'Digestive aid', 'Natural probiotic drink']
+      },
+      {
+        name: 'Araku Black Pepper',
+        type: 'underrated',
+        description: 'Organic black pepper grown in the shade of coffee plantations, prized for its exceptional aroma and heat.',
+        significance: 'Grown alongside coffee plants, Araku black pepper benefits from the same ideal growing conditions. The pepper has higher essential oil content due to the slow ripening in cool mountain air, making it sought after by gourmet chefs.',
+        makingProcess: 'Pepper vines are trained to climb silver oak trees in coffee plantations. Berries are harvested when they begin turning red, then sun-dried on bamboo mats for 5-7 days until they shrivel and blacken. Hand-sorted to remove imperfect corns.',
+        uses: ['Gourmet cooking', 'Ayurvedic medicine', 'Digestive remedy', 'Meat preservation', 'Spice blends']
       }
     ]
   },

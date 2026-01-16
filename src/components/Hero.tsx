@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-sage font-medium tracking-widest uppercase text-sm mb-6"
           >
-            Explore the Eastern Ghats
+            Explore Hidden Destinations
           </motion.p>
           
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6">
@@ -40,8 +40,8 @@ const Hero = () => {
           </h1>
           
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            Uncover the underrated treasures of Andhra Pradesh's most beautiful hill stations — 
-            from misty valleys to tribal crafts.
+            Uncover the underrated treasures of the world's most beautiful destinations — 
+            from misty valleys to artisan crafts and local traditions.
           </p>
 
           <motion.div

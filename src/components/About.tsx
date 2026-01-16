@@ -45,7 +45,7 @@ const About = () => {
             </h2>
             <p className="text-muted-foreground text-lg">
               We believe the best travel experiences come from discovering what makes a place truly special — 
-              the hidden spots, local crafts, and cultural traditions that don't make it to mainstream guides.
+              the hidden spots, local crafts, and cultural traditions that don't make it to mainstream travel guides.
             </p>
           </motion.div>
 
