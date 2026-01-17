@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-araku.jpg';
-
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -53,15 +53,17 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="gradient-forest text-primary-foreground border-0 px-8 py-6 text-base font-medium shadow-elevated hover:scale-105 transition-transform"
+              asChild
             >
-              Explore Destinations
+              <Link to="/destinations">Explore Destinations</Link>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 px-8 py-6 text-base"
+              asChild
             >
-              Hidden Gems
+              <Link to="/hidden-gems">Hidden Gems</Link>
             </Button>
           </motion.div>
         </motion.div>
