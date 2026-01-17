@@ -5,13 +5,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { destinations } from '@/data/destinations';
 
-// Group underrated products by destination
+// Get destinations with underrated products count
 const destinationsWithGems = destinations
   .map(dest => ({
     ...dest,
-    gems: dest.products.filter(p => p.type === 'underrated')
+    gemsCount: dest.products.filter(p => p.type === 'underrated').length,
+    famousCount: dest.products.filter(p => p.type === 'famous').length,
   }))
-  .filter(dest => dest.gems.length > 0);
+  .filter(dest => dest.gemsCount > 0);
 
 const HiddenGemsPage = () => {
   return (
@@ -49,117 +50,82 @@ const HiddenGemsPage = () => {
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Each destination holds secrets—rare products, ancient traditions, and local treasures 
-              known only to those who venture off the beaten path. Explore them by place.
+              known only to those who venture off the beaten path. Select a location to explore its hidden gems.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Destinations with Gems */}
-      <section className="py-16">
+      {/* Location Cards Grid */}
+      <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
-          {destinationsWithGems.map((destination, destIndex) => (
-            <motion.div
-              key={destination.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: destIndex * 0.1 }}
-              className="mb-20 last:mb-0"
-            >
-              {/* Destination Header */}
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-6 border-b border-border/50">
-                <div>
-                  <div className="flex items-center gap-2 text-primary mb-2">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm font-medium tracking-wide uppercase">
-                      {destination.elevation} elevation
-                    </span>
-                  </div>
-                  <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
-                    {destination.name}
-                  </h2>
-                  <p className="text-muted-foreground mt-2 max-w-xl">
-                    {destination.tagline}
-                  </p>
-                </div>
-                
-                <Link 
-                  to={`/destination/${destination.id}`}
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all group"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {destinationsWithGems.map((destination, index) => (
+              <motion.div
+                key={destination.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Link
+                  to={`/hidden-gems/${destination.id}`}
+                  className="group block bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl"
                 >
-                  Explore destination
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-
-              {/* Gems Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {destination.gems.map((gem, gemIndex) => (
-                  <motion.article
-                    key={gem.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: gemIndex * 0.1 }}
-                    className="group bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-500 border border-border/30"
-                  >
-                    {/* Card Header with Icon */}
-                    <div className="p-6 pb-4">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="p-3 bg-gradient-to-br from-primary/20 to-accent/10 rounded-xl">
-                          <Sparkles className="w-5 h-5 text-primary" />
-                        </div>
-                        <span className="text-xs bg-secondary text-secondary-foreground px-3 py-1.5 rounded-full font-medium">
-                          Hidden Gem
+                  {/* Image */}
+                  <div className="aspect-[16/10] relative overflow-hidden">
+                    <img
+                      src={destination.image}
+                      alt={destination.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    
+                    {/* Gems Badge */}
+                    <div className="absolute top-4 right-4">
+                      <div className="flex items-center gap-1.5 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                        <Sparkles className="w-3.5 h-3.5 text-primary" />
+                        <span className="text-xs font-medium text-foreground">
+                          {destination.gemsCount} Hidden {destination.gemsCount === 1 ? 'Gem' : 'Gems'}
                         </span>
                       </div>
-                      
-                      <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {gem.name}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
-                        {gem.description}
-                      </p>
                     </div>
-
-                    {/* Story Preview */}
-                    <div className="px-6 pb-4">
-                      <div className="bg-secondary/50 rounded-xl p-4 space-y-3">
-                        <div>
-                          <span className="text-xs font-semibold text-foreground uppercase tracking-wide">
-                            Why it matters
-                          </span>
-                          <p className="text-muted-foreground text-sm mt-1 line-clamp-2">
-                            {gem.significance}
-                          </p>
-                        </div>
+                    
+                    {/* Location Info */}
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-2 text-primary-foreground/80 text-sm">
+                        <MapPin className="w-4 h-4" />
+                        <span>{destination.elevation}</span>
                       </div>
                     </div>
-
-                    {/* Card Footer */}
-                    <div className="px-6 pb-6">
-                      <div className="flex flex-wrap gap-2">
-                        {gem.uses.slice(0, 3).map((use, i) => (
-                          <span 
-                            key={i}
-                            className="text-xs bg-accent/20 text-accent-foreground px-2.5 py-1 rounded-full"
-                          >
-                            {use}
-                          </span>
-                        ))}
-                        {gem.uses.length > 3 && (
-                          <span className="text-xs text-muted-foreground px-2 py-1">
-                            +{gem.uses.length - 3} more
-                          </span>
-                        )}
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      {destination.name}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {destination.tagline}
+                    </p>
+                    
+                    {/* Stats */}
+                    <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                      <div className="flex items-center gap-4 text-sm">
+                        <span className="text-muted-foreground">
+                          <span className="font-medium text-foreground">{destination.gemsCount}</span> Underrated
+                        </span>
+                        <span className="text-muted-foreground">
+                          <span className="font-medium text-foreground">{destination.famousCount}</span> Famous
+                        </span>
                       </div>
+                      <ArrowRight className="w-4 h-4 text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                     </div>
-                  </motion.article>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -173,7 +139,7 @@ const HiddenGemsPage = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to Explore?
+              Ready to Explore More?
             </h2>
             <p className="text-muted-foreground mb-8">
               Each destination has more to offer. Dive deeper into the culture, 

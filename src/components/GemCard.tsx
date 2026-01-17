@@ -16,7 +16,7 @@ const GemCard = ({ name, location, description, image, index }: GemCardProps) =>
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      className="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-card shadow-soft hover:shadow-card transition-all duration-500"
+      className="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-card shadow-soft hover:shadow-card transition-all duration-500 cursor-pointer"
     >
       {/* Image */}
       <div className="w-full md:w-40 h-40 flex-shrink-0 rounded-xl overflow-hidden">

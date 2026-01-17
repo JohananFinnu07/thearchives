@@ -1,26 +1,31 @@
 import { motion } from 'framer-motion';
 import { Mountain, Users, Leaf, Camera } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const features = [
   {
     icon: Mountain,
     title: 'Scenic Routes',
     description: 'Curated travel guides through the most breathtaking landscapes.',
+    link: '/destinations',
   },
   {
     icon: Users,
     title: 'Local Stories',
     description: 'Authentic narratives from tribal communities and local artisans.',
+    link: '/about',
   },
   {
     icon: Leaf,
     title: 'Sustainable Travel',
     description: 'Eco-conscious recommendations that support local livelihoods.',
+    link: '/hidden-gems',
   },
   {
     icon: Camera,
     title: 'Visual Journey',
     description: 'Stunning photography capturing the essence of each destination.',
+    link: '/gallery',
   },
 ];
 
@@ -49,7 +54,6 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Features Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -58,17 +62,21 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group"
               >
-                <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <feature.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {feature.description}
-                </p>
+                <Link 
+                  to={feature.link}
+                  className="text-center group block"
+                >
+                  <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <feature.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    {feature.description}
+                  </p>
+                </Link>
               </motion.div>
             ))}
           </div>
