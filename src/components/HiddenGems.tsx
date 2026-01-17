@@ -2,25 +2,31 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import GemCard from './GemCard';
+import { destinations } from '@/data/destinations';
 import coffeeImage from '@/assets/araku-coffee.jpg';
 import craftsImage from '@/assets/tribal-crafts.jpg';
 import honeyImage from '@/assets/wild-honey.jpg';
-const gems = [
+
+// Get a sample of underrated gems from different destinations for the homepage
+const sampleGems = [
   {
     name: 'Araku Coffee',
     location: 'Araku Valley',
+    locationId: 'araku-valley',
     description: 'Organic, shade-grown coffee cultivated by tribal communities. Award-winning beans with a unique flavor profile shaped by the Eastern Ghats.',
     image: coffeeImage,
   },
   {
     name: 'Tribal Bamboo Crafts',
     location: 'Paderu Region',
+    locationId: 'paderu',
     description: 'Handwoven baskets, mats, and decorative items crafted by local artisans using traditional techniques passed down through generations.',
     image: craftsImage,
   },
   {
     name: 'Wild Forest Honey',
-    location: 'Lambasingi Hills',
+    location: 'Maredumilli',
+    locationId: 'maredumilli',
     description: 'Pure, unprocessed honey harvested from forest hives. Rich in medicinal properties and sustainably collected by tribal honey hunters.',
     image: honeyImage,
   },
@@ -61,15 +67,16 @@ const HiddenGems = () => {
 
           {/* Right Column - Cards */}
           <div className="flex flex-col gap-6">
-            {gems.map((gem, index) => (
-              <GemCard
-                key={gem.name}
-                name={gem.name}
-                location={gem.location}
-                description={gem.description}
-                image={gem.image}
-                index={index}
-              />
+            {sampleGems.map((gem, index) => (
+              <Link key={gem.name} to={`/hidden-gems/${gem.locationId}`}>
+                <GemCard
+                  name={gem.name}
+                  location={gem.location}
+                  description={gem.description}
+                  image={gem.image}
+                  index={index}
+                />
+              </Link>
             ))}
           </div>
         </div>
