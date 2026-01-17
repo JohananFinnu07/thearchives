@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import GemCard from './GemCard';
 import coffeeImage from '@/assets/araku-coffee.jpg';
 import craftsImage from '@/assets/tribal-crafts.jpg';
 import honeyImage from '@/assets/wild-honey.jpg';
-
 const gems = [
   {
     name: 'Araku Coffee',
@@ -53,8 +53,9 @@ const HiddenGems = () => {
             <Button 
               size="lg" 
               className="gradient-accent text-accent-foreground border-0 px-8 font-medium hover:scale-105 transition-transform"
+              asChild
             >
-              Explore All Gems
+              <Link to="/hidden-gems">Explore All Gems</Link>
             </Button>
           </motion.div>
 
