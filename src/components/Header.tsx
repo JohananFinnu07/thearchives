@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -47,8 +47,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" size="sm" className="gradient-forest text-primary-foreground border-0">
-              Plan Your Trip
+            <Button variant="default" size="sm" className="gradient-forest text-primary-foreground border-0" asChild>
+              <Link to="/destinations">Start Exploring</Link>
             </Button>
           </div>
 
@@ -84,8 +84,8 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button variant="default" className="gradient-forest text-primary-foreground border-0 mt-2">
-                Plan Your Trip
+              <Button variant="default" className="gradient-forest text-primary-foreground border-0 mt-2" asChild>
+                <Link to="/destinations">Start Exploring</Link>
               </Button>
             </nav>
           </motion.div>
