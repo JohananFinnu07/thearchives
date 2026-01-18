@@ -4,6 +4,7 @@ import Destinations from '@/components/Destinations';
 import HiddenGems from '@/components/HiddenGems';
 import About from '@/components/About';
 import Footer from '@/components/Footer';
+import SubmitGemForm from '@/components/SubmitGemForm';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         <About />
       </main>
       <Footer />
+      <SubmitGemForm />
     </div>
   );
 };

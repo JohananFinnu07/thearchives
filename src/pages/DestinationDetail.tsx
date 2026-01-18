@@ -45,11 +45,11 @@ const DestinationDetail = () => {
           className="absolute top-24 left-4 sm:left-8 lg:left-16"
         >
           <Link
-            to="/"
+            to="/destinations"
             className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="font-medium">Back to Explore</span>
+            <span className="font-medium">Back to Destinations</span>
           </Link>
         </motion.div>
 
@@ -192,7 +192,7 @@ const DestinationDetail = () => {
               Plan your journey to discover these treasures firsthand and support local communities.
             </p>
             <Link
-              to="/"
+              to="/destinations"
               className="inline-flex items-center gap-2 bg-primary-foreground text-foreground font-medium px-8 py-3 rounded-full hover:bg-primary-foreground/90 transition-colors"
             >
               Explore More Destinations

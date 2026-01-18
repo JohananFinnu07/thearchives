@@ -34,14 +34,14 @@ const Hero = () => {
           </motion.p>
           
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6">
-            <span className="italic">Discover</span> Hidden Gems.
+            A Cultural Archive of
             <br />
-            <span className="italic">Experience</span> Authenticity.
+            <span className="italic">India's Hidden Treasures</span>
           </h1>
           
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            Uncover the underrated treasures of the world's most beautiful destinations — 
-            from misty valleys to artisan crafts and local traditions.
+            Explore iconic destinations through their untold stories — local crafts, rare spices, 
+            tribal traditions, and the people who preserve them.
           </p>
 
           <motion.div
