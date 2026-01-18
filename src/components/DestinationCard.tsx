@@ -8,20 +8,23 @@ interface DestinationCardProps {
   image: string;
   index: number;
   id: string;
+  featured?: boolean;
 }
 
-const DestinationCard = ({ name, tagline, image, index, id }: DestinationCardProps) => {
+const DestinationCard = ({ name, tagline, image, index, id, featured = false }: DestinationCardProps) => {
   return (
-    <Link to={`/destination/${id}`}>
+    <Link to={`/destination/${id}`} className="block h-full">
       <motion.article
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.6, delay: index * 0.1 }}
-        className="group relative overflow-hidden rounded-2xl bg-card shadow-card hover:shadow-elevated transition-all duration-500 cursor-pointer"
+        className={`group relative overflow-hidden rounded-2xl bg-card shadow-card hover:shadow-elevated transition-all duration-500 cursor-pointer h-full ${
+          featured ? 'aspect-[4/3]' : 'aspect-[4/5]'
+        }`}
       >
         {/* Image Container */}
-        <div className="aspect-[4/5] overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
           <img
             src={image}
             alt={`${name} landscape`}
@@ -39,10 +42,12 @@ const DestinationCard = ({ name, tagline, image, index, id }: DestinationCardPro
                 <MapPin className="w-3.5 h-3.5" />
                 <span className="text-xs font-medium tracking-wide uppercase">Andhra Pradesh</span>
               </div>
-              <h3 className="font-serif text-2xl font-semibold text-primary-foreground mb-1">
+              <h3 className={`font-serif font-semibold text-primary-foreground mb-1 ${
+                featured ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
+              }`}>
                 {name}
               </h3>
-              <p className="text-primary-foreground/70 text-sm">
+              <p className={`text-primary-foreground/70 ${featured ? 'text-base' : 'text-sm'}`}>
                 {tagline}
               </p>
             </div>
