@@ -18,7 +18,26 @@ const SubmitGemForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // For now, just show success state
+    
+    // Build email body
+    const emailBody = `
+New Hidden Gem Submission
+
+Gem Name: ${formData.gemName}
+Location: ${formData.location}
+
+Description:
+${formData.description}
+
+Submitted by: ${formData.yourName || 'Anonymous'}
+Contact Email: ${formData.email || 'Not provided'}
+    `.trim();
+
+    // Open mailto link
+    const mailtoLink = `mailto:johananfinnutalari@gmail.com?subject=${encodeURIComponent(`Hidden Gem Discovery: ${formData.gemName}`)}&body=${encodeURIComponent(emailBody)}`;
+    window.open(mailtoLink, '_blank');
+    
+    // Show success state
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);

@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Sparkles, MapPin, ArrowLeft, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles, MapPin, ArrowLeft, ArrowRight, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getDestinationById, destinations } from '@/data/destinations';
@@ -9,6 +10,32 @@ import { Button } from '@/components/ui/button';
 const LocationHiddenGemsPage = () => {
   const { id } = useParams<{ id: string }>();
   const destination = getDestinationById(id || '');
+  
+  // Track interest for each product
+  const [interests, setInterests] = useState<Record<string, { liked: boolean; count: number }>>({});
+  
+  const initializeInterest = (productName: string) => {
+    if (!interests[productName]) {
+      setInterests(prev => ({
+        ...prev,
+        [productName]: { liked: false, count: Math.floor(Math.random() * 80) + 20 }
+      }));
+    }
+    return interests[productName] || { liked: false, count: Math.floor(Math.random() * 80) + 20 };
+  };
+
+  const handleInterest = (productName: string) => {
+    setInterests(prev => {
+      const current = prev[productName] || { liked: false, count: Math.floor(Math.random() * 80) + 20 };
+      return {
+        ...prev,
+        [productName]: {
+          liked: !current.liked,
+          count: current.liked ? current.count - 1 : current.count + 1
+        }
+      };
+    });
+  };
 
   if (!destination) {
     return (
@@ -95,59 +122,93 @@ const LocationHiddenGemsPage = () => {
               </motion.div>
 
               <div className="grid gap-8 lg:gap-12">
-                {underratedProducts.map((product, index) => (
-                  <motion.article
-                    key={product.name}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-card rounded-2xl p-8 lg:p-10 border border-border hover:border-primary/30 transition-colors"
-                  >
-                    <div className="grid lg:grid-cols-3 gap-8">
-                      {/* Main Content */}
-                      <div className="lg:col-span-2 space-y-6">
-                        <div>
-                          <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">
-                            {product.name}
-                          </h3>
-                          <p className="text-muted-foreground leading-relaxed">
-                            {product.description}
-                          </p>
-                        </div>
-
-                        <div className="bg-secondary/30 rounded-xl p-6">
-                          <h4 className="font-medium text-foreground mb-2">Why it matters</h4>
-                          <p className="text-muted-foreground text-sm leading-relaxed">
-                            {product.significance}
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="font-medium text-foreground mb-2">How it's made</h4>
-                          <p className="text-muted-foreground text-sm leading-relaxed">
-                            {product.makingProcess}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Uses Sidebar */}
-                      <div className="lg:border-l lg:border-border lg:pl-8">
-                        <h4 className="font-medium text-foreground mb-4">Common uses</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {product.uses.map((use) => (
-                            <span
-                              key={use}
-                              className="px-3 py-1.5 bg-primary/10 text-primary text-xs rounded-full"
+                {underratedProducts.map((product, index) => {
+                  const interest = initializeInterest(product.name);
+                  const isLiked = interests[product.name]?.liked || false;
+                  const likeCount = interests[product.name]?.count || interest.count;
+                  
+                  return (
+                    <motion.article
+                      key={product.name}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="bg-card rounded-2xl p-8 lg:p-10 border border-border hover:border-primary/30 transition-colors"
+                    >
+                      <div className="grid lg:grid-cols-3 gap-8">
+                        {/* Main Content */}
+                        <div className="lg:col-span-2 space-y-6">
+                          <div className="flex items-start justify-between gap-4">
+                            <div>
+                              <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">
+                                {product.name}
+                              </h3>
+                              <p className="text-muted-foreground leading-relaxed">
+                                {product.description}
+                              </p>
+                            </div>
+                            
+                            {/* Interest Button */}
+                            <motion.button
+                              onClick={() => handleInterest(product.name)}
+                              className={`flex-shrink-0 flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-colors ${
+                                isLiked 
+                                  ? 'bg-accent/20 text-accent' 
+                                  : 'bg-secondary/50 text-muted-foreground hover:text-accent hover:bg-accent/10'
+                              }`}
+                              whileTap={{ scale: 0.95 }}
                             >
-                              {use}
-                            </span>
-                          ))}
+                              <motion.div
+                                animate={isLiked ? { scale: [1, 1.3, 1] } : {}}
+                                transition={{ duration: 0.3 }}
+                              >
+                                <Heart
+                                  className={`w-6 h-6 transition-all duration-300 ${
+                                    isLiked ? 'fill-accent text-accent' : ''
+                                  }`}
+                                />
+                              </motion.div>
+                              <span className="text-xs font-medium">{likeCount}</span>
+                              <span className="text-xs">
+                                {isLiked ? 'Interested' : 'Interest'}
+                              </span>
+                            </motion.button>
+                          </div>
+
+                          <div className="bg-secondary/30 rounded-xl p-6">
+                            <h4 className="font-medium text-foreground mb-2">Why it matters</h4>
+                            <p className="text-muted-foreground text-sm leading-relaxed">
+                              {product.significance}
+                            </p>
+                          </div>
+
+                          <div>
+                            <h4 className="font-medium text-foreground mb-2">How it's made</h4>
+                            <p className="text-muted-foreground text-sm leading-relaxed">
+                              {product.makingProcess}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Uses Sidebar */}
+                        <div className="lg:border-l lg:border-border lg:pl-8">
+                          <h4 className="font-medium text-foreground mb-4">Common uses</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {product.uses.map((use) => (
+                              <span
+                                key={use}
+                                className="px-3 py-1.5 bg-primary/10 text-primary text-xs rounded-full"
+                              >
+                                {use}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.article>
-                ))}
+                    </motion.article>
+                  );
+                })}
               </div>
             </div>
           </section>
