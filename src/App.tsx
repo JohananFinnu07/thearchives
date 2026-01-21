@@ -9,6 +9,7 @@ import DestinationDetail from "./pages/DestinationDetail";
 import DestinationsPage from "./pages/DestinationsPage";
 import HiddenGemsPage from "./pages/HiddenGemsPage";
 import LocationHiddenGemsPage from "./pages/LocationHiddenGemsPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import GalleryPage from "./pages/GalleryPage";
 import LocationGalleryPage from "./pages/LocationGalleryPage";
 import AboutPage from "./pages/AboutPage";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route path="/hidden-gems" element={<HiddenGemsPage />} />
           <Route path="/hidden-gems/:id" element={<LocationHiddenGemsPage />} />
+          <Route path="/hidden-gems/:locationId/:productName" element={<ProductDetailPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallery/:id" element={<LocationGalleryPage />} />
           <Route path="/about" element={<AboutPage />} />

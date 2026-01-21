@@ -127,31 +127,37 @@ const LocationHiddenGemsPage = () => {
                   const isLiked = interests[product.name]?.liked || false;
                   const likeCount = interests[product.name]?.count || interest.count;
                   
-                  return (
+                    const productSlug = product.name.toLowerCase().replace(/\s+/g, '-');
+                    
+                    return (
                     <motion.article
                       key={product.name}
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-card rounded-2xl p-8 lg:p-10 border border-border hover:border-primary/30 transition-colors"
+                      className="bg-card rounded-2xl p-8 lg:p-10 border border-border hover:border-primary/30 transition-colors group"
                     >
                       <div className="grid lg:grid-cols-3 gap-8">
                         {/* Main Content */}
                         <div className="lg:col-span-2 space-y-6">
                           <div className="flex items-start justify-between gap-4">
-                            <div>
-                              <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">
+                            <Link to={`/hidden-gems/${destination.id}/${productSlug}`} className="flex-1">
+                              <h3 className="font-serif text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                                 {product.name}
                               </h3>
                               <p className="text-muted-foreground leading-relaxed">
                                 {product.description}
                               </p>
-                            </div>
+                            </Link>
                             
                             {/* Interest Button */}
                             <motion.button
-                              onClick={() => handleInterest(product.name)}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                handleInterest(product.name);
+                              }}
                               className={`flex-shrink-0 flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-colors ${
                                 isLiked 
                                   ? 'bg-accent/20 text-accent' 
@@ -176,19 +182,23 @@ const LocationHiddenGemsPage = () => {
                             </motion.button>
                           </div>
 
-                          <div className="bg-secondary/30 rounded-xl p-6">
-                            <h4 className="font-medium text-foreground mb-2">Why it matters</h4>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
-                              {product.significance}
-                            </p>
-                          </div>
+                          <Link to={`/hidden-gems/${destination.id}/${productSlug}`}>
+                            <div className="bg-secondary/30 rounded-xl p-6 hover:bg-secondary/40 transition-colors">
+                              <h4 className="font-medium text-foreground mb-2">Why it matters</h4>
+                              <p className="text-muted-foreground text-sm leading-relaxed">
+                                {product.significance}
+                              </p>
+                            </div>
+                          </Link>
 
-                          <div>
-                            <h4 className="font-medium text-foreground mb-2">How it's made</h4>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
-                              {product.makingProcess}
-                            </p>
-                          </div>
+                          <Link to={`/hidden-gems/${destination.id}/${productSlug}`}>
+                            <div className="mt-4">
+                              <h4 className="font-medium text-foreground mb-2">How it's made</h4>
+                              <p className="text-muted-foreground text-sm leading-relaxed">
+                                {product.makingProcess}
+                              </p>
+                            </div>
+                          </Link>
                         </div>
 
                         {/* Uses Sidebar */}
@@ -204,6 +214,12 @@ const LocationHiddenGemsPage = () => {
                               </span>
                             ))}
                           </div>
+                          <Link 
+                            to={`/hidden-gems/${destination.id}/${productSlug}`}
+                            className="inline-block mt-4 text-sm text-primary hover:underline"
+                          >
+                            Learn more →
+                          </Link>
                         </div>
                       </div>
                     </motion.article>

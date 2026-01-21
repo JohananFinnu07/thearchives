@@ -1,4 +1,4 @@
-import { MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { MapPin, Instagram, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -44,18 +44,11 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="mailto:johananfinnutalari@gmail.com" 
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
-                aria-label="Facebook"
+                aria-label="Email"
               >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
