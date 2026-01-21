@@ -41,7 +41,7 @@ const ProductDetailPage = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src={destination.image}
+              src={product.image || destination.image}
               alt={product.name}
               className="w-full h-full object-cover"
             />
@@ -126,7 +126,7 @@ const ProductDetailPage = () => {
                     <div className="bg-card rounded-2xl p-6 border border-border">
                       <div className="w-full aspect-video rounded-xl bg-secondary/50 mb-4 overflow-hidden">
                         <img
-                          src={destination.image}
+                          src={product.image || destination.image}
                           alt="Making process"
                           className="w-full h-full object-cover"
                         />
@@ -143,7 +143,7 @@ const ProductDetailPage = () => {
                     <div className="bg-card rounded-2xl p-6 border border-border">
                       <div className="w-full aspect-video rounded-xl bg-secondary/50 mb-4 overflow-hidden">
                         <img
-                          src={destination.image}
+                          src={product.image || destination.image}
                           alt="Flavor profile"
                           className="w-full h-full object-cover opacity-80"
                         />
