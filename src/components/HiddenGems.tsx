@@ -44,14 +44,14 @@ const HiddenGems = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <p className="text-accent font-medium tracking-widest uppercase text-sm mb-4">
-            Local Treasures
+            What the Markets Miss
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-            Hidden Gems <span className="italic text-primary">Worth Exploring</span>
+            Treasures That <span className="italic text-primary">Stay Local</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Beyond the scenic beauty lies a rich tapestry of local products, artisan crafts, 
-            and culinary traditions that make each destination truly special.
+            The best coffee never leaves the valley. The finest honey stays with the tribe. 
+            Here's what we found before it disappeared.
           </p>
           <Button 
             size="lg" 

@@ -48,13 +48,13 @@ const Destinations = () => {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <p className="text-accent font-medium tracking-widest uppercase text-sm mb-4">
-            Featured Places
+            Off the Tourist Trail
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-4">
-            Destinations Worth <span className="italic text-primary">Discovering</span>
+            Places Where <span className="italic text-primary">Time Moves Slowly</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Five extraordinary hill stations in Andhra Pradesh, each offering a unique experience of nature, culture, and tranquility.
+            Hill stations where tribal traditions still breathe, coffee grows wild, and the outside world feels far away.
           </p>
         </motion.div>
       </div>

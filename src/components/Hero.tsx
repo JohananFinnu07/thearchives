@@ -3,6 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-araku.jpg';
+
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -30,18 +31,18 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-sage font-medium tracking-widest uppercase text-sm mb-6"
           >
-            Explore Hidden Destinations
+            What Survives Locally, Disappears Nationally
           </motion.p>
           
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6">
-            A Cultural Archive of
+            Discover What India
             <br />
-            <span className="italic">India's Hidden Treasures</span>
+            <span className="italic">Almost Forgot</span>
           </h1>
           
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            Explore iconic destinations through their untold stories — local crafts, rare spices, 
-            tribal traditions, and the people who preserve them.
+            We find the spices that never reached supermarkets. The crafts that never went viral. 
+            The recipes that stayed in village kitchens. Before they're gone.
           </p>
 
           <motion.div
@@ -55,7 +56,7 @@ const Hero = () => {
               className="gradient-forest text-primary-foreground border-0 px-8 py-6 text-base font-medium shadow-elevated hover:scale-105 transition-transform"
               asChild
             >
-              <Link to="/destinations">Explore Destinations</Link>
+              <Link to="/destinations">Start Exploring</Link>
             </Button>
             <Button 
               size="lg" 
@@ -63,7 +64,7 @@ const Hero = () => {
               className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 px-8 py-6 text-base"
               asChild
             >
-              <Link to="/hidden-gems">Hidden Gems</Link>
+              <Link to="/hidden-gems">Find Hidden Gems</Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -82,7 +83,7 @@ const Hero = () => {
           className="flex flex-col items-center gap-2 cursor-pointer"
           onClick={() => document.getElementById('destinations')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <span className="text-primary-foreground/60 text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-primary-foreground/60 text-xs tracking-widest uppercase">Discover</span>
           <ChevronDown className="w-5 h-5 text-primary-foreground/60" />
         </motion.div>
       </motion.div>
