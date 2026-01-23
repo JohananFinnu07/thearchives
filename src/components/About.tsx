@@ -5,26 +5,26 @@ import { Link } from 'react-router-dom';
 const features = [
   {
     icon: Mountain,
-    title: 'Scenic Routes',
-    description: 'Curated travel guides through the most breathtaking landscapes.',
+    title: 'Uncharted Places',
+    description: 'Hill stations where tourists are still rare and traditions run deep.',
     link: '/destinations',
   },
   {
     icon: Users,
-    title: 'Local Stories',
-    description: 'Authentic narratives from tribal communities and local artisans.',
+    title: 'Real Stories',
+    description: 'Meet the artisans, farmers, and keepers of vanishing traditions.',
     link: '/about',
   },
   {
     icon: Leaf,
-    title: 'Sustainable Travel',
-    description: 'Eco-conscious recommendations that support local livelihoods.',
+    title: 'Local Economy',
+    description: 'Every item you discover supports families who\'ve made it for generations.',
     link: '/hidden-gems',
   },
   {
     icon: Camera,
-    title: 'Visual Journey',
-    description: 'Stunning photography capturing the essence of each destination.',
+    title: 'Visual Archive',
+    description: 'Documenting what might not exist in another decade.',
     link: '/gallery',
   },
 ];
@@ -43,14 +43,14 @@ const About = () => {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <p className="text-accent font-medium tracking-widest uppercase text-sm mb-4">
-              About TheArchives
+              Why This Matters
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-              Curating <span className="italic text-primary">Authentic</span> Travel Stories
+              Some Things <span className="italic text-primary">Only Exist</span> in One Place
             </h2>
             <p className="text-muted-foreground text-lg">
-              We believe the best travel experiences come from discovering what makes a place truly special — 
-              the hidden spots, local crafts, and cultural traditions that don't make it to mainstream travel guides.
+              Every year, a recipe disappears when a grandmother passes. A craft dies when the last artisan 
+              can't find an apprentice. We're building an archive before it's too late.
             </p>
           </motion.div>
 

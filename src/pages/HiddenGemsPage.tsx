@@ -40,17 +40,17 @@ const HiddenGemsPage = () => {
               className="inline-flex items-center gap-2 bg-primary/10 text-primary px-5 py-2.5 rounded-full mb-8"
             >
               <Gem className="w-4 h-4" />
-              <span className="text-sm font-medium tracking-wide">Discover the Undiscovered</span>
+              <span className="text-sm font-medium tracking-wide">What Survives Locally</span>
             </motion.div>
             
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Hidden <span className="text-primary italic">Gems</span> by
-              <br />Destination
+              Treasures That <span className="text-primary italic">Never Left</span>
+              <br />Their Villages
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Each destination holds secrets—rare products, ancient traditions, and local treasures 
-              known only to those who venture off the beaten path. Select a location to explore its hidden gems.
+              The finest spices stay with the farmers who grew them. The purest honey never reaches city markets.
+              Here's what we found before it disappeared—products that exist only where they were made.
             </p>
           </motion.div>
         </div>
@@ -139,11 +139,11 @@ const HiddenGemsPage = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to Explore More?
+              Want to Go Deeper?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Each destination has more to offer. Dive deeper into the culture, 
-              history, and traditions that make these places extraordinary.
+              Behind every product is a village, a tradition, and a story waiting to be told.
+              Explore the places where these treasures come from.
             </p>
             <Link 
               to="/destinations"

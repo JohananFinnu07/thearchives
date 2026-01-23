@@ -21,8 +21,8 @@ const AboutPage = () => {
               About <span className="text-primary">TheArchives</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Preserving and sharing the untold stories of hidden destinations worldwide — 
-              where ancient traditions meet breathtaking landscapes.
+              We document what India almost forgot — the crafts, recipes, and traditions that exist 
+              only in the villages where they were born. Before they disappear.
             </p>
           </motion.div>
         </div>
@@ -39,24 +39,22 @@ const AboutPage = () => {
             >
               <span className="text-primary font-medium mb-4 block">Our Story</span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Documenting the Soul of Hidden Places
+              Saving What Survives Locally
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                TheArchives was born from a deep passion for exploring the unexplored and 
-                documenting the rich cultural heritage of hidden destinations around the world. 
-                What started as personal journeys through misty hills and remote villages has 
-                evolved into a mission to share these treasures with travelers everywhere.
+                Every year, a recipe dies when the last grandmother who knew it passes away. 
+                A craft disappears when the artisan's children move to cities. A spice variety 
+                goes extinct when farms switch to commercial crops.
               </p>
                 <p>
-                  We believe that every destination has stories waiting to be told — stories of 
-                  ancient coffee traditions, handcrafted textiles, wild honey harvested from 
-                  cliff faces, and communities living in harmony with nature.
+                  TheArchives was born from a simple realization: India's most precious treasures 
+                  never make it to supermarket shelves. The best honey stays with the tribal family 
+                  that harvested it. The finest turmeric never leaves the village where it grew.
                 </p>
                 <p>
-                  Our team works closely with local communities to understand and authentically 
-                  represent their traditions, ensuring that our content respects and celebrates 
-                  their heritage.
+                  We're building a living archive — finding these treasures, documenting their stories, 
+                  and connecting them with people who care, before they're gone forever.
                 </p>
               </div>
             </motion.div>
@@ -103,8 +101,8 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <p className="text-muted-foreground">
-              We're committed to sustainable tourism that benefits local communities 
-              while preserving the natural beauty and cultural heritage of these regions.
+              To find, document, and share India's vanishing treasures — connecting conscious travelers 
+              with the artisans and farmers keeping traditions alive.
             </p>
           </motion.div>
 
@@ -112,18 +110,18 @@ const AboutPage = () => {
             {[
               {
                 icon: Compass,
-                title: 'Discover',
-                description: 'Uncover hidden gems and lesser-known destinations that offer authentic experiences away from crowded tourist spots.'
+                title: 'Find',
+                description: 'We travel to remote villages and hill stations, seeking out products and traditions that never reached mainstream markets.'
               },
               {
                 icon: BookOpen,
                 title: 'Document',
-                description: 'Preserve traditional knowledge, artisanal techniques, and cultural practices through detailed documentation.'
+                description: 'Every item gets a story — how it\'s made, who makes it, why it matters, and what happens if we lose it.'
               },
               {
                 icon: Heart,
-                title: 'Support',
-                description: 'Promote sustainable tourism that directly benefits local artisans, farmers, and tribal communities.'
+                title: 'Connect',
+                description: 'We link curious travelers directly to sources, ensuring your interest sustains the people behind the products.'
               }
             ].map((item, index) => (
               <motion.div
