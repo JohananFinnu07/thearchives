@@ -1,13 +1,14 @@
-import { motion } from 'framer-motion';
-import { MapPin, Heart, Users, Camera, Compass, BookOpen } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { motion } from "framer-motion";
+import { MapPin, Heart, Users, Camera, Compass, BookOpen } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { destinations } from "@/data/destinations";
 
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
@@ -21,8 +22,9 @@ const AboutPage = () => {
               About <span className="text-primary">TheArchives</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              We document what India almost forgot — the crafts, recipes, and traditions that exist 
-              only in the villages where they were born. Before they disappear.
+              We document India’s most underrated cultural gems — the crafts,
+              foods, and traditions that thrive locally, yet remain unseen
+              beyond their place of origin.
             </p>
           </motion.div>
         </div>
@@ -37,24 +39,28 @@ const AboutPage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-primary font-medium mb-4 block">Our Story</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Saving What Survives Locally
-            </h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                Every year, a recipe dies when the last grandmother who knew it passes away. 
-                A craft disappears when the artisan's children move to cities. A spice variety 
-                goes extinct when farms switch to commercial crops.
-              </p>
+              <span className="text-primary font-medium mb-4 block">
+                Our Story
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Highlighting What Thrives Locally
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
                 <p>
-                  TheArchives was born from a simple realization: India's most precious treasures 
-                  never make it to supermarket shelves. The best honey stays with the tribal family 
-                  that harvested it. The finest turmeric never leaves the village where it grew.
+                  Across India, remarkable foods, crafts, and techniques
+                  continue to exist — practiced daily, refined over generations,
+                  and deeply rooted in place.
                 </p>
                 <p>
-                  We're building a living archive — finding these treasures, documenting their stories, 
-                  and connecting them with people who care, before they're gone forever.
+                  Yet many regions become known for a single famous product,
+                  while equally valuable traditions remain in the background —
+                  not lost, but overlooked.
+                </p>
+                <p>
+                  TheArchives was born from a simple realization: visibility
+                  shapes value. We are building a living archive that brings
+                  underrepresented regional treasures into focus, without
+                  removing them from their context or origin.
                 </p>
               </div>
             </motion.div>
@@ -66,11 +72,27 @@ const AboutPage = () => {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { icon: MapPin, label: '4 Destinations', sublabel: 'Documented' },
-                { icon: Heart, label: '20+ Products', sublabel: 'Featured' },
-                { icon: Users, label: 'Local Communities', sublabel: 'Partnered' },
-                { icon: Camera, label: '100+ Stories', sublabel: 'Shared' },
-              ].map((item, index) => (
+                {
+                  icon: MapPin,
+                  label: destinations.length,
+                  sublabel: "Explored deeply",
+                },
+                {
+                  icon: Heart,
+                  label: "30+ Products",
+                  sublabel: "Researched at source",
+                },
+                {
+                  icon: Users,
+                  label: "Local Communities",
+                  sublabel: "Directly engaged",
+                },
+                {
+                  icon: Camera,
+                  label: "100+ Stories",
+                  sublabel: "Documented with context",
+                },
+              ].map((item) => (
                 <div
                   key={item.label}
                   className="bg-card p-6 rounded-xl shadow-elegant border border-border/50 text-center"
@@ -81,7 +103,9 @@ const AboutPage = () => {
                   <div className="font-serif text-xl font-bold text-foreground">
                     {item.label}
                   </div>
-                  <div className="text-sm text-muted-foreground">{item.sublabel}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {item.sublabel}
+                  </div>
                 </div>
               ))}
             </motion.div>
@@ -101,8 +125,9 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <p className="text-muted-foreground">
-              To find, document, and share India's vanishing treasures — connecting conscious travelers 
-              with the artisans and farmers keeping traditions alive.
+              To discover, document, and share India’s underrepresented regional
+              treasures — connecting curious travelers and conscious consumers
+              with the people who sustain them.
             </p>
           </motion.div>
 
@@ -110,19 +135,22 @@ const AboutPage = () => {
             {[
               {
                 icon: Compass,
-                title: 'Find',
-                description: 'We travel to remote villages and hill stations, seeking out products and traditions that never reached mainstream markets.'
+                title: "Find",
+                description:
+                  "We look beyond the obvious — into villages, hill regions, and local markets — to uncover traditions that rarely travel beyond their home regions.",
               },
               {
                 icon: BookOpen,
-                title: 'Document',
-                description: 'Every item gets a story — how it\'s made, who makes it, why it matters, and what happens if we lose it.'
+                title: "Document",
+                description:
+                  "Every item is explored in full context: how it’s made, who makes it, what makes it distinct, and why place matters.",
               },
               {
                 icon: Heart,
-                title: 'Connect',
-                description: 'We link curious travelers directly to sources, ensuring your interest sustains the people behind the products.'
-              }
+                title: "Connect",
+                description:
+                  "When interest turns into action, we guide it back to the source — ensuring visibility benefits the communities behind the tradition.",
+              },
             ].map((item, index) => (
               <motion.div
                 key={item.title}
@@ -157,25 +185,29 @@ const AboutPage = () => {
             <h2 className="font-serif text-3xl font-bold text-foreground mb-8 text-center">
               What We Stand For
             </h2>
-            
+
             <div className="space-y-6">
               {[
                 {
-                  title: 'Authenticity',
-                  description: 'We only share genuine information gathered through firsthand experiences and conversations with local communities.'
+                  title: "Authenticity",
+                  description:
+                    "We only share what we have directly researched — through firsthand visits, conversations, and regional study.",
                 },
                 {
-                  title: 'Sustainability',
-                  description: 'We promote responsible travel practices that minimize environmental impact and support local economies.'
+                  title: "Sustainability",
+                  description:
+                    "We highlight traditions shaped by season, land, and community — not scaled copies detached from origin.",
                 },
                 {
-                  title: 'Respect',
-                  description: 'We honor the traditions, customs, and privacy of the communities we document, always seeking permission before sharing.'
+                  title: "Respect",
+                  description:
+                    "We treat regional knowledge as living culture, shared responsibly and with care.",
                 },
                 {
-                  title: 'Accessibility',
-                  description: 'We believe everyone should have access to information about these beautiful destinations and their unique offerings.'
-                }
+                  title: "Accessibility",
+                  description:
+                    "We believe regional heritage should be easy to discover — without being simplified or misrepresented.",
+                },
               ].map((value, index) => (
                 <motion.div
                   key={value.title}
