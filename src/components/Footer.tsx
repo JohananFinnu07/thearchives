@@ -1,4 +1,4 @@
-import { MapPin, Instagram, Mail } from 'lucide-react';
+import { MapPin, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,10 +9,13 @@ const Footer = () => {
           <div>
             <a href="#home" className="flex items-center gap-2 mb-4">
               <MapPin className="w-6 h-6" />
-              <span className="font-serif text-xl font-semibold">TheArchives</span>
+              <span className="font-serif text-xl font-semibold">
+                TheArchives
+              </span>
             </a>
             <p className="text-primary-foreground/70 text-sm max-w-xs">
-              Discovering hidden gems and authentic experiences in Andhra Pradesh's most beautiful destinations.
+              Discovering hidden gems and authentic experiences in Andhra
+              Pradesh's most beautiful destinations.
             </p>
           </div>
 
@@ -20,13 +23,22 @@ const Footer = () => {
           <div>
             <h4 className="font-serif text-lg font-semibold mb-4">Explore</h4>
             <nav className="flex flex-col gap-2">
-              <a href="#destinations" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">
+              <a
+                href="/destinations"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+              >
                 Destinations
               </a>
-              <a href="#gems" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">
+              <a
+                href="/hidden-gems"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+              >
                 Hidden Gems
               </a>
-              <a href="#about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">
+              <a
+                href="/about"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+              >
                 About Us
               </a>
             </nav>
@@ -36,15 +48,15 @@ const Footer = () => {
           <div>
             <h4 className="font-serif text-lg font-semibold mb-4">Connect</h4>
             <div className="flex gap-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="mailto:johananfinnutalari@gmail.com" 
+              <a
+                href="mailto:johananfinnutalari@gmail.com"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
                 aria-label="Email"
               >
