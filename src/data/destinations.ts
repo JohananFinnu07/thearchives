@@ -3,6 +3,13 @@ import lambasingiImage from "@/assets/lambasingi-card.jpg";
 import vanajangiImage from "@/assets/vanajangi-card.jpg";
 import paderuImage from "@/assets/paderu-card.jpg";
 import maredumilliImage from "@/assets/maredumilli-card.jpg";
+import tirupatiImage from "@/assets/tirupati.jpg";
+import ethikopakkaImage from "@/assets/ethikoppaka.jpg";
+import gandikotaImage from "@/assets/gandikota.jpg";
+import madagadaImage from "@/assets/madagada.jpg";
+import papikondaluImage from "@/assets/papikondalu.jpg";
+import srisailamImage from "@/assets/srisailam.jpg";
+import vishakapatnamImage from "@/assets/visakhapatnam.jpg";
 
 // Product images
 import arakuCoffeeImage from "@/assets/products/araku-coffee-beans.jpg";
@@ -517,7 +524,7 @@ export const destinations: Destination[] = [
     id: "tirupati",
     name: "Tirupati",
     tagline: "Where devotion meets the forested hills",
-    image: "/images/tirupati.jpg",
+    image: tirupatiImage,
     heroDescription:
       "Beyond the chants and temple bells lies a living landscape of forests, village kitchens, and sacred traditions shaped by centuries of pilgrimage.",
     elevation: "853 m",
@@ -554,7 +561,7 @@ export const destinations: Destination[] = [
     id: "visakhapatnam",
     name: "Visakhapatnam",
     tagline: "Where the Eastern Ghats meet the sea",
-    image: "/images/visakhapatnam.jpg",
+    image: vishakapatnamImage,
     heroDescription:
       "A coastal city shaped by fishermen, hill tribes, spices, and salt-laced winds — layered far deeper than its beaches.",
     elevation: "45 m",
@@ -599,7 +606,7 @@ export const destinations: Destination[] = [
     id: "etikoppaka",
     name: "Etikoppaka",
     tagline: "A village that turns wood into memory",
-    image: "/images/etikoppaka.jpg",
+    image: ethikopakkaImage,
     heroDescription:
       "Bright lacquered toys shaped by hand, fire, and patience — carrying stories across generations.",
     elevation: "25 m",
@@ -646,7 +653,7 @@ export const destinations: Destination[] = [
     id: "gandikota",
     name: "Gandikota",
     tagline: "India’s silent canyon of stone and wind",
-    image: "/images/gandikota.jpg",
+    image: gandikotaImage,
     heroDescription:
       "A vast gorge carved by time, guarding stories of survival, stone, and forgotten food cultures.",
     elevation: "300 m",
@@ -682,7 +689,7 @@ export const destinations: Destination[] = [
     id: "madagada",
     name: "Madagada",
     tagline: "Clay shaped by fire and folklore",
-    image: "/images/madagada.jpg",
+    image: madagadaImage,
     heroDescription:
       "A village where earth becomes cookware, ritual, and everyday survival.",
     elevation: "120 m",
@@ -765,7 +772,7 @@ export const destinations: Destination[] = [
     id: "papikondalu",
     name: "Papikondalu",
     tagline: "Forests folded around a river",
-    image: "/images/papikondalu.jpg",
+    image: papikondaluImage,
     heroDescription:
       "Mist-covered hills where tribal life, forest food, and the Godavari flow together.",
     elevation: "300–900 m",
@@ -789,7 +796,7 @@ export const destinations: Destination[] = [
     id: "srisailam-nallamala",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred hills guarded by wilderness",
-    image: "/images/srisailam.jpg",
+    image: srisailamImage,
     heroDescription:
       "A spiritual center surrounded by one of South India’s oldest forest ecosystems.",
     elevation: "450 m",
