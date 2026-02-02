@@ -514,6 +514,131 @@ export const destinations: Destination[] = [
       },
     ],
   },
+  {
+    id: "tirupati",
+    name: "Tirupati",
+    tagline: "Where devotion meets the forested hills",
+    image: "/images/tirupati.jpg",
+    heroDescription:
+      "Beyond the chants and temple bells lies a living landscape of forests, village kitchens, and sacred traditions shaped by centuries of pilgrimage.",
+    elevation: "853 m",
+    bestTime: "September – February",
+    temperature: "18°C – 32°C",
+    about:
+      "Tirupati is often seen only through the lens of devotion, yet its soul stretches far beyond temple corridors. Nestled against the Tirumala hills, the region nurtures ancient forest foods, temple-inspired cuisines, and age-old crafts shaped by constant movement of pilgrims. Seasonal produce, traditional prasadam techniques, and village rituals quietly coexist with faith, forming a cultural ecosystem rarely noticed by visitors.",
+    products: [],
+  },
+  {
+    id: "visakhapatnam",
+    name: "Visakhapatnam",
+    tagline: "Where the Eastern Ghats meet the sea",
+    image: "/images/visakhapatnam.jpg",
+    heroDescription:
+      "A coastal city shaped by fishermen, hill tribes, spices, and salt-laced winds — layered far deeper than its beaches.",
+    elevation: "45 m",
+    bestTime: "October – March",
+    temperature: "20°C – 34°C",
+    about:
+      "Visakhapatnam is a threshold — between hills and ocean, tribal interiors and global trade routes. While known for beaches and ports, its deeper identity lives in fishing hamlets, hill-grown spices, dried seafood traditions, and markets where forest produce meets the sea. Vizag acts as a cultural gateway, carrying the flavors and crafts of surrounding tribal regions into the modern world.",
+    products: [],
+  },
+  {
+    id: "etikoppaka",
+    name: "Etikoppaka",
+    tagline: "A village that turns wood into memory",
+    image: "/images/etikoppaka.jpg",
+    heroDescription:
+      "Bright lacquered toys shaped by hand, fire, and patience — carrying stories across generations.",
+    elevation: "25 m",
+    bestTime: "November – February",
+    temperature: "22°C – 35°C",
+    about:
+      "Etikoppaka is not an industry — it is a rhythm. For over four centuries, artisans here have transformed locally sourced wood into lacquered toys using natural dyes, seeds, and tree resins. Every object reflects a slow craft philosophy where sustainability, storytelling, and skill pass silently from parent to child, resisting mass production.",
+    products: [],
+  },
+  {
+    id: "gandikota",
+    name: "Gandikota",
+    tagline: "India’s silent canyon of stone and wind",
+    image: "/images/gandikota.jpg",
+    heroDescription:
+      "A vast gorge carved by time, guarding stories of survival, stone, and forgotten food cultures.",
+    elevation: "300 m",
+    bestTime: "October – February",
+    temperature: "15°C – 38°C",
+    about:
+      "Gandikota’s dramatic canyon hides a quieter narrative — one of hardy village life shaped by drought, stone, and seasonal rivers. Traditional grains, sun-dried foods, and resilient cooking techniques evolved here not for taste alone, but for survival. The land teaches restraint, patience, and respect for scarcity.",
+    products: [],
+  },
+  {
+    id: "madagada",
+    name: "Madagada",
+    tagline: "Clay shaped by fire and folklore",
+    image: "/images/madagada.jpg",
+    heroDescription:
+      "A village where earth becomes cookware, ritual, and everyday survival.",
+    elevation: "120 m",
+    bestTime: "November – February",
+    temperature: "20°C – 36°C",
+    about:
+      "Madagada is known quietly among rural kitchens for its earthenware — pots believed to enhance flavor, preserve nutrients, and cool naturally. Made from locally sourced clay and fired using traditional kilns, these vessels are inseparable from food rituals, seasonal cooking, and indigenous wisdom that modern materials struggle to replicate.",
+    products: [],
+  },
+  {
+    id: "konaseema",
+    name: "Konaseema / Godavari",
+    tagline: "Where rivers write recipes",
+    image: "/images/konaseema.jpg",
+    heroDescription:
+      "A fertile delta shaped by coconut palms, backwaters, and slow-cooked traditions.",
+    elevation: "Sea level",
+    bestTime: "November – February",
+    temperature: "18°C – 34°C",
+    about:
+      "Konaseema is abundance made gentle. Fed by the Godavari’s branches, the region produces coconuts, rice, river fish, and leaf-wrapped delicacies that define Andhra’s comfort food culture. Here, preservation techniques, sweets, and pickles evolved around humidity, festivals, and river rhythms rather than markets.",
+    products: [],
+  },
+  {
+    id: "papikondalu",
+    name: "Papikondalu",
+    tagline: "Forests folded around a river",
+    image: "/images/papikondalu.jpg",
+    heroDescription:
+      "Mist-covered hills where tribal life, forest food, and the Godavari flow together.",
+    elevation: "300–900 m",
+    bestTime: "October – February",
+    temperature: "15°C – 30°C",
+    about:
+      "Papikondalu is a living archive of tribal ecology. Communities here rely on forest honey, tubers, leafy greens, and river fish harvested with restraint and ritual. Food is seasonal, knowledge is oral, and survival depends on harmony with the forest rather than control over it.",
+    products: [],
+  },
+  {
+    id: "srisailam-nallamala",
+    name: "Srisailam – Nallamala Forest",
+    tagline: "Sacred hills guarded by wilderness",
+    image: "/images/srisailam.jpg",
+    heroDescription:
+      "A spiritual center surrounded by one of South India’s oldest forest ecosystems.",
+    elevation: "450 m",
+    bestTime: "October – February",
+    temperature: "16°C – 35°C",
+    about:
+      "Srisailam stands at the heart of the Nallamala forest, where temple traditions coexist with deep tribal knowledge. The forest supplies medicinal plants, honey, millets, and wild produce that sustain local communities. Here, spirituality is inseparable from ecology.",
+    products: [],
+  },
+  {
+    id: "nellore",
+    name: "Nellore",
+    tagline: "Fields, salt air, and slow harvests",
+    image: "/images/nellore.jpg",
+    heroDescription: "A land of rice, seafood, and understated abundance.",
+    elevation: "20 m",
+    bestTime: "November – February",
+    temperature: "22°C – 36°C",
+    about:
+      "Nellore’s identity is rooted in agriculture and the sea. From salt pans and paddy fields to prawn-rich coastal cuisine, the region’s food systems evolved around patience and scale. Traditional rice varieties, sun-dried seafood, and pickling methods form its quiet culinary backbone.",
+    products: [],
+  },
 ];
 
 export const getDestinationById = (id: string): Destination | undefined => {
