@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion';
-import { MapPin, Mountain, Thermometer, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { destinations } from '@/data/destinations';
+import { motion } from "framer-motion";
+import { MapPin, Mountain, Thermometer, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { destinations } from "@/data/destinations";
 
 const DestinationsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
@@ -23,8 +23,9 @@ const DestinationsPage = () => {
               Explore Our <span className="text-primary">Destinations</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Discover the untouched beauty of Eastern Ghats through these four magnificent destinations, 
-              each offering unique landscapes, cultures, and experiences.
+              Discover the untouched beauty of Eastern Ghats through these four
+              magnificent destinations, each offering unique landscapes,
+              cultures, and experiences.
             </p>
           </motion.div>
         </div>
@@ -51,15 +52,21 @@ const DestinationsPage = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     </div>
-                    
+
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <div className="flex items-center gap-2 mb-2">
                         <MapPin className="w-4 h-4 text-accent" />
-                        <span className="text-sm text-white/80">{destination.tagline}</span>
+                        <span className="text-sm text-white/80">
+                          {destination.tagline}
+                        </span>
                       </div>
-                      <h3 className="font-serif text-2xl font-bold mb-2">{destination.name}</h3>
-                      <p className="text-white/80 text-sm mb-4 line-clamp-2">{destination.heroDescription}</p>
-                      
+                      <h3 className="font-serif text-2xl font-bold mb-2">
+                        {destination.name}
+                      </h3>
+                      <p className="text-white/80 text-sm mb-4 line-clamp-2">
+                        {destination.heroDescription}
+                      </p>
+
                       <div className="flex flex-wrap gap-4 text-sm">
                         <div className="flex items-center gap-1">
                           <Mountain className="w-4 h-4 text-accent" />
@@ -88,10 +95,10 @@ const DestinationsPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: 'Destinations', value: '4' },
-              { label: 'Local Products', value: '20+' },
-              { label: 'Elevation Range', value: '900-1400m' },
-              { label: 'Best Months', value: 'Oct-Feb' },
+              { label: "Destinations", value: destinations.length },
+              { label: "Local Products", value: "30+" },
+              { label: "Communities & Traditions Featured", value: "15+" },
+              { label: "Stories Preserved", value: "40+" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -103,7 +110,9 @@ const DestinationsPage = () => {
                 <div className="font-serif text-3xl md:text-4xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground text-sm">{stat.label}</div>
+                <div className="text-muted-foreground text-sm">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </div>
