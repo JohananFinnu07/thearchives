@@ -10,6 +10,8 @@ import madagadaImage from "@/assets/madagada.jpg";
 import papikondaluImage from "@/assets/papikondalu.jpg";
 import srisailamImage from "@/assets/srisailam.jpg";
 import vishakapatnamImage from "@/assets/visakhapatnam.jpg";
+import nelloreImage from "@/assets/nellore.jpg";
+import konaseemaImage from "@/assets/konaseema.jpg";
 
 // Product images
 import arakuCoffeeImage from "@/assets/products/araku-coffee-beans.jpg";
@@ -715,7 +717,7 @@ export const destinations: Destination[] = [
     id: "konaseema",
     name: "Konaseema / Godavari",
     tagline: "Where rivers write recipes",
-    image: "/images/konaseema.jpg",
+    image: konaseemaImage,
     heroDescription:
       "A fertile delta shaped by coconut palms, backwaters, and slow-cooked traditions.",
     elevation: "Sea level",
@@ -838,7 +840,7 @@ export const destinations: Destination[] = [
     id: "nellore",
     name: "Nellore",
     tagline: "Fields, salt air, and slow harvests",
-    image: "/images/nellore.jpg",
+    image: nelloreImage,
     heroDescription: "A land of rice, seafood, and understated abundance.",
     elevation: "20 m",
     bestTime: "November – February",
