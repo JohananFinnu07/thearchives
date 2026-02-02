@@ -1,32 +1,35 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import GemCard from './GemCard';
-import coffeeImage from '@/assets/araku-coffee.jpg';
-import craftsImage from '@/assets/tribal-crafts.jpg';
-import honeyImage from '@/assets/wild-honey.jpg';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import GemCard from "./GemCard";
+import coffeeImage from "@/assets/araku-coffee.jpg";
+import craftsImage from "@/assets/tribal-crafts.jpg";
+import honeyImage from "@/assets/wild-honey.jpg";
 
 // Get a sample of underrated gems from different destinations for the homepage
 const sampleGems = [
   {
-    name: 'Araku Coffee',
-    location: 'Araku Valley',
-    locationId: 'araku-valley',
-    description: 'Organic, shade-grown coffee cultivated by tribal communities. Award-winning beans with a unique flavor profile shaped by the Eastern Ghats.',
+    name: "Araku Coffee",
+    location: "Araku Valley",
+    locationId: "araku-valley",
+    description:
+      "Organic, shade-grown coffee cultivated by tribal communities. Award-winning beans with a unique flavor profile shaped by the Eastern Ghats.",
     image: coffeeImage,
   },
   {
-    name: 'Tribal Bamboo Crafts',
-    location: 'Paderu Region',
-    locationId: 'paderu',
-    description: 'Handwoven baskets, mats, and decorative items crafted by local artisans using traditional techniques passed down through generations.',
+    name: "Tribal Bamboo Crafts",
+    location: "Paderu Region",
+    locationId: "paderu",
+    description:
+      "Handwoven baskets, mats, and decorative items crafted by local artisans using traditional techniques passed down through generations.",
     image: craftsImage,
   },
   {
-    name: 'Wild Forest Honey',
-    location: 'Maredumilli',
-    locationId: 'maredumilli',
-    description: 'Pure, unprocessed honey harvested from forest hives. Rich in medicinal properties and sustainably collected by tribal honey hunters.',
+    name: "Wild Forest Honey",
+    location: "Maredumilli",
+    locationId: "maredumilli",
+    description:
+      "Pure, unprocessed honey harvested from forest hives. Rich in medicinal properties and sustainably collected by tribal honey hunters.",
     image: honeyImage,
   },
 ];
@@ -47,14 +50,15 @@ const HiddenGems = () => {
             What the Markets Miss
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-            Treasures That <span className="italic text-primary">Stay Local</span>
+            Treasures That{" "}
+            <span className="italic text-primary">Stay Local</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            The best coffee never leaves the valley. The finest honey stays with the tribe. 
-            Here's what we found before it disappeared.
+            The best coffee never leaves the valley. The finest honey stays with
+            the tribe. Here's what we found before it disappeared.
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="gradient-accent text-accent-foreground border-0 px-8 font-medium hover:scale-105 transition-transform"
             asChild
           >

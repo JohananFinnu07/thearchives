@@ -152,17 +152,16 @@ export const destinations: Destination[] = [
         name: "Bodeng Purugu",
         type: "underrated",
         description:
-          "It is a rare tribal food found inside Eetha Dumpa in the forests of Araku valley.",
+          "A rare tribal forest food found inside Eetha Dumpa (wild palm pith) in the forests of the Araku Valley.",
         significance:
-          "Grown alongside coffee plants, Araku black pepper benefits from the same ideal growing conditions. The pepper has higher essential oil content due to the slow ripening in cool mountain air, making it sought after by gourmet chefs.",
+          "Bodeng Purugu is a deeply indigenous food knowledge, consumed by tribal communities as a seasonal forest protein. Its discovery inside the Eetha Dumpa reflects generations of intimate understanding of forest ecology, where food is gathered without cultivation and eaten in rhythm with nature’s cycles.",
         makingProcess:
-          "Pepper vines are trained to climb silver oak trees in coffee plantations. Berries are harvested when they begin turning red, then sun-dried on bamboo mats for 5-7 days until they shrivel and blacken. Hand-sorted to remove imperfect corns.",
+          "During specific seasons, the Eetha Dumpa is carefully split open to reveal Bodeng Purugu growing within. The larvae are gently collected, cleaned, and either lightly roasted or cooked directly over fire without oils, preserving their natural flavor and nutrients. Harvesting is done selectively to allow forest regeneration.",
         uses: [
-          "Gourmet cooking",
-          "Ayurvedic medicine",
-          "Digestive remedy",
-          "Meat preservation",
-          "Spice blends",
+          "Seasonal tribal delicacy",
+          "High-protein forest food",
+          "Emergency nutrition during forest foraging",
+          "Cultural and ritual consumption",
         ],
         image: blackPepperImage,
       },
@@ -526,7 +525,30 @@ export const destinations: Destination[] = [
     temperature: "18°C – 32°C",
     about:
       "Tirupati is often seen only through the lens of devotion, yet its soul stretches far beyond temple corridors. Nestled against the Tirumala hills, the region nurtures ancient forest foods, temple-inspired cuisines, and age-old crafts shaped by constant movement of pilgrims. Seasonal produce, traditional prasadam techniques, and village rituals quietly coexist with faith, forming a cultural ecosystem rarely noticed by visitors.",
-    products: [],
+    products: [
+      {
+        name: "Dry Flower Agarbathis",
+        type: "underrated",
+        description:
+          "Incense sticks made from recycled temple flowers, sun-dried and naturally bound.",
+        significance:
+          "Transforms sacred waste into a sustainable livelihood while preserving devotional fragrance traditions.",
+        makingProcess:
+          "Collected temple flowers are dried, powdered, blended with natural binders, and hand-rolled into agarbathis.",
+        uses: ["Daily worship", "Meditation", "Natural fragrance"],
+      },
+      {
+        name: "Panchagavya Products",
+        type: "famous",
+        description:
+          "Traditional formulations derived from cow-based inputs used in rituals and organic farming.",
+        significance:
+          "Deeply rooted in temple culture and Vedic practices, symbolizing purity and holistic living.",
+        makingProcess:
+          "Prepared through controlled fermentation of five cow-derived ingredients following ritual protocols.",
+        uses: ["Ritual use", "Organic farming", "Traditional wellness"],
+      },
+    ],
   },
   {
     id: "visakhapatnam",
@@ -540,7 +562,38 @@ export const destinations: Destination[] = [
     temperature: "20°C – 34°C",
     about:
       "Visakhapatnam is a threshold — between hills and ocean, tribal interiors and global trade routes. While known for beaches and ports, its deeper identity lives in fishing hamlets, hill-grown spices, dried seafood traditions, and markets where forest produce meets the sea. Vizag acts as a cultural gateway, carrying the flavors and crafts of surrounding tribal regions into the modern world.",
-    products: [],
+    products: [
+      {
+        name: "Palm Jaggery & Sugarcane Vinegar",
+        type: "famous",
+        description:
+          "Unrefined sweeteners and vinegars extracted using traditional coastal methods.",
+        significance:
+          "Represents pre-industrial sugar practices and coastal fermentation knowledge.",
+        makingProcess:
+          "Sugarcane juice is boiled in open pans or naturally fermented for vinegar.",
+        uses: ["Traditional cooking", "Health tonics", "Natural sweetening"],
+      },
+      {
+        name: "Dry Fish Varieties & Curry Pastes",
+        type: "underrated",
+        description:
+          "Sun-dried coastal fish and spice-ground pastes used in deep-flavor Andhra cooking.",
+        significance:
+          "A survival cuisine developed by fishing communities to preserve seasonal abundance.",
+        makingProcess:
+          "Fresh catch is salted, sun-dried, and blended with region-specific spice mixes.",
+        uses: ["Fish curries", "Dry fry dishes", "Travel-friendly protein"],
+      },
+      {
+        name: "Salted Seafood Snacks",
+        type: "underrated",
+        description: "Crunchy, salted seafood bites enjoyed along the coast.",
+        significance: "Reflects informal street and boat-life food culture.",
+        makingProcess: "Small seafood is salted, dried, and lightly roasted.",
+        uses: ["Snacking", "Side dishes"],
+      },
+    ],
   },
   {
     id: "etikoppaka",
@@ -554,7 +607,40 @@ export const destinations: Destination[] = [
     temperature: "22°C – 35°C",
     about:
       "Etikoppaka is not an industry — it is a rhythm. For over four centuries, artisans here have transformed locally sourced wood into lacquered toys using natural dyes, seeds, and tree resins. Every object reflects a slow craft philosophy where sustainability, storytelling, and skill pass silently from parent to child, resisting mass production.",
-    products: [],
+    products: [
+      {
+        name: "Salt & Pepper Shakers",
+        type: "underrated",
+        description:
+          "Minimal lacquered wooden tableware crafted using the Etikoppaka technique.",
+        significance:
+          "Brings a centuries-old toy-making craft into modern kitchens.",
+        makingProcess:
+          "Turned on a lathe and colored using natural dyes and resin-based lacquer.",
+        uses: ["Dining tableware", "Decor accents"],
+      },
+      {
+        name: "Ankudu Wood Kitchenware",
+        type: "famous",
+        description:
+          "Eco-friendly kitchen tools made from locally sourced Ankudu wood.",
+        significance:
+          "Sustainable, toxin-free alternatives rooted in village craftsmanship.",
+        makingProcess:
+          "Hand-carved, polished, and naturally lacquered without chemicals.",
+        uses: ["Cooking utensils", "Serving tools"],
+      },
+      {
+        name: "Minimalist Table Lamps",
+        type: "underrated",
+        description:
+          "Contemporary lighting pieces inspired by traditional wood-turning skills.",
+        significance: "Shows how heritage crafts can adapt to modern design.",
+        makingProcess:
+          "Lathe-turned wooden bases finished with natural lacquer.",
+        uses: ["Home decor", "Ambient lighting"],
+      },
+    ],
   },
   {
     id: "gandikota",
@@ -568,7 +654,29 @@ export const destinations: Destination[] = [
     temperature: "15°C – 38°C",
     about:
       "Gandikota’s dramatic canyon hides a quieter narrative — one of hardy village life shaped by drought, stone, and seasonal rivers. Traditional grains, sun-dried foods, and resilient cooking techniques evolved here not for taste alone, but for survival. The land teaches restraint, patience, and respect for scarcity.",
-    products: [],
+    products: [
+      {
+        name: "Sun-Dried Vegetables",
+        type: "underrated",
+        description:
+          "Seasonal vegetables preserved using intense sun and dry winds.",
+        significance:
+          "A drought-resilient food tradition developed for arid landscapes.",
+        makingProcess:
+          "Vegetables are sliced, salted lightly, and sun-dried for long storage.",
+        uses: ["Curries", "Emergency food", "Travel meals"],
+      },
+      {
+        name: "Suddha Rai Stone Carvings",
+        type: "famous",
+        description:
+          "Hand-carved stone artifacts made from locally available rock.",
+        significance:
+          "Reflects the region’s historical relationship with stone and fort architecture.",
+        makingProcess: "Chiseled manually using traditional carving tools.",
+        uses: ["Home decor", "Temple artifacts"],
+      },
+    ],
   },
   {
     id: "madagada",
@@ -582,7 +690,19 @@ export const destinations: Destination[] = [
     temperature: "20°C – 36°C",
     about:
       "Madagada is known quietly among rural kitchens for its earthenware — pots believed to enhance flavor, preserve nutrients, and cool naturally. Made from locally sourced clay and fired using traditional kilns, these vessels are inseparable from food rituals, seasonal cooking, and indigenous wisdom that modern materials struggle to replicate.",
-    products: [],
+    products: [
+      {
+        name: "Madagada Black Pottery",
+        type: "famous",
+        description:
+          "Smoke-fired black earthenware used for cooking and storage.",
+        significance:
+          "Believed to enhance flavor and maintain food temperature naturally.",
+        makingProcess:
+          "Clay pots are fired in low-oxygen pits using organic fuel.",
+        uses: ["Cooking", "Water storage", "Ritual use"],
+      },
+    ],
   },
   {
     id: "konaseema",
@@ -596,7 +716,50 @@ export const destinations: Destination[] = [
     temperature: "18°C – 34°C",
     about:
       "Konaseema is abundance made gentle. Fed by the Godavari’s branches, the region produces coconuts, rice, river fish, and leaf-wrapped delicacies that define Andhra’s comfort food culture. Here, preservation techniques, sweets, and pickles evolved around humidity, festivals, and river rhythms rather than markets.",
-    products: [],
+    products: [
+      {
+        name: "Coconut Jaggery",
+        type: "famous",
+        description: "Unrefined sweetener made from coconut sap.",
+        significance: "Central to delta sweets and traditional energy foods.",
+        makingProcess:
+          "Sap is collected, filtered, and slow-boiled to solidify.",
+        uses: ["Sweets", "Beverages", "Healthy sweetener"],
+      },
+      {
+        name: "Leaf-Wrapped Sweets",
+        type: "underrated",
+        description: "Traditional sweets steamed or set in natural leaves.",
+        significance: "Zero-waste packaging rooted in ritual cooking.",
+        makingProcess:
+          "Sweet mixtures are wrapped in leaves and gently cooked.",
+        uses: ["Festivals", "Offerings"],
+      },
+      {
+        name: "Athreyapuram Pootharekulu",
+        type: "famous",
+        description: "Paper-thin sweet layered with jaggery and ghee.",
+        significance: "A GI-recognized delicacy of the Godavari delta.",
+        makingProcess: "Rice starch sheets are sun-dried and hand-layered.",
+        uses: ["Festive sweet", "Gifting"],
+      },
+      {
+        name: "Kakinada Gottam Kaja",
+        type: "famous",
+        description: "Crisp fried sweet soaked in sugar syrup.",
+        significance: "Represents coastal sweet-making mastery.",
+        makingProcess: "Fried dough shells are dipped in flavored syrup.",
+        uses: ["Celebrations", "Snacks"],
+      },
+      {
+        name: "Pulasa Fish",
+        type: "famous",
+        description: "Highly prized seasonal fish from the Godavari.",
+        significance: "Symbol of river abundance and seasonal eating.",
+        makingProcess: "Caught during monsoon migration season.",
+        uses: ["Curries", "Traditional feasts"],
+      },
+    ],
   },
   {
     id: "papikondalu",
@@ -610,7 +773,17 @@ export const destinations: Destination[] = [
     temperature: "15°C – 30°C",
     about:
       "Papikondalu is a living archive of tribal ecology. Communities here rely on forest honey, tubers, leafy greens, and river fish harvested with restraint and ritual. Food is seasonal, knowledge is oral, and survival depends on harmony with the forest rather than control over it.",
-    products: [],
+    products: [
+      {
+        name: "Bamboo Fish Traps",
+        type: "underrated",
+        description: "Handwoven bamboo traps used for river fishing.",
+        significance:
+          "An eco-sensitive fishing method perfected by tribal communities.",
+        makingProcess: "Split bamboo is woven into conical traps.",
+        uses: ["Fishing", "Decor", "Cultural display"],
+      },
+    ],
   },
   {
     id: "srisailam-nallamala",
@@ -624,7 +797,35 @@ export const destinations: Destination[] = [
     temperature: "16°C – 35°C",
     about:
       "Srisailam stands at the heart of the Nallamala forest, where temple traditions coexist with deep tribal knowledge. The forest supplies medicinal plants, honey, millets, and wild produce that sustain local communities. Here, spirituality is inseparable from ecology.",
-    products: [],
+    products: [
+      {
+        name: "Herbal Oils & Forest Roots",
+        type: "underrated",
+        description: "Medicinal extracts prepared from forest-grown plants.",
+        significance: "Part of indigenous healing knowledge passed orally.",
+        makingProcess:
+          "Roots and herbs are sun-dried and slow-infused in oils.",
+        uses: ["Traditional medicine", "Massage"],
+      },
+      {
+        name: "Chinch Bamboo Crafts",
+        type: "underrated",
+        description: "Utility and decor items made from native bamboo.",
+        significance:
+          "Sustainable forest craft with minimal ecological impact.",
+        makingProcess: "Hand-cut bamboo is shaped and cured naturally.",
+        uses: ["Storage", "Home decor"],
+      },
+      {
+        name: "Forest Honey",
+        type: "famous",
+        description: "Wild honey harvested seasonally from forest hives.",
+        significance:
+          "Collected using ritual methods that respect bee colonies.",
+        makingProcess: "Honey is extracted manually without chemicals.",
+        uses: ["Food", "Medicine", "Ritual offerings"],
+      },
+    ],
   },
   {
     id: "nellore",
@@ -637,7 +838,24 @@ export const destinations: Destination[] = [
     temperature: "22°C – 36°C",
     about:
       "Nellore’s identity is rooted in agriculture and the sea. From salt pans and paddy fields to prawn-rich coastal cuisine, the region’s food systems evolved around patience and scale. Traditional rice varieties, sun-dried seafood, and pickling methods form its quiet culinary backbone.",
-    products: [],
+    products: [
+      {
+        name: "Udayagiri Wooden Cutlery",
+        type: "underrated",
+        description: "Hand-carved wooden spoons and ladles.",
+        significance: "Preserves regional woodworking traditions.",
+        makingProcess: "Locally sourced wood is carved and polished by hand.",
+        uses: ["Cooking", "Serving"],
+      },
+      {
+        name: "Citrus Products",
+        type: "famous",
+        description: "Preserved citrus-based foods and condiments.",
+        significance: "Adapted to coastal climate and long shelf-life needs.",
+        makingProcess: "Fruits are sun-cured, salted, or pickled.",
+        uses: ["Pickles", "Flavoring"],
+      },
+    ],
   },
 ];
 
