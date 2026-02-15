@@ -795,7 +795,7 @@ export const destinations: Destination[] = [
     ],
   },
   {
-    id: "srisailam nallamala forest",
+    id: "srisailam",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred hills guarded by wilderness",
     image: srisailamImage,

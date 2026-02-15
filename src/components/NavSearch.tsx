@@ -50,7 +50,7 @@ const NavSearch = () => {
     destinations.forEach((dest) => {
       // Destination match
       if (dest.name.toLowerCase().includes(lower)) {
-        const DestinationSlug = slugify(dest.name);
+        const DestinationSlug = slugify(dest.id.toLowerCase());
         matches.push({
           title: dest.name,
           subtitle: "Destination",
