@@ -715,7 +715,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "konaseema",
-    name: "Konaseema / Godavari",
+    name: "Konaseema Godavari",
     tagline: "Where rivers write recipes",
     image: konaseemaImage,
     heroDescription:
@@ -795,7 +795,7 @@ export const destinations: Destination[] = [
     ],
   },
   {
-    id: "srisailam-nallamala",
+    id: "Srisailam Nallamala",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred hills guarded by wilderness",
     image: srisailamImage,
