@@ -1,8 +1,8 @@
-import { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { destinations } from '@/data/destinations';
+import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { destinations } from "@/data/destinations";
 
 const Destinations = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -11,7 +11,8 @@ const Destinations = () => {
 
   const checkScrollPosition = () => {
     if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
       setCanScrollLeft(scrollLeft > 0);
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
     }
@@ -20,24 +21,27 @@ const Destinations = () => {
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (container) {
-      container.addEventListener('scroll', checkScrollPosition);
+      container.addEventListener("scroll", checkScrollPosition);
       checkScrollPosition();
-      return () => container.removeEventListener('scroll', checkScrollPosition);
+      return () => container.removeEventListener("scroll", checkScrollPosition);
     }
   }, []);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
       scrollContainerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
       });
     }
   };
 
   return (
-    <section id="destinations" className="py-24 lg:py-32 bg-background overflow-hidden">
+    <section
+      id="destinations"
+      className="py-24 lg:py-32 bg-background overflow-hidden"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -51,10 +55,12 @@ const Destinations = () => {
             Off the Tourist Trail
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-4">
-            Places Where <span className="italic text-primary">Time Moves Slowly</span>
+            Places Where{" "}
+            <span className="italic text-primary">Time Moves Slowly</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Hill stations where tribal traditions still breathe, coffee grows wild, and the outside world feels far away.
+            Hill stations where tribal traditions still breathe, coffee grows
+            wild, and the outside world feels far away.
           </p>
         </motion.div>
       </div>
@@ -65,9 +71,9 @@ const Destinations = () => {
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: canScrollLeft ? 1 : 0 }}
-          onClick={() => scroll('left')}
+          onClick={() => scroll("left")}
           className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm border border-border shadow-elevated flex items-center justify-center text-foreground hover:bg-background transition-colors disabled:opacity-0"
-          style={{ pointerEvents: canScrollLeft ? 'auto' : 'none' }}
+          style={{ pointerEvents: canScrollLeft ? "auto" : "none" }}
           aria-label="Scroll left"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -76,9 +82,9 @@ const Destinations = () => {
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: canScrollRight ? 1 : 0 }}
-          onClick={() => scroll('right')}
+          onClick={() => scroll("right")}
           className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm border border-border shadow-elevated flex items-center justify-center text-foreground hover:bg-background transition-colors disabled:opacity-0"
-          style={{ pointerEvents: canScrollRight ? 'auto' : 'none' }}
+          style={{ pointerEvents: canScrollRight ? "auto" : "none" }}
           aria-label="Scroll right"
         >
           <ChevronRight className="w-6 h-6" />
@@ -88,7 +94,7 @@ const Destinations = () => {
         <div
           ref={scrollContainerRef}
           className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 sm:px-8 lg:px-16 pb-4 scrollbar-hide"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {destinations.map((destination, index) => (
             <motion.div

@@ -105,7 +105,7 @@ export const destinations: Destination[] = [
         image: tribalBambooCraftImage,
       },
       {
-        name: "Wild Turmeric (Kasturi Manjal)",
+        name: "Wild Turmeric Kasturi Manjal",
         type: "underrated",
         description:
           "A rare variety of turmeric found in the forests of Araku, known for its exceptional fragrance and potency.",
@@ -399,7 +399,7 @@ export const destinations: Destination[] = [
         image: dhokraArtImage,
       },
       {
-        name: "Jack Fruit Chips & Products",
+        name: "Jack Fruit Chips and Products",
         type: "underrated",
         description:
           "Dried jackfruit chips and preserves made from the abundant jackfruit trees of the region.",
@@ -573,7 +573,7 @@ export const destinations: Destination[] = [
       "Visakhapatnam is a threshold — between hills and ocean, tribal interiors and global trade routes. While known for beaches and ports, its deeper identity lives in fishing hamlets, hill-grown spices, dried seafood traditions, and markets where forest produce meets the sea. Vizag acts as a cultural gateway, carrying the flavors and crafts of surrounding tribal regions into the modern world.",
     products: [
       {
-        name: "Palm Jaggery & Sugarcane Vinegar",
+        name: "Palm Jaggery and Sugarcane Vinegar",
         type: "famous",
         description:
           "Unrefined sweeteners and vinegars extracted using traditional coastal methods.",
@@ -584,7 +584,7 @@ export const destinations: Destination[] = [
         uses: ["Traditional cooking", "Health tonics", "Natural sweetening"],
       },
       {
-        name: "Dry Fish Varieties & Curry Pastes",
+        name: "Dry Fish Varieties and Curry Pastes",
         type: "underrated",
         description:
           "Sun-dried coastal fish and spice-ground pastes used in deep-flavor Andhra cooking.",
@@ -618,7 +618,7 @@ export const destinations: Destination[] = [
       "Etikoppaka is not an industry — it is a rhythm. For over four centuries, artisans here have transformed locally sourced wood into lacquered toys using natural dyes, seeds, and tree resins. Every object reflects a slow craft philosophy where sustainability, storytelling, and skill pass silently from parent to child, resisting mass production.",
     products: [
       {
-        name: "Salt & Pepper Shakers",
+        name: "Salt and Pepper Shakers",
         type: "underrated",
         description:
           "Minimal lacquered wooden tableware crafted using the Etikoppaka technique.",
@@ -665,7 +665,7 @@ export const destinations: Destination[] = [
       "Gandikota’s dramatic canyon hides a quieter narrative — one of hardy village life shaped by drought, stone, and seasonal rivers. Traditional grains, sun-dried foods, and resilient cooking techniques evolved here not for taste alone, but for survival. The land teaches restraint, patience, and respect for scarcity.",
     products: [
       {
-        name: "Sun-Dried Vegetables",
+        name: "Sun Dried Vegetables",
         type: "underrated",
         description:
           "Seasonal vegetables preserved using intense sun and dry winds.",
@@ -715,7 +715,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "konaseema",
-    name: "Konaseema / Godavari",
+    name: "Konaseema - Godavari",
     tagline: "Where rivers write recipes",
     image: konaseemaImage,
     heroDescription:
@@ -736,7 +736,7 @@ export const destinations: Destination[] = [
         uses: ["Sweets", "Beverages", "Healthy sweetener"],
       },
       {
-        name: "Leaf-Wrapped Sweets",
+        name: "Leaf Wrapped Sweets",
         type: "underrated",
         description: "Traditional sweets steamed or set in natural leaves.",
         significance: "Zero-waste packaging rooted in ritual cooking.",
@@ -795,7 +795,7 @@ export const destinations: Destination[] = [
     ],
   },
   {
-    id: "srisailam-nallamala",
+    id: "srisailam",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred hills guarded by wilderness",
     image: srisailamImage,
@@ -808,7 +808,7 @@ export const destinations: Destination[] = [
       "Srisailam stands at the heart of the Nallamala forest, where temple traditions coexist with deep tribal knowledge. The forest supplies medicinal plants, honey, millets, and wild produce that sustain local communities. Here, spirituality is inseparable from ecology.",
     products: [
       {
-        name: "Herbal Oils & Forest Roots",
+        name: "Herbal Oils and Forest Roots",
         type: "underrated",
         description: "Medicinal extracts prepared from forest-grown plants.",
         significance: "Part of indigenous healing knowledge passed orally.",

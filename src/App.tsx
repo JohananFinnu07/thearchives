@@ -14,6 +14,7 @@ import GalleryPage from "./pages/GalleryPage";
 import LocationGalleryPage from "./pages/LocationGalleryPage";
 import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
+import SearchPage from "./components/NavSearch";
 
 const queryClient = new QueryClient();
 
@@ -29,11 +30,31 @@ const App = () => (
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route path="/hidden-gems" element={<HiddenGemsPage />} />
           <Route path="/hidden-gems/:id" element={<LocationHiddenGemsPage />} />
-          <Route path="/hidden-gems/:locationId/:productName" element={<ProductDetailPage />} />
+          <Route
+            path="/hidden-gems/:locationId/:productName"
+            element={<ProductDetailPage />}
+          />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallery/:id" element={<LocationGalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/destination/:id" element={<DestinationDetail />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/destinations" element={<DestinationsPage />} />
+          <Route
+            path="/destination/:destinationId"
+            element={<DestinationsPage />}
+          />
+
+          <Route path="/hidden-gems" element={<HiddenGemsPage />} />
+          <Route
+            path="/hidden-gems/:destinationId"
+            element={<HiddenGemsPage />}
+          />
+          <Route
+            path="/hidden-gems/:destinationId/:productSlug"
+            element={<HiddenGemsPage />}
+          />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
