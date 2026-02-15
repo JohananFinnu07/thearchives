@@ -54,7 +54,7 @@ const NavSearch = () => {
         matches.push({
           title: dest.name,
           subtitle: "Destination",
-          route: `/destinations/${DestinationSlug}`,
+          route: `/destination/${DestinationSlug}`,
         });
       }
 

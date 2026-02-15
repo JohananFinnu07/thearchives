@@ -41,7 +41,7 @@ const App = () => (
           <Route path="/search" element={<SearchPage />} />
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route
-            path="/destinations/:destinationId"
+            path="/destination/:destinationId"
             element={<DestinationsPage />}
           />
 
