@@ -37,13 +37,11 @@ const App = () => (
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallery/:id" element={<LocationGalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/destination/:destinationId"
-            element={<DestinationDetail />}
-          />
+          <Route path="/destination/:id" element={<DestinationDetail />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/destinations" element={<DestinationsPage />} />
           <Route
-            path="/destinations/:destinationID"
+            path="/destinations/:destinationId"
             element={<DestinationsPage />}
           />
 
