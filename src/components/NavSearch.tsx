@@ -60,7 +60,7 @@ const NavSearch = () => {
     setSearch("");
 
     navigate("/destinations", {
-      state: { scrollTo: scrollId.toLowerCase() },
+      state: { scrollTo: scrollId },
     });
   };
 
@@ -92,7 +92,7 @@ const NavSearch = () => {
               {results.destinations.map((dest) => (
                 <CommandItem
                   key={dest.id}
-                  onSelect={() => handleSelect(dest.name)}
+                  onSelect={() => handleSelect(dest.id)}
                 >
                   <div>
                     <p className="font-medium">{dest.name}</p>
@@ -109,8 +109,8 @@ const NavSearch = () => {
             <CommandGroup heading="Products">
               {results.products.map((product) => (
                 <CommandItem
-                  key={product.name}
-                  onSelect={() => handleSelect(product.name)}
+                  key={product.destinationId}
+                  onSelect={() => handleSelect(product.destinationId)}
                 >
                   <div>
                     <p className="font-medium">{product.name}</p>
