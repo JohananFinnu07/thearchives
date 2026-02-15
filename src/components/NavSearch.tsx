@@ -11,14 +11,6 @@ import {
 } from "@/components/ui/command";
 import { destinations } from "@/data/destinations";
 
-interface SearchResult {
-  id: string;
-  title: string;
-  subtitle: string;
-  type: "destination" | "hiddenGem";
-  route: string;
-}
-
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -37,38 +29,33 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  const results: SearchResult[] = useMemo(() => {
+  const results = useMemo(() => {
     if (!search.trim()) return [];
 
     const lower = search.toLowerCase();
-    const matches: SearchResult[] = [];
+    const matches: {
+      title: string;
+      subtitle: string;
+      route: string;
+    }[] = [];
 
-    // DESTINATIONS
     destinations.forEach((dest) => {
+      // Destination match
       if (dest.name.toLowerCase().includes(lower)) {
         matches.push({
-          id: dest.id,
           title: dest.name,
-          subtitle: dest.tagline,
-          type: "destination",
+          subtitle: "Destination",
           route: "/destinations",
         });
       }
 
-      // PRODUCTS
+      // Product match → redirect to hidden gem by destination.id
       dest.products.forEach((product) => {
         if (product.name.toLowerCase().includes(lower)) {
-          const slug = product.name
-            .toLowerCase()
-            .replace(/\s+/g, "-")
-            .replace(/[^\w-]+/g, "");
-
           matches.push({
-            id: slug,
             title: product.name,
-            subtitle: `From ${dest.name}`,
-            type: "hiddenGem",
-            route: `/hidden-gems/${slug}`,
+            subtitle: `Hidden Gem • ${dest.name}`,
+            route: `/hidden-gems/${dest.id}`,
           });
         }
       });
@@ -85,7 +72,6 @@ const NavSearch = () => {
 
   return (
     <>
-      {/* Trigger */}
       <button
         onClick={() => setOpen(true)}
         className="hidden md:flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-muted-foreground transition hover:bg-muted"
@@ -97,7 +83,6 @@ const NavSearch = () => {
         </kbd>
       </button>
 
-      {/* Dialog */}
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput
           placeholder="Search destinations or hidden gems..."
@@ -110,11 +95,10 @@ const NavSearch = () => {
 
           {results.length > 0 && (
             <CommandGroup heading="Results">
-              {results.map((item) => (
+              {results.map((item, index) => (
                 <CommandItem
-                  key={item.id}
+                  key={index}
                   onSelect={() => handleSelect(item.route)}
-                  className="cursor-pointer"
                 >
                   <div>
                     <p className="font-medium">{item.title}</p>
