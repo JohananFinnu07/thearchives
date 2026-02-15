@@ -39,7 +39,10 @@ const App = () => (
           <Route path="/about" element={<AboutPage />} />
           <Route path="/destination/:id" element={<DestinationDetail />} />
           <Route path="/search" element={<SearchPage />} />
-          <Route path="/destinations" element={<DestinationsPage />} />
+          <Route
+            path="/destinations/:destinationID"
+            element={<DestinationsPage />}
+          />
 
           <Route path="/hidden-gems" element={<HiddenGemsPage />} />
           <Route

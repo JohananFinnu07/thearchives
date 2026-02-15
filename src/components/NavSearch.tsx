@@ -53,7 +53,7 @@ const NavSearch = () => {
         matches.push({
           title: dest.name,
           subtitle: "Destination",
-          route: "/destinations",
+          route: `/destinations/ ${dest.id}`,
         });
       }
 
