@@ -40,8 +40,14 @@ const App = () => (
           <Route path="/destination/:id" element={<DestinationDetail />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/destinations" element={<DestinationsPage />} />
+
+          <Route path="/hidden-gems" element={<HiddenGemsPage />} />
           <Route
-            path="/hidden-gems/:id/:productName"
+            path="/hidden-gems/:destinationId"
+            element={<HiddenGemsPage />}
+          />
+          <Route
+            path="/hidden-gems/:destinationId/:productSlug"
             element={<HiddenGemsPage />}
           />
 

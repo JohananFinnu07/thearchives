@@ -12,6 +12,13 @@ import {
 } from "@/components/ui/command";
 import { destinations } from "@/data/destinations";
 
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
+
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -30,7 +37,6 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  // 🔎 Search Logic
   const results = useMemo(() => {
     if (!search.trim()) return [];
 
@@ -54,10 +60,12 @@ const NavSearch = () => {
       // Product match
       dest.products.forEach((product) => {
         if (product.name.toLowerCase().includes(lower)) {
+          const productSlug = slugify(product.name);
+
           matches.push({
             title: product.name,
             subtitle: `Hidden Gem • ${dest.name}`,
-            route: `/hidden-gems/${dest.id}/${product.name.toLowerCase()}`,
+            route: `/hidden-gems/${dest.id}/${productSlug}`,
           });
         }
       });
@@ -74,7 +82,6 @@ const NavSearch = () => {
 
   return (
     <>
-      {/* 🔍 Animated Trigger Button */}
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.96 }}
@@ -94,7 +101,6 @@ const NavSearch = () => {
         </motion.kbd>
       </motion.button>
 
-      {/* 🔥 Animated Dialog */}
       <AnimatePresence>
         {open && (
           <CommandDialog open={open} onOpenChange={setOpen}>
