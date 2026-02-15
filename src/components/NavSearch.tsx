@@ -11,12 +11,20 @@ import {
 } from "@/components/ui/command";
 import { destinations } from "@/data/destinations";
 
+interface SearchResult {
+  id: string;
+  title: string;
+  subtitle: string;
+  type: "destination" | "hiddenGem";
+  route: string;
+}
+
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  // ⌘K Shortcut
+  // ⌘K shortcut
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -29,43 +37,55 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  const results = useMemo(() => {
-    if (!search.trim()) {
-      return { destinations: [], products: [] };
-    }
+  const results: SearchResult[] = useMemo(() => {
+    if (!search.trim()) return [];
 
     const lower = search.toLowerCase();
+    const matches: SearchResult[] = [];
 
-    const matchedDestinations = destinations.filter((dest) =>
-      dest.name.toLowerCase().includes(lower),
-    );
+    // DESTINATIONS
+    destinations.forEach((dest) => {
+      if (dest.name.toLowerCase().includes(lower)) {
+        matches.push({
+          id: dest.id,
+          title: dest.name,
+          subtitle: dest.tagline,
+          type: "destination",
+          route: "/destinations",
+        });
+      }
 
-    const matchedProducts = destinations.flatMap((dest) =>
-      dest.products
-        .filter((product) => product.name.toLowerCase().includes(lower))
-        .map((product) => ({
-          ...product,
-          destinationId: dest.id,
-        })),
-    );
+      // PRODUCTS
+      dest.products.forEach((product) => {
+        if (product.name.toLowerCase().includes(lower)) {
+          const slug = product.name
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^\w-]+/g, "");
 
-    return {
-      destinations: matchedDestinations,
-      products: matchedProducts,
-    };
+          matches.push({
+            id: slug,
+            title: product.name,
+            subtitle: `From ${dest.name}`,
+            type: "hiddenGem",
+            route: `/hidden-gems/${slug}`,
+          });
+        }
+      });
+    });
+
+    return matches;
   }, [search]);
 
-  const handleSelect = (scrollId: string) => {
+  const handleSelect = (route: string) => {
     setOpen(false);
     setSearch("");
-
-    navigate("/destinations", {
-      state: { scrollTo: scrollId.toLowerCase() },
-    });
+    navigate(route);
   };
 
   return (
     <>
+      {/* Trigger */}
       <button
         onClick={() => setOpen(true)}
         className="hidden md:flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-muted-foreground transition hover:bg-muted"
@@ -77,9 +97,10 @@ const NavSearch = () => {
         </kbd>
       </button>
 
+      {/* Dialog */}
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput
-          placeholder="Search destinations or products..."
+          placeholder="Search destinations or hidden gems..."
           value={search}
           onValueChange={setSearch}
         />
@@ -87,35 +108,18 @@ const NavSearch = () => {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
 
-          {results.destinations.length > 0 && (
-            <CommandGroup heading="Destinations">
-              {results.destinations.map((dest) => (
+          {results.length > 0 && (
+            <CommandGroup heading="Results">
+              {results.map((item) => (
                 <CommandItem
-                  key={dest.id}
-                  onSelect={() => handleSelect(dest.name)}
+                  key={item.id}
+                  onSelect={() => handleSelect(item.route)}
+                  className="cursor-pointer"
                 >
                   <div>
-                    <p className="font-medium">{dest.name}</p>
+                    <p className="font-medium">{item.title}</p>
                     <p className="text-xs text-muted-foreground">
-                      {dest.tagline}
-                    </p>
-                  </div>
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          )}
-
-          {results.products.length > 0 && (
-            <CommandGroup heading="Products">
-              {results.products.map((product) => (
-                <CommandItem
-                  key={product.name}
-                  onSelect={() => handleSelect(product.name)}
-                >
-                  <div>
-                    <p className="font-medium">{product.name}</p>
-                    <p className="text-xs text-muted-foreground">
-                      From {product.destinationId}
+                      {item.subtitle}
                     </p>
                   </div>
                 </CommandItem>

@@ -39,6 +39,8 @@ const App = () => (
           <Route path="/about" element={<AboutPage />} />
           <Route path="/destination/:id" element={<DestinationDetail />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/hidden-gems/:slug" element={<HiddenGemsPage />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
