@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { Search } from "lucide-react";
 import {
   CommandDialog,
@@ -29,6 +30,7 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  // 🔎 Search Logic
   const results = useMemo(() => {
     if (!search.trim()) return [];
 
@@ -49,7 +51,7 @@ const NavSearch = () => {
         });
       }
 
-      // Product match → redirect to hidden gem by destination.id
+      // Product match
       dest.products.forEach((product) => {
         if (product.name.toLowerCase().includes(lower)) {
           matches.push({
@@ -72,46 +74,75 @@ const NavSearch = () => {
 
   return (
     <>
-      <button
+      {/* 🔍 Animated Trigger Button */}
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.96 }}
+        transition={{ type: "spring", stiffness: 300 }}
         onClick={() => setOpen(true)}
-        className="hidden md:flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-muted-foreground transition hover:bg-muted"
+        className="hidden md:flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-muted-foreground transition hover:bg-muted shadow-sm hover:shadow-md"
       >
         <Search className="h-4 w-4" />
         <span>Search...</span>
-        <kbd className="ml-2 rounded border px-1.5 py-0.5 text-[10px] text-muted-foreground">
+        <motion.kbd
+          initial={{ opacity: 0.6 }}
+          animate={{ opacity: [0.6, 1, 0.6] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="ml-2 rounded border px-1.5 py-0.5 text-[10px]"
+        >
           ⌘K
-        </kbd>
-      </button>
+        </motion.kbd>
+      </motion.button>
 
-      <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput
-          placeholder="Search destinations or hidden gems..."
-          value={search}
-          onValueChange={setSearch}
-        />
+      {/* 🔥 Animated Dialog */}
+      <AnimatePresence>
+        {open && (
+          <CommandDialog open={open} onOpenChange={setOpen}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: 10 }}
+              transition={{ duration: 0.2 }}
+              className="bg-background/80 backdrop-blur-xl rounded-xl"
+            >
+              <CommandInput
+                placeholder="Search destinations or hidden gems..."
+                value={search}
+                onValueChange={setSearch}
+              />
 
-        <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
+              <CommandList>
+                <CommandEmpty>No results found.</CommandEmpty>
 
-          {results.length > 0 && (
-            <CommandGroup heading="Results">
-              {results.map((item, index) => (
-                <CommandItem
-                  key={index}
-                  onSelect={() => handleSelect(item.route)}
-                >
-                  <div>
-                    <p className="font-medium">{item.title}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {item.subtitle}
-                    </p>
-                  </div>
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          )}
-        </CommandList>
-      </CommandDialog>
+                {results.length > 0 && (
+                  <CommandGroup heading="Results">
+                    {results.map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.03 }}
+                      >
+                        <CommandItem
+                          onSelect={() => handleSelect(item.route)}
+                          className="cursor-pointer rounded-md hover:bg-primary/10 transition"
+                        >
+                          <div>
+                            <p className="font-medium">{item.title}</p>
+                            <p className="text-xs text-muted-foreground">
+                              {item.subtitle}
+                            </p>
+                          </div>
+                        </CommandItem>
+                      </motion.div>
+                    ))}
+                  </CommandGroup>
+                )}
+              </CommandList>
+            </motion.div>
+          </CommandDialog>
+        )}
+      </AnimatePresence>
     </>
   );
 };
