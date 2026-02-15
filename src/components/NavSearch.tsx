@@ -88,7 +88,7 @@ const NavSearch = () => {
         whileTap={{ scale: 0.96 }}
         transition={{ type: "spring", stiffness: 300 }}
         onClick={() => setOpen(true)}
-        className="hidden md:flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-muted-foreground transition hover:bg-muted shadow-sm hover:shadow-md"
+        className="flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 text-sm text-muted-foreground transition hover:bg-muted shadow-sm hover:shadow-md"
       >
         <Search className="h-4 w-4" />
         <span>Search...</span>
