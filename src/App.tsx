@@ -14,7 +14,7 @@ import GalleryPage from "./pages/GalleryPage";
 import LocationGalleryPage from "./pages/LocationGalleryPage";
 import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
-import SearchPage from "./pages/searchpage";
+import SearchPage from "./components/NavSearch";
 
 const queryClient = new QueryClient();
 

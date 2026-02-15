@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, MapPin, Search } from "lucide-react";
+import { Menu, X, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import NavSearch from "@/components/NavSearch";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -14,18 +15,17 @@ const navLinks = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+  // 🔥 Detect scroll for styling
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
 
-    if (!searchQuery.trim()) return;
-
-    navigate(`/destinations?q=${searchQuery}`);
-    setSearchQuery("");
-    setIsMenuOpen(false);
-  };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.header
@@ -57,22 +57,10 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop Search */}
-          <form
-            onSubmit={handleSearch}
-            className="hidden md:flex items-center bg-muted rounded-full px-3 py-1.5"
-          >
-            <Search className="w-4 h-4 text-muted-foreground mr-2" />
-            <input
-              type="text"
-              placeholder="Search destinations or products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="bg-transparent outline-none text-sm w-40 lg:w-56"
-            />
-          </form>
+          {/* 🔍 Integrated NavSearch */}
+          <NavSearch />
 
-          {/* CTA */}
+          {/* CTA Button */}
           <div className="hidden md:block">
             <Button
               variant="default"
@@ -88,6 +76,7 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-foreground"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? (
               <X className="w-6 h-6" />
@@ -109,21 +98,6 @@ const Header = () => {
             className="md:hidden bg-background border-t border-border"
           >
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              {/* Mobile Search */}
-              <form
-                onSubmit={handleSearch}
-                className="flex items-center bg-muted rounded-full px-3 py-2"
-              >
-                <Search className="w-4 h-4 text-muted-foreground mr-2" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-transparent outline-none text-sm flex-1"
-                />
-              </form>
-
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
