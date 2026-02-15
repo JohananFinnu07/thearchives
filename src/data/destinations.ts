@@ -714,8 +714,8 @@ export const destinations: Destination[] = [
     ],
   },
   {
-    id: "konaseema godavari",
-    name: "Konaseema Godavari",
+    id: "konaseema",
+    name: "Konaseema - Godavari",
     tagline: "Where rivers write recipes",
     image: konaseemaImage,
     heroDescription:
