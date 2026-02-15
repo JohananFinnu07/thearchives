@@ -19,11 +19,12 @@ const Header = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim() !== "") {
-      navigate(`/search?q=${searchQuery}`);
-      setSearchQuery("");
-      setIsMenuOpen(false);
-    }
+
+    if (!searchQuery.trim()) return;
+
+    navigate(`/destinations?q=${searchQuery}`);
+    setSearchQuery("");
+    setIsMenuOpen(false);
   };
 
   return (
@@ -64,7 +65,7 @@ const Header = () => {
             <Search className="w-4 h-4 text-muted-foreground mr-2" />
             <input
               type="text"
-              placeholder="Search hidden gems..."
+              placeholder="Search destinations or products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="bg-transparent outline-none text-sm w-40 lg:w-56"
@@ -87,7 +88,6 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
           >
             {isMenuOpen ? (
               <X className="w-6 h-6" />
