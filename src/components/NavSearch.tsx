@@ -57,7 +57,7 @@ const NavSearch = () => {
           matches.push({
             title: product.name,
             subtitle: `Hidden Gem • ${dest.name}`,
-            route: `/hidden-gems/${dest.id}/${product.name}`,
+            route: `/hidden-gems/${dest.id}/${product.name.toLowerCase()}`,
           });
         }
       });
