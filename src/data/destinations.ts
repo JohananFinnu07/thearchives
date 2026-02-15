@@ -105,7 +105,7 @@ export const destinations: Destination[] = [
         image: tribalBambooCraftImage,
       },
       {
-        name: "Wild Turmeric (Kasturi Manjal)",
+        name: "Wild Turmeric Kasturi Manjal",
         type: "underrated",
         description:
           "A rare variety of turmeric found in the forests of Araku, known for its exceptional fragrance and potency.",
@@ -618,7 +618,7 @@ export const destinations: Destination[] = [
       "Etikoppaka is not an industry — it is a rhythm. For over four centuries, artisans here have transformed locally sourced wood into lacquered toys using natural dyes, seeds, and tree resins. Every object reflects a slow craft philosophy where sustainability, storytelling, and skill pass silently from parent to child, resisting mass production.",
     products: [
       {
-        name: "Salt & Pepper Shakers",
+        name: "Salt and Pepper Shakers",
         type: "underrated",
         description:
           "Minimal lacquered wooden tableware crafted using the Etikoppaka technique.",
