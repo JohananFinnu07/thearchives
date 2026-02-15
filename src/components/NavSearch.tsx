@@ -119,9 +119,71 @@ const NavSearch = () => {
               />
 
               <CommandList>
-                <CommandEmpty>No results found.</CommandEmpty>
+                {/* 🔎 When user types and no matches */}
+                {search.trim() && results.length === 0 && (
+                  <CommandEmpty>No results found.</CommandEmpty>
+                )}
 
-                {results.length > 0 && (
+                {/* 🌿 When search is empty → show suggestions */}
+                {!search.trim() && (
+                  <>
+                    <CommandGroup heading="Popular Destinations">
+                      {destinations.slice(0, 4).map((dest) => (
+                        <CommandItem
+                          key={dest.id}
+                          onSelect={() =>
+                            handleSelect(`/destination/${slugify(dest.name)}`)
+                          }
+                          className="cursor-pointer"
+                        >
+                          <div>
+                            <p className="font-medium">{dest.name}</p>
+                            <p className="text-xs text-muted-foreground">
+                              {dest.tagline}
+                            </p>
+                          </div>
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+
+                    <CommandGroup heading="Featured Hidden Gems">
+                      {destinations
+                        .flatMap((dest) =>
+                          dest.products
+                            .filter((p) => p.type === "underrated")
+                            .slice(0, 1)
+                            .map((product) => ({
+                              product,
+                              destinationId: dest.id,
+                            })),
+                        )
+                        .slice(0, 4)
+                        .map(({ product, destinationId }) => (
+                          <CommandItem
+                            key={product.name}
+                            onSelect={() =>
+                              handleSelect(
+                                `/hidden-gems/${destinationId}/${slugify(
+                                  product.name,
+                                )}`,
+                              )
+                            }
+                            className="cursor-pointer"
+                          >
+                            <div>
+                              <p className="font-medium">{product.name}</p>
+                              <p className="text-xs text-muted-foreground">
+                                Hidden Gem
+                              </p>
+                            </div>
+                          </CommandItem>
+                        ))}
+                    </CommandGroup>
+                  </>
+                )}
+
+                {/* 🔎 When matches exist */}
+                {search.trim() && results.length > 0 && (
                   <CommandGroup heading="Results">
                     {results.map((item, index) => (
                       <motion.div
