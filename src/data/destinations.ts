@@ -19,21 +19,101 @@ import tribalBambooCraftImage from "@/assets/products/tribal-bamboo-craft.jpg";
 
 import wildTurmericImage from "@/assets/products/wild-turmeric.jpg";
 import wildTurmericMaking from "@/assets/products/wild-turmeric1.jpg";
-import wildTurmericflavor from "@/assets/products/wild-turmeric3.jpg";
+import wildTurmericFlavor from "@/assets/products/wild-turmeric3.jpg";
 
 import blackPepperImage from "@/assets/products/black-pepper.jpg";
+import blackPepperMake from "@/assets/products/black-pepper.jpg";
+import blackPepperFlavor from "@/assets/products/BPH.jpg";
+
 import wildHoneyImage from "@/assets/products/wild-honey.jpg";
 import forestStrawberriesImage from "@/assets/products/forest-strawberries.jpg";
+
 import tribalShawlImage from "@/assets/products/tribal-shawl.jpg";
+import tribalShawlMake from "@/assets/products/KDTSM.jpg";
+import tribalShawlFlavor from "@/assets/products/KDTSF.jpeg";
+
 import hillRiceImage from "@/assets/products/hill-rice.jpg";
+
 import dhokraArtImage from "@/assets/products/dhokra-art.jpg";
+import dhokraArtMake from "@/assets/products/KTJM.jpg";
+import dhokraArtFlavor from "@/assets/products/dhokra-art.jpg";
+
 import bambooChickenImage from "@/assets/products/bamboo-chicken.jpg";
 import marketSpicesImage from "@/assets/products/market-spices.jpg";
-import silkCocoonsImage from "@/assets/products/silk-cocoons.jpg";
-import jackfruitChipsImage from "@/assets/products/jackfruit-chips.jpg";
-import mahuaFlowersImage from "@/assets/products/mahua-flowers.jpg";
-import palmWineImage from "@/assets/products/palm-wine.jpg";
-import meadowHerbsImage from "@/assets/products/meadow-herbs.jpg";
+
+import silkCocoonsImage from "@/assets/products/cocoonsHero .jpeg";
+import silkCocoonsMake from "@/assets/products/silk-cocoons.jpg";
+import silkCocoonsFlavor from "@/assets/products/CocoonFlavor.jpeg";
+
+import jackfruitChipsImage from "@/assets/products/JackfruitHero.jpeg";
+import jackfruitChipsMake from "@/assets/products/jackfruitMaking.jpeg";
+import jackfruitChipsFlavor from "@/assets/products/jackfruitflavor.jpeg";
+
+import mahuaFlowersImage from "@/assets/products/FMFH.jpg";
+import mahuaFlowersMake from "@/assets/products/mahua-flowers.jpg";
+import mahuaFlowersFlavor from "@/assets/products/FMFF.jpg";
+
+import palmWineImage from "@/assets/products/KRPWH.jpg";
+import palmWineMake from "@/assets/products/palm-wine.jpg";
+import palmWineFlavor from "@/assets/products/KRPWM.jpg";
+
+import meadowHerbsImage from "@/assets/products/MHCH.jpg";
+import meadowHerbsMake from "@/assets/products/meadow-herbs.jpg";
+import meadowHerbsFlavor from "@/assets/products/MHCF.jpg";
+
+import bodengPuruguImage from "@/assets/products/BPH.jpg";
+
+import mistmountHoneyImage from "@/assets/products/MistmountainHoney.jpeg";
+import mistmountHoneyMake from "@/assets/products/MMHM.jpeg";
+import mistmountHoneyFlavor from "@/assets/products/MMHF.jpeg";
+
+import forestTurmericImage from "@/assets/products/ForesttermericHero.jpeg";
+import forestTurmericMake from "@/assets/products/forestTurmericMake.jpeg";
+import forestTurmericFlavor from "@/assets/products/ForestTermericflavor.jpeg";
+
+import dryflowerImage from "@/assets/products/DFAH.jpg";
+import dryflowerMake from "@/assets/products/DFAH.jpg";
+import dryflowerFlavor from "@/assets/products/DFAF.jpg";
+
+import dryFishImage from "@/assets/products/DFVH.jpg";
+import dryFishMake from "@/assets/products/DFVH.jpg";
+import dryFishFlavor from "@/assets/products/DFVF.jpg";
+
+import saltedSeafoodImage from "@/assets/products/SSFSH.jpg";
+import saltedSeafoodMake from "@/assets/products/SSFSH.jpg";
+import saltedSeafoodFlavor from "@/assets/products/SSFSF.jpg";
+
+import saltandPepperImage from "@/assets/products/SAPSH.jpg";
+import saltandPepperMake from "@/assets/products/SAPSM.jpg";
+import saltandPepperFlavor from "@/assets/ethikoppaka.jpg";
+
+import minimalistLampImage from "@/assets/products/minimalistLamp.jpg";
+import minimalistLampMake from "@/assets/products/MTLM.jpg";
+import minimalistLampFlavor from "@/assets/products/minimalistLamp.jpg";
+
+import sundriedVegImage from "@/assets/products/SDVH.jpg";
+import sundriedVegMake from "@/assets/products/SDVH.jpg";
+import sundriedVegFlavor from "@/assets/products/SDVF.jpg";
+
+import leafWrappedSweetsImage from "@/assets/products/LWSH.jpg";
+import leafWrappedSweetsMake from "@/assets/products/LWSH.jpg";
+import leafWrappedSweetsFlavor from "@/assets/products/LWSF.jpg";
+
+import bambooFishTrapsImage from "@/assets/products/BFTH.jpg";
+import bambooFishTrapsMake from "@/assets/products/BFTM.jpg";
+import bambooFishTrapsFlavor from "@/assets/products/BFTH.jpg";
+
+import herbalOilsForestRootsImage from "@/assets/products/HOFRH.jpg";
+import herbalOilsForestRootsMake from "@/assets/products/HOFRM.jpg";
+import herbalOilsForestRootsFlavor from "@/assets/products/HOFRF.jpg";
+
+import chinchbambooCraftsImage from "@/assets/products/CBCH.jpg";
+import chinchbambooCraftsMake from "@/assets/products/CBCM.jpg";
+import chinchbambooCraftsFlavor from "@/assets/products/CBCH.jpg";
+
+import udayagiriWoodencutleryImage from "@/assets/products/UWCH.jpg";
+import udayagiriWoodencutleryMake from "@/assets/products/UWCM.jpg";
+import udayagiriWoodencutleryFlavor from "@/assets/products/UWCF.jpg";
 
 export interface Product {
   name: string;
@@ -128,7 +208,7 @@ export const destinations: Destination[] = [
         ],
         image: wildTurmericImage,
         makingImage: wildTurmericMaking,
-        flavorImage: wildTurmericflavor,
+        flavorImage: wildTurmericFlavor,
       },
       {
         name: "Konda Reddi Palm Wine",
@@ -146,6 +226,8 @@ export const destinations: Destination[] = [
           "Natural probiotic drink",
         ],
         image: palmWineImage,
+        makingImage: palmWineMake,
+        flavorImage: palmWineFlavor,
       },
       {
         name: "Araku Black Pepper",
@@ -164,6 +246,8 @@ export const destinations: Destination[] = [
           "Spice blends",
         ],
         image: blackPepperImage,
+        makingImage: blackPepperMake,
+        flavorImage: blackPepperFlavor,
       },
       {
         name: "Bodeng Purugu",
@@ -180,7 +264,9 @@ export const destinations: Destination[] = [
           "Emergency nutrition during forest foraging",
           "Cultural and ritual consumption",
         ],
-        image: blackPepperImage,
+        image: bodengPuruguImage,
+        makingImage: bodengPuruguImage,
+        flavorImage: bodengPuruguImage,
       },
     ],
   },
@@ -213,7 +299,7 @@ export const destinations: Destination[] = [
           "Digestive aid",
           "Cold remedies",
         ],
-        image: blackPepperImage,
+        image: blackPepperMake,
       },
       {
         name: "Forest Strawberries",
@@ -249,6 +335,8 @@ export const destinations: Destination[] = [
           "Cultural preservation",
         ],
         image: tribalShawlImage,
+        makingImage: tribalShawlMake,
+        flavorImage: tribalShawlFlavor,
       },
       {
         name: "Misty Mountain Honey",
@@ -266,7 +354,9 @@ export const destinations: Destination[] = [
           "Ayurvedic medicine",
           "Skin care",
         ],
-        image: wildHoneyImage,
+        image: mistmountHoneyImage,
+        makingImage: mistmountHoneyMake,
+        flavorImage: mistmountHoneyFlavor,
       },
     ],
   },
@@ -336,6 +426,8 @@ export const destinations: Destination[] = [
           "Eco-fashion",
         ],
         image: silkCocoonsImage,
+        makingImage: silkCocoonsMake,
+        flavorImage: silkCocoonsFlavor,
       },
       {
         name: "Meadow Herbs Collection",
@@ -354,6 +446,8 @@ export const destinations: Destination[] = [
           "Joint pain relief",
         ],
         image: meadowHerbsImage,
+        makingImage: meadowHerbsMake,
+        flavorImage: meadowHerbsFlavor,
       },
     ],
   },
@@ -423,6 +517,8 @@ export const destinations: Destination[] = [
           "Natural sweetener",
         ],
         image: jackfruitChipsImage,
+        makingImage: jackfruitChipsMake,
+        flavorImage: jackfruitChipsFlavor,
       },
       {
         name: "Forest Mahua Flowers",
@@ -441,6 +537,8 @@ export const destinations: Destination[] = [
           "Animal feed",
         ],
         image: mahuaFlowersImage,
+        makingImage: mahuaFlowersMake,
+        flavorImage: mahuaFlowersFlavor,
       },
     ],
   },
@@ -509,6 +607,8 @@ export const destinations: Destination[] = [
           "Collector items",
         ],
         image: dhokraArtImage,
+        makingImage: dhokraArtMake,
+        flavorImage: dhokraArtFlavor,
       },
       {
         name: "Forest Turmeric",
@@ -526,7 +626,9 @@ export const destinations: Destination[] = [
           "Religious rituals",
           "Natural dye",
         ],
-        image: wildTurmericImage,
+        image: forestTurmericImage,
+        makingImage: forestTurmericMake,
+        flavorImage: forestTurmericFlavor,
       },
     ],
   },
@@ -553,6 +655,9 @@ export const destinations: Destination[] = [
         makingProcess:
           "Collected temple flowers are dried, powdered, blended with natural binders, and hand-rolled into agarbathis.",
         uses: ["Daily worship", "Meditation", "Natural fragrance"],
+        image: dryflowerImage,
+        makingImage: dryflowerMake,
+        flavorImage: dryflowerFlavor,
       },
       {
         name: "Panchagavya Products",
@@ -601,6 +706,9 @@ export const destinations: Destination[] = [
         makingProcess:
           "Fresh catch is salted, sun-dried, and blended with region-specific spice mixes.",
         uses: ["Fish curries", "Dry fry dishes", "Travel-friendly protein"],
+        image: dryFishImage,
+        makingImage: dryFishMake,
+        flavorImage: dryFishFlavor,
       },
       {
         name: "Salted Seafood Snacks",
@@ -609,6 +717,9 @@ export const destinations: Destination[] = [
         significance: "Reflects informal street and boat-life food culture.",
         makingProcess: "Small seafood is salted, dried, and lightly roasted.",
         uses: ["Snacking", "Side dishes"],
+        image: saltedSeafoodImage,
+        makingImage: saltedSeafoodMake,
+        flavorImage: saltedSeafoodFlavor,
       },
     ],
   },
@@ -635,6 +746,9 @@ export const destinations: Destination[] = [
         makingProcess:
           "Turned on a lathe and colored using natural dyes and resin-based lacquer.",
         uses: ["Dining tableware", "Decor accents"],
+        image: saltandPepperImage,
+        makingImage: saltandPepperMake,
+        flavorImage: saltandPepperFlavor,
       },
       {
         name: "Ankudu Wood Kitchenware",
@@ -656,6 +770,9 @@ export const destinations: Destination[] = [
         makingProcess:
           "Lathe-turned wooden bases finished with natural lacquer.",
         uses: ["Home decor", "Ambient lighting"],
+        image: minimalistLampImage,
+        makingImage: minimalistLampMake,
+        flavorImage: minimalistLampFlavor,
       },
     ],
   },
@@ -682,6 +799,9 @@ export const destinations: Destination[] = [
         makingProcess:
           "Vegetables are sliced, salted lightly, and sun-dried for long storage.",
         uses: ["Curries", "Emergency food", "Travel meals"],
+        image: sundriedVegImage,
+        makingImage: sundriedVegMake,
+        flavorImage: sundriedVegFlavor,
       },
       {
         name: "Suddha Rai Stone Carvings",
@@ -751,6 +871,9 @@ export const destinations: Destination[] = [
         makingProcess:
           "Sweet mixtures are wrapped in leaves and gently cooked.",
         uses: ["Festivals", "Offerings"],
+        image: leafWrappedSweetsImage,
+        makingImage: leafWrappedSweetsMake,
+        flavorImage: leafWrappedSweetsFlavor,
       },
       {
         name: "Athreyapuram Pootharekulu",
@@ -799,6 +922,9 @@ export const destinations: Destination[] = [
           "An eco-sensitive fishing method perfected by tribal communities.",
         makingProcess: "Split bamboo is woven into conical traps.",
         uses: ["Fishing", "Decor", "Cultural display"],
+        image: bambooFishTrapsImage,
+        makingImage: bambooFishTrapsMake,
+        flavorImage: bambooFishTrapsFlavor,
       },
     ],
   },
@@ -823,6 +949,9 @@ export const destinations: Destination[] = [
         makingProcess:
           "Roots and herbs are sun-dried and slow-infused in oils.",
         uses: ["Traditional medicine", "Massage"],
+        image: herbalOilsForestRootsImage,
+        makingImage: herbalOilsForestRootsMake,
+        flavorImage: herbalOilsForestRootsFlavor,
       },
       {
         name: "Chinch Bamboo Crafts",
@@ -832,6 +961,9 @@ export const destinations: Destination[] = [
           "Sustainable forest craft with minimal ecological impact.",
         makingProcess: "Hand-cut bamboo is shaped and cured naturally.",
         uses: ["Storage", "Home decor"],
+        image: chinchbambooCraftsImage,
+        makingImage: chinchbambooCraftsMake,
+        flavorImage: chinchbambooCraftsFlavor,
       },
       {
         name: "Forest Honey",
@@ -863,6 +995,9 @@ export const destinations: Destination[] = [
         significance: "Preserves regional woodworking traditions.",
         makingProcess: "Locally sourced wood is carved and polished by hand.",
         uses: ["Cooking", "Serving"],
+        image: udayagiriWoodencutleryImage,
+        makingImage: udayagiriWoodencutleryMake,
+        flavorImage: udayagiriWoodencutleryFlavor,
       },
       {
         name: "Citrus Products",
