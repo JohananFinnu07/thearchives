@@ -23,7 +23,7 @@ import wildTurmericFlavor from "@/assets/products/wild-turmeric3.jpg";
 
 import blackPepperImage from "@/assets/products/black-pepper.jpg";
 import blackPepperMake from "@/assets/products/black-pepper.jpg";
-import blackPepperFlavor from "@/assets/products/BPH.jpg";
+import blackPepperFlavor from "@/assets/products/ABPF.jpg";
 
 import wildHoneyImage from "@/assets/products/wild-honey.jpg";
 import forestStrawberriesImage from "@/assets/products/forest-strawberries.jpg";

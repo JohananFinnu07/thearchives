@@ -166,7 +166,7 @@ const ProductDetailPage = () => {
                         />
                       </div>
                       <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                        Flavor Profile & Significance
+                        Significance
                       </h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">
                         {product.significance}
