@@ -156,7 +156,11 @@ const ProductDetailPage = () => {
                     <div className="bg-card rounded-2xl p-6 border border-border">
                       <div className="w-full aspect-video rounded-xl bg-secondary/50 mb-4 overflow-hidden">
                         <img
-                          src={product.image || destination.image}
+                          src={
+                            product.flavorImage ||
+                            product.image ||
+                            destination.image
+                          }
                           alt="Flavor profile"
                           className="w-full h-full object-cover opacity-80"
                         />
