@@ -1,18 +1,21 @@
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { MapPin, ArrowLeft, Leaf, Heart, Sparkles } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { getDestinationById, destinations, Product } from '@/data/destinations';
-import { Button } from '@/components/ui/button';
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { MapPin, ArrowLeft, Leaf, Heart, Sparkles } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { getDestinationById, destinations, Product } from "@/data/destinations";
+import { Button } from "@/components/ui/button";
 
 const ProductDetailPage = () => {
-  const { locationId, productName } = useParams<{ locationId: string; productName: string }>();
-  const destination = getDestinationById(locationId || '');
-  
-  const decodedProductName = productName ? decodeURIComponent(productName) : '';
+  const { locationId, productName } = useParams<{
+    locationId: string;
+    productName: string;
+  }>();
+  const destination = getDestinationById(locationId || "");
+
+  const decodedProductName = productName ? decodeURIComponent(productName) : "";
   const product = destination?.products.find(
-    p => p.name.toLowerCase().replace(/\s+/g, '-') === decodedProductName
+    (p) => p.name.toLowerCase().replace(/\s+/g, "-") === decodedProductName,
   );
 
   if (!destination || !product) {
@@ -20,7 +23,9 @@ const ProductDetailPage = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-32 pb-16 text-center">
-          <h1 className="font-serif text-3xl text-foreground mb-4">Product not found</h1>
+          <h1 className="font-serif text-3xl text-foreground mb-4">
+            Product not found
+          </h1>
           <Link to="/hidden-gems" className="text-primary hover:underline">
             Back to Hidden Gems
           </Link>
@@ -30,7 +35,7 @@ const ProductDetailPage = () => {
     );
   }
 
-  const isUnderrated = product.type === 'underrated';
+  const isUnderrated = product.type === "underrated";
 
   return (
     <div className="min-h-screen bg-background">
@@ -57,7 +62,7 @@ const ProductDetailPage = () => {
               className="max-w-3xl"
             >
               {/* Breadcrumb */}
-              <Link 
+              <Link
                 to={`/hidden-gems/${destination.id}`}
                 className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
               >
@@ -73,16 +78,20 @@ const ProductDetailPage = () => {
               {/* Location */}
               <div className="flex items-center gap-2 text-primary mb-6">
                 <MapPin className="w-5 h-5" />
-                <span className="text-lg">From {destination.name}, Andhra Pradesh</span>
+                <span className="text-lg">
+                  From {destination.name}, Andhra Pradesh
+                </span>
               </div>
 
               {/* Badge */}
               <div className="flex items-center gap-3 mb-6">
-                <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium ${
-                  isUnderrated 
-                    ? 'bg-accent/20 text-accent' 
-                    : 'bg-primary/20 text-primary'
-                }`}>
+                <span
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium ${
+                    isUnderrated
+                      ? "bg-accent/20 text-accent"
+                      : "bg-primary/20 text-primary"
+                  }`}
+                >
                   {isUnderrated ? (
                     <>
                       <Sparkles className="w-4 h-4" />
@@ -126,7 +135,11 @@ const ProductDetailPage = () => {
                     <div className="bg-card rounded-2xl p-6 border border-border">
                       <div className="w-full aspect-video rounded-xl bg-secondary/50 mb-4 overflow-hidden">
                         <img
-                          src={product.image || destination.image}
+                          src={
+                            product.makingImage ||
+                            product.image ||
+                            destination.image
+                          }
                           alt="Making process"
                           className="w-full h-full object-cover"
                         />
@@ -181,7 +194,9 @@ const ProductDetailPage = () => {
                         <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <Leaf className="w-5 h-5 text-primary" />
                         </div>
-                        <span className="text-foreground font-medium text-sm">{use}</span>
+                        <span className="text-foreground font-medium text-sm">
+                          {use}
+                        </span>
                       </motion.div>
                     ))}
                   </div>
@@ -202,9 +217,10 @@ const ProductDetailPage = () => {
                     {destination.name}, Andhra Pradesh
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    The local markets and spice shops in the {destination.name} area are the best places 
-                    to find fresh and high-quality {product.name} directly from the source. Look for 
-                    tribal cooperatives and organic certified sellers.
+                    The local markets and spice shops in the {destination.name}{" "}
+                    area are the best places to find fresh and high-quality{" "}
+                    {product.name} directly from the source. Look for tribal
+                    cooperatives and organic certified sellers.
                   </p>
                   <Button asChild className="bg-primary hover:bg-primary/90">
                     <Link to={`/destination/${destination.id}`}>
@@ -259,18 +275,22 @@ const ProductDetailPage = () => {
                     </h3>
                     <div className="space-y-3">
                       {destination.products
-                        .filter(p => p.name !== product.name)
+                        .filter((p) => p.name !== product.name)
                         .slice(0, 3)
                         .map((otherProduct) => (
                           <Link
                             key={otherProduct.name}
-                            to={`/hidden-gems/${destination.id}/${otherProduct.name.toLowerCase().replace(/\s+/g, '-')}`}
+                            to={`/hidden-gems/${destination.id}/${otherProduct.name.toLowerCase().replace(/\s+/g, "-")}`}
                             className="block p-3 bg-card rounded-xl hover:shadow-soft transition-shadow group"
                           >
                             <div className="flex items-center gap-3">
-                              <span className={`w-2 h-2 rounded-full flex-shrink-0 ${
-                                otherProduct.type === 'underrated' ? 'bg-accent' : 'bg-primary'
-                              }`} />
+                              <span
+                                className={`w-2 h-2 rounded-full flex-shrink-0 ${
+                                  otherProduct.type === "underrated"
+                                    ? "bg-accent"
+                                    : "bg-primary"
+                                }`}
+                              />
                               <span className="text-foreground group-hover:text-primary transition-colors text-sm font-medium">
                                 {otherProduct.name}
                               </span>

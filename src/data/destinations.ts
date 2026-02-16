@@ -17,6 +17,7 @@ import konaseemaImage from "@/assets/konaseema.jpg";
 import arakuCoffeeImage from "@/assets/products/araku-coffee-beans.jpg";
 import tribalBambooCraftImage from "@/assets/products/tribal-bamboo-craft.jpg";
 import wildTurmericImage from "@/assets/products/wild-turmeric.jpg";
+import wildTurmericMaking from "@/assets/products/wild-turmeric1.jpg";
 import blackPepperImage from "@/assets/products/black-pepper.jpg";
 import wildHoneyImage from "@/assets/products/wild-honey.jpg";
 import forestStrawberriesImage from "@/assets/products/forest-strawberries.jpg";
@@ -39,6 +40,7 @@ export interface Product {
   makingProcess: string;
   uses: string[];
   image?: string;
+  makingImage?: string;
 }
 
 export interface Destination {
@@ -121,6 +123,7 @@ export const destinations: Destination[] = [
           "Skin brightening",
         ],
         image: wildTurmericImage,
+        makingImage: wildTurmericMaking,
       },
       {
         name: "Konda Reddi Palm Wine",
