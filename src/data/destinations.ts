@@ -67,12 +67,12 @@ import mistmountHoneyImage from "@/assets/products/MistmountainHoney.jpeg";
 import mistmountHoneyMake from "@/assets/products/MMHM.jpeg";
 import mistmountHoneyFlavor from "@/assets/products/MMHF.jpeg";
 
-import forestTurmericImage from "@/assets/products/ForesttermericHero.jpeg";
+import forestTurmericImage from "@/assets/products/FTH.jpg";
 import forestTurmericMake from "@/assets/products/forestTurmericMake.jpeg";
 import forestTurmericFlavor from "@/assets/products/ForestTermericflavor.jpeg";
 
 import dryflowerImage from "@/assets/products/DFAH.jpg";
-import dryflowerMake from "@/assets/products/DFAH.jpg";
+import dryflowerMake from "@/assets/products/DFAM.jpg";
 import dryflowerFlavor from "@/assets/products/DFAF.jpg";
 
 import dryFishImage from "@/assets/products/DFVH.jpg";
@@ -80,7 +80,7 @@ import dryFishMake from "@/assets/products/DFVH.jpg";
 import dryFishFlavor from "@/assets/products/DFVF.jpg";
 
 import saltedSeafoodImage from "@/assets/products/SSFSH.jpg";
-import saltedSeafoodMake from "@/assets/products/SSFSH.jpg";
+import saltedSeafoodMake from "@/assets/products/SSFSM.jpg";
 import saltedSeafoodFlavor from "@/assets/products/SSFSF.jpg";
 
 import saltandPepperImage from "@/assets/products/SAPSH.jpg";
@@ -89,7 +89,7 @@ import saltandPepperFlavor from "@/assets/ethikoppaka.jpg";
 
 import minimalistLampImage from "@/assets/products/minimalistLamp.jpg";
 import minimalistLampMake from "@/assets/products/MTLM.jpg";
-import minimalistLampFlavor from "@/assets/products/minimalistLamp.jpg";
+import minimalistLampFlavor from "@/assets/products/MTLF.png";
 
 import sundriedVegImage from "@/assets/products/SDVH.jpg";
 import sundriedVegMake from "@/assets/products/SDVH.jpg";
@@ -99,7 +99,7 @@ import leafWrappedSweetsImage from "@/assets/products/LWSH.jpg";
 import leafWrappedSweetsMake from "@/assets/products/LWSH.jpg";
 import leafWrappedSweetsFlavor from "@/assets/products/LWSF.jpg";
 
-import bambooFishTrapsImage from "@/assets/products/BFTH.jpg";
+import bambooFishTrapsImage from "@/assets/products/BFTH.png";
 import bambooFishTrapsMake from "@/assets/products/BFTM.jpg";
 import bambooFishTrapsFlavor from "@/assets/products/BFTH.jpg";
 
