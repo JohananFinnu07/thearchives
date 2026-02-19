@@ -25,6 +25,10 @@ import nigeroilHero from "@/assets/products/NSOH.jpg";
 import nigeroilMake from "@/assets/products/NSOM.jpg";
 import nigeroilFlavor from "@/assets/products/NSOF.jpg";
 
+import kondapacchaHero from "@/assets/products/KPHH.jpg";
+import kondapacchaMake from "@/assets/products/KPHM.jpg";
+import kondapacchaFlavor from "@/assets/products/KPHF.jpg";
+
 import wildTurmericImage from "@/assets/products/wild-turmeric.jpg";
 import wildTurmericMaking from "@/assets/products/wild-turmeric1.jpg";
 import wildTurmericFlavor from "@/assets/products/wild-turmeric3.jpg";
@@ -82,6 +86,10 @@ import mistmountHoneyFlavor from "@/assets/products/MMHF.jpeg";
 import forestTurmericImage from "@/assets/products/FTH.jpg";
 import forestTurmericMake from "@/assets/products/forestTurmericMake.jpeg";
 import forestTurmericFlavor from "@/assets/products/ForestTermericflavor.jpeg";
+
+import addLeafHero from "@/assets/products/ALPH.jpg";
+import addLeafMake from "@/assets/products/ALPM.jpg";
+import addLeafFlavor from "@/assets/products/ALPF.jpg";
 
 import dryflowerImage from "@/assets/products/DFAH.jpg";
 import dryflowerMake from "@/assets/products/DFAM.jpg";
@@ -660,6 +668,25 @@ export const destinations: Destination[] = [
         image: bambooChickenImage,
       },
       {
+        name: "Adda Leaf Plates Adda Aaku",
+        type: "famous",
+        description:
+          "Eco-friendly biodegradable plates handcrafted from Adda leaves, stitched together using thin bamboo sticks. A sustainable alternative rooted in tribal craftsmanship.",
+        significance:
+          "Represents zero-waste living and forest-based livelihoods. These plates are widely used in temple feasts, tribal festivals, and eco-conscious catering.",
+        makingProcess:
+          "Fresh Adda leaves are collected, cleaned, and sun-softened. Leaves are layered and stitched manually using bamboo ribs, then pressed into shape for durability.",
+        uses: [
+          "Traditional meal serving",
+          "Temple prasadam distribution",
+          "Eco-friendly catering",
+          "Sustainable event supplies",
+        ],
+        image: addLeafHero,
+        makingImage: addLeafFlavor,
+        flavorImage: addLeafMake,
+      },
+      {
         name: "Koya Tribal Jewelry",
         type: "underrated",
         description:
@@ -679,6 +706,26 @@ export const destinations: Destination[] = [
         makingImage: dhokraArtMake,
         flavorImage: dhokraArtFlavor,
       },
+      {
+        name: "Konda Paccha Forest Herbs",
+        type: "underrated",
+        description:
+          "A collection of wild leafy greens and medicinal herbs naturally grown in the hill forests of Maredumilli. Known locally as ‘Konda Paccha,’ these herbs are rich in micronutrients and healing properties.",
+        significance:
+          "These greens are part of indigenous food knowledge systems, often consumed seasonally to boost immunity and maintain digestive health.",
+        makingProcess:
+          "Herbs are sustainably foraged from forest slopes, washed in stream water, and either sun-dried or cooked fresh with minimal spices to retain nutrients.",
+        uses: [
+          "Seasonal tribal curries",
+          "Herbal decoctions",
+          "Immunity-boosting soups",
+          "Dry powder for traditional remedies",
+        ],
+        image: kondapacchaHero,
+        makingImage: kondapacchaMake,
+        flavorImage: kondapacchaFlavor,
+      },
+
       {
         name: "Forest Turmeric",
         type: "underrated",
