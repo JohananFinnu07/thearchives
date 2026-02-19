@@ -85,7 +85,7 @@ import saltedSeafoodFlavor from "@/assets/products/SSFSF.jpg";
 
 import saltandPepperImage from "@/assets/products/SAPSH.jpg";
 import saltandPepperMake from "@/assets/products/SAPSM.jpg";
-import saltandPepperFlavor from "@/assets/ethikoppaka.jpg";
+import saltandPepperFlavor from "@/assets/products/SAPSH.jpg";
 
 import minimalistLampImage from "@/assets/products/minimalistLamp.jpg";
 import minimalistLampMake from "@/assets/products/MTLM.jpg";
