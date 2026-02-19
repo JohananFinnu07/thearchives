@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Award, MapPin, Sparkles, ArrowRight } from "lucide-react";
-
+//import { ChevronDown, Award, MapPin, Sparkles, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowUpRight, Award, Sparkles } from "lucide-react";
 import { odopAndhraPradesh, ODOPDistrict } from "@/data/odop";
 import { Button } from "@/components/ui/button";
 
@@ -39,9 +39,9 @@ const ODOPDiscovery = () => {
           </h2>
 
           <p className="text-muted-foreground text-lg">
-            The Government of India recognized one signature product from each
-            district. We went further — uncovering what the official lists
-            missed.
+            Every district has one officially recognized product. We go further
+            — exploring the lesser-known foods, crafts, and traditions that
+            truly define the region.
           </p>
         </motion.div>
 
@@ -150,7 +150,7 @@ const ODOPDiscovery = () => {
                 </div>
               </div>
 
-              {/* Modal Footer */}
+              {/* Modal Footer 
               <div className="p-6 border-t border-border/50">
                 <button
                   className="inline-flex items-center gap-2 text-primary
@@ -159,7 +159,7 @@ const ODOPDiscovery = () => {
                   <span>Explore {activeDistrict.name}</span>
                   <ArrowRight className="w-6 h-4" />
                 </button>
-              </div>
+              </div>*/}
             </motion.div>
           </motion.div>
         )}
@@ -182,9 +182,9 @@ const DistrictCard = ({ district, index, onOpen }: DistrictCardProps) => {
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       onClick={onOpen}
-      className="w-full text-left bg-card rounded-xl border border-border
-                 p-5 hover:border-primary/30 hover:shadow-sm
-                 transition-all duration-300"
+      className="group w-full text-left bg-card rounded-xl border border-border
+           p-5 hover:border-primary/30 hover:shadow-sm
+           transition-all duration-300"
     >
       <div className="flex items-start justify-between gap-4">
         <div>
@@ -210,11 +210,20 @@ const DistrictCard = ({ district, index, onOpen }: DistrictCardProps) => {
           </p>
         </div>
 
-        <div
+        {/*<div
           className="w-8 h-8 mt-1 rounded-full bg-secondary
                         flex items-center justify-center"
         >
           <ChevronDown className="w-4 h-4 text-muted-foreground" />
+        </div>*/}
+        <div className="mt-1 flex items-center justify-center">
+          <ArrowUpRight
+            className="w-4 h-4 text-muted-foreground
+               group-hover:text-primary
+               group-hover:translate-x-1
+               group-hover:-translate-y-1
+               transition-all duration-300"
+          />
         </div>
       </div>
     </motion.button>
