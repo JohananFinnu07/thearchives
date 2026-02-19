@@ -17,6 +17,14 @@ import konaseemaImage from "@/assets/konaseema.jpg";
 import arakuCoffeeImage from "@/assets/products/araku-coffee-beans.jpg";
 import tribalBambooCraftImage from "@/assets/products/tribal-bamboo-craft.jpg";
 
+import coffeeinfusedDark from "@/assets/products/ACIDCH.jpg";
+import coffeeinfusedDarkMake from "@/assets/products/ACIDCM.jpg";
+import coffeeinfusedDarkFlavor from "@/assets/products/ACIDCF.jpg";
+
+import nigeroilHero from "@/assets/products/NSOH.jpg";
+import nigeroilMake from "@/assets/products/NSOM.jpg";
+import nigeroilFlavor from "@/assets/products/NSOF.jpg";
+
 import wildTurmericImage from "@/assets/products/wild-turmeric.jpg";
 import wildTurmericMaking from "@/assets/products/wild-turmeric1.jpg";
 import wildTurmericFlavor from "@/assets/products/wild-turmeric3.jpg";
@@ -31,6 +39,10 @@ import forestStrawberriesImage from "@/assets/products/forest-strawberries.jpg";
 import tribalShawlImage from "@/assets/products/tribal-shawl.jpg";
 import tribalShawlMake from "@/assets/products/KDTSM.jpg";
 import tribalShawlFlavor from "@/assets/products/KDTSF.jpeg";
+
+import forestTamarindHero from "@/assets/products/MFTH.jpg";
+import forestTamarindMake from "@/assets/products/MFTM.jpg";
+import forestTamarindFlavor from "@/assets/products/MFTF.jpg";
 
 import hillRiceImage from "@/assets/products/hill-rice.jpg";
 
@@ -191,6 +203,25 @@ export const destinations: Destination[] = [
         image: tribalBambooCraftImage,
       },
       {
+        name: "Araku Coffee-Infused Dark Chocolates",
+        type: "famous",
+        description:
+          "A bold fusion of high-altitude Arabica coffee from Araku Valley blended into rich, slow-tempered dark chocolate. This artisanal creation captures the valley’s forest aroma and deep cocoa intensity in every bite.",
+        significance:
+          "Araku coffee is globally recognized for its organic cultivation by tribal farmers. Infusing it into dark chocolate elevates the region’s most iconic crop into a premium, export-ready gourmet product.",
+        makingProcess:
+          "Shade-grown Arabica beans are handpicked, sun-dried, and slow-roasted. The roasted beans are finely ground and blended into melted dark couverture chocolate. The mixture is tempered to achieve a glossy finish and crisp snap before being molded and cured.",
+        uses: [
+          "Gourmet gifting",
+          "Luxury dessert platters",
+          "Pairing with red wine or black coffee",
+          "Premium corporate hampers",
+        ],
+        image: coffeeinfusedDark,
+        makingImage: coffeeinfusedDarkMake,
+        flavorImage: coffeeinfusedDarkFlavor,
+      },
+      {
         name: "Wild Turmeric Kasturi Manjal",
         type: "underrated",
         description:
@@ -228,6 +259,25 @@ export const destinations: Destination[] = [
         image: palmWineImage,
         makingImage: palmWineMake,
         flavorImage: palmWineFlavor,
+      },
+      {
+        name: "Niger Seed Oil Valisalu",
+        type: "underrated",
+        description:
+          "A rare tribal delicacy made using nutrient-rich Niger seeds (locally called Valisalu). Known for its earthy aroma and high oil content, this ingredient is both a culinary and medicinal treasure of Araku’s tribal communities.",
+        significance:
+          "Overshadowed by coffee, Niger seeds are traditionally cultivated by indigenous farmers. The cold-pressed oil and seed-based dishes are deeply rooted in tribal nutrition and seasonal food practices.",
+        makingProcess:
+          "Mature Niger seeds are sun-dried and cleaned. For oil extraction, seeds are cold-pressed using traditional wooden mills. For valisalu dishes, seeds are roasted and ground into coarse powder, often mixed with spices and forest herbs.",
+        uses: [
+          "Chutney base for rice and millets",
+          "Traditional tribal oil for cooking",
+          "Nutrient-rich seasoning powder",
+          "Ayurvedic and home remedies",
+        ],
+        image: nigeroilHero,
+        makingImage: nigeroilMake,
+        flavorImage: nigeroilFlavor,
       },
       {
         name: "Araku Black Pepper",
@@ -572,6 +622,25 @@ export const destinations: Destination[] = [
           "Premium sweetener",
         ],
         image: wildHoneyImage,
+      },
+      {
+        name: "Forest Tamarind",
+        type: "famous",
+        description:
+          "Wild-harvested tamarind from the dense forests of Maredumilli, known for its intense tanginess and natural sweetness. Unlike commercial varieties, it retains a deeper, smoky forest flavor.",
+        significance:
+          "Collected by tribal communities, forest tamarind forms a seasonal source of livelihood and is integral to Andhra cuisine, especially in pulusu and chutneys.",
+        makingProcess:
+          "Ripe pods are hand-harvested from forest trees, sun-dried naturally, and deseeded. The pulp is compressed into blocks without chemical preservatives.",
+        uses: [
+          "Pulusu and sambar preparation",
+          "Chutneys and pickles",
+          "Natural souring agent",
+          "Marinades for meat and fish",
+        ],
+        image: forestTamarindHero,
+        makingImage: forestTamarindMake,
+        flavorImage: forestTamarindFlavor,
       },
       {
         name: "Bamboo Chicken",
