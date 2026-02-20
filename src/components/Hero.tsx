@@ -1,12 +1,15 @@
-import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-araku.jpg';
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-araku.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -33,16 +36,17 @@ const Hero = () => {
           >
             What Survives Locally, Disappears Nationally
           </motion.p>
-          
+
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6">
-            Discover What India
+            The <span className="italic text-[#D6A84F]">Archive</span> Of Hidden
             <br />
-            <span className="italic">Almost Forgot</span>
+            <span className="italic">Local Gems</span>
           </h1>
-          
+
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            We find the spices that never reached supermarkets. The crafts that never went viral. 
-            The recipes that stayed in village kitchens. Before they're gone.
+            We find the spices that never reached supermarkets. The crafts that
+            never went viral. The recipes that stayed in village kitchens.
+            Before they're gone.
           </p>
 
           <motion.div
@@ -51,16 +55,16 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="gradient-forest text-primary-foreground border-0 px-8 py-6 text-base font-medium shadow-elevated hover:scale-105 transition-transform"
               asChild
             >
               <Link to="/destinations">Start Exploring</Link>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 px-8 py-6 text-base"
               asChild
             >
@@ -79,11 +83,17 @@ const Hero = () => {
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2 cursor-pointer"
-          onClick={() => document.getElementById('destinations')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() =>
+            document
+              .getElementById("destinations")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
         >
-          <span className="text-primary-foreground/60 text-xs tracking-widest uppercase">Discover</span>
+          <span className="text-primary-foreground/60 text-xs tracking-widest uppercase">
+            Discover
+          </span>
           <ChevronDown className="w-5 h-5 text-primary-foreground/60" />
         </motion.div>
       </motion.div>
