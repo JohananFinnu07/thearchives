@@ -36,7 +36,7 @@ const sampleGems = [
 
 const HiddenGems = () => {
   return (
-    <section id="gems" className="py-24 lg:py-32 bg-secondary/50">
+    <section id="gems" className="py-24 lg:py-38 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header - Centered */}
         <motion.div
@@ -53,9 +53,12 @@ const HiddenGems = () => {
             Treasures That{" "}
             <span className="italic text-primary">Stay Local</span>
           </h2>
-          <p className="text-muted-foreground text-lg mb-8">
-            The best coffee never leaves the valley. The finest honey stays with
-            the tribe. Here's what we found before it disappeared.
+          <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            In every celebrated destination, one product becomes the headline —
+            everything else becomes a whisper. Beyond the famous names lie
+            crafts, flavors, and forest harvests that rarely leave their source.
+            We document, verify, and bring forward these overlooked treasures —
+            before they fade into silence.
           </p>
           <Button
             size="lg"

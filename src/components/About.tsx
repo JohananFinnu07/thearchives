@@ -1,31 +1,34 @@
-import { motion } from 'framer-motion';
-import { Mountain, Users, Leaf, Camera } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { Mountain, Users, Leaf, Camera } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
     icon: Mountain,
-    title: 'Uncharted Places',
-    description: 'Hill stations where tourists are still rare and traditions run deep.',
-    link: '/destinations',
+    title: "Uncharted Places",
+    description:
+      "Hill stations where tourists are still rare and traditions run deep.",
+    link: "/destinations",
   },
   {
     icon: Users,
-    title: 'Real Stories',
-    description: 'Meet the artisans, farmers, and keepers of vanishing traditions.',
-    link: '/about',
+    title: "Real Stories",
+    description:
+      "Meet the artisans, farmers, and keepers of vanishing traditions.",
+    link: "/about",
   },
   {
     icon: Leaf,
-    title: 'Local Economy',
-    description: 'Every item you discover supports families who\'ve made it for generations.',
-    link: '/hidden-gems',
+    title: "Local Economy",
+    description:
+      "Every item you discover supports families who've made it for generations.",
+    link: "/hidden-gems",
   },
   {
     icon: Camera,
-    title: 'Visual Archive',
-    description: 'Documenting what might not exist in another decade.',
-    link: '/gallery',
+    title: "Visual Archive",
+    description: "Documenting what might not exist in another decade.",
+    link: "/gallery",
   },
 ];
 
@@ -46,11 +49,14 @@ const About = () => {
               Why This Matters
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-              Some Things <span className="italic text-primary">Only Exist</span> in One Place
+              Some Things{" "}
+              <span className="italic text-primary">Only Exist</span> in One
+              Place
             </h2>
             <p className="text-muted-foreground text-lg">
-              Every year, a recipe disappears when a grandmother passes. A craft dies when the last artisan 
-              can't find an apprentice. We're building an archive before it's too late.
+              Every year, a recipe disappears when a grandmother passes. A craft
+              dies when the last artisan can't find an apprentice. We're
+              building an archive before it's too late.
             </p>
           </motion.div>
 
@@ -63,10 +69,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link 
-                  to={feature.link}
-                  className="text-center group block"
-                >
+                <Link to={feature.link} className="text-center group block">
                   <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                     <feature.icon className="w-7 h-7 text-primary" />
                   </div>

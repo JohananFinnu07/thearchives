@@ -40,7 +40,7 @@ const Destinations = () => {
   return (
     <section
       id="destinations"
-      className="py-20 lg:py-30 bg-background overflow-hidden"
+      className="py-24 lg:py-34 bg-background overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
