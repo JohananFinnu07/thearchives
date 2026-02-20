@@ -40,7 +40,7 @@ const Destinations = () => {
   return (
     <section
       id="destinations"
-      className="py-24 lg:py-32 bg-background overflow-hidden"
+      className="py-20 lg:py-30 bg-background overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -59,8 +59,10 @@ const Destinations = () => {
             <span className="italic text-primary">Time Moves Slowly</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Hill stations where tribal traditions still breathe, coffee grows
-            wild, and the outside world feels far away.
+            Hill paths wrapped in mist. Forest markets that wake with the sun.
+            Coastal towns where salt hangs in the air. These are not rushed
+            destinations — they are lived-in landscapes. Here, tribal traditions
+            breathe, rivers remember, and the earth still speaks first.
           </p>
         </motion.div>
       </div>
