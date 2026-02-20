@@ -37,26 +37,29 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <MapPin className="w-6 h-6 text-primary" />
+          <Link to="/" className="flex items-center gap-2 leading-none">
+            <MapPin className="w-6 h-6 text-primary relative top-[1px]" />
             <span className="font-serif text-xl lg:text-2xl font-semibold text-foreground">
               TheArchives
             </span>
           </Link>
 
           {/* Desktop Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm tracking-wide"
+                className="relative text-[17px] font-normal font-sans text-muted-foreground hover:text-foreground transition-colors duration-200 group"
               >
                 {link.name}
+
+                {/* Underline Hover Effect */}
+                <span className="absolute left-0 -bottom-1 h-[1.5px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>
-
           {/* 🔍 Integrated NavSearch */}
           <NavSearch />
 
