@@ -1,24 +1,24 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, X, Send, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, X, Send, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const SubmitGemForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    gemName: '',
-    location: '',
-    description: '',
-    yourName: '',
-    email: '',
+    gemName: "",
+    location: "",
+    description: "",
+    yourName: "",
+    email: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Build email body
     const emailBody = `
 New Hidden Gem Submission
@@ -29,31 +29,33 @@ Location: ${formData.location}
 Description:
 ${formData.description}
 
-Submitted by: ${formData.yourName || 'Anonymous'}
-Contact Email: ${formData.email || 'Not provided'}
+Submitted by: ${formData.yourName || "Anonymous"}
+Contact Email: ${formData.email || "Not provided"}
     `.trim();
 
     // Open mailto link
-    const mailtoLink = `mailto:johananfinnutalari@gmail.com?subject=${encodeURIComponent(`Hidden Gem Discovery: ${formData.gemName}`)}&body=${encodeURIComponent(emailBody)}`;
-    window.open(mailtoLink, '_blank');
-    
+    const mailtoLink = `mailto:thearchives.offc@gmail.com?subject=${encodeURIComponent(`Hidden Gem Discovery: ${formData.gemName}`)}&body=${encodeURIComponent(emailBody)}`;
+    window.open(mailtoLink, "_blank");
+
     // Show success state
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
       setIsOpen(false);
       setFormData({
-        gemName: '',
-        location: '',
-        description: '',
-        yourName: '',
-        email: '',
+        gemName: "",
+        location: "",
+        description: "",
+        yourName: "",
+        email: "",
       });
     }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
@@ -65,13 +67,15 @@ Contact Email: ${formData.email || 'Not provided'}
       <motion.button
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 200 }}
+        transition={{ delay: 1, type: "spring", stiffness: 200 }}
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 rounded-full gradient-forest text-primary-foreground shadow-elevated hover:scale-105 transition-transform"
         aria-label="Share a hidden gem"
       >
         <Sparkles className="w-5 h-5" />
-        <span className="font-medium text-sm hidden sm:inline">Share a Gem</span>
+        <span className="font-medium text-sm hidden sm:inline">
+          Share a Gem
+        </span>
       </motion.button>
 
       {/* Modal Overlay */}
@@ -89,7 +93,7 @@ Contact Email: ${formData.email || 'Not provided'}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 w-[calc(100%-2rem)] sm:w-[420px] max-h-[85vh] overflow-y-auto bg-background rounded-2xl shadow-elevated border border-border"
             >
               {/* Header */}
@@ -134,7 +138,8 @@ Contact Email: ${formData.email || 'Not provided'}
                         Thank You!
                       </h4>
                       <p className="text-muted-foreground text-sm">
-                        Your discovery has been submitted. We'll review it and add it to our archives.
+                        Your discovery has been submitted. We'll review it and
+                        add it to our archives.
                       </p>
                     </motion.div>
                   ) : (
@@ -147,13 +152,17 @@ Contact Email: ${formData.email || 'Not provided'}
                       className="space-y-5"
                     >
                       <p className="text-muted-foreground text-sm">
-                        Found something special during your travels? A rare spice, traditional craft, or local delicacy? 
-                        Let us know and help preserve cultural heritage.
+                        Found something special during your travels? A rare
+                        spice, traditional craft, or local delicacy? Let us know
+                        and help preserve cultural heritage.
                       </p>
 
                       <div className="space-y-4">
                         <div>
-                          <label htmlFor="gemName" className="block text-sm font-medium text-foreground mb-1.5">
+                          <label
+                            htmlFor="gemName"
+                            className="block text-sm font-medium text-foreground mb-1.5"
+                          >
                             What did you discover? *
                           </label>
                           <Input
@@ -168,7 +177,10 @@ Contact Email: ${formData.email || 'Not provided'}
                         </div>
 
                         <div>
-                          <label htmlFor="location" className="block text-sm font-medium text-foreground mb-1.5">
+                          <label
+                            htmlFor="location"
+                            className="block text-sm font-medium text-foreground mb-1.5"
+                          >
                             Where did you find it? *
                           </label>
                           <Input
@@ -183,7 +195,10 @@ Contact Email: ${formData.email || 'Not provided'}
                         </div>
 
                         <div>
-                          <label htmlFor="description" className="block text-sm font-medium text-foreground mb-1.5">
+                          <label
+                            htmlFor="description"
+                            className="block text-sm font-medium text-foreground mb-1.5"
+                          >
                             Tell us more *
                           </label>
                           <Textarea
@@ -200,7 +215,10 @@ Contact Email: ${formData.email || 'Not provided'}
 
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <label htmlFor="yourName" className="block text-sm font-medium text-foreground mb-1.5">
+                            <label
+                              htmlFor="yourName"
+                              className="block text-sm font-medium text-foreground mb-1.5"
+                            >
                               Your Name
                             </label>
                             <Input
@@ -213,7 +231,10 @@ Contact Email: ${formData.email || 'Not provided'}
                             />
                           </div>
                           <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">
+                            <label
+                              htmlFor="email"
+                              className="block text-sm font-medium text-foreground mb-1.5"
+                            >
                               Email
                             </label>
                             <Input
@@ -238,7 +259,8 @@ Contact Email: ${formData.email || 'Not provided'}
                       </Button>
 
                       <p className="text-xs text-muted-foreground text-center">
-                        By submitting, you agree that we may feature your discovery on TheArchives.
+                        By submitting, you agree that we may feature your
+                        discovery on TheArchives.
                       </p>
                     </motion.form>
                   )}
