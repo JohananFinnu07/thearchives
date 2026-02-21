@@ -42,6 +42,14 @@ import blackPepperImage from "@/assets/products/black-pepper.jpg";
 import blackPepperMake from "@/assets/products/black-pepper.jpg";
 import blackPepperFlavor from "@/assets/products/ABPF.jpg";
 
+import madagadaBPotteryImage from "@/assets/products/MBPH.jpg";
+import madagadaBPotteryMake from "@/assets/products/MBPM.jpg";
+import madagadaBPotteryFlavor from "@/assets/products/MBPF.jpg";
+
+import coconutJaggeryImage from "@/assets/products/CJH.jpg";
+import coconutJaggeryMake from "@/assets/products/CJM.jpg";
+import coconutJaggeryFlavor from "@/assets/products/CJF.jpg";
+
 import koyatribalJImage from "@/assets/products/KTJH.jpg";
 import koyatribalJMake from "@/assets/products/KTJM.jpg";
 import koyatribalJFlavor from "@/assets/products/KTJF.jpg";
@@ -125,8 +133,12 @@ import dryflowerMake from "@/assets/products/DFAM.jpg";
 import dryflowerFlavor from "@/assets/products/DFAF.jpg";
 
 import dryFishImage from "@/assets/products/DFVH.jpg";
-import dryFishMake from "@/assets/products/DFVH.jpg";
+import dryFishMake from "@/assets/products/DFVM.jpg";
 import dryFishFlavor from "@/assets/products/DFVF.jpg";
+
+import palmjaggeryImage from "@/assets/products/PJH.jpg";
+import palmjaggeryMake from "@/assets/products/PJM.jpg";
+import palmjaggeryFlavor from "@/assets/products/PJF.jpg";
 
 import saltedSeafoodImage from "@/assets/products/SSFSH.jpg";
 import saltedSeafoodMake from "@/assets/products/SSFSM.jpg";
@@ -136,29 +148,61 @@ import saltandPepperImage from "@/assets/products/SAPSH.jpg";
 import saltandPepperMake from "@/assets/products/SAPSM.jpg";
 import saltandPepperFlavor from "@/assets/products/SAPSH.jpg";
 
-import minimalistLampImage from "@/assets/products/minimalistLamp.jpg";
+import minimalistLampImage from "@/assets/products/MTLMH.jpg";
 import minimalistLampMake from "@/assets/products/MTLM.jpg";
 import minimalistLampFlavor from "@/assets/products/MTLF.png";
 
+import ankuduKitchenwareImage from "@/assets/products/AWKH.jpg";
+import ankuduKitchenwareMake from "@/assets/products/AWKM.jpg";
+import ankuduKitchenwareFlavor from "@/assets/products/AWKF.jpg";
+
 import sundriedVegImage from "@/assets/products/SDVH.jpg";
-import sundriedVegMake from "@/assets/products/SDVH.jpg";
+import sundriedVegMake from "@/assets/products/SDVM.jpg";
 import sundriedVegFlavor from "@/assets/products/SDVF.jpg";
 
+import sudharaistoneImage from "@/assets/products/SRSCH.jpg";
+import sudharaistoneMake from "@/assets/products/SRSCM.jpg";
+import sudharaistoneFlavor from "@/assets/products/SRSCF.jpg";
+
 import leafWrappedSweetsImage from "@/assets/products/LWSH.jpg";
-import leafWrappedSweetsMake from "@/assets/products/LWSH.jpg";
+import leafWrappedSweetsMake from "@/assets/products/LWSM.jpg";
 import leafWrappedSweetsFlavor from "@/assets/products/LWSF.jpg";
 
-import bambooFishTrapsImage from "@/assets/products/BFTH.png";
+import athreyapuramPImage from "@/assets/products/ATPH.jpg";
+import athreyapuramPMake from "@/assets/products/ATPM.jpg";
+import athreyapuramPFlavor from "@/assets/products/ATPF.jpg";
+
+import bambooFishTrapsImage from "@/assets/products/BFTH.jpg";
 import bambooFishTrapsMake from "@/assets/products/BFTM.jpg";
-import bambooFishTrapsFlavor from "@/assets/products/BFTH.jpg";
+import bambooFishTrapsFlavor from "@/assets/products/BFTF.jpg";
 
 import herbalOilsForestRootsImage from "@/assets/products/HOFRH.jpg";
 import herbalOilsForestRootsMake from "@/assets/products/HOFRM.jpg";
 import herbalOilsForestRootsFlavor from "@/assets/products/HOFRF.jpg";
 
+import cocnutJaggeryImage from "@/assets/products/CJH.jpg";
+import cocnutJaggeryMake from "@/assets/products/CJM.jpg";
+import cocnutJaggeryFlavor from "@/assets/products/CJF.jpg";
+
+import kakinadaGKImage from "@/assets/products/KGKH.jpg";
+import kakinadaGKMake from "@/assets/products/KDKM.jpg";
+import kakinadaGKFlavor from "@/assets/products/KGKF.jpg";
+
+import pulasaFishImage from "@/assets/products/PFH.jpg";
+import pulasaFishMake from "@/assets/products/PFM.jpg";
+import pulasaFishFlavor from "@/assets/products/PFF.jpg";
+
+import forestHoneyImage from "@/assets/products/FHH.jpg";
+import forestHoneyMake from "@/assets/products/FHM.jpg";
+import forestHoneyFlavor from "@/assets/products/FHF.jpg";
+
+import citrusProductsImage from "@/assets/products/CPH.jpg";
+import citrusProductsMake from "@/assets/products/CPM.jpg";
+import citrusProductsFlavor from "@/assets/products/CPF.jpg";
+
 import chinchbambooCraftsImage from "@/assets/products/CBCH.jpg";
 import chinchbambooCraftsMake from "@/assets/products/CBCM.jpg";
-import chinchbambooCraftsFlavor from "@/assets/products/CBCH.jpg";
+import chinchbambooCraftsFlavor from "@/assets/products/CBCF.jpg";
 
 import udayagiriWoodencutleryImage from "@/assets/products/UWCH.jpg";
 import udayagiriWoodencutleryMake from "@/assets/products/UWCM.jpg";
@@ -853,37 +897,50 @@ export const destinations: Destination[] = [
   {
     id: "visakhapatnam",
     name: "Visakhapatnam",
-    tagline: "Where the Eastern Ghats meet the sea",
+    tagline: "Where the Eastern Ghats Meet the Sea",
     image: vishakapatnamImage,
     heroDescription:
-      "A coastal city shaped by fishermen, hill tribes, spices, and salt-laced winds — layered far deeper than its beaches.",
+      "A coastal gateway where tribal hills, fishing traditions, spices, and sea trade shape a layered cultural identity.",
     elevation: "45 m",
     bestTime: "October – March",
     temperature: "20°C – 34°C",
     about:
-      "Visakhapatnam is a threshold — between hills and ocean, tribal interiors and global trade routes. While known for beaches and ports, its deeper identity lives in fishing hamlets, hill-grown spices, dried seafood traditions, and markets where forest produce meets the sea. Vizag acts as a cultural gateway, carrying the flavors and crafts of surrounding tribal regions into the modern world.",
+      "Visakhapatnam, popularly known as Vizag, is a dynamic coastal city in Andhra Pradesh where the Eastern Ghats descend into the Bay of Bengal. Beyond its beaches and port skyline lies a deeper ecosystem shaped by fishing communities, hill-grown spices, dried seafood traditions, salt-making practices, and bustling coastal markets. Serving as a cultural bridge between tribal interiors and maritime trade routes, Vizag carries the flavors, crafts, and food wisdom of surrounding regions into modern urban life.",
     products: [
       {
         name: "Palm Jaggery and Sugarcane Vinegar",
         type: "famous",
         description:
-          "Unrefined sweeteners and vinegars extracted using traditional coastal methods.",
+          "Traditional unrefined palm jaggery and naturally fermented sugarcane vinegar produced using age-old coastal methods.",
         significance:
-          "Represents pre-industrial sugar practices and coastal fermentation knowledge.",
+          "These products preserve pre-industrial sugar extraction and natural fermentation knowledge passed down through coastal agrarian communities.",
         makingProcess:
-          "Sugarcane juice is boiled in open pans or naturally fermented for vinegar.",
-        uses: ["Traditional cooking", "Health tonics", "Natural sweetening"],
+          "Fresh palm sap or sugarcane juice is slowly boiled in open pans to produce jaggery. For vinegar, the juice undergoes controlled natural fermentation in earthen or wooden containers without chemical additives.",
+        uses: [
+          "Traditional Andhra sweets",
+          "Health tonics",
+          "Natural sweetening",
+          "Pickling and preservation",
+        ],
+        image: palmjaggeryImage,
+        makingImage: palmjaggeryMake,
+        flavorImage: palmjaggeryFlavor,
       },
       {
         name: "Dry Fish Varieties and Curry Pastes",
         type: "underrated",
         description:
-          "Sun-dried coastal fish and spice-ground pastes used in deep-flavor Andhra cooking.",
+          "Sun-dried coastal fish and hand-ground spice pastes central to deep-flavor Andhra seafood cuisine.",
         significance:
-          "A survival cuisine developed by fishing communities to preserve seasonal abundance.",
+          "Developed as a preservation technique by fishing communities, dry fish cuisine represents resilience, seasonality, and coastal survival food systems.",
         makingProcess:
-          "Fresh catch is salted, sun-dried, and blended with region-specific spice mixes.",
-        uses: ["Fish curries", "Dry fry dishes", "Travel-friendly protein"],
+          "Freshly caught fish are cleaned, salted generously, and sun-dried for several days. Some are later blended with red chilies, garlic, and regional spices to create concentrated curry pastes.",
+        uses: [
+          "Spicy fish curries",
+          "Dry fry dishes",
+          "Travel-friendly protein",
+          "Flavor-enhancing condiments",
+        ],
         image: dryFishImage,
         makingImage: dryFishMake,
         flavorImage: dryFishFlavor,
@@ -891,10 +948,18 @@ export const destinations: Destination[] = [
       {
         name: "Salted Seafood Snacks",
         type: "underrated",
-        description: "Crunchy, salted seafood bites enjoyed along the coast.",
-        significance: "Reflects informal street and boat-life food culture.",
-        makingProcess: "Small seafood is salted, dried, and lightly roasted.",
-        uses: ["Snacking", "Side dishes"],
+        description:
+          "Crunchy salted seafood bites made from small coastal catch, enjoyed as street snacks and boat food.",
+        significance:
+          "Reflects informal coastal food culture rooted in fishing life, offering high-protein, long-lasting nourishment.",
+        makingProcess:
+          "Small fish, prawns, or anchovies are salted, sun-dried, and lightly roasted or fried before being seasoned with chili and spices.",
+        uses: [
+          "Evening snacks",
+          "Side dishes",
+          "Travel rations",
+          "Coastal street food",
+        ],
         image: saltedSeafoodImage,
         makingImage: saltedSeafoodMake,
         flavorImage: saltedSeafoodFlavor,
@@ -904,26 +969,30 @@ export const destinations: Destination[] = [
   {
     id: "etikoppaka",
     name: "Etikoppaka",
-    tagline: "A village that turns wood into memory",
+    tagline: "A Village That Turns Wood Into Memory",
     image: ethikopakkaImage,
     heroDescription:
-      "Bright lacquered toys shaped by hand, fire, and patience — carrying stories across generations.",
+      "Home of India’s iconic lacquered wooden toys, where natural dyes and hand-turned craft preserve centuries of storytelling.",
     elevation: "25 m",
     bestTime: "November – February",
     temperature: "22°C – 35°C",
     about:
-      "Etikoppaka is not an industry — it is a rhythm. For over four centuries, artisans here have transformed locally sourced wood into lacquered toys using natural dyes, seeds, and tree resins. Every object reflects a slow craft philosophy where sustainability, storytelling, and skill pass silently from parent to child, resisting mass production.",
+      "Etikoppaka is a heritage craft village in Andhra Pradesh globally recognized for its traditional lacquered wooden toys and utility products. For over four centuries, artisans have transformed locally sourced Ankudu wood (Wrightia tinctoria) into vibrant handcrafted objects using natural dyes, vegetable pigments, and resin-based lac. The craft follows a sustainable, zero-waste philosophy where wood-turning skills are passed from generation to generation, preserving ecological balance while adapting to modern design needs.",
     products: [
       {
         name: "Salt and Pepper Shakers",
         type: "underrated",
         description:
-          "Minimal lacquered wooden tableware crafted using the Etikoppaka technique.",
+          "Minimal lacquered wooden salt and pepper shakers crafted using the traditional Etikoppaka hand-lathe technique.",
         significance:
-          "Brings a centuries-old toy-making craft into modern kitchens.",
+          "Represents the evolution of toy-making craftsmanship into contemporary tableware, blending heritage aesthetics with functional design.",
         makingProcess:
-          "Turned on a lathe and colored using natural dyes and resin-based lacquer.",
-        uses: ["Dining tableware", "Decor accents"],
+          "Shaped on a hand-operated lathe from Ankudu wood and colored using natural vegetable dyes mixed with resin-based lacquer. The smooth finish is achieved through friction polishing without synthetic chemicals.",
+        uses: [
+          "Dining tableware",
+          "Kitchen decor accents",
+          "Sustainable gifting",
+        ],
         image: saltandPepperImage,
         makingImage: saltandPepperMake,
         flavorImage: saltandPepperFlavor,
@@ -932,22 +1001,36 @@ export const destinations: Destination[] = [
         name: "Ankudu Wood Kitchenware",
         type: "famous",
         description:
-          "Eco-friendly kitchen tools made from locally sourced Ankudu wood.",
+          "Eco-friendly kitchen tools handcrafted from locally sourced Ankudu wood, known for its lightweight and durable properties.",
         significance:
-          "Sustainable, toxin-free alternatives rooted in village craftsmanship.",
+          "Offers toxin-free, biodegradable alternatives to plastic and metal utensils while sustaining traditional village craftsmanship.",
         makingProcess:
-          "Hand-carved, polished, and naturally lacquered without chemicals.",
-        uses: ["Cooking utensils", "Serving tools"],
+          "Wood blocks are seasoned, lathe-turned or hand-carved into utensils, and polished with natural lac coatings to enhance durability and shine.",
+        uses: [
+          "Cooking utensils",
+          "Serving spoons",
+          "Kitchen decor",
+          "Eco-conscious living",
+        ],
+        image: ankuduKitchenwareImage,
+        makingImage: ankuduKitchenwareMake,
+        flavorImage: ankuduKitchenwareFlavor,
       },
       {
         name: "Minimalist Table Lamps",
         type: "underrated",
         description:
-          "Contemporary lighting pieces inspired by traditional wood-turning skills.",
-        significance: "Shows how heritage crafts can adapt to modern design.",
+          "Contemporary wooden table lamps inspired by Etikoppaka’s traditional wood-turning techniques.",
+        significance:
+          "Demonstrates how heritage craftsmanship adapts to modern interior design while preserving natural materials and artisanal processes.",
         makingProcess:
-          "Lathe-turned wooden bases finished with natural lacquer.",
-        uses: ["Home decor", "Ambient lighting"],
+          "Lamp bases are precision-turned on traditional lathes, finished with natural lacquer, and assembled with modern lighting components.",
+        uses: [
+          "Home decor",
+          "Ambient lighting",
+          "Studio interiors",
+          "Handcrafted gifting",
+        ],
         image: minimalistLampImage,
         makingImage: minimalistLampMake,
         flavorImage: minimalistLampFlavor,
@@ -957,26 +1040,31 @@ export const destinations: Destination[] = [
   {
     id: "gandikota",
     name: "Gandikota",
-    tagline: "India’s silent canyon of stone and wind",
+    tagline: "India’s Silent Canyon of Stone and Wind",
     image: gandikotaImage,
     heroDescription:
-      "A vast gorge carved by time, guarding stories of survival, stone, and forgotten food cultures.",
+      "A dramatic canyon landscape shaped by erosion, survival foods, stone craftsmanship, and resilient village traditions.",
     elevation: "300 m",
     bestTime: "October – February",
     temperature: "15°C – 38°C",
     about:
-      "Gandikota’s dramatic canyon hides a quieter narrative — one of hardy village life shaped by drought, stone, and seasonal rivers. Traditional grains, sun-dried foods, and resilient cooking techniques evolved here not for taste alone, but for survival. The land teaches restraint, patience, and respect for scarcity.",
+      "Gandikota, often called the ‘Grand Canyon of India,’ is a striking gorge carved by the Pennar River through rugged stone formations in Andhra Pradesh. Beyond its dramatic cliffs and fort ruins lies a landscape shaped by drought cycles, rocky terrain, and seasonal rivers. Local food traditions evolved around sun-drying, grain preservation, and low-water cooking techniques designed for survival. Stone, wind, and scarcity influenced not only architecture but also culinary and craft practices, making Gandikota a testament to resilience and adaptation.",
     products: [
       {
         name: "Sun Dried Vegetables",
         type: "underrated",
         description:
-          "Seasonal vegetables preserved using intense sun and dry winds.",
+          "Seasonal vegetables preserved using intense sunlight and dry canyon winds to ensure long shelf life.",
         significance:
-          "A drought-resilient food tradition developed for arid landscapes.",
+          "A drought-resilient preservation technique developed for arid conditions, allowing households to store nutrition for lean months.",
         makingProcess:
-          "Vegetables are sliced, salted lightly, and sun-dried for long storage.",
-        uses: ["Curries", "Emergency food", "Travel meals"],
+          "Fresh vegetables are sliced thin, lightly salted, and spread on woven mats under direct sunlight for several days until fully dehydrated.",
+        uses: [
+          "Rehydrated curries",
+          "Travel and storage food",
+          "Emergency supplies",
+          "Flavor concentrates",
+        ],
         image: sundriedVegImage,
         makingImage: sundriedVegMake,
         flavorImage: sundriedVegFlavor,
@@ -985,70 +1073,89 @@ export const destinations: Destination[] = [
         name: "Suddha Rai Stone Carvings",
         type: "famous",
         description:
-          "Hand-carved stone artifacts made from locally available rock.",
+          "Hand-chiseled stone artifacts crafted from locally sourced rock, inspired by the region’s fort architecture.",
         significance:
-          "Reflects the region’s historical relationship with stone and fort architecture.",
-        makingProcess: "Chiseled manually using traditional carving tools.",
-        uses: ["Home decor", "Temple artifacts"],
+          "Reflects Gandikota’s historical connection to stone construction, temple sculpture, and defensive fort design.",
+        makingProcess:
+          "Blocks of local stone are manually carved using chisels and hammers, shaped into decorative or ritual objects with traditional finishing techniques.",
+        uses: [
+          "Home decor",
+          "Temple artifacts",
+          "Architectural accents",
+          "Cultural souvenirs",
+        ],
+        image: sudharaistoneImage,
+        makingImage: sudharaistoneMake,
+        flavorImage: sudharaistoneFlavor,
       },
     ],
   },
   {
     id: "madagada",
     name: "Madagada",
-    tagline: "Clay shaped by fire and folklore",
+    tagline: "Clay Shaped by Fire and Folklore",
     image: madagadaImage,
     heroDescription:
-      "A village where earth becomes cookware, ritual, and everyday survival.",
+      "A heritage pottery village where earthen cookware preserves flavor, ritual, and indigenous food wisdom.",
     elevation: "120 m",
     bestTime: "November – February",
     temperature: "20°C – 36°C",
     about:
-      "Madagada is known quietly among rural kitchens for its earthenware — pots believed to enhance flavor, preserve nutrients, and cool naturally. Made from locally sourced clay and fired using traditional kilns, these vessels are inseparable from food rituals, seasonal cooking, and indigenous wisdom that modern materials struggle to replicate.",
+      "Madagada is renowned for its traditional black earthenware pottery crafted from locally sourced clay. These vessels are valued in rural kitchens for their natural cooling properties, mineral retention, and ability to enhance flavor. Fired in traditional kilns using organic fuels, Madagada pottery represents a sustainable alternative to modern cookware while preserving culinary rituals passed down through generations.",
     products: [
       {
         name: "Madagada Black Pottery",
         type: "famous",
         description:
-          "Smoke-fired black earthenware used for cooking and storage.",
+          "Smoke-fired black earthenware cookware crafted using traditional low-oxygen firing techniques.",
         significance:
-          "Believed to enhance flavor and maintain food temperature naturally.",
+          "Enhances flavor naturally, retains heat evenly, and reflects centuries-old rural cooking traditions.",
         makingProcess:
-          "Clay pots are fired in low-oxygen pits using organic fuel.",
-        uses: ["Cooking", "Water storage", "Ritual use"],
+          "Hand-shaped clay pots are sun-dried and fired in low-oxygen pits using organic fuel to achieve the signature black finish.",
+        uses: ["Traditional cooking", "Water storage", "Ritual ceremonies"],
+        image: madagadaBPotteryImage,
+        makingImage: madagadaBPotteryMake,
+        flavorImage: madagadaBPotteryFlavor,
       },
     ],
   },
   {
     id: "konaseema",
     name: "Konaseema - Godavari",
-    tagline: "Where rivers write recipes",
+    tagline: "Where Rivers Write Recipes",
     image: konaseemaImage,
     heroDescription:
-      "A fertile delta shaped by coconut palms, backwaters, and slow-cooked traditions.",
+      "A fertile delta shaped by coconuts, river fish, jaggery sweets, and slow-cooked traditions.",
     elevation: "Sea level",
     bestTime: "November – February",
     temperature: "18°C – 34°C",
     about:
-      "Konaseema is abundance made gentle. Fed by the Godavari’s branches, the region produces coconuts, rice, river fish, and leaf-wrapped delicacies that define Andhra’s comfort food culture. Here, preservation techniques, sweets, and pickles evolved around humidity, festivals, and river rhythms rather than markets.",
+      "Konaseema, located in the Godavari delta of Andhra Pradesh, is known for its lush coconut groves, paddy fields, river fisheries, and heritage sweets. Seasonal river rhythms influence its cuisine, where leaf-wrapped delicacies, coconut jaggery, and iconic festival sweets define regional identity. Preservation techniques evolved around humidity, abundance, and celebration rather than scarcity.",
     products: [
       {
         name: "Coconut Jaggery",
         type: "famous",
-        description: "Unrefined sweetener made from coconut sap.",
-        significance: "Central to delta sweets and traditional energy foods.",
+        description:
+          "Unrefined sweetener made from freshly tapped coconut sap.",
+        significance:
+          "A key ingredient in delta sweets and traditional energy-rich foods.",
         makingProcess:
-          "Sap is collected, filtered, and slow-boiled to solidify.",
-        uses: ["Sweets", "Beverages", "Healthy sweetener"],
+          "Coconut sap is collected, filtered, and slow-boiled in open pans until thickened and solidified.",
+        uses: ["Traditional sweets", "Beverages", "Natural sweetener"],
+        image: cocnutJaggeryImage,
+        makingImage: cocnutJaggeryMake,
+        flavorImage: cocnutJaggeryFlavor,
       },
       {
         name: "Leaf Wrapped Sweets",
         type: "underrated",
-        description: "Traditional sweets steamed or set in natural leaves.",
-        significance: "Zero-waste packaging rooted in ritual cooking.",
+        description:
+          "Traditional sweets steamed or set in natural leaves for aroma and zero-waste packaging.",
+        significance:
+          "Rooted in ritual cooking and eco-friendly food traditions of the delta.",
         makingProcess:
-          "Sweet mixtures are wrapped in leaves and gently cooked.",
-        uses: ["Festivals", "Offerings"],
+          "Sweet mixtures are wrapped in leaves such as turmeric or banana and gently steamed or set.",
+        uses: ["Festivals", "Temple offerings", "Traditional gifting"],
         image: leafWrappedSweetsImage,
         makingImage: leafWrappedSweetsMake,
         flavorImage: leafWrappedSweetsFlavor,
@@ -1056,50 +1163,68 @@ export const destinations: Destination[] = [
       {
         name: "Athreyapuram Pootharekulu",
         type: "famous",
-        description: "Paper-thin sweet layered with jaggery and ghee.",
-        significance: "A GI-recognized delicacy of the Godavari delta.",
-        makingProcess: "Rice starch sheets are sun-dried and hand-layered.",
-        uses: ["Festive sweet", "Gifting"],
+        description:
+          "Paper-thin sweet layered with jaggery, ghee, and dry fruits.",
+        significance:
+          "A GI-recognized delicacy representing Godavari’s sweet-making heritage.",
+        makingProcess:
+          "Rice starch sheets are spread thin, sun-dried, and hand-layered with sweet fillings.",
+        uses: ["Festive sweet", "Premium gifting"],
+        image: athreyapuramPImage,
+        makingImage: athreyapuramPMake,
+        flavorImage: athreyapuramPFlavor,
       },
       {
         name: "Kakinada Gottam Kaja",
         type: "famous",
-        description: "Crisp fried sweet soaked in sugar syrup.",
-        significance: "Represents coastal sweet-making mastery.",
-        makingProcess: "Fried dough shells are dipped in flavored syrup.",
-        uses: ["Celebrations", "Snacks"],
+        description:
+          "Crisp fried pastry shells soaked in flavored sugar syrup.",
+        significance: "Symbol of coastal Andhra’s mastery in layered sweets.",
+        makingProcess:
+          "Rolled dough is deep-fried until crisp and dipped in cardamom-infused syrup.",
+        uses: ["Celebrations", "Snacks", "Festive boxes"],
+        image: kakinadaGKImage,
+        makingImage: kakinadaGKMake,
+        flavorImage: kakinadaGKFlavor,
       },
       {
         name: "Pulasa Fish",
         type: "famous",
-        description: "Highly prized seasonal fish from the Godavari.",
-        significance: "Symbol of river abundance and seasonal eating.",
-        makingProcess: "Caught during monsoon migration season.",
-        uses: ["Curries", "Traditional feasts"],
+        description: "Highly prized seasonal fish from the Godavari River.",
+        significance:
+          "A monsoon delicacy symbolizing river abundance and seasonal eating traditions.",
+        makingProcess:
+          "Caught during annual upstream migration in monsoon months.",
+        uses: ["Traditional curries", "Festive feasts"],
+        image: pulasaFishImage,
+        makingImage: pulasaFishMake,
+        flavorImage: pulasaFishFlavor,
       },
     ],
   },
   {
     id: "papikondalu",
     name: "Papikondalu",
-    tagline: "Forests folded around a river",
+    tagline: "Forests Folded Around a River",
     image: papikondaluImage,
     heroDescription:
-      "Mist-covered hills where tribal life, forest food, and the Godavari flow together.",
+      "Mist-covered hills where tribal ecology, forest foods, and the Godavari flow together.",
     elevation: "300–900 m",
     bestTime: "October – February",
     temperature: "15°C – 30°C",
     about:
-      "Papikondalu is a living archive of tribal ecology. Communities here rely on forest honey, tubers, leafy greens, and river fish harvested with restraint and ritual. Food is seasonal, knowledge is oral, and survival depends on harmony with the forest rather than control over it.",
+      "Papikondalu is a forested river valley ecosystem along the Godavari, home to indigenous tribal communities who depend on seasonal forest produce. Food practices revolve around honey collection, tubers, leafy greens, and small river fish harvested sustainably. Knowledge systems are oral, ecological, and guided by seasonal cycles rather than markets.",
     products: [
       {
         name: "Bamboo Fish Traps",
         type: "underrated",
-        description: "Handwoven bamboo traps used for river fishing.",
+        description:
+          "Handwoven bamboo traps used for sustainable river fishing.",
         significance:
-          "An eco-sensitive fishing method perfected by tribal communities.",
-        makingProcess: "Split bamboo is woven into conical traps.",
-        uses: ["Fishing", "Decor", "Cultural display"],
+          "Eco-sensitive fishing method perfected by tribal communities along the Godavari.",
+        makingProcess:
+          "Split bamboo is woven into conical or cylindrical traps designed to allow water flow while trapping fish.",
+        uses: ["Fishing", "Decor display", "Cultural artifacts"],
         image: bambooFishTrapsImage,
         makingImage: bambooFishTrapsMake,
         flavorImage: bambooFishTrapsFlavor,
@@ -1109,7 +1234,7 @@ export const destinations: Destination[] = [
   {
     id: "srisailam",
     name: "Srisailam – Nallamala Forest",
-    tagline: "Sacred hills guarded by wilderness",
+    tagline: "Sacred Hills Guarded by Wilderness",
     image: srisailamImage,
     heroDescription:
       "A spiritual center surrounded by one of South India’s oldest forest ecosystems.",
@@ -1117,16 +1242,18 @@ export const destinations: Destination[] = [
     bestTime: "October – February",
     temperature: "16°C – 35°C",
     about:
-      "Srisailam stands at the heart of the Nallamala forest, where temple traditions coexist with deep tribal knowledge. The forest supplies medicinal plants, honey, millets, and wild produce that sustain local communities. Here, spirituality is inseparable from ecology.",
+      "Srisailam lies within the Nallamala Forest, blending sacred temple traditions with deep tribal ecological knowledge. Forest-based livelihoods include medicinal plants, wild honey, millets, and bamboo crafts. Spirituality here is inseparable from conservation and forest stewardship.",
     products: [
       {
         name: "Herbal Oils and Forest Roots",
         type: "underrated",
-        description: "Medicinal extracts prepared from forest-grown plants.",
-        significance: "Part of indigenous healing knowledge passed orally.",
+        description:
+          "Medicinal extracts prepared from forest-grown herbs and roots.",
+        significance:
+          "Part of indigenous healing systems passed orally through generations.",
         makingProcess:
-          "Roots and herbs are sun-dried and slow-infused in oils.",
-        uses: ["Traditional medicine", "Massage"],
+          "Roots and herbs are shade-dried and slow-infused in oils using traditional methods.",
+        uses: ["Traditional medicine", "Massage therapy"],
         image: herbalOilsForestRootsImage,
         makingImage: herbalOilsForestRootsMake,
         flavorImage: herbalOilsForestRootsFlavor,
@@ -1134,11 +1261,12 @@ export const destinations: Destination[] = [
       {
         name: "Chinch Bamboo Crafts",
         type: "underrated",
-        description: "Utility and decor items made from native bamboo.",
+        description: "Utility and decorative items crafted from native bamboo.",
         significance:
           "Sustainable forest craft with minimal ecological impact.",
-        makingProcess: "Hand-cut bamboo is shaped and cured naturally.",
-        uses: ["Storage", "Home decor"],
+        makingProcess:
+          "Hand-cut bamboo is shaped, cured, and assembled using natural binding techniques.",
+        uses: ["Storage baskets", "Home decor"],
         image: chinchbambooCraftsImage,
         makingImage: chinchbambooCraftsMake,
         flavorImage: chinchbambooCraftsFlavor,
@@ -1148,31 +1276,39 @@ export const destinations: Destination[] = [
         type: "famous",
         description: "Wild honey harvested seasonally from forest hives.",
         significance:
-          "Collected using ritual methods that respect bee colonies.",
-        makingProcess: "Honey is extracted manually without chemicals.",
+          "Collected using ritual methods that respect bee colonies and forest balance.",
+        makingProcess:
+          "Honeycomb is extracted manually without chemicals and filtered naturally.",
         uses: ["Food", "Medicine", "Ritual offerings"],
+        image: forestHoneyImage,
+        makingImage: forestHoneyMake,
+        flavorImage: forestHoneyFlavor,
       },
     ],
   },
   {
     id: "nellore",
     name: "Nellore",
-    tagline: "Fields, salt air, and slow harvests",
+    tagline: "Fields, Salt Air, and Slow Harvests",
     image: nelloreImage,
-    heroDescription: "A land of rice, seafood, and understated abundance.",
+    heroDescription:
+      "A coastal agricultural region known for rice, seafood, and patient preservation traditions.",
     elevation: "20 m",
     bestTime: "November – February",
     temperature: "22°C – 36°C",
     about:
-      "Nellore’s identity is rooted in agriculture and the sea. From salt pans and paddy fields to prawn-rich coastal cuisine, the region’s food systems evolved around patience and scale. Traditional rice varieties, sun-dried seafood, and pickling methods form its quiet culinary backbone.",
+      "Nellore’s economy and cuisine revolve around expansive paddy fields, coastal salt pans, and aquaculture. Traditional rice varieties, prawn-rich seafood dishes, citrus preservation, and sun-drying techniques define its understated culinary backbone.",
     products: [
       {
         name: "Udayagiri Wooden Cutlery",
         type: "underrated",
-        description: "Hand-carved wooden spoons and ladles.",
-        significance: "Preserves regional woodworking traditions.",
-        makingProcess: "Locally sourced wood is carved and polished by hand.",
-        uses: ["Cooking", "Serving"],
+        description:
+          "Hand-carved wooden spoons and ladles from locally sourced timber.",
+        significance:
+          "Preserves regional woodworking traditions and sustainable kitchen tools.",
+        makingProcess:
+          "Wood is carved, shaped, and polished manually without chemical coatings.",
+        uses: ["Cooking utensils", "Serving tools"],
         image: udayagiriWoodencutleryImage,
         makingImage: udayagiriWoodencutleryMake,
         flavorImage: udayagiriWoodencutleryFlavor,
@@ -1180,10 +1316,15 @@ export const destinations: Destination[] = [
       {
         name: "Citrus Products",
         type: "famous",
-        description: "Preserved citrus-based foods and condiments.",
-        significance: "Adapted to coastal climate and long shelf-life needs.",
-        makingProcess: "Fruits are sun-cured, salted, or pickled.",
-        uses: ["Pickles", "Flavoring"],
+        description: "Sun-cured citrus pickles and preserved condiments.",
+        significance:
+          "Adapted to coastal humidity and designed for extended shelf life.",
+        makingProcess:
+          "Citrus fruits are salted, sun-cured, and blended with regional spices.",
+        uses: ["Pickles", "Flavor enhancers", "Traditional condiments"],
+        image: citrusProductsImage,
+        makingImage: citrusProductsMake,
+        flavorImage: citrusProductsFlavor,
       },
     ],
   },
