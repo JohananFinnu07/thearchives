@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Leaf, Wrench, Lightbulb } from 'lucide-react';
-import { Product } from '@/data/destinations';
-
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Leaf, Wrench, Lightbulb } from "lucide-react";
+import { Product } from "@/data/destinations";
+import { Link, useParams } from "react-router-dom";
 interface ProductCardProps {
   product: Product;
   index: number;
@@ -10,7 +10,8 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, index }: ProductCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const { id } = useParams();
+  const slug = product.name.toLowerCase().replace(/\s+/g, "-");
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -26,20 +27,20 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
-              <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                product.type === 'famous' 
-                  ? 'bg-primary/10 text-primary' 
-                  : 'bg-accent/10 text-accent'
-              }`}>
-                {product.type === 'famous' ? 'Famous' : 'Hidden Gem'}
+              <span
+                className={`px-3 py-1 rounded-full text-xs font-medium ${
+                  product.type === "famous"
+                    ? "bg-primary/10 text-primary"
+                    : "bg-accent/10 text-accent"
+                }`}
+              >
+                {product.type === "famous" ? "Famous" : "Hidden Gem"}
               </span>
             </div>
             <h3 className="font-serif text-xl sm:text-2xl font-semibold text-foreground mb-2">
               {product.name}
             </h3>
-            <p className="text-muted-foreground">
-              {product.description}
-            </p>
+            <p className="text-muted-foreground">{product.description}</p>
           </div>
           <motion.div
             animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -55,7 +56,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
         {isExpanded && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
@@ -65,7 +66,9 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Lightbulb className="w-5 h-5 text-primary" />
-                  <h4 className="font-semibold text-foreground">Significance</h4>
+                  <h4 className="font-semibold text-foreground">
+                    Significance
+                  </h4>
                 </div>
                 <p className="text-muted-foreground leading-relaxed pl-7">
                   {product.significance}
@@ -76,7 +79,9 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Wrench className="w-5 h-5 text-accent" />
-                  <h4 className="font-semibold text-foreground">Making Process</h4>
+                  <h4 className="font-semibold text-foreground">
+                    Making Process
+                  </h4>
                 </div>
                 <p className="text-muted-foreground leading-relaxed pl-7">
                   {product.makingProcess}
@@ -100,6 +105,12 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
                   ))}
                 </div>
               </div>
+              <Link
+                to={`/hidden-gems/${id}/${slug}`}
+                className="inline-flex items-center text-primary font-medium hover:underline transition-colors duration-300"
+              >
+                Explore {product.name} →
+              </Link>
             </div>
           </motion.div>
         )}

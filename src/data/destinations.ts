@@ -15,7 +15,12 @@ import konaseemaImage from "@/assets/konaseema.jpg";
 
 // Product images
 import arakuCoffeeImage from "@/assets/products/araku-coffee-beans.jpg";
+import arakuCoffeeMake from "@/assets/products/AVCM.jpg";
+import arakuCoffeeFlavor from "@/assets/products/AVCF.jpg";
+
 import tribalBambooCraftImage from "@/assets/products/tribal-bamboo-craft.jpg";
+import tribalBambooCraftMake from "@/assets/products/TBCM.jpg";
+import tribalBambooCraftFlavor from "@/assets/products/TBCF.jpg";
 
 import coffeeinfusedDark from "@/assets/products/ACIDCH.jpg";
 import coffeeinfusedDarkMake from "@/assets/products/ACIDCM.jpg";
@@ -164,51 +169,56 @@ export const destinations: Destination[] = [
   {
     id: "araku-valley",
     name: "Araku Valley",
-    tagline: "Coffee Haven in the Hills",
+    tagline: "Organic Coffee & Tribal Heritage of Andhra Pradesh",
     image: arakuImage,
     heroDescription:
-      "A stunning hill station nestled in the Eastern Ghats, famous for its organic coffee plantations and tribal heritage.",
+      "A scenic hill station in the Eastern Ghats of Andhra Pradesh, Araku Valley is globally known for its organic coffee plantations, tribal culture, forest produce, and traditional artisan crafts.",
     elevation: "1,300m",
     bestTime: "October - February",
     temperature: "15°C - 28°C",
+
     about:
-      "Araku Valley is a picturesque hill station located about 115 km from Visakhapatnam. This verdant valley is home to various indigenous tribes who have preserved their unique culture and traditions for centuries. The valley is renowned for its coffee plantations, bamboo forests, and the famous Borra Caves.",
+      "Araku Valley is a picturesque hill destination located about 115 km from Visakhapatnam in Andhra Pradesh. Nestled in the Eastern Ghats, this high-altitude valley is home to indigenous tribal communities who have preserved their agricultural traditions, forest-based livelihoods, and artisan skills for generations. Araku is internationally recognized for its organic Arabica coffee, but the region also produces wild forest honey, black pepper, niger seeds, bamboo crafts, and rare tribal foods that reflect its deep ecological and cultural heritage.",
+
     products: [
       {
         name: "Araku Valley Coffee",
         type: "famous",
         description:
-          "Internationally acclaimed organic Arabica coffee grown at high altitudes by tribal farmers using traditional methods.",
+          "Award-winning organic Arabica coffee grown at high altitudes in Araku Valley by tribal farmers using sustainable and pesticide-free farming methods.",
         significance:
-          "Araku coffee has won the prestigious Prix Epicures Or award in Paris. It's one of the finest organic coffees in the world, grown without pesticides or chemicals in the shade of silver oak and jackfruit trees.",
+          "Araku Coffee has received international recognition, including the prestigious Prix Epicures award in Paris. Grown under shade trees in the Eastern Ghats, it is considered one of India’s finest organic coffees with a distinct fruity and chocolatey flavor profile.",
         makingProcess:
-          "The coffee cherries are hand-picked when perfectly ripe, then sun-dried on bamboo mats for 15-20 days. The dried beans are hulled using traditional methods, sorted by hand, and roasted in small batches. The entire process from cherry to cup takes about 4-6 weeks.",
+          "Ripe coffee cherries are handpicked, sun-dried for 15–20 days, traditionally hulled, hand-sorted, and small-batch roasted. The slow cultivation and processing enhance aroma, acidity balance, and natural sweetness.",
         uses: [
-          "Morning brew",
           "Filter coffee",
           "Espresso",
           "Cold brew",
-          "Coffee-based desserts",
+          "Specialty café blends",
+          "Coffee desserts",
         ],
         image: arakuCoffeeImage,
+        makingImage: arakuCoffeeMake,
+        flavorImage: arakuCoffeeFlavor,
       },
       {
-        name: "Tribal Bamboo Craft",
+        name: "Tribal Bamboo Crafts",
         type: "famous",
         description:
-          "Intricate handwoven baskets, furniture, and decorative items made from locally sourced bamboo.",
+          "Handwoven bamboo baskets, furniture, and household items crafted by tribal artisans of Araku using locally sourced forest bamboo.",
         significance:
-          "These crafts represent centuries of tribal artisanship passed down through generations. Each piece tells a story of the forest and the community's deep connection with nature.",
+          "These traditional bamboo crafts represent centuries-old indigenous craftsmanship. Each product reflects sustainable forest practices and tribal design patterns unique to the Eastern Ghats region.",
         makingProcess:
-          "Mature bamboo is harvested during winter when moisture content is lowest. It's treated with lime water to prevent insect attack, then split into thin strips. Artisans weave these strips using traditional patterns unique to each tribe, taking 3-15 days per piece depending on complexity.",
+          "Mature bamboo is harvested during winter, treated naturally, split into strips, and woven into functional and decorative items using traditional tribal weaving techniques.",
         uses: [
           "Home décor",
-          "Storage containers",
-          "Furniture",
-          "Kitchen utilities",
-          "Gift items",
+          "Eco-friendly storage",
+          "Handmade furniture",
+          "Sustainable lifestyle products",
         ],
         image: tribalBambooCraftImage,
+        makingImage: tribalBambooCraftMake,
+        flavorImage: tribalBambooCraftFlavor,
       },
       {
         name: "Araku Coffee-Infused Dark Chocolates",
@@ -230,20 +240,19 @@ export const destinations: Destination[] = [
         flavorImage: coffeeinfusedDarkFlavor,
       },
       {
-        name: "Wild Turmeric Kasturi Manjal",
+        name: "Wild Turmeric (Kasturi Manjal)",
         type: "underrated",
         description:
-          "A rare variety of turmeric found in the forests of Araku, known for its exceptional fragrance and potency.",
+          "A rare forest-grown turmeric variety found in Araku Valley, known for its strong aroma, medicinal properties, and cosmetic benefits.",
         significance:
-          "Unlike regular turmeric, wild turmeric has a distinct camphor-like aroma and is considered more potent for medicinal and cosmetic use. Tribal communities have used it for centuries in rituals and healing.",
+          "Wild turmeric from the Eastern Ghats is valued in Ayurveda and tribal medicine for skin healing, anti-inflammatory benefits, and ritual use.",
         makingProcess:
-          "The rhizomes are carefully dug out from forest floors during spring. They're washed, boiled for 45 minutes, sun-dried for 10-15 days, and then ground using stone mills. The powder retains its aromatic properties for up to 2 years.",
+          "Forest rhizomes are harvested seasonally, boiled, sun-dried, and stone-ground to preserve natural oils and fragrance.",
         uses: [
+          "Ayurvedic remedies",
+          "Natural skincare",
           "Face packs",
-          "Ayurvedic medicine",
-          "Religious ceremonies",
-          "Natural antiseptic",
-          "Skin brightening",
+          "Religious rituals",
         ],
         image: wildTurmericImage,
         makingImage: wildTurmericMaking,
@@ -269,20 +278,21 @@ export const destinations: Destination[] = [
         flavorImage: palmWineFlavor,
       },
       {
-        name: "Niger Seed Oil Valisalu",
+        name: "Niger Seed Oil (Valisalu)",
         type: "underrated",
         description:
-          "A rare tribal delicacy made using nutrient-rich Niger seeds (locally called Valisalu). Known for its earthy aroma and high oil content, this ingredient is both a culinary and medicinal treasure of Araku’s tribal communities.",
+          "Cold-pressed oil and traditional food ingredient made from niger seeds cultivated by tribal farmers in Araku Valley.",
         significance:
-          "Overshadowed by coffee, Niger seeds are traditionally cultivated by indigenous farmers. The cold-pressed oil and seed-based dishes are deeply rooted in tribal nutrition and seasonal food practices.",
+          "Niger seeds are a traditional tribal crop rich in healthy fats and nutrients, commonly used in chutneys and seasonal tribal dishes.",
         makingProcess:
-          "Mature Niger seeds are sun-dried and cleaned. For oil extraction, seeds are cold-pressed using traditional wooden mills. For valisalu dishes, seeds are roasted and ground into coarse powder, often mixed with spices and forest herbs.",
+          "Sun-dried seeds are cold-pressed in wooden mills or roasted and ground into coarse powder for chutneys.",
         uses: [
-          "Chutney base for rice and millets",
-          "Traditional tribal oil for cooking",
-          "Nutrient-rich seasoning powder",
-          "Ayurvedic and home remedies",
+          "Traditional chutneys",
+          "Tribal cooking oil",
+          "Seasonal millet dishes",
+          "Nutrient-rich seasoning",
         ],
+
         image: nigeroilHero,
         makingImage: nigeroilMake,
         flavorImage: nigeroilFlavor,
@@ -291,17 +301,16 @@ export const destinations: Destination[] = [
         name: "Araku Black Pepper",
         type: "underrated",
         description:
-          "Organic black pepper grown in the shade of coffee plantations, prized for its exceptional aroma and heat.",
+          "Organic black pepper grown in the cool climate of Araku’s coffee plantations, known for its intense aroma and high essential oil content.",
         significance:
-          "Grown alongside coffee plants, Araku black pepper benefits from the same ideal growing conditions. The pepper has higher essential oil content due to the slow ripening in cool mountain air, making it sought after by gourmet chefs.",
+          "Shade-grown alongside Arabica coffee, Araku pepper develops a stronger flavor due to slow ripening in the mountain climate, making it popular among gourmet chefs.",
         makingProcess:
-          "Pepper vines are trained to climb silver oak trees in coffee plantations. Berries are harvested when they begin turning red, then sun-dried on bamboo mats for 5-7 days until they shrivel and blacken. Hand-sorted to remove imperfect corns.",
+          "Pepper berries are harvested when semi-ripe, sun-dried naturally, and hand-sorted to maintain quality.",
         uses: [
-          "Gourmet cooking",
-          "Ayurvedic medicine",
-          "Digestive remedy",
-          "Meat preservation",
           "Spice blends",
+          "Gourmet cooking",
+          "Ayurvedic remedies",
+          "Meat preservation",
         ],
         image: blackPepperImage,
         makingImage: blackPepperMake,
