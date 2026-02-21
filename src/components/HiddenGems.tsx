@@ -50,8 +50,8 @@ const HiddenGems = () => {
             What the Markets Miss
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-            Treasures That{" "}
-            <span className="italic text-primary">Stay Local</span>
+            The Underrated{" "}
+            <span className="italic text-primary">Local Specialties</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
             In every celebrated destination, one product becomes the headline —

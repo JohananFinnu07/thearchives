@@ -5,29 +5,29 @@ import { Link } from "react-router-dom";
 const features = [
   {
     icon: Mountain,
-    title: "Uncharted Places",
+    title: "Uncharted Destinations",
     description:
-      "Hill stations where tourists are still rare and traditions run deep.",
+      "Offbeat places in the Eastern Ghats where traditions remain intact.",
     link: "/destinations",
   },
   {
     icon: Users,
     title: "Real Stories",
     description:
-      "Meet the artisans, farmers, and keepers of vanishing traditions.",
+      "Artisans, farmers, and tribal communities behind every product.",
     link: "/about",
   },
   {
     icon: Leaf,
     title: "Local Economy",
-    description:
-      "Every item you discover supports families who've made it for generations.",
+    description: "Supporting families who sustain generations of knowledge.",
     link: "/hidden-gems",
   },
   {
     icon: Camera,
     title: "Visual Archive",
-    description: "Documenting what might not exist in another decade.",
+    description:
+      "Documenting products and practices that may not exist in another decade.",
     link: "/gallery",
   },
 ];
@@ -49,9 +49,8 @@ const About = () => {
               Why This Matters
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-              Some Things{" "}
-              <span className="italic text-primary">Only Exist</span> in One
-              Place
+              Preserving What{" "}
+              <span className="italic text-primary">Exists</span> Only Here
             </h2>
             <p className="text-muted-foreground text-lg">
               Every year, a recipe disappears when a grandmother passes. A craft

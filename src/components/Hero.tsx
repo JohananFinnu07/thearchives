@@ -34,7 +34,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-sage font-medium tracking-widest uppercase text-sm mb-6"
           >
-            What Survives Locally, Disappears Nationally
+            Hidden Local Products & Destinations of Andhra Pradesh
           </motion.p>
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6">
@@ -44,9 +44,9 @@ const Hero = () => {
           </h1>
 
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            We find the spices that never reached supermarkets. The crafts that
-            never went viral. The recipes that stayed in village kitchens.
-            Before they're gone.
+            We document famous and underrated regional products, tribal crafts,
+            traditional foods, and cultural treasures across the Eastern Ghats
+            and beyond — before they disappear from national memory.
           </p>
 
           <motion.div

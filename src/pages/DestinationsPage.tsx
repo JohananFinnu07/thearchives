@@ -23,9 +23,12 @@ const DestinationsPage = () => {
               Explore Our <span className="text-primary">Destinations</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Discover the untouched beauty of Eastern Ghats through these four
-              magnificent destinations, each offering unique landscapes,
-              cultures, and experiences.
+              From the misty hills of Araku Valley and Lambasingi to the river
+              landscapes of Konaseema and Papikondalu, explore culturally rich
+              destinations across Andhra Pradesh and the Eastern Ghats. Discover
+              famous regional products, underrated local specialties, tribal
+              crafts, traditional foods, and authentic heritage experiences that
+              define the true identity of each place.
             </p>
           </motion.div>
         </div>

@@ -29,7 +29,7 @@ const ODOPDiscovery = () => {
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
             <Award className="w-4 h-4" />
             <span className="text-sm font-medium">
-              One District, One Product
+              One District, One Product - Andhra Pradesh
             </span>
           </div>
 

@@ -55,14 +55,14 @@ const Destinations = () => {
             Off the Tourist Trail
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-4">
-            Places Where{" "}
-            <span className="italic text-primary">Time Moves Slowly</span>
+            Authentic Destinations in <br></br>
+            <span className="italic text-primary">Andhra Pradesh</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Hill paths wrapped in mist. Forest markets that wake with the sun.
-            Coastal towns where salt hangs in the air. These are not rushed
-            destinations — they are lived-in landscapes. Here, tribal traditions
-            breathe, rivers remember, and the earth still speaks first.
+            From Araku Valley to Konaseema, discover destinations across Andhra
+            Pradesh known for iconic products and hidden local treasures. Not
+            just places to visit — but landscapes shaped by culture, craft, and
+            tradition.
           </p>
         </motion.div>
       </div>
