@@ -69,43 +69,48 @@ const DestinationDetail = () => {
         </motion.div>
 
         {/* Hero Content */}
-        <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-12 lg:p-16">
+        <div className="absolute bottom-0 left-0 right-0 px-6 sm:px-12 lg:px-16 pb-10 sm:pb-14 lg:pb-16">
           <div className="container mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="max-w-3xl"
             >
               <div className="flex items-center gap-2 text-sage mb-3">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm font-medium tracking-wide uppercase">
+                <span className="text-xs sm:text-sm font-medium tracking-wide uppercase">
                   Andhra Pradesh, India
                 </span>
               </div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-3">
+
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-3 leading-tight">
                 {destination.name}
               </h1>
-              <p className="text-xl text-primary-foreground/80 max-w-2xl mb-6">
+
+              <p className="text-base sm:text-lg lg:text-xl text-primary-foreground/80 max-w-xl leading-relaxed mb-6">
                 {destination.heroDescription}
               </p>
 
               {/* Quick Stats */}
-              <div className="flex flex-wrap gap-4 sm:gap-6">
+              <div className="flex flex-wrap gap-3 sm:gap-6">
                 <div className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2">
                   <Mountain className="w-4 h-4 text-sage" />
-                  <span className="text-primary-foreground text-sm">
+                  <span className="text-primary-foreground text-xs sm:text-sm">
                     {destination.elevation}
                   </span>
                 </div>
+
                 <div className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2">
                   <Thermometer className="w-4 h-4 text-sage" />
-                  <span className="text-primary-foreground text-sm">
+                  <span className="text-primary-foreground text-xs sm:text-sm">
                     {destination.temperature}
                   </span>
                 </div>
+
                 <div className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2">
                   <Calendar className="w-4 h-4 text-sage" />
-                  <span className="text-primary-foreground text-sm">
+                  <span className="text-primary-foreground text-xs sm:text-sm">
                     {destination.bestTime}
                   </span>
                 </div>

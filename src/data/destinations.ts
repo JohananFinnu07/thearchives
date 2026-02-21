@@ -42,8 +42,25 @@ import blackPepperImage from "@/assets/products/black-pepper.jpg";
 import blackPepperMake from "@/assets/products/black-pepper.jpg";
 import blackPepperFlavor from "@/assets/products/ABPF.jpg";
 
-import wildHoneyImage from "@/assets/products/wild-honey.jpg";
-import forestStrawberriesImage from "@/assets/products/forest-strawberries.jpg";
+import koyatribalJImage from "@/assets/products/KTJH.jpg";
+import koyatribalJMake from "@/assets/products/KTJM.jpg";
+import koyatribalJFlavor from "@/assets/products/KTJF.jpg";
+
+import LamblackPepperHero from "@/assets/products/LBPH.jpg";
+import LamblackPepperMake from "@/assets/products/LBPM.jpg";
+import LamblackPepperFlavor from "@/assets/products/LBPF.jpg";
+
+import wildHoneyImage from "@/assets/products/WFHH.jpg";
+import wildHoneyMake from "@/assets/products/WFHM.jpg";
+import wildHoneyFlavor from "@/assets/products/WFHF.jpg";
+
+import VGrassHoneyImage from "@/assets/products/VGHH.jpg";
+import VGrassHoneyMake from "@/assets/products/VGHM.jpg";
+import VGrassHoneyFlavor from "@/assets/products/VGHF.jpg";
+
+import forestStrawberriesImage from "@/assets/products/FSH.jpg";
+import forestStrawberriesMake from "@/assets/products/FSM.jpg";
+import forestStrawberriesFlavor from "@/assets/products/FSF.jpg";
 
 import tribalShawlImage from "@/assets/products/tribal-shawl.jpg";
 import tribalShawlMake from "@/assets/products/KDTSM.jpg";
@@ -53,17 +70,24 @@ import forestTamarindHero from "@/assets/products/MFTH.jpg";
 import forestTamarindMake from "@/assets/products/MFTM.jpg";
 import forestTamarindFlavor from "@/assets/products/MFTF.jpg";
 
-import hillRiceImage from "@/assets/products/hill-rice.jpg";
+import hillRiceImage from "@/assets/products/OHRH.jpg";
+import hillRiceMake from "@/assets/products/OHRM.jpg";
+import hillRiceFlavor from "@/assets/products/OHRF.jpg";
 
 import dhokraArtImage from "@/assets/products/dhokra-art.jpg";
-import dhokraArtMake from "@/assets/products/KTJM.jpg";
-import dhokraArtFlavor from "@/assets/products/dhokra-art.jpg";
+import dhokraArtMake from "@/assets/products/DAM.jpg";
+import dhokraArtFlavor from "@/assets/products/DAF.jpg";
 
-import bambooChickenImage from "@/assets/products/bamboo-chicken.jpg";
-import marketSpicesImage from "@/assets/products/market-spices.jpg";
+import bambooChickenImage from "@/assets/products/BCH.jpg";
+import bambooChickenMake from "@/assets/products/BCM.jpg";
+import bambooChickenFlavor from "@/assets/products/bamboo-chicken.jpg";
+
+import marketSpicesImage from "@/assets/products/PWMSH.jpg";
+import marketSpicesMake from "@/assets/products/market-spices.jpg";
+import marketSpicesFlavor from "@/assets/products/PWMSF.jpg";
 
 import silkCocoonsImage from "@/assets/products/cocoonsHero .jpeg";
-import silkCocoonsMake from "@/assets/products/silk-cocoons.jpg";
+import silkCocoonsMake from "@/assets/products/SWCM.jpg";
 import silkCocoonsFlavor from "@/assets/products/CocoonFlavor.jpeg";
 
 import jackfruitChipsImage from "@/assets/products/JackfruitHero.jpeg";
@@ -89,7 +113,7 @@ import mistmountHoneyMake from "@/assets/products/MMHM.jpeg";
 import mistmountHoneyFlavor from "@/assets/products/MMHF.jpeg";
 
 import forestTurmericImage from "@/assets/products/FTH.jpg";
-import forestTurmericMake from "@/assets/products/forestTurmericMake.jpeg";
+import forestTurmericMake from "@/assets/products/forestTurmericMake.jpg";
 import forestTurmericFlavor from "@/assets/products/ForestTermericflavor.jpeg";
 
 import addLeafHero from "@/assets/products/ALPH.jpg";
@@ -139,6 +163,10 @@ import chinchbambooCraftsFlavor from "@/assets/products/CBCH.jpg";
 import udayagiriWoodencutleryImage from "@/assets/products/UWCH.jpg";
 import udayagiriWoodencutleryMake from "@/assets/products/UWCM.jpg";
 import udayagiriWoodencutleryFlavor from "@/assets/products/UWCF.jpg";
+
+import pachgavyaImage from "@/assets/products/PGPH.jpg";
+import pachgavyaMake from "@/assets/products/PGPM.jpg";
+import pachgavyaFlavor from "@/assets/products/PGPF.jpg";
 
 export interface Product {
   name: string;
@@ -340,65 +368,69 @@ export const destinations: Destination[] = [
   {
     id: "lambasingi",
     name: "Lambasingi",
-    tagline: "Kashmir of Andhra",
+    tagline: "Kashmir of Andhra Pradesh",
     image: lambasingiImage,
     heroDescription:
-      "Known as the only place in South India where temperature drops below freezing, Lambasingi offers misty mornings and pepper plantations.",
+      "The coldest place in South India, famous for frost mornings, pepper plantations, and mist-covered forest hills.",
     elevation: "1,000m",
-    bestTime: "November - January",
+    bestTime: "November - January (Peak Winter Season)",
     temperature: "0°C - 20°C",
     about:
-      'Lambasingi, often called the "Kashmir of Andhra Pradesh," is a small village in the Chintapalli mandal. It\'s the only place in South India that experiences sub-zero temperatures, with frost covering the fields during winter mornings. The village is surrounded by dense forests and pepper plantations.',
+      'Lambasingi, often called the "Kashmir of Andhra Pradesh," is a scenic tribal village in the Chintapalli mandal of Alluri Sitharama Raju district. Unlike most South Indian hill stations, Lambasingi experiences freezing winter temperatures with visible frost covering fields at dawn. Surrounded by dense forests, rolling valleys, and spice plantations, the region sustains indigenous tribal communities who cultivate premium black pepper, forage seasonal forest produce, and preserve traditional weaving practices. Its rare cool microclimate makes it one of the most unique eco-tourism and agro-tourism destinations in the Eastern Ghats.',
     products: [
       {
         name: "Lambasingi Black Pepper",
         type: "famous",
         description:
-          "Premium quality black pepper grown in the cool, misty climate of Lambasingi, known for its exceptional pungency and aroma.",
+          "Premium high-altitude black pepper grown in Lambasingi’s cool, mist-heavy climate, known for its bold pungency, deep aroma, and superior medicinal potency.",
         significance:
-          "The unique microclimate with heavy mist and cold temperatures produces pepper with higher piperine content, making it more flavorful and medicinally potent than lowland varieties.",
+          "The region’s sub-zero winters and dense fog create a rare microclimate that increases piperine concentration. This results in stronger flavor intensity and higher Ayurvedic value compared to lowland commercial varieties.",
         makingProcess:
-          "Pepper vines climb on silver oak trees for 3-4 years before first harvest. Green berries are hand-picked when they turn yellow-red, then sun-dried on bamboo mats for 7-10 days until they shrivel and turn black. No artificial processing is used.",
+          "Pepper vines climb silver oak support trees and mature for 3-4 years before first harvest. Berries are hand-picked when they turn yellow-red, then naturally sun-dried on bamboo mats for 7-10 days until they shrivel and turn black. No artificial polishing or chemical processing is used.",
         uses: [
-          "Culinary spice",
-          "Ayurvedic medicine",
+          "Gourmet culinary spice",
+          "Ayurvedic formulations",
           "Natural preservative",
-          "Digestive aid",
-          "Cold remedies",
+          "Digestive stimulant",
+          "Cold and immunity remedies",
         ],
-        image: blackPepperMake,
+        image: LamblackPepperHero,
+        makingImage: LamblackPepperMake,
+        flavorImage: LamblackPepperFlavor,
       },
       {
         name: "Forest Strawberries",
         type: "famous",
         description:
-          "Small, intensely flavored wild strawberries that grow naturally in the cold forests around Lambasingi.",
+          "Small, intensely flavored wild strawberries that grow naturally in Lambasingi’s cold forest clearings during peak winter.",
         significance:
-          "These strawberries are unique to the region's cold climate and are smaller but much more flavorful than cultivated varieties. Locals consider them a seasonal delicacy available only in winter.",
+          "Unlike commercial hybrid strawberries, these wild berries are smaller, sweeter, and more aromatic. The cold climate enhances natural sugar concentration, making them a rare seasonal delicacy available only between December and February.",
         makingProcess:
-          "Wild strawberries are hand-foraged from forest clearings during December-February. They're too delicate to store, so they're sold fresh within hours of picking. Some are sun-dried for use in traditional medicine.",
+          "Wild strawberries are hand-foraged by tribal communities from forest patches during December-February. Due to their delicate nature, they are sold fresh within hours of picking. Some are sun-dried and used in traditional herbal preparations.",
         uses: [
-          "Fresh consumption",
-          "Jams and preserves",
-          "Traditional medicine",
-          "Natural sweetener",
+          "Fresh seasonal fruit",
+          "Homemade jams and preserves",
+          "Traditional tribal medicine",
+          "Natural dessert ingredient",
         ],
         image: forestStrawberriesImage,
+        makingImage: forestStrawberriesMake,
+        flavorImage: forestStrawberriesFlavor,
       },
       {
         name: "Konda Dora Tribal Shawls",
         type: "underrated",
         description:
-          "Handwoven woolen shawls made by the Konda Dora tribe using traditional backstrap looms.",
+          "Handwoven woolen shawls crafted by the Konda Dora tribe using traditional backstrap looms, designed to withstand Lambasingi’s freezing winters.",
         significance:
-          "These shawls are woven using techniques unchanged for centuries. The geometric patterns represent tribal stories and natural elements. They're essential for surviving Lambasingi's cold winters.",
+          "Each geometric pattern represents tribal stories, forest symbols, and ancestral identity. The weaving techniques have been preserved orally for generations, making every shawl a living cultural artifact.",
         makingProcess:
-          "Wool is carded and spun by hand using spindles. Natural dyes from forest plants create colors. Women weave on backstrap looms, taking 2-4 weeks per shawl. Each pattern is memorized, not documented.",
+          "Wool is hand-carded and spun using wooden spindles. Natural dyes extracted from forest plants create earthy colors. Women weave on backstrap looms, taking 2-4 weeks to complete each shawl. Patterns are memorized and passed down, not written.",
         uses: [
-          "Winter wear",
-          "Ceremonial clothing",
-          "Gifting",
-          "Home décor",
+          "Winter clothing",
+          "Tribal ceremonial wear",
+          "Heritage gifting",
+          "Sustainable home décor",
           "Cultural preservation",
         ],
         image: tribalShawlImage,
@@ -409,17 +441,17 @@ export const destinations: Destination[] = [
         name: "Misty Mountain Honey",
         type: "underrated",
         description:
-          "Rare multifloral honey collected from wild bee colonies in the fog-shrouded forests.",
+          "Rare multifloral wild honey collected from natural bee colonies in Lambasingi’s fog-covered forests.",
         significance:
-          "The bees forage on rare medicinal flowers found only in Lambasingi's ecosystem. The honey has a distinctive taste and is believed to have superior medicinal properties.",
+          "Bees forage on diverse medicinal forest flowers unique to the Eastern Ghats ecosystem. This produces thick, aromatic honey with a distinctive taste profile and strong therapeutic value.",
         makingProcess:
-          "Traditional honey hunters climb trees to locate wild hives during spring. Smoke from specific leaves calms bees. Only 60% of honey is taken, leaving enough for the colony. The honey is strained through cloth and stored in clay pots.",
+          "Traditional honey hunters climb tall trees to access wild hives during spring. Smoke from selected forest leaves calms the bees. Only 60% of the honey is harvested to ensure sustainability. The honey is filtered through cloth and stored in clay pots without industrial processing.",
         uses: [
           "Natural sweetener",
-          "Cough remedy",
+          "Cough and cold remedy",
           "Wound healing",
           "Ayurvedic medicine",
-          "Skin care",
+          "Skin nourishment",
         ],
         image: mistmountHoneyImage,
         makingImage: mistmountHoneyMake,
@@ -433,58 +465,62 @@ export const destinations: Destination[] = [
     tagline: "Meadows Above the Clouds",
     image: vanajangiImage,
     heroDescription:
-      "An untouched paradise featuring vast grassland meadows that appear to float above the clouds during misty mornings.",
+      "High-altitude meadows offering sunrise views above clouds, rolling grasslands, and untouched Eastern Ghats beauty.",
     elevation: "1,100m",
-    bestTime: "September - February",
+    bestTime: "September - February (Post-Monsoon to Winter)",
     temperature: "12°C - 26°C",
     about:
-      "Vanajangi is a hidden gem that offers breathtaking views of endless meadows surrounded by dense forests. The village sits at the edge of vast grasslands that seem to merge with the sky during foggy mornings, creating a surreal landscape that attracts photographers and nature lovers.",
+      "Vanajangi is a scenic hill hamlet in the Eastern Ghats of Andhra Pradesh, celebrated for expansive grassland meadows and surreal cloud formations at sunrise. Often described as a 'meadow above the clouds,' the region offers cool mountain air, dense surrounding forests, and breathtaking valley views. Its unique ecosystem supports traditional tribal farming, ethical silk production, meadow honey, and rare medicinal herbs, making it one of the most pristine eco-tourism destinations in Andhra Pradesh.",
     products: [
       {
         name: "Vanajangi Grass Honey",
         type: "famous",
         description:
-          "Light-colored, mild honey produced by bees that forage primarily on the flowering grasses of the meadows.",
+          "Light-colored, mild and floral honey produced by bees that forage primarily on flowering meadow grasses and seasonal wild blooms.",
         significance:
-          "This honey is distinctively light in color and flavor compared to forest honey. The unique meadow ecosystem produces honey with subtle floral notes not found elsewhere.",
+          "Unlike dark forest honey, Vanajangi Grass Honey is pale, delicate, and subtly sweet. The meadow ecosystem gives it unique floral undertones, and traditional cold extraction preserves natural enzymes and nutrients.",
         makingProcess:
-          "Local beekeepers maintain traditional log hives at meadow edges. Honey is harvested twice yearly - post-monsoon and spring. Comb is cut carefully, crushed gently, and strained through muslin. No heat processing preserves enzymes.",
+          "Local beekeepers maintain traditional wooden and log hives at meadow edges. Honey is harvested twice yearly — post-monsoon and spring. Combs are cut carefully, crushed gently, and strained through muslin cloth without heat processing.",
         uses: [
-          "Tea sweetener",
-          "Children's remedy",
-          "Face masks",
-          "Energy drink",
-          "Traditional medicine",
+          "Natural tea sweetener",
+          "Children’s immunity remedy",
+          "Face masks and skincare",
+          "Energy drink ingredient",
+          "Traditional herbal medicine",
         ],
-        image: wildHoneyImage,
+        image: VGrassHoneyImage,
+        makingImage: VGrassHoneyMake,
+        flavorImage: VGrassHoneyFlavor,
       },
       {
         name: "Organic Hill Rice",
         type: "famous",
         description:
-          "Traditional red rice varieties grown on terraced hillsides using ancient farming methods.",
+          "Traditional red and indigenous rice varieties grown on terraced hillsides using chemical-free ancestral farming methods.",
         significance:
-          "These indigenous rice varieties are highly nutritious and adapted to the local ecosystem. They require no fertilizers and are grown sustainably by tribal communities for generations.",
+          "These heirloom hill rice varieties are nutrient-dense, rich in fiber, and naturally adapted to the high-altitude ecosystem. They are cultivated sustainably by tribal communities without fertilizers or pesticides.",
         makingProcess:
-          "Seeds saved from previous harvest are planted with onset of monsoon. No transplanting - direct sowing into terraces. Harvest is manual, grains are sun-dried, and hulled using stone mills or wooden pounders to retain the red bran layer.",
+          "Seeds saved from previous harvests are directly sown into rain-fed terraces during monsoon. Crops are manually harvested, sun-dried, and hulled using stone mills or wooden pounders to retain the nutritious red bran layer.",
         uses: [
-          "Daily staple",
-          "Traditional porridge",
+          "Daily staple food",
+          "Traditional red rice porridge",
           "Rice flour products",
-          "Fermented beverages",
+          "Fermented tribal beverages",
           "Ritual offerings",
         ],
         image: hillRiceImage,
+        makingImage: hillRiceMake,
+        flavorImage: hillRiceFlavor,
       },
       {
         name: "Silkworm Cocoons",
         type: "underrated",
         description:
-          "Wild eri and tasar silkworms are collected from forest trees, producing unique non-violent silk.",
+          "Wild eri and tasar silkworm cocoons collected from forest trees, producing ethically harvested non-violent 'Ahimsa Silk'.",
         significance:
-          'Unlike commercial silk, this "ahimsa silk" is harvested after the moth emerges naturally. It\'s rougher but highly valued for its ethical production and natural golden color.',
+          "Unlike commercial silk, this eco-friendly silk is harvested only after the moth naturally emerges. Known as Ahimsa Silk, it has a natural golden tone and is valued in sustainable fashion markets.",
         makingProcess:
-          "Wild cocoons are collected from sal and asan trees after moths emerge. Empty cocoons are degummed by boiling in ash water, then hand-reeled using simple spindles. Thread is woven on pit looms into textured fabric.",
+          "Wild cocoons are gathered from forest trees after moth emergence. Empty cocoons are degummed in ash water, then hand-reeled using simple spindles. The thread is woven on traditional pit looms into textured fabric.",
         uses: [
           "Traditional sarees",
           "Scarves",
@@ -500,14 +536,14 @@ export const destinations: Destination[] = [
         name: "Meadow Herbs Collection",
         type: "underrated",
         description:
-          "Dried medicinal herbs foraged from Vanajangi's unique grassland ecosystem.",
+          "Dried medicinal herbs sustainably foraged from Vanajangi’s unique high-altitude grassland ecosystem.",
         significance:
-          "The meadows host medicinal plants found nowhere else in the region. Tribal healers have catalogued over 100 species used for various ailments.",
+          "The meadows host rare medicinal plants not commonly found elsewhere in the region. Tribal healers use these herbs for digestive, respiratory, and joint-related remedies.",
         makingProcess:
-          "Herbs are collected during specific lunar phases believed to maximize potency. They're shade-dried to preserve volatile compounds, then stored in bamboo containers. Knowledge of preparation is passed orally through generations.",
+          "Herbs are hand-foraged during specific seasons and shade-dried to preserve potency. They are stored in bamboo containers, and preparation knowledge is passed orally through generations.",
         uses: [
-          "Herbal teas",
-          "Poultices",
+          "Herbal teas and infusions",
+          "Medicinal poultices",
           "Digestive remedies",
           "Fever treatment",
           "Joint pain relief",
@@ -524,64 +560,68 @@ export const destinations: Destination[] = [
     tagline: "Tribal Heritage Gateway",
     image: paderuImage,
     heroDescription:
-      "The commercial hub of the Eastern Ghats tribal region, known for its weekly markets and rich tribal culture.",
+      "The commercial and cultural heart of the Eastern Ghats tribal region, famous for vibrant weekly markets and indigenous heritage.",
     elevation: "900m",
     bestTime: "October - March",
     temperature: "15°C - 30°C",
     about:
-      "Paderu serves as the administrative headquarters and commercial hub for the surrounding tribal villages. The town is famous for its weekly tribal markets where indigenous communities gather to trade their produce. It's surrounded by coffee plantations and serves as a gateway to explore the tribal heartland.",
+      "Paderu serves as the administrative headquarters and primary commercial hub of the Eastern Ghats tribal belt in Andhra Pradesh. Surrounded by coffee plantations and forested hills, the town is best known for its legendary Saturday tribal market where indigenous communities from remote villages gather to trade spices, forest produce, crafts, and traditional foods. It acts as the gateway to explore the rich tribal culture, sustainable agriculture, and ancient craftsmanship of the region.",
     products: [
       {
         name: "Paderu Weekly Market Spices",
         type: "famous",
         description:
-          "A variety of organic spices including dried chilies, cinnamon, and cardamom traded in the famous Saturday market.",
+          "Organic forest-grown spices including dried chilies, cinnamon bark, and cardamom traded in Paderu’s iconic Saturday tribal market.",
         significance:
-          "The weekly market is where tribes from dozens of villages converge to trade. Spices here are grown in small forest gardens without chemicals, using ancient agricultural wisdom.",
+          "The weekly market brings together tribal farmers from dozens of surrounding villages. Spices are cultivated in small forest gardens without chemical fertilizers, preserving traditional agricultural knowledge and biodiversity.",
         makingProcess:
-          "Each spice follows traditional processing - chilies are sun-dried for weeks, cinnamon bark is peeled and rolled by hand, cardamom pods are dried in bamboo baskets over gentle heat. All sold in traditional leaf wrappings.",
+          "Chilies are sun-dried for several weeks to intensify flavor. Cinnamon bark is hand-peeled and naturally rolled. Cardamom pods are slow-dried in bamboo baskets over gentle heat. Spices are traditionally sold in leaf wrappings.",
         uses: [
           "Daily cooking",
-          "Pickling",
-          "Medicinal preparations",
-          "Aromatic uses",
-          "Traditional ceremonies",
+          "Pickling and preservation",
+          "Traditional medicine",
+          "Aromatic blends",
+          "Ritual ceremonies",
         ],
         image: marketSpicesImage,
+        makingImage: marketSpicesMake,
+        flavorImage: marketSpicesFlavor,
       },
       {
         name: "Tribal Dhokra Art",
         type: "famous",
         description:
-          "Ancient lost-wax metal casting technique producing unique brass figurines and jewelry.",
+          "Handcrafted brass figurines and jewelry made using the ancient lost-wax casting technique known as Dhokra art.",
         significance:
-          "Dhokra is one of the oldest metal crafting techniques in the world, dating back 4,500 years. Each piece is one-of-a-kind as the mold is destroyed in the casting process.",
+          "Dhokra is a 4,500-year-old metal casting tradition. Each piece is unique because the clay mold is destroyed during casting, ensuring no two artifacts are identical.",
         makingProcess:
-          "A clay core is covered with beeswax threads to form the design. This is coated with clay and heated - wax melts out, creating a mold. Molten brass is poured in, cooled, and clay broken away to reveal the unique piece.",
+          "A clay core is shaped and wrapped with beeswax threads to form intricate designs. The model is coated with clay and heated, allowing wax to melt out and create a mold cavity. Molten brass is poured in, cooled, and the outer clay broken to reveal the finished artwork.",
         uses: [
           "Religious icons",
-          "Jewelry",
+          "Handmade jewelry",
           "Home décor",
-          "Collectibles",
-          "Gifts",
+          "Collector artifacts",
+          "Cultural gifting",
         ],
         image: dhokraArtImage,
+        makingImage: dhokraArtMake,
+        flavorImage: dhokraArtFlavor,
       },
       {
         name: "Jack Fruit Chips and Products",
         type: "underrated",
         description:
-          "Dried jackfruit chips and preserves made from the abundant jackfruit trees of the region.",
+          "Sun-dried jackfruit chips and preserves prepared using traditional tribal techniques from locally grown jackfruit.",
         significance:
-          "While jackfruit is common, the tribal preparation methods create unique flavors. The chips provide income during the fruiting season and nutrition year-round.",
+          "Jackfruit processing provides seasonal income to tribal families while preserving fruit for year-round consumption. Traditional drying techniques create distinctive flavors and natural sweetness.",
         makingProcess:
-          "Ripe jackfruit bulbs are separated, deseeded, sliced thin, and sun-dried for 3-4 days. Some are lightly salted or spiced before drying. Unripe jackfruit is similarly prepared for savory chips.",
+          "Ripe jackfruit bulbs are deseeded, thinly sliced, and sun-dried for 3–4 days. Some batches are lightly salted or spiced before drying. Unripe jackfruit is processed into savory chips using similar sun-drying methods.",
         uses: [
-          "Healthy snacking",
+          "Healthy snack alternative",
           "Cooking ingredient",
           "Travel food",
-          "Export product",
-          "Natural sweetener",
+          "Export-ready product",
+          "Natural sweetener substitute",
         ],
         image: jackfruitChipsImage,
         makingImage: jackfruitChipsMake,
@@ -591,16 +631,16 @@ export const destinations: Destination[] = [
         name: "Forest Mahua Flowers",
         type: "underrated",
         description:
-          "Dried flowers of the Mahua tree, sacred to tribal communities and used for various purposes.",
+          "Sun-dried Mahua flowers collected from forest trees, valued for their nutritional, cultural, and economic importance.",
         significance:
-          "The Mahua tree is considered sacred and provides food security during lean seasons. Flowers are a traditional sweetener and important income source for forest-dwelling communities.",
+          "The Mahua tree is sacred to tribal communities and provides food security during lean seasons. Its flowers serve as a natural sweetener and important livelihood source for forest-dwelling families.",
         makingProcess:
-          "Flowers fall naturally in early summer and are collected before dawn while still moist. They're spread on clean ground to sun-dry for 4-5 days, turning regularly. Dried flowers are stored in breathable sacks for year-round use.",
+          "Flowers naturally fall during early summer and are collected before sunrise while moist. They are sun-dried for 4–5 days, regularly turned to ensure even drying, then stored in breathable sacks for year-round use.",
         uses: [
-          "Traditional liquor",
+          "Traditional fermented beverages",
           "Natural sweetener",
-          "Medicine",
-          "Cooking oil (from seeds)",
+          "Herbal medicine",
+          "Cooking oil extraction (from seeds)",
           "Animal feed",
         ],
         image: mahuaFlowersImage,
@@ -615,45 +655,47 @@ export const destinations: Destination[] = [
     tagline: "Eco-Tourism Paradise",
     image: maredumilliImage,
     heroDescription:
-      "A pristine forest destination in the heart of the Eastern Ghats, renowned for its eco-tourism initiatives and rich biodiversity.",
+      "A pristine Eastern Ghats forest destination known for eco-tourism, waterfalls, tribal culture, and rich biodiversity.",
     elevation: "500m",
     bestTime: "October - March",
     temperature: "18°C - 32°C",
     about:
-      "Maredumilli is a biodiversity hotspot located in the East Godavari district, surrounded by dense deciduous forests. Known as one of the best eco-tourism destinations, it offers trekking trails, waterfalls, and an immersive experience of tribal life. The area is home to the Koya and Konda Reddi tribes who have lived in harmony with the forests for centuries.",
+      "Maredumilli is a biodiversity hotspot in the East Godavari district of Andhra Pradesh, surrounded by dense deciduous forests and rolling hill landscapes. Recognized as one of the state’s leading eco-tourism destinations, it offers scenic trekking trails, forest waterfalls, bamboo groves, and immersive tribal experiences. The region is home to the Koya and Konda Reddi tribes, who have sustainably lived in harmony with the forest ecosystem for generations.",
     products: [
       {
         name: "Wild Forest Honey",
         type: "famous",
         description:
-          "Pure, unprocessed honey harvested from wild bee colonies deep within the Maredumilli forests by tribal honey hunters.",
+          "Pure, raw honey harvested from wild bee colonies deep within the untouched forests of Maredumilli.",
         significance:
-          "Maredumilli wild honey is considered among the purest in India due to the untouched forest ecosystem. The bees forage on diverse medicinal plants, giving the honey unique therapeutic properties. It supports the livelihood of forest-dwelling communities.",
+          "Considered among the purest forest honeys in India, it derives its medicinal potency from bees that forage on diverse native medicinal plants. It supports sustainable tribal livelihoods.",
         makingProcess:
-          "Skilled tribal honey hunters identify wild hives in ancient trees. Using smoke from forest herbs to calm bees, they climb using traditional rope techniques. Honeycomb is carefully extracted, leaving enough for the colony. The honey is strained through muslin and stored in earthen pots.",
+          "Traditional honey hunters identify wild hives in tall forest trees. Using herbal smoke to calm bees, they climb using rope techniques and extract honeycomb responsibly, leaving enough for colony survival. Honey is filtered through muslin and stored naturally.",
         uses: [
-          "Natural medicine",
-          "Immunity booster",
-          "Wound healing",
-          "Ayurvedic preparations",
+          "Natural immunity booster",
+          "Wound healing remedy",
+          "Ayurvedic formulations",
           "Premium sweetener",
+          "Traditional medicine",
         ],
         image: wildHoneyImage,
+        makingImage: wildHoneyMake,
+        flavorImage: wildHoneyFlavor,
       },
       {
         name: "Forest Tamarind",
         type: "famous",
         description:
-          "Wild-harvested tamarind from the dense forests of Maredumilli, known for its intense tanginess and natural sweetness. Unlike commercial varieties, it retains a deeper, smoky forest flavor.",
+          "Wild-harvested tamarind known for its bold tanginess, deep flavor, and natural sweetness.",
         significance:
-          "Collected by tribal communities, forest tamarind forms a seasonal source of livelihood and is integral to Andhra cuisine, especially in pulusu and chutneys.",
+          "Collected seasonally by tribal communities, forest tamarind is a key ingredient in Andhra cuisine and a vital source of income for forest dwellers.",
         makingProcess:
-          "Ripe pods are hand-harvested from forest trees, sun-dried naturally, and deseeded. The pulp is compressed into blocks without chemical preservatives.",
+          "Ripe tamarind pods are hand-harvested, sun-dried naturally, deseeded, and compressed into preservative-free pulp blocks.",
         uses: [
-          "Pulusu and sambar preparation",
-          "Chutneys and pickles",
+          "Pulusu and sambar",
+          "Pickles and chutneys",
           "Natural souring agent",
-          "Marinades for meat and fish",
+          "Meat and fish marinades",
         ],
         image: forestTamarindHero,
         makingImage: forestTamarindMake,
@@ -663,33 +705,35 @@ export const destinations: Destination[] = [
         name: "Bamboo Chicken",
         type: "famous",
         description:
-          "Iconic tribal dish where chicken is slow-cooked inside fresh bamboo stems over an open fire, infusing it with a unique smoky flavor.",
+          "Traditional tribal delicacy where marinated chicken is slow-cooked inside fresh bamboo over an open fire.",
         significance:
-          "This ancient cooking technique is unique to the tribal regions of Andhra Pradesh. The bamboo imparts a distinctive flavor and keeps the meat incredibly tender. It has become synonymous with Maredumilli tourism.",
+          "An iconic food experience of Maredumilli tourism, the bamboo infuses smoky flavor while keeping the meat tender and juicy.",
         makingProcess:
-          "Fresh green bamboo stems are cut and one end is sealed naturally. Marinated chicken with tribal spices is stuffed inside and the open end is sealed with leaves. The bamboo is placed over slow-burning coals for 2-3 hours, rotating regularly.",
+          "Fresh bamboo stems are filled with spiced chicken, sealed with leaves, and slow-roasted over charcoal for 2–3 hours while rotated evenly.",
         uses: [
-          "Traditional cuisine",
-          "Tourist attraction",
-          "Special occasions",
-          "Cultural experience",
+          "Tribal cuisine experience",
+          "Tourist specialty dish",
+          "Festival food",
+          "Cultural attraction",
         ],
         image: bambooChickenImage,
+        makingImage: bambooChickenMake,
+        flavorImage: bambooChickenFlavor,
       },
       {
-        name: "Adda Leaf Plates Adda Aaku",
+        name: "Adda Leaf Plates (Adda Aaku)",
         type: "famous",
         description:
-          "Eco-friendly biodegradable plates handcrafted from Adda leaves, stitched together using thin bamboo sticks. A sustainable alternative rooted in tribal craftsmanship.",
+          "Eco-friendly biodegradable plates handcrafted from Adda leaves, stitched using bamboo sticks.",
         significance:
-          "Represents zero-waste living and forest-based livelihoods. These plates are widely used in temple feasts, tribal festivals, and eco-conscious catering.",
+          "A symbol of sustainable forest-based livelihoods and zero-waste living, widely used in temples and eco-conscious events.",
         makingProcess:
-          "Fresh Adda leaves are collected, cleaned, and sun-softened. Leaves are layered and stitched manually using bamboo ribs, then pressed into shape for durability.",
+          "Collected leaves are cleaned, layered, stitched manually with bamboo ribs, and pressed into durable shapes.",
         uses: [
-          "Traditional meal serving",
-          "Temple prasadam distribution",
+          "Temple meal serving",
+          "Prasadam distribution",
           "Eco-friendly catering",
-          "Sustainable event supplies",
+          "Sustainable events",
         ],
         image: addLeafHero,
         makingImage: addLeafFlavor,
@@ -699,51 +743,49 @@ export const destinations: Destination[] = [
         name: "Koya Tribal Jewelry",
         type: "underrated",
         description:
-          "Handcrafted beaded jewelry and metal ornaments made by Koya women using traditional techniques.",
+          "Handcrafted beaded and metal ornaments made by Koya tribal women using ancestral techniques.",
         significance:
-          "Each piece of jewelry tells a story of the wearer's clan, marital status, and social position. The designs have remained unchanged for centuries and are an important cultural identifier.",
+          "Each piece represents clan identity, marital status, and cultural symbolism preserved for centuries.",
         makingProcess:
-          "Beads are strung on natural fiber threads in specific patterns taught from mother to daughter. Metal pieces are hammered and shaped using simple tools. Some incorporate forest seeds, shells, and animal teeth.",
+          "Beads are strung on natural fibers in symbolic patterns. Metal elements are hand-shaped using simple tools, sometimes incorporating forest seeds and shells.",
         uses: [
-          "Ceremonial wear",
-          "Daily adornment",
-          "Gifting",
-          "Cultural identity",
+          "Ceremonial adornment",
+          "Daily traditional wear",
+          "Cultural gifting",
           "Collector items",
         ],
-        image: dhokraArtImage,
-        makingImage: dhokraArtMake,
-        flavorImage: dhokraArtFlavor,
+        image: koyatribalJImage,
+        makingImage: koyatribalJMake,
+        flavorImage: koyatribalJFlavor,
       },
       {
         name: "Konda Paccha Forest Herbs",
         type: "underrated",
         description:
-          "A collection of wild leafy greens and medicinal herbs naturally grown in the hill forests of Maredumilli. Known locally as ‘Konda Paccha,’ these herbs are rich in micronutrients and healing properties.",
+          "Wild leafy greens and medicinal herbs naturally grown in the forested hills of Maredumilli.",
         significance:
-          "These greens are part of indigenous food knowledge systems, often consumed seasonally to boost immunity and maintain digestive health.",
+          "Part of indigenous nutritional wisdom, these herbs are consumed seasonally for immunity and digestive health.",
         makingProcess:
-          "Herbs are sustainably foraged from forest slopes, washed in stream water, and either sun-dried or cooked fresh with minimal spices to retain nutrients.",
+          "Herbs are sustainably foraged, washed in stream water, and either cooked fresh or shade-dried for medicinal use.",
         uses: [
-          "Seasonal tribal curries",
+          "Tribal curries",
           "Herbal decoctions",
-          "Immunity-boosting soups",
-          "Dry powder for traditional remedies",
+          "Immunity soups",
+          "Traditional remedies",
         ],
         image: kondapacchaHero,
         makingImage: kondapacchaMake,
         flavorImage: kondapacchaFlavor,
       },
-
       {
         name: "Forest Turmeric",
         type: "underrated",
         description:
-          "Potent wild turmeric harvested from the forest floors of Maredumilli, known for high curcumin content.",
+          "Wild forest-grown turmeric known for high curcumin concentration and strong medicinal properties.",
         significance:
-          "Forest turmeric from Maredumilli has been tested to contain significantly higher curcumin levels than cultivated varieties. It's been used by tribal healers for centuries for its powerful anti-inflammatory properties.",
+          "Used by tribal healers for centuries, forest turmeric contains significantly higher curcumin levels than many cultivated varieties.",
         makingProcess:
-          "Rhizomes are dug from forest soils during the dry season. They're cleaned, boiled in large pots for hours, then sun-dried on raised platforms. The dried fingers are ground in stone mills to preserve medicinal properties.",
+          "Rhizomes are harvested during dry season, cleaned, boiled, sun-dried, and stone-ground to preserve natural potency.",
         uses: [
           "Traditional medicine",
           "Cooking spice",
@@ -760,26 +802,30 @@ export const destinations: Destination[] = [
   {
     id: "tirupati",
     name: "Tirupati",
-    tagline: "Where devotion meets the forested hills",
+    tagline: "Where Devotion Meets the Forested Hills",
     image: tirupatiImage,
     heroDescription:
-      "Beyond the chants and temple bells lies a living landscape of forests, village kitchens, and sacred traditions shaped by centuries of pilgrimage.",
+      "A sacred pilgrimage city where temple traditions, forest produce, and heritage crafts shape a timeless cultural landscape.",
     elevation: "853 m",
     bestTime: "September – February",
     temperature: "18°C – 32°C",
     about:
-      "Tirupati is often seen only through the lens of devotion, yet its soul stretches far beyond temple corridors. Nestled against the Tirumala hills, the region nurtures ancient forest foods, temple-inspired cuisines, and age-old crafts shaped by constant movement of pilgrims. Seasonal produce, traditional prasadam techniques, and village rituals quietly coexist with faith, forming a cultural ecosystem rarely noticed by visitors.",
+      "Tirupati, located at the foothills of the Tirumala hills in Andhra Pradesh, is globally renowned as one of India’s most sacred pilgrimage destinations. Beyond the temple corridors, the region sustains a unique ecosystem of forest produce, temple-inspired culinary traditions, sustainable devotional crafts, and agrarian practices shaped by centuries of pilgrimage. Seasonal prasadam preparation techniques, cow-based ritual formulations, and flower recycling initiatives quietly coexist with faith, forming a deeply rooted cultural and economic landscape.",
     products: [
       {
         name: "Dry Flower Agarbathis",
         type: "underrated",
         description:
-          "Incense sticks made from recycled temple flowers, sun-dried and naturally bound.",
+          "Eco-friendly incense sticks crafted from recycled temple flowers, naturally dried and hand-rolled into fragrant agarbathis.",
         significance:
-          "Transforms sacred waste into a sustainable livelihood while preserving devotional fragrance traditions.",
+          "Transforms sacred floral offerings into sustainable livelihood products, reducing temple waste while preserving devotional fragrance traditions.",
         makingProcess:
-          "Collected temple flowers are dried, powdered, blended with natural binders, and hand-rolled into agarbathis.",
-        uses: ["Daily worship", "Meditation", "Natural fragrance"],
+          "Collected temple flowers are carefully segregated, sun-dried, powdered, and blended with natural binders. The mixture is hand-rolled into incense sticks and shade-dried before packaging.",
+        uses: [
+          "Daily worship rituals",
+          "Meditation and spiritual practices",
+          "Natural home fragrance",
+        ],
         image: dryflowerImage,
         makingImage: dryflowerMake,
         flavorImage: dryflowerFlavor,
@@ -788,12 +834,19 @@ export const destinations: Destination[] = [
         name: "Panchagavya Products",
         type: "famous",
         description:
-          "Traditional formulations derived from cow-based inputs used in rituals and organic farming.",
+          "Traditional Vedic formulations derived from five cow-based ingredients, used in rituals, organic farming, and holistic wellness.",
         significance:
-          "Deeply rooted in temple culture and Vedic practices, symbolizing purity and holistic living.",
+          "Deeply rooted in temple culture and ancient scriptures, Panchagavya symbolizes purity, sustainability, and integrated living within devotional ecosystems.",
         makingProcess:
-          "Prepared through controlled fermentation of five cow-derived ingredients following ritual protocols.",
-        uses: ["Ritual use", "Organic farming", "Traditional wellness"],
+          "Prepared through controlled fermentation of milk, curd, ghee, cow urine, and cow dung under ritual protocols. The mixture is matured naturally and used in specific ceremonial or agricultural applications.",
+        uses: [
+          "Temple rituals and purification",
+          "Organic farming enhancer",
+          "Traditional wellness practices",
+        ],
+        image: pachgavyaImage,
+        makingImage: pachgavyaMake,
+        flavorImage: pachgavyaFlavor,
       },
     ],
   },
