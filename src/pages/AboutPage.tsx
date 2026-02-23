@@ -19,7 +19,7 @@ const AboutPage = () => {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              About <span className="text-primary">TheArchives</span>
+              About <span className="text-primary">BeyondTourism</span>
             </h1>
             <p className="text-lg text-muted-foreground">
               We document India’s most underrated cultural treasures —
@@ -58,7 +58,7 @@ const AboutPage = () => {
                   not lost, but hidden in plain sight.
                 </p>
                 <p className="font-bold">
-                  TheArchives was born from a simple realization: visibility
+                  BeyondTourism was born from a simple realization: visibility
                   shapes value.
                 </p>
                 <p>

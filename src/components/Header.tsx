@@ -40,7 +40,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2 leading-none">
             <MapPin className="w-6 h-6 text-primary relative top-[1px]" />
             <span className="font-serif text-xl lg:text-2xl font-semibold text-foreground">
-              TheArchives
+              BeyondTourism
             </span>
           </Link>
 
