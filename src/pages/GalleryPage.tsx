@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Camera, MapPin, ArrowRight } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { destinations } from '@/data/destinations';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Camera, MapPin, ArrowRight } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { destinations } from "@/data/destinations";
 
 const GalleryPage = () => {
   return (
@@ -24,11 +24,14 @@ const GalleryPage = () => {
                 <span className="text-sm font-medium">Visual Journey</span>
               </div>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-                Gallery by <span className="italic text-primary">Destination</span>
+                Destination Photo Gallery <br />
+                <span className="italic text-primary">-Andhra Pradesh</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Explore the visual stories of each destination. Select a location to discover its 
-                landscapes, culture, and hidden treasures through our curated gallery.
+                Browse visual stories from Araku, Lambasingi, Maredumilli,
+                Konaseema, and more. Explore scenic landscapes, indigenous
+                crafts, village life, and traditional products through our
+                curated galleries.
               </p>
             </motion.div>
           </div>
@@ -59,13 +62,13 @@ const GalleryPage = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4">
-                        <div className="flex items-center gap-2 text-primary-foreground/80 text-sm mb-2">
+                        <div className="flex items-center gap-2 text-primary-foreground/100 text-sm mb-2">
                           <MapPin className="w-4 h-4" />
                           <span>{destination.elevation}</span>
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="p-6">
                       <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
@@ -92,7 +95,8 @@ const GalleryPage = () => {
         <section className="py-12 bg-secondary/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-muted-foreground">
-              We're curating stunning visuals for each destination. Check back soon for immersive photo galleries.
+              We're curating stunning visuals for each destination. Check back
+              soon for immersive photo galleries.
             </p>
           </div>
         </section>

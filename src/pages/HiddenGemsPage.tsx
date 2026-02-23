@@ -46,16 +46,17 @@ const HiddenGemsPage = () => {
             </motion.div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Treasures That{" "}
-              <span className="text-primary italic">Never Left</span>
+              Authentic village{" "}
+              <span className="text-primary italic">Products</span>
               <br />
-              Their Villages
+              from <span className="text-primary italic">Andhra Pradesh</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              The finest spices stay with the farmers who grew them. The purest
-              honey never reaches city markets. Here's what we found before it
-              disappeared—products that exist only where they were made.
+              Explore rare tribal spices, raw forest honey, traditional
+              cookware, and handcrafted goods that never enter commercial supply
+              chains. These indigenous products survive only in the villages
+              where they are grown, harvested, and handmade.
             </p>
           </motion.div>
         </div>
@@ -84,11 +85,11 @@ const HiddenGemsPage = () => {
                       alt={destination.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/5 to-transparent" />
 
                     {/* Gems Badge */}
                     <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1.5 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                      <div className="flex items-center gap-1.5 bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
                         <Sparkles className="w-3.5 h-3.5 text-primary" />
                         <span className="text-xs font-medium text-foreground">
                           {destination.gemsCount} Hidden{" "}
@@ -99,7 +100,7 @@ const HiddenGemsPage = () => {
 
                     {/* Location Info */}
                     <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center gap-2 text-primary-foreground/80 text-sm">
+                      <div className="flex items-center gap-2 text-primary-foreground/100 text-sm">
                         <MapPin className="w-4 h-4" />
                         <span>{destination.elevation}</span>
                       </div>
@@ -151,12 +152,13 @@ const HiddenGemsPage = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Want to Go Deeper?
+              Discover the Villages Behind the Products
             </h2>
             <p className="text-muted-foreground mb-8">
-              Behind every product is a village, a tradition, and a story
-              waiting to be told. Explore the places where these treasures come
-              from.
+              Every tribal spice, forest honey harvest, handcrafted toy, and
+              heritage sweet begins in a specific village. Explore the hidden
+              destinations of Andhra Pradesh where these authentic local
+              products originate.
             </p>
             <Link
               to="/destinations"

@@ -22,9 +22,9 @@ const AboutPage = () => {
               About <span className="text-primary">TheArchives</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              We document India’s most underrated cultural gems — the crafts,
-              foods, and traditions that thrive locally, yet remain unseen
-              beyond their place of origin.
+              We document India’s most underrated cultural treasures —
+              traditional crafts, indigenous foods, and regional practices that
+              thrive locally yet remain unseen beyond their place of origin.
             </p>
           </motion.div>
         </div>
@@ -47,20 +47,25 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Across India, remarkable foods, crafts, and techniques
-                  continue to exist — practiced daily, refined over generations,
-                  and deeply rooted in place.
+                  Across India, extraordinary regional foods, handcraft
+                  traditions, and ancestral techniques continue to exist —
+                  practiced daily, refined across generations, and deeply rooted
+                  in geography.
                 </p>
                 <p>
-                  Yet many regions become known for a single famous product,
-                  while equally valuable traditions remain in the background —
-                  not lost, but overlooked.
+                  Yet many destinations become known for just one “hero”
+                  product, while equally valuable traditions remain overlooked —
+                  not lost, but hidden in plain sight.
                 </p>
-                <p>
+                <p className="font-bold">
                   TheArchives was born from a simple realization: visibility
-                  shapes value. We are building a living archive that brings
-                  underrepresented regional treasures into focus, without
-                  removing them from their context or origin.
+                  shapes value.
+                </p>
+                <p>
+                  We are building a living cultural archive that brings
+                  underrepresented regional products, indigenous craftsmanship,
+                  and local food systems into focus — without removing them from
+                  their context, ecosystem, or community.
                 </p>
               </div>
             </motion.div>
@@ -129,6 +134,12 @@ const AboutPage = () => {
               treasures — connecting curious travelers and conscious consumers
               with the people who sustain them.
             </p>
+            <br />
+            <p className="text-muted-foreground">
+              We focus on authentic Indian village products, tribal crafts,
+              traditional foods, and indigenous knowledge systems that deserve
+              wider recognition.
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -137,19 +148,19 @@ const AboutPage = () => {
                 icon: Compass,
                 title: "Find",
                 description:
-                  "We look beyond the obvious — into villages, hill regions, and local markets — to uncover traditions that rarely travel beyond their home regions.",
+                  "We look beyond mainstream tourism — into remote villages, forest regions, weekly markets, and family workshops — uncovering local traditions that rarely travel beyond their home regions.",
               },
               {
                 icon: BookOpen,
                 title: "Document",
                 description:
-                  "Every item is explored in full context: how it’s made, who makes it, what makes it distinct, and why place matters.",
+                  "Every item is explored in full context: how it’s made, who makes it, what makes it unique, and why geography and ecology matter. We believe regional identity is inseparable from place.",
               },
               {
                 icon: Heart,
                 title: "Connect",
                 description:
-                  "When interest turns into action, we guide it back to the source — ensuring visibility benefits the communities behind the tradition.",
+                  "When discovery turns into interest, we guide attention back to the source — ensuring that visibility strengthens the communities behind the tradition rather than detaching value from origin.",
               },
             ].map((item, index) => (
               <motion.div
@@ -191,22 +202,22 @@ const AboutPage = () => {
                 {
                   title: "Authenticity",
                   description:
-                    "We only share what we have directly researched — through firsthand visits, conversations, and regional study.",
+                    "We document only what we have directly researched through field visits, regional study, and conversations with artisans, farmers, and makers.",
                 },
                 {
                   title: "Sustainability",
                   description:
-                    "We highlight traditions shaped by season, land, and community — not scaled copies detached from origin.",
+                    "We highlight traditions shaped by season, land, biodiversity, and community — not mass-produced copies stripped of context.",
                 },
                 {
                   title: "Respect",
                   description:
-                    "We treat regional knowledge as living culture, shared responsibly and with care.",
+                    "We treat indigenous knowledge and regional heritage as living cultures, shared responsibly and with care.",
                 },
                 {
                   title: "Accessibility",
                   description:
-                    "We believe regional heritage should be easy to discover — without being simplified or misrepresented.",
+                    "We make India’s regional heritage discoverable and understandable — without simplifying, commercializing, or misrepresenting it.",
                 },
               ].map((value, index) => (
                 <motion.div
