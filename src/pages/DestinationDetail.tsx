@@ -39,6 +39,11 @@ const DestinationDetail = () => {
   const underratedProducts = destination.products.filter(
     (p) => p.type === "underrated",
   );
+  const slug = destination.name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
 
   return (
     <div className="min-h-screen bg-background">
@@ -219,12 +224,21 @@ const DestinationDetail = () => {
               Plan your journey to discover these treasures firsthand and
               support local communities.
             </p>
-            <Link
-              to="/destinations"
-              className="inline-flex items-center gap-2 bg-primary-foreground text-foreground font-medium px-8 py-3 rounded-full hover:bg-primary-foreground/90 transition-colors"
-            >
-              Explore More Destinations
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4 mt-6">
+              <Link
+                to="/destinations"
+                className="inline-flex items-center gap-2 bg-primary-foreground text-foreground font-medium px-8 py-3 rounded-full hover:bg-primary-foreground/90 transition-colors"
+              >
+                Explore More Destinations
+              </Link>
+
+              <Link
+                to={`/gallery/${slug}`}
+                className="inline-flex items-center gap-2 bg-primary-foreground text-foreground font-medium px-8 py-3 rounded-full hover:bg-primary-foreground/90 transition-colors"
+              >
+                Explore {destination.name}'s Gallery
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

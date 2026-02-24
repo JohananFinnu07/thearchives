@@ -12,7 +12,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center gap-2 mb-4">
               <MapPin className="w-6 h-6" />
               <span className="font-serif text-xl font-semibold">
-                BeyondTourism
+                TheArchives
               </span>
             </Link>
             <p className="text-primary-foreground/70 text-sm max-w-xs">
@@ -87,7 +87,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/50 text-sm">
-            © 2026 BeyondTourism. All rights reserved.
+            © 2026 TheArchives. All rights reserved.
           </p>
           <p className="text-primary-foreground/50 text-sm">
             Made with ♥ for explorers
