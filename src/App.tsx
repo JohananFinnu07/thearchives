@@ -15,6 +15,7 @@ import LocationGalleryPage from "./pages/LocationGalleryPage";
 import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
 import SearchPage from "./components/NavSearch";
+import RecipeDetailPage from "./pages/RecipeDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,8 @@ const App = () => (
             path="/hidden-gems/:destinationId/:productSlug"
             element={<HiddenGemsPage />}
           />
+
+          <Route path="/recipes/:slug" element={<RecipeDetailPage />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

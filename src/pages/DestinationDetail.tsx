@@ -13,6 +13,7 @@ import { getDestinationById } from "@/data/destinations";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
+import RecipeCard from "@/components/RecipeCard";
 
 const DestinationDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -276,8 +277,8 @@ const DestinationDetail = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {destination.recipes?.map((recipe, index) => (
-              <ProductCard key={recipe.name} product={recipe} index={index} />
+            {destination.recipes?.map((recipe) => (
+              <RecipeCard key={recipe.name} recipe={recipe} />
             ))}
           </div>
         </div>
