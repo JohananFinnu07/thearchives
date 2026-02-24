@@ -214,7 +214,7 @@ import pachgavyaFlavor from "@/assets/products/PGPF.jpg";
 
 export interface Product {
   name: string;
-  type: "famous" | "underrated" | "recipe";
+  type: "famous" | "underrated";
   description: string;
   significance?: string;
   makingProcess?: string;
@@ -235,7 +235,6 @@ export interface Destination {
   temperature: string;
   about: string;
   products: Product[];
-  recipes: Product[]; // REQUIRED
   culture: string; // REQUIRED (so no undefined issues)
 }
 
@@ -410,38 +409,7 @@ export const destinations: Destination[] = [
         flavorImage: bodengPuruguImage,
       },
     ],
-    recipes: [
-      {
-        name: "Bamboo Chicken",
-        type: "recipe",
-        description:
-          "A signature tribal delicacy where marinated country chicken is slow-roasted inside fresh bamboo over open fire.",
-        significance:
-          "Represents Araku’s forest-based cooking style where bamboo acts as a natural pressure cooker and flavor infuser.",
-        makingProcess:
-          "Spiced chicken is stuffed into hollow bamboo, sealed with forest leaves, and roasted slowly over charcoal for 2–3 hours.",
-        uses: ["Festival food", "Tourist specialty", "Tribal celebrations"],
-        image: bambooChickenImage,
-        makingImage: bambooChickenMake,
-        flavorImage: bambooChickenFlavor,
-      },
-      {
-        name: "Niger Seed Chutney",
-        type: "recipe",
-        description:
-          "Traditional chutney made from roasted niger seeds (Valisalu), garlic, and red chilies.",
-        significance:
-          "A protein-rich tribal accompaniment that reflects Araku’s millet-based food culture.",
-        makingProcess:
-          "Niger seeds are dry roasted, stone-ground with garlic and chilies, and mixed with warm oil.",
-        uses: [
-          "Millet roti accompaniment",
-          "Rice side dish",
-          "Seasonal tribal meal",
-        ],
-        image: nigeroilHero,
-      },
-    ],
+
     culture:
       "Araku Valley is home to tribal communities such as the Kondh, Valmiki, and Konda Dora tribes. Weekly shandies (markets), Dhimsa dance performances, forest-foraging traditions, and sustainable coffee farming define the region’s living culture. Bamboo architecture, millet-based food systems, and seasonal forest rhythms reflect a deep ecological bond with the Eastern Ghats landscape.",
   },
@@ -538,7 +506,6 @@ export const destinations: Destination[] = [
         flavorImage: mistmountHoneyFlavor,
       },
     ],
-    recipes: [],
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -636,7 +603,6 @@ export const destinations: Destination[] = [
         flavorImage: meadowHerbsFlavor,
       },
     ],
-    recipes: [],
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -735,7 +701,7 @@ export const destinations: Destination[] = [
         flavorImage: mahuaFlowersFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -888,7 +854,7 @@ export const destinations: Destination[] = [
         flavorImage: forestTurmericFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -942,7 +908,7 @@ export const destinations: Destination[] = [
         flavorImage: pachgavyaFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1017,7 +983,7 @@ export const destinations: Destination[] = [
         flavorImage: saltedSeafoodFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1091,7 +1057,7 @@ export const destinations: Destination[] = [
         flavorImage: minimalistLampFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1147,7 +1113,7 @@ export const destinations: Destination[] = [
         flavorImage: sudharaistoneFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1179,7 +1145,7 @@ export const destinations: Destination[] = [
         flavorImage: madagadaBPotteryFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1265,7 +1231,7 @@ export const destinations: Destination[] = [
         flavorImage: pulasaFishFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1297,7 +1263,7 @@ export const destinations: Destination[] = [
         flavorImage: bambooFishTrapsFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1355,7 +1321,7 @@ export const destinations: Destination[] = [
         flavorImage: forestHoneyFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },
@@ -1400,7 +1366,7 @@ export const destinations: Destination[] = [
         flavorImage: citrusProductsFlavor,
       },
     ],
-    recipes: [],
+
     culture:
       "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
   },

@@ -14,11 +14,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import RecipeCard from "@/components/RecipeCard";
+import { recipes } from "@/data/recipes";
 
 const DestinationDetail = () => {
   const { id } = useParams<{ id: string }>();
   const destination = getDestinationById(id || "");
-
+  const destinationRecipes = recipes.filter(
+    (recipe) => recipe.destination === destination.name,
+  );
   if (!destination) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -277,7 +280,7 @@ const DestinationDetail = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {destination.recipes?.map((recipe) => (
+            {destinationRecipes.map((recipe) => (
               <RecipeCard key={recipe.name} recipe={recipe} />
             ))}
           </div>
