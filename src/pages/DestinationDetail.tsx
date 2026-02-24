@@ -39,12 +39,20 @@ const DestinationDetail = () => {
   const underratedProducts = destination.products.filter(
     (p) => p.type === "underrated",
   );
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   const slug = destination.name
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -140,11 +148,42 @@ const DestinationDetail = () => {
             <p className="text-muted-foreground text-lg leading-relaxed">
               {destination.about}
             </p>
+            {/* Section Quick Links */}
+            {/* Section Quick Links */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <button
+                onClick={() => scrollToSection("famous")}
+                className="px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition"
+              >
+                Famous
+              </button>
+
+              <button
+                onClick={() => scrollToSection("underrated")}
+                className="px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition"
+              >
+                Underrated
+              </button>
+
+              <button
+                onClick={() => scrollToSection("recipes")}
+                className="px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition"
+              >
+                Recipes
+              </button>
+
+              <button
+                onClick={() => scrollToSection("culture")}
+                className="px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition"
+              >
+                Culture
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>
       {/* Famous Products Section */}
-      <section className="py-16 lg:py-24 bg-muted/30">
+      <section id="famous" className="py-16 lg:py-24 bg-muted/30 scroll-mt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -176,7 +215,10 @@ const DestinationDetail = () => {
         </div>
       </section>
       {/* Underrated Products Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section
+        id="underrated"
+        className="py-16 lg:py-24 bg-background scroll-mt-24"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -206,6 +248,67 @@ const DestinationDetail = () => {
               <ProductCard key={product.name} product={product} index={index} />
             ))}
           </div>
+        </div>
+      </section>
+      {/* Recipes Section */}
+      <section id="recipes" className="py-16 lg:py-24 bg-muted/30 scroll-mt-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <Sparkles className="w-6 h-6 text-primary" />
+              <p className="text-accent font-medium tracking-widest uppercase text-sm">
+                The Action
+              </p>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-foreground mb-4">
+              Traditional Recipes of {destination.name}
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl">
+              Discover how local ingredients transform into unforgettable
+              dishes.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {destination.recipes?.map((recipe, index) => (
+              <ProductCard key={recipe.name} product={recipe} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Culture Section */}
+      <section
+        id="culture"
+        className="py-16 lg:py-24 bg-background scroll-mt-24"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <MapPin className="w-6 h-6 text-accent" />
+              <p className="text-accent font-medium tracking-widest uppercase text-sm">
+                The Live Experience
+              </p>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-foreground mb-4">
+              Culture & Traditions
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-5xl leading-relaxed">
+              {destination.culture}
+            </p>
+          </motion.div>
         </div>
       </section>
       {/* CTA Section */}
