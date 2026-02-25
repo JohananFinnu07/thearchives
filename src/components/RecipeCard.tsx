@@ -7,6 +7,7 @@ interface RecipeCardProps {
     name: string;
     description: string;
     image?: string;
+    season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal";
   };
 }
 
@@ -27,7 +28,11 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
           className="w-full h-48 object-cover rounded-lg mb-4"
         />
       )}
-
+      {recipe.season && (
+        <span className="inline-block px-3 py-1 text-xs rounded-full bg-accent/10 text-accent mb-3">
+          {recipe.season} Special
+        </span>
+      )}
       <h3 className="text-xl font-semibold mb-2">{recipe.name}</h3>
 
       <p className="text-muted-foreground mb-4">{recipe.description}</p>

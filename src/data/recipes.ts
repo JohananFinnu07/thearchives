@@ -1,23 +1,946 @@
 // src/data/recipes.ts
+import nigerseedChutneyImage from "@/assets/Recipes/NSCH.jpg";
+import bambooChickenImage from "@/assets/Recipes/BCH.jpg";
+import bambooBiryaniImage from "@/assets/Recipes/BBH.jpg";
+import ragiSankatiImage from "@/assets/Recipes/RSH.jpg";
+import tribalriceWineImage from "@/assets/Recipes/TRWH.jpg";
+
+import spicycountryChickenImage from "@/assets/Recipes/SCCH.jpg";
+import tribalPickelsImage from "@/assets/Recipes/TPSH.jpg";
+import strawberryDelightImage from "@/assets/Recipes/SDH.jpg";
+import wildmushroomFryImage from "@/assets/Recipes/WFMF.jpg";
+
+import andhrapulaoImage from "@/assets/Recipes/ACP.jpg";
+import mirapakaiBajjiImage from "@/assets/Recipes/MBH.jpg";
+
+import paderuturmericRasamImage from "@/assets/Recipes/PTRH.jpg";
+import milletUpmaImage from "@/assets/Recipes/MUH.jpg";
+import milletIdlyImage from "@/assets/Recipes/MIH.jpg";
+
+import bambooShootImage from "@/assets/Recipes/BSCH.jpg";
+import adividumpalakuraImage from "@/assets/Recipes/ATDCH.jpg";
+import foresthoneyRiceImage from "@/assets/Recipes/FHRH.jpg";
+import jackfruitCurryImage from "@/assets/Recipes/JFCH.jpg";
+
+import marichiAnnamImage from "@/assets/Recipes/MAH.jpg";
+import reniguntaAppamImage from "@/assets/Recipes/RAH.jpg";
+import potcurdPulihoraImage from "@/assets/Recipes/PCPH.jpg";
+
+import murimixtureImage from "@/assets/Recipes/MMH.jpg";
+import bellamParamannamImage from "@/assets/Recipes/BPH.jpg";
+import ulavacharuImage from "@/assets/Recipes/UCH.jpg";
+
+import pottikalluImage from "@/assets/Recipes/JFLIH.jpg";
+import lakkapidathalaImage from "@/assets/Recipes/PCH.jpg";
+import dividiviImage from "@/assets/Recipes/DDTH.jpg";
 
 export interface Recipe {
   name: string;
   description: string;
   destination: string;
+
+  image: string;
+
+  prepTime: string;
+  cookTime: string;
+  servings: string;
+  difficulty: "Easy" | "Medium" | "Hard";
+
   ingredients: string[];
   steps: string[];
+
+  story?: string; // Cultural context block
+  season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal";
+
+  buyLink?: string; // Optional e-commerce bridge
 }
 
 export const recipes: Recipe[] = [
   {
     name: "Niger Seed Chutney",
     destination: "Araku Valley",
-    description: "A tribal-style roasted niger seed chutney.",
-    ingredients: ["Niger seeds", "Dry red chillies", "Garlic", "Salt"],
-    steps: [
-      "Dry roast niger seeds",
-      "Grind with chillies and garlic",
-      "Add salt and serve",
+    description:
+      "A deeply roasted tribal-style chutney made from niger seeds, traditionally served with hot millet rotis and steamed rice in the Eastern Ghats.",
+
+    image: nigerseedChutneyImage,
+
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Niger seeds (Valise)",
+      "4 Dry red chillies",
+      "3 Garlic cloves",
+      "Salt to taste",
+      "1 tsp Tamarind (optional)",
     ],
+
+    steps: [
+      "Place a thick iron pan on low flame and dry roast the niger seeds slowly. Stir continuously until they release a nutty aroma and turn slightly darker.",
+      "Transfer the roasted seeds onto a plate and allow them to cool completely. This helps preserve their natural oils.",
+      "In the same pan, lightly roast the dry red chillies and garlic until fragrant.",
+      "Using a stone grinder or mixer, grind everything together into a coarse, slightly oily texture — not too smooth.",
+      "Serve fresh with hot steamed rice and a drizzle of ghee, or alongside ragi rotis.",
+    ],
+    story:
+      "Niger Seed Chutney, locally known as 'Valise Pachadi', is a staple among tribal communities in Araku Valley. The seeds are rich in natural oils and provide warmth during colder months in the hills. Traditionally prepared using stone grinders, the chutney reflects the simplicity and depth of forest-based cuisine.",
+    season: "Winter",
+    buyLink: "https://amzn.to/4s4Oio5",
+  },
+  {
+    name: "Bamboo Chicken",
+    destination: "Araku Valley",
+    description:
+      "A smoky tribal delicacy where marinated chicken is slow-cooked inside bamboo over open fire, sealing in aroma and forest flavours.",
+
+    image: bambooChickenImage,
+
+    prepTime: "20 mins",
+    cookTime: "40 mins",
+    servings: "Serves 3–4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "500g country chicken (cut into pieces)",
+      "1 fresh bamboo shoot (hollow section)",
+      "2 tbsp red chilli powder",
+      "1 tbsp ginger-garlic paste",
+      "½ tsp turmeric",
+      "Salt to taste",
+      "Fresh coriander leaves",
+      "1 tbsp mustard oil",
+    ],
+
+    steps: [
+      "Wash the chicken pieces thoroughly and drain excess water.",
+      "In a bowl, mix red chilli powder, turmeric, ginger-garlic paste, salt and mustard oil.",
+      "Add the chicken pieces and coat evenly. Marinate for at least 30 minutes.",
+      "Take a fresh hollow bamboo shoot and clean the inside properly.",
+      "Stuff the marinated chicken tightly into the bamboo.",
+      "Seal the open end using banana leaf or natural bamboo cap.",
+      "Place the bamboo directly over a medium wood fire.",
+      "Rotate slowly every few minutes to ensure even cooking.",
+      "Cook for about 35–40 minutes until the chicken is tender.",
+      "Carefully split open the bamboo and serve hot.",
+    ],
+
+    story:
+      "Bamboo Chicken, locally known as Bongulo Chicken, is a signature tribal dish of Araku Valley, often prepared during weekly markets and forest gatherings. Slow-cooked inside fresh bamboo over an open fire, the method seals in natural juices while infusing a deep, earthy smokiness that modern kitchens struggle to replicate.",
+    season: "All Year",
+    buyLink: "https://amzn.to/4s4Oio5",
+  },
+  {
+    name: "Bamboo Biryani",
+    destination: "Araku Valley",
+    description:
+      "A forest-style biryani layered inside bamboo and slow-cooked over fire, absorbing smoky and woody undertones.",
+
+    image: bambooBiryaniImage,
+
+    prepTime: "30 mins",
+    cookTime: "45 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "2 cups basmati rice",
+      "500g chicken or vegetables",
+      "1 large bamboo hollow",
+      "2 onions (sliced)",
+      "2 tomatoes (chopped)",
+      "Biryani masala",
+      "Fresh mint and coriander",
+      "Salt to taste",
+      "Ghee",
+    ],
+
+    steps: [
+      "Wash basmati rice and soak for 20 minutes.",
+      "Boil water with salt and cook rice until 70% done. Drain and keep aside.",
+      "Heat oil in a pan and sauté sliced onions until golden brown.",
+      "Add ginger-garlic paste and cook until raw smell disappears.",
+      "Add tomatoes, chilli powder and biryani masala. Cook until oil separates.",
+      "Add chicken or vegetables and cook until 80% done.",
+      "Take a clean bamboo hollow and layer rice and masala alternately.",
+      "Seal the bamboo using banana leaf.",
+      "Place over medium fire and rotate occasionally.",
+      "Cook for 40–45 minutes until rice is fully done and flavours blend.",
+      "Open carefully and serve hot.",
+    ],
+
+    story:
+      "Bamboo Biryani in Araku Valley is a modern twist on traditional tribal bamboo cooking. Inspired by ancient forest techniques, rice and marinated country chicken are sealed inside fresh bamboo and slow-cooked over a wood fire. This method locks in moisture and infuses a natural smoky aroma, making it one of Araku’s most unique and sought-after food experiences in the Eastern Ghats.",
+    season: "All Year",
+  },
+  {
+    name: "Ragi Sankati - Natu Kodi",
+    destination: "Araku Valley",
+    description:
+      "A nourishing millet staple served with fiery country chicken curry, deeply rooted in the Eastern Ghats tribal diet.",
+
+    image: ragiSankatiImage,
+
+    prepTime: "15 mins",
+    cookTime: "40 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup ragi flour",
+      "2 cups water",
+      "Salt",
+      "500g country chicken",
+      "Red chilli powder",
+      "Garam masala",
+      "Onions, ginger, garlic",
+      "Oil",
+    ],
+
+    steps: [
+      "Boil 2 cups of water in a thick-bottomed pot and add salt.",
+      "When water starts boiling, reduce flame and slowly add ragi flour while stirring continuously.",
+      "Keep stirring to avoid lumps until mixture thickens.",
+      "Cover and cook on low flame for 5–7 minutes.",
+      "Mix well again and shape into round balls using a wooden spoon.",
+      "In another pan, heat oil and sauté onions until soft.",
+      "Add ginger-garlic paste and cook briefly.",
+      "Add country chicken pieces, chilli powder and spices.",
+      "Cook covered until chicken becomes tender and gravy thickens.",
+      "Serve hot ragi sankati with natu kodi curry.",
+    ],
+
+    story:
+      "Ragi Sankati is a traditional millet-based staple of Araku Valley, valued for providing warmth and sustained energy in the region’s cool, hilly climate. Made from finger millet and served with naturally raised country chicken, it reflects the agricultural lifestyle and food wisdom of local tribal communities, where millets remain central to daily nourishment and seasonal eating.",
+  },
+  {
+    name: "Madapa - Tribal Rice Wine",
+    destination: "Araku Valley",
+    description:
+      "A traditionally fermented rice drink prepared during festivals and community gatherings in Araku's tribal villages.",
+
+    image: tribalriceWineImage,
+
+    prepTime: "2 days fermentation",
+    cookTime: "Minimal active time",
+    servings: "Serves community sharing",
+    difficulty: "Hard",
+
+    ingredients: [
+      "2 cups cooked rice",
+      "Traditional fermentation starter (herbal yeast)",
+      "Clay pot",
+      "Clean muslin cloth",
+    ],
+
+    steps: [
+      "Cook rice completely and allow it to cool to room temperature.",
+      "Spread rice evenly on a clean plate to remove excess moisture.",
+      "Powder the traditional fermentation starter.",
+      "Mix the starter evenly with cooled rice using clean hands.",
+      "Transfer the mixture into a clean clay pot.",
+      "Cover with muslin cloth and keep in a cool, dark place.",
+      "Allow fermentation for 48 hours without disturbing.",
+      "After fermentation, gently press the rice to extract liquid.",
+      "Strain the liquid into a clean vessel.",
+      "Serve fresh or lightly chilled.",
+    ],
+
+    story:
+      "Madapa is more than a traditional drink in Araku Valley — it is a ceremonial beverage shared during harvest festivals and weddings. Each tribal community preserves its own unique fermentation method, passed down orally through generations, reflecting deep-rooted cultural identity, seasonal rhythms, and ancestral knowledge of forest-based ingredients and natural brewing practices.",
+    season: "Winter",
+  },
+  {
+    name: "Spicy Country Chicken - Lambasingi Style",
+    destination: "Lambasingi",
+    description:
+      "A bold hill-style country chicken curry slow-cooked with strong spices, perfect for Lambasingi’s cold and misty evenings.",
+    image: spicycountryChickenImage,
+    prepTime: "20 mins",
+    cookTime: "50 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "500g country chicken",
+      "2 onions (chopped)",
+      "2 tbsp red chilli powder",
+      "1 tbsp coriander powder",
+      "1 tsp garam masala",
+      "1 tbsp ginger-garlic paste",
+      "Oil",
+      "Salt",
+    ],
+    steps: [
+      "Clean and wash the country chicken pieces thoroughly.",
+      "Heat oil in a heavy pan and sauté chopped onions until golden.",
+      "Add ginger-garlic paste and cook for 1 minute.",
+      "Add chicken pieces and sauté for 5–7 minutes.",
+      "Add chilli powder, coriander powder and salt.",
+      "Cover and cook on low flame until chicken releases juices.",
+      "Add water if required and cook until chicken becomes tender.",
+      "Sprinkle garam masala and simmer for 5 minutes before serving.",
+    ],
+    story:
+      "Spicy Country Chicken from Lambasingi is a bold hill-style curry known for its deep red gravy and intense heat. Popular throughout the year and especially comforting during winter, this dish reflects the region’s cold climate and love for strong spices. Made with free-range country chicken, it remains a signature Lambasingi comfort food.",
+  },
+  {
+    name: "Tribal Pickles & Hill Spices",
+    destination: "Lambasingi",
+    description:
+      "Sun-cured tribal pickles and freshly ground spice blends prepared in hill households using locally grown produce.",
+    image: tribalPickelsImage,
+    prepTime: "30 mins",
+    cookTime: "Sun-curing time",
+    servings: "Multiple servings",
+    difficulty: "Easy",
+    season: "Summer",
+    ingredients: [
+      "Raw mango or forest vegetables",
+      "Red chilli powder",
+      "Mustard powder",
+      "Fenugreek seeds",
+      "Sesame oil",
+      "Salt",
+    ],
+    steps: [
+      "Wash and completely dry raw mango or forest vegetables.",
+      "Cut into uniform pieces.",
+      "Mix chilli powder, mustard powder and salt in a bowl.",
+      "Combine vegetable pieces with spice mixture evenly.",
+      "Heat sesame oil and allow it to cool slightly.",
+      "Pour oil over the mixture and mix thoroughly.",
+      "Store in airtight jars and keep under sunlight for 3–5 days.",
+      "Stir occasionally before using.",
+    ],
+    story:
+      "Lambasingi Tribal Pickles are traditionally prepared during summer using sun-dried spices and locally grown produce. The hill climate allows natural preservation through sunlight curing. These homemade pickles and spice blends are essential to village kitchens, adding heat and flavor throughout the year. Summer is the prime season for preparing these long-lasting condiments.",
+  },
+  {
+    name: "Strawberry Delight",
+    destination: "Lambasingi",
+    description:
+      "A fresh hill-style dessert made from locally grown Lambasingi strawberries, lightly sweetened to preserve natural flavor.",
+    image: strawberryDelightImage,
+    prepTime: "15 mins",
+    cookTime: "10 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "Winter",
+    ingredients: [
+      "2 cups fresh strawberries",
+      "2 tbsp sugar",
+      "1 tsp lemon juice",
+      "Fresh cream (optional)",
+    ],
+    steps: [
+      "Wash fresh Lambasingi strawberries and remove stems.",
+      "Chop half the strawberries into small pieces.",
+      "Blend the remaining strawberries into a smooth puree.",
+      "Heat the puree with sugar for 5 minutes.",
+      "Add chopped strawberries and lemon juice.",
+      "Cook for another 2 minutes.",
+      "Allow to cool completely.",
+      "Serve chilled with fresh cream if desired.",
+    ],
+    story:
+      "Strawberry Delight celebrates Lambasingi’s winter strawberry harvest. Known as Andhra Pradesh’s coldest hill station, Lambasingi produces fresh strawberries during winter months. This simple dessert preserves the fruit’s natural sweetness without heavy processing. Seasonal and refreshing, it highlights the region’s unique winter cultivation and growing reputation for hill-grown strawberries.",
+  },
+  {
+    name: "Wild Forest Mushroom Fry",
+    destination: "Lambasingi",
+    description:
+      "A monsoon-only delicacy made from freshly foraged wild mushrooms sautéed with hill spices.",
+    image: wildmushroomFryImage,
+    prepTime: "20 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+    season: "Monsoon",
+    ingredients: [
+      "Fresh wild forest mushrooms",
+      "2 onions (sliced)",
+      "2 green chillies",
+      "½ tsp turmeric",
+      "1 tsp red chilli powder",
+      "Oil",
+      "Salt",
+    ],
+    steps: [
+      "Clean wild forest mushrooms thoroughly with water.",
+      "Chop into medium-sized pieces.",
+      "Heat oil in a pan and sauté sliced onions until soft.",
+      "Add green chillies and cook briefly.",
+      "Add mushrooms and sauté on medium flame.",
+      "Add turmeric, chilli powder and salt.",
+      "Cook uncovered until moisture evaporates.",
+      "Fry until slightly crisp and serve hot.",
+    ],
+    story:
+      "Wild Forest Mushroom Fry is a monsoon-only specialty in Lambasingi. These mushrooms appear naturally during the rainy season and are carefully foraged by local villagers. Not commercially cultivated, they remain a seasonal treasure of the Eastern Ghats. The earthy flavor and limited availability make this monsoon dish one of Lambasingi’s most authentic culinary experiences.",
+  },
+  {
+    name: "Andhra Chicken Pulao - Vanjangi Style",
+    destination: "Vanajangi",
+    description:
+      "A fragrant village-style chicken pulao cooked with whole spices and slow-simmered rice, reflecting Vanjangi’s rustic hill cooking traditions.",
+    image: andhrapulaoImage,
+    prepTime: "20 mins",
+    cookTime: "40 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "2 cups basmati rice",
+      "500g chicken pieces",
+      "2 onions (sliced)",
+      "Whole spices (cloves, cardamom, cinnamon)",
+      "Green chillies",
+      "Ginger-garlic paste",
+      "Mint leaves",
+      "Oil",
+      "Salt",
+    ],
+    steps: [
+      "Wash and soak basmati rice for 20 minutes.",
+      "Heat oil in a heavy pot and sauté whole spices.",
+      "Add sliced onions and cook until golden.",
+      "Add ginger-garlic paste and green chillies.",
+      "Add chicken pieces and sauté for 5–7 minutes.",
+      "Add salt and cook until chicken is partially tender.",
+      "Add soaked rice and required water.",
+      "Cover and cook on low flame until rice is fully done.",
+      "Rest for 5 minutes before serving hot.",
+    ],
+    story:
+      "Andhra Chicken Pulao in Vanjangi is a rustic hill-style rice dish prepared with whole spices and locally sourced chicken. Cooked slowly over a low flame, it reflects the simple yet aromatic cooking traditions of tribal villages. Available throughout the year, this pulao remains a staple for family gatherings and festive meals.",
+  },
+  {
+    name: "Mirapakaya Bajji - Vanjangi Style",
+    destination: "Vanajangi",
+    description:
+      "A crispy deep-fried green chilli snack coated in gram flour batter, commonly enjoyed in Vanjangi’s cool evenings.",
+    image: mirapakaiBajjiImage,
+    prepTime: "15 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "8 large green chillies",
+      "1 cup gram flour (besan)",
+      "½ tsp turmeric",
+      "½ tsp red chilli powder",
+      "Salt",
+      "Water",
+      "Oil for deep frying",
+    ],
+    steps: [
+      "Wash and slit green chillies vertically, removing seeds if desired.",
+      "In a bowl, mix gram flour, turmeric, chilli powder and salt.",
+      "Add water gradually to form a thick batter.",
+      "Heat oil in a deep pan.",
+      "Dip each chilli into batter, coating evenly.",
+      "Carefully drop into hot oil.",
+      "Fry until golden brown and crisp.",
+      "Remove and drain excess oil before serving hot.",
+    ],
+    story:
+      "Mirapakaya Bajji is a beloved snack in Vanjangi village, especially during cool hill evenings. Prepared using fresh green chillies and gram flour batter, it is commonly sold near viewpoints and village gatherings. Available throughout the year, this crispy snack reflects the simplicity and warmth of Vanjangi’s local food culture.",
+  },
+  {
+    name: "Paderu Turmeric Rasam",
+    destination: "Paderu",
+    description:
+      "A warm and healing rasam prepared using high-curcumin Paderu turmeric, traditionally consumed during monsoon and winter.",
+    image: paderuturmericRasamImage,
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "Monsoon",
+    ingredients: [
+      "Fresh Paderu turmeric",
+      "Tamarind extract",
+      "Crushed black pepper",
+      "Garlic cloves",
+      "Mustard seeds",
+      "Curry leaves",
+      "Salt",
+    ],
+    steps: [
+      "Boil tamarind water in a pot.",
+      "Add crushed garlic and black pepper.",
+      "Grate fresh turmeric and add to the boiling liquid.",
+      "Simmer for 10 minutes on low flame.",
+      "Heat oil separately and temper mustard seeds and curry leaves.",
+      "Pour tempering into rasam and mix well.",
+      "Serve hot.",
+    ],
+    story:
+      "Paderu is known for its organically grown, high-curcumin turmeric cultivated in the Eastern Ghats. This turmeric rasam is especially popular during monsoon and winter for its warmth and immunity benefits. Simple yet powerful, it reflects the region’s agricultural richness and traditional medicinal knowledge.",
+  },
+  {
+    name: "Korra Upma",
+    destination: "Paderu",
+    description:
+      "A nutritious foxtail millet(Korra) breakfast prepared using simple spices, reflecting Paderu’s millet-based diet.",
+    image: milletUpmaImage,
+    prepTime: "10 mins",
+    cookTime: "20 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "1 cup foxtail millet",
+      "1 onion (chopped)",
+      "Green chillies",
+      "Mustard seeds",
+      "Curry leaves",
+      "Oil",
+      "Salt",
+    ],
+    steps: [
+      "Wash foxtail millet thoroughly and drain.",
+      "Heat oil and temper mustard seeds and curry leaves.",
+      "Add chopped onions and green chillies.",
+      "Add millet and lightly roast for 2 minutes.",
+      "Add water and salt.",
+      "Cover and cook on low flame until millet softens.",
+      "Fluff gently and serve hot.",
+    ],
+    story:
+      "Millets like korra are staple foods in Paderu’s tribal communities. Cultivated in hill terrains with minimal water, foxtail millet provides strength and sustained energy. This simple upma is prepared throughout the year, showcasing the region’s commitment to sustainable farming and traditional nutrition.",
+  },
+  {
+    name: "Millet Idly - Paderu Style",
+    destination: "Paderu",
+    description:
+      "Soft steamed idlies made using millets instead of rice, a healthier adaptation of a traditional staple.",
+    image: milletIdlyImage,
+    prepTime: "8 hours fermentation",
+    cookTime: "15 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: ["1 cup foxtail millet", "½ cup urad dal", "Salt", "Water"],
+    steps: [
+      "Soak millet and urad dal separately for 4 hours.",
+      "Grind into smooth batter.",
+      "Mix and allow to ferment overnight.",
+      "Add salt and mix gently.",
+      "Pour batter into idly moulds.",
+      "Steam for 12–15 minutes.",
+      "Serve hot with chutney.",
+    ],
+    story:
+      "Millet idlies are a healthier variation of traditional idli, widely adopted in Paderu’s hill communities. Using locally grown millets instead of polished rice, this dish supports sustainable farming and balanced nutrition. Prepared throughout the year, it represents the integration of traditional grains into everyday meals.",
+  },
+
+  {
+    name: "Bamboo Shoot Curry - Maredumilli",
+    destination: "Maredumilli",
+    description:
+      "A seasonal forest delicacy prepared using tender bamboo shoots harvested during monsoon in the Eastern Ghats.",
+    image: bambooShootImage,
+    prepTime: "20 mins",
+    cookTime: "25 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+    season: "Monsoon",
+    ingredients: [
+      "Fresh bamboo shoots",
+      "Onions",
+      "Green chillies",
+      "Turmeric",
+      "Red chilli powder",
+      "Oil",
+      "Salt",
+    ],
+    steps: [
+      "Peel outer layers of fresh bamboo shoots.",
+      "Slice thinly and boil for 15 minutes to remove bitterness.",
+      "Heat oil and sauté onions and green chillies.",
+      "Add boiled bamboo shoots and turmeric.",
+      "Add chilli powder and salt.",
+      "Cook covered for 10 minutes.",
+      "Stir occasionally and serve hot.",
+    ],
+    story:
+      "Bamboo Shoot Curry is a monsoon specialty in Maredumilli, where fresh shoots sprout after heavy rains. Tribal communities carefully process the shoots to remove bitterness before cooking. Rich in fiber and nutrients, this seasonal dish reflects the deep forest knowledge and sustainable food traditions of the Eastern Ghats.",
+  },
+  {
+    name: "Adavi Tega Dumpala Koora",
+    destination: "Maredumilli",
+    description:
+      "A traditional curry made from wild forest tubers foraged from the hills of Maredumilli.",
+    image: adividumpalakuraImage,
+    prepTime: "25 mins",
+    cookTime: "30 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+    season: "Monsoon",
+    ingredients: [
+      "Wild forest tubers",
+      "Onions",
+      "Turmeric",
+      "Red chilli powder",
+      "Curry leaves",
+      "Oil",
+      "Salt",
+    ],
+    steps: [
+      "Wash and peel forest tubers thoroughly.",
+      "Cut into small cubes.",
+      "Boil lightly to soften.",
+      "Heat oil and sauté onions and curry leaves.",
+      "Add tubers, turmeric and chilli powder.",
+      "Add salt and cook covered until tender.",
+      "Serve hot with rice or millet roti.",
+    ],
+    story:
+      "Adavi Tega Dumpala Koora is prepared using wild tubers gathered from Maredumilli forests. Tribal families rely on these roots during monsoon and cooler months. This earthy curry showcases the community’s self-sufficient lifestyle and deep understanding of seasonal forest produce.",
+  },
+  {
+    name: "Forest Honey Rice - Maredumilli",
+    destination: "Maredumilli",
+    description:
+      "A simple sweet dish made by mixing warm rice with raw forest honey collected from hill regions.",
+    image: foresthoneyRiceImage,
+    prepTime: "5 mins",
+    cookTime: "15 mins",
+    servings: "Serves 2",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: ["Cooked rice", "Raw forest honey", "Ghee (optional)"],
+    steps: [
+      "Cook rice until soft.",
+      "Allow it to cool slightly but keep warm.",
+      "Add a spoon of raw forest honey.",
+      "Mix gently without mashing the rice.",
+      "Add a little ghee if desired.",
+      "Serve immediately.",
+    ],
+    story:
+      "Forest Honey Rice is a comforting sweet prepared using raw honey collected by tribal groups in Maredumilli. Often enjoyed during winter evenings and gatherings, this dish highlights the abundance of forest resources and the community’s close connection with nature.",
+  },
+  {
+    name: "Jackfruit Curry - Panasa Koora",
+    destination: "Maredumilli",
+    description:
+      "A summer specialty made with tender raw jackfruit cooked using traditional tribal spice blends.",
+    image: jackfruitCurryImage,
+    prepTime: "25 mins",
+    cookTime: "30 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+    season: "Summer",
+    ingredients: [
+      "Raw jackfruit",
+      "Onions",
+      "Green chillies",
+      "Turmeric",
+      "Red chilli powder",
+      "Oil",
+      "Salt",
+    ],
+    steps: [
+      "Peel and cube raw jackfruit carefully.",
+      "Boil pieces until slightly tender.",
+      "Heat oil and sauté onions and green chillies.",
+      "Add jackfruit cubes and turmeric.",
+      "Add chilli powder and salt.",
+      "Cook covered for 15 minutes.",
+      "Stir occasionally and serve hot.",
+    ],
+    story:
+      "Panasa Koora is widely prepared in Maredumilli during summer when raw jackfruit is abundant. The fibrous texture absorbs tribal spice blends beautifully. This seasonal curry represents the agricultural rhythm of the region and the tradition of cooking with locally available produce.",
+  },
+  {
+    name: "Marichi Annam - Tirupati Style",
+    destination: "Tirupati",
+    description:
+      "A traditional pepper-infused rice dish prepared with ghee and whole spices, commonly associated with temple-style cooking.",
+    image: marichiAnnamImage,
+    prepTime: "10 mins",
+    cookTime: "20 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Cooked rice",
+      "Crushed black pepper",
+      "Cumin seeds",
+      "Ghee",
+      "Curry leaves",
+      "Cashews",
+      "Salt",
+    ],
+    steps: [
+      "Cook rice and allow it to cool slightly.",
+      "Heat ghee in a pan.",
+      "Add cumin seeds and allow them to splutter.",
+      "Add curry leaves and cashews, sauté until golden.",
+      "Add freshly crushed black pepper and salt.",
+      "Mix cooked rice gently into the tempering.",
+      "Stir evenly without mashing the grains.",
+      "Serve warm.",
+    ],
+    story:
+      "Marichi Annam, or pepper rice, is a simple yet sacred dish associated with temple-style cooking in Tirupati. Made using black pepper, ghee, and cumin, it is valued for its digestive benefits and warming properties. Traditionally prepared during cooler months and religious occasions, this sattvic rice dish reflects the spiritual and culinary heritage of the temple town.",
+  },
+  {
+    name: "Renigunta Appam",
+    destination: "Tirupati",
+    description:
+      "A traditional sweet appam prepared with rice flour and jaggery, popular in Renigunta households during festivals.",
+    image: reniguntaAppamImage,
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "Rice flour",
+      "Jaggery",
+      "Grated coconut",
+      "Cardamom powder",
+      "Water",
+      "Oil for frying",
+    ],
+    steps: [
+      "Dissolve jaggery in warm water and strain impurities.",
+      "Mix rice flour with jaggery syrup.",
+      "Add grated coconut and cardamom powder.",
+      "Prepare a thick batter without lumps.",
+      "Heat oil in a deep pan.",
+      "Pour small portions of batter into hot oil.",
+      "Fry until golden brown on both sides.",
+      "Drain excess oil and serve warm.",
+    ],
+    story:
+      "Renigunta Appam is a festive sweet prepared in households near Tirupati, especially during temple celebrations and family rituals. Made with jaggery and rice flour, this deep-fried delicacy symbolizes prosperity and devotion. The simplicity of ingredients reflects traditional Rayalaseema cooking practices passed down through generations.",
+  },
+  {
+    name: "Pot-Curd Pulihora",
+    destination: "Tirupati",
+    description:
+      "A cooling rice dish mixed with fresh curd and tempered spices, traditionally served in clay pots.",
+    image: potcurdPulihoraImage,
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "Summer",
+    ingredients: [
+      "Cooked rice",
+      "Fresh curd",
+      "Mustard seeds",
+      "Green chillies",
+      "Curry leaves",
+      "Ginger",
+      "Salt",
+    ],
+    steps: [
+      "Cook rice and allow it to cool completely.",
+      "Whisk fresh curd until smooth.",
+      "Mix curd and salt into the rice.",
+      "Heat oil and temper mustard seeds.",
+      "Add ginger, green chillies and curry leaves.",
+      "Pour tempering over curd rice.",
+      "Mix gently and serve in a clay pot.",
+      "Chill slightly before serving.",
+    ],
+    story:
+      "Pot-Curd Pulihora, similar to temple-style daddojanam, is a cooling dish widely consumed in Tirupati during hot summers. Served traditionally in clay pots, it balances the region’s warm climate with soothing curd and mild tempering. This humble dish represents the sattvic culinary traditions of the temple town.",
+  },
+  {
+    name: "Murri Mixture - Vizag Style",
+    destination: "Visakhapatnam",
+    description:
+      "A spicy puffed rice snack mixed with peanuts, onions, and coastal spices, popular as a street-side treat in Vizag.",
+    image: murimixtureImage,
+    prepTime: "10 mins",
+    cookTime: "5 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Puffed rice (murri)",
+      "Roasted peanuts",
+      "Finely chopped onions",
+      "Green chillies",
+      "Red chilli powder",
+      "Salt",
+      "Lemon juice",
+      "Curry leaves",
+      "Oil",
+    ],
+    steps: [
+      "Heat a small amount of oil in a pan.",
+      "Add curry leaves and sauté briefly.",
+      "In a large bowl, combine puffed rice and roasted peanuts.",
+      "Add chopped onions and green chillies.",
+      "Sprinkle red chilli powder and salt.",
+      "Add sautéed curry leaves and mix thoroughly.",
+      "Squeeze fresh lemon juice and toss well.",
+      "Serve immediately for best crunch.",
+    ],
+    story:
+      "Murri Mixture is a beloved street snack in Visakhapatnam, often sold near beaches and busy markets. Light yet spicy, it reflects the coastal city’s fast-paced lifestyle and love for bold flavors. Made fresh and served instantly, this puffed rice mixture captures the everyday culinary spirit of Vizag’s vibrant street culture.",
+  },
+  {
+    name: "Bellam Paramannam",
+    destination: "Visakhapatnam",
+    description:
+      "A traditional jaggery rice pudding prepared during festivals and temple celebrations in coastal Andhra.",
+    image: bellamParamannamImage,
+    prepTime: "10 mins",
+    cookTime: "30 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Raw rice",
+      "Jaggery",
+      "Milk",
+      "Ghee",
+      "Cardamom powder",
+      "Cashews",
+      "Raisins",
+    ],
+    steps: [
+      "Cook rice until soft.",
+      "Dissolve jaggery in a little water and strain impurities.",
+      "Add jaggery syrup to cooked rice.",
+      "Pour milk and cook on low flame.",
+      "Add cardamom powder.",
+      "Heat ghee separately and fry cashews and raisins.",
+      "Add fried nuts to the mixture.",
+      "Simmer until slightly thick and serve warm.",
+    ],
+    story:
+      "Bellam Paramannam is a sacred sweet widely prepared in Visakhapatnam during temple rituals and festivals. Made with jaggery and rice, it symbolizes prosperity and devotion. The rich aroma of ghee and cardamom enhances its festive appeal. This traditional dessert remains an integral part of coastal Andhra’s spiritual and culinary celebrations.",
+  },
+  {
+    name: "Ulava Charu - Coastal Andhra Style",
+    destination: "Visakhapatnam",
+    description:
+      "A hearty horse gram soup simmered for hours, served with rice and cream in coastal Andhra households.",
+    image: ulavacharuImage,
+    prepTime: "15 mins",
+    cookTime: "1 hour",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "Horse gram (ulavalu)",
+      "Tamarind extract",
+      "Garlic",
+      "Black pepper",
+      "Mustard seeds",
+      "Curry leaves",
+      "Salt",
+    ],
+    steps: [
+      "Soak horse gram for 6 hours.",
+      "Pressure cook until soft.",
+      "Strain and reserve the thick extract.",
+      "Add tamarind extract and crushed garlic.",
+      "Simmer for 20 minutes.",
+      "Temper mustard seeds and curry leaves in oil.",
+      "Add tempering to the charu.",
+      "Serve hot with rice.",
+    ],
+    story:
+      "Ulava Charu is a traditional Andhra delicacy prepared by slow-cooking horse gram to extract its rich flavor. Popular in Visakhapatnam and across coastal Andhra, it is valued for its strength-giving properties. Often served with rice and a touch of cream, this hearty dish reflects the region’s rustic yet deeply satisfying culinary heritage.",
+  },
+  {
+    name: "Pottikkalu - Jackfruit Leaf Idlis",
+    destination: "Etikoppaka",
+    description:
+      "A unique twist on the traditional idli, steamed inside handmade jackfruit leaf cups to infuse a woody, herbal aroma.",
+    image: pottikalluImage,
+    prepTime: "8 hours (includes fermentation)",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Hard",
+    season: "All Year",
+    ingredients: [
+      "Urad dal",
+      "Rice rava (idli rava)",
+      "Fresh Jackfruit leaves (16-20 leaves)",
+      "Small coconut sticks (for pinning)",
+      "Salt",
+      "Water",
+    ],
+    steps: [
+      "Soak urad dal and rice rava separately for 4 hours.",
+      "Grind dal into a smooth batter and mix with rava.",
+      "Ferment the batter overnight for 8 hours.",
+      "Wash jackfruit leaves and pin 4 leaves together using sticks to form a small cup (Pottikka).",
+      "Add salt to the fermented batter and pour into the leaf cups.",
+      "Place cups in a steamer or idli cooker.",
+      "Steam for 15-20 minutes until the leaves change color.",
+      "Carefully peel off the leaves and serve with ginger chutney.",
+    ],
+    story:
+      "Pottikkalu is a labor of love synonymous with the Konaseema and Etikoppaka regions. The jackfruit tree is considered sacred and medicinal; steaming the batter in its leaves is believed to aid digestion. Crafting the leaf cups requires immense patience, a skill passed down through generations of women in Andhra households.",
+  },
+  {
+    name: "Lakkapidathala Vantalu - Miniature Heritage",
+    destination: "Etikoppaka",
+    description:
+      "A cultural 'recipe' where traditional lacquer toy sets are used to teach children the basics of Andhra culinary arts.",
+    image: lakkapidathalaImage,
+    prepTime: "5 mins",
+    cookTime: "N/A (Mock Cooking)",
+    servings: "For 1 Child",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Miniature lacquered wooden pots",
+      "Salt",
+      "Dried chilies",
+      "Local grains",
+      "Hand-pressed flower petals",
+    ],
+    steps: [
+      "Introduce the child to the miniature wooden rolling pin and stove.",
+      "Demonstrate how to store salt and pickles in the safe, lacquer-coated jars.",
+      "Simulate the process of pounding spices using the wooden mortar and pestle.",
+      "Explain the significance of the natural 'Alekha' (lacquer) finish.",
+      "Encourage the child to arrange a 'mock thali' for the family.",
+    ],
+    story:
+      "While not a dish consumed by adults, this 'recipe for tradition' is how Etikoppaka preserves its identity. On a child's first birthday, they are gifted these non-toxic toys. It turns cooking into a play-based ritual, ensuring that the reverence for handmade craftsmanship and traditional food is instilled at a very young age.",
+  },
+  {
+    name: "Divi-Divi Heritage Brew",
+    destination: "Etikoppaka",
+    description:
+      "A traditional forest tea made from the pods of the Divi-Divi tree, known for its medicinal tannins and earthy flavor.",
+    image: dividiviImage,
+    prepTime: "5 mins",
+    cookTime: "10 mins",
+    servings: "Serves 2",
+    difficulty: "Medium",
+    season: "Winter",
+    ingredients: [
+      "Dried Divi-Divi pods (Caesalpinia coriaria)",
+      "Water",
+      "Ginger",
+      "Honey (Forest-sourced)",
+    ],
+    steps: [
+      "Lightly crush the dried pods to release the inner seeds.",
+      "Boil 2 cups of water with crushed ginger.",
+      "Add the pods and simmer until the water turns a deep amber/red.",
+      "Strain the liquid into cups.",
+      "Stir in honey and drink while warm.",
+    ],
+    story:
+      "The Divi-Divi tree provided the natural red dye for Etikoppaka toys for centuries. Beyond the craft, tribal elders used the pods to create a potent brew. Rich in tannins, this 'forest tea' was a household remedy for inflammation and stomach health, representing a time when the village lived in total synergy with its flora.",
   },
 ];

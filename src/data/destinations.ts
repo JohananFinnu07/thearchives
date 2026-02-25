@@ -114,7 +114,9 @@ import meadowHerbsImage from "@/assets/products/MHCH.jpg";
 import meadowHerbsMake from "@/assets/products/meadow-herbs.jpg";
 import meadowHerbsFlavor from "@/assets/products/MHCF.jpg";
 
-import bodengPuruguImage from "@/assets/products/BPH.jpg";
+import bodengPuruguImage from "@/assets/products/BoPM.png";
+import bodengPuruguMake from "@/assets/products/BoPM.png";
+import bodengPuruguFlavor from "@/assets/products/BPH.jpg";
 
 import mistmountHoneyImage from "@/assets/products/MistmountainHoney.jpeg";
 import mistmountHoneyMake from "@/assets/products/MMHM.jpeg";
@@ -405,8 +407,8 @@ export const destinations: Destination[] = [
           "Cultural and ritual consumption",
         ],
         image: bodengPuruguImage,
-        makingImage: bodengPuruguImage,
-        flavorImage: bodengPuruguImage,
+        makingImage: bodengPuruguMake,
+        flavorImage: bodengPuruguFlavor,
       },
     ],
 
@@ -507,7 +509,7 @@ export const destinations: Destination[] = [
       },
     ],
     culture:
-      "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
+      "Lambasingi is home to indigenous tribal communities such as the Kondh and other Eastern Ghats groups who continue to follow deeply rooted cultural traditions. Their lifestyle revolves around nature, agriculture, and forest-based living. Seasonal farming, millet cultivation, and foraging for wild produce are central to daily life. Community bonding is strong, with collective participation in harvest festivals, traditional dances, and ritual gatherings. Indigenous music using drums and folk instruments accompanies celebrations. Natural fermentation practices, herbal medicine knowledge, and sustainable cooking methods are preserved through oral tradition. Respect for forests, ancestral beliefs, and community-centered decision-making remain defining cultural values in Lambasingi.",
   },
   {
     id: "vanajangi",
@@ -604,7 +606,7 @@ export const destinations: Destination[] = [
       },
     ],
     culture:
-      "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
+      "Vanjangi village preserves a rich tribal heritage, home to communities such as Bagata, Konda Dora, Nuka Dora, Valmiki, and other Particularly Vulnerable Tribal Groups (PVTGs). Traditions are closely tied to agriculture, forest living, and millet-based diets. Festivals celebrate nature and harvest seasons through music, dance, and community rituals centered around the Bolengamma Thalli temple. The Adivasi Traditional Centre, managed by local women, showcases indigenous tools, crafts, and art, reflecting Vanjangi’s deeply rooted cultural identity.",
   },
 
   {
@@ -703,7 +705,7 @@ export const destinations: Destination[] = [
     ],
 
     culture:
-      "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
+      "Paderu, located in the Eastern Ghats of Andhra Pradesh, is home to tribal communities such as the Konda Dora, Bagata, and Valmiki. Their traditions revolve around forest living, millet farming, and sustainable agriculture. Daily life includes wood-fire cooking, stone grinding, and seasonal foraging. A major cultural highlight is the Paderu Santha, the weekly market organized by tribal groups. Here, locals sell organic jaggery made without chemicals, raw forest honey collected from hill regions, and Konda Mirapa, small but extremely pungent forest chilies. The Santha reflects Paderu’s self-sufficient economy, strong community bonds, and deep connection to land and nature.",
   },
   {
     id: "maredumilli",
@@ -856,7 +858,7 @@ export const destinations: Destination[] = [
     ],
 
     culture:
-      "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
+      "Maredumilli’s culture is defined by the Konda Reddi and Koya tribes, whose lives are harmoniously woven into the Eastern Ghats. Governed by the Pedda Kapu (village head), they practice animism, worshipping nature deities like Bhudevi. Iconic traditions include the rhythmic Bison Horn Dance, where men don elaborate headgear to the beat of traditional drums. Their festivals, like Mamidi Kotha, celebrate forest harvests, ensuring no fruit is eaten before being offered to the gods. From masterful bamboo craftsmanship to the preservation of sacred groves, their heritage is a testament to sustainable forest living and ancestral reverence.",
   },
   {
     id: "tirupati",
@@ -910,7 +912,7 @@ export const destinations: Destination[] = [
     ],
 
     culture:
-      "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
+      "Tirupati’s culture centers on profound devotion to Lord Venkateswara. Pillars of this faith include tonsuring, a humble gesture of gratitude, and offerings made to the massive temple Hundi. Spiritual life is marked by intricate daily sevas and the grand Brahmotsavam festival. The iconic Tirupati Laddu, a GI-tagged prasadam, remains a 300-year-old culinary legacy. Visitors maintain sanctity through traditional dress codes and silence. Beyond the temple, the region preserves its Vijayanagara and Dravidian heritage at Chandragiri Hills. Locally, the culture is flavored by authentic cuisine, from tangy tomato rice to various traditional payasams and temple-style dosas.",
   },
   {
     id: "visakhapatnam",
@@ -985,7 +987,7 @@ export const destinations: Destination[] = [
     ],
 
     culture:
-      "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
+      "Visakhapatnam’s culture is a vibrant blend of ancient spirituality and maritime heritage. The city is anchored by the Simhachalam Temple, where the deity is famously veiled in sandalwood during the Chandanotsavam. Its Buddhist roots are preserved at the Thotlakonda and Bavikonda complexes, honoring a peaceful history that predates the bustling port.The coastline dictates life here, from the INS Kursura Submarine Museum to the iconic Dolphin’s Nose Lighthouse. Local traditions flourish through Kalamkari textiles and Kondapalli toys, while the cuisine offers a fiery, coastal punch. Whether celebrating at Visakha Utsav or exploring the prehistoric Borra Caves, the city perfectly balances its tribal Agency influences with its identity as a modern naval powerhouse.",
   },
   {
     id: "etikoppaka",
@@ -1059,7 +1061,7 @@ export const destinations: Destination[] = [
     ],
 
     culture:
-      "Local traditions, seasonal practices, and regional crafts define the cultural landscape of this destination.",
+      "Etikoppaka’s culture is anchored in a 400-year-old hereditary craft that flourished under the Vijayanagara Empire. Known as the Toy Village, it is celebrated for its sustainable use of Alekha (natural dyes) extracted from forest bark, seeds, and roots. These vibrant colors are sealed with lac, a natural resin, ensuring every piece is non-toxic. The toys are central to the Bommala Koluvu festival, where intricate displays of deities, bullock carts, and rural life are meticulously arranged. Beyond aesthetics, they serve as ritualistic gifts during weddings, symbolizing heritage and blessings. This ancient art, revitalized by younger generations and protected by a 2017 Geographical Indication (GI) tag, remains a profound testament to Andhra Pradesh’s eco-conscious and artistic soul.",
   },
   {
     id: "gandikota",

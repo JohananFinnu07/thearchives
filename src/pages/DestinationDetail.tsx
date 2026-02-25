@@ -1,4 +1,6 @@
 import { useParams, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -19,6 +21,7 @@ import { recipes } from "@/data/recipes";
 const DestinationDetail = () => {
   const { id } = useParams<{ id: string }>();
   const destination = getDestinationById(id || "");
+  const location = useLocation();
   const destinationRecipes = recipes.filter(
     (recipe) => recipe.destination === destination.name,
   );
@@ -36,7 +39,17 @@ const DestinationDetail = () => {
       </div>
     );
   }
-
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const section = document.getElementById(location.state.scrollTo);
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [location]);
   const famousProducts = destination.products.filter(
     (p) => p.type === "famous",
   );

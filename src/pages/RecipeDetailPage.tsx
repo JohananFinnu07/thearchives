@@ -1,5 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowLeft, Clock, ChefHat, Flame, ShoppingBag } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { recipes } from "@/data/recipes";
+import { Button } from "@/components/ui/button";
 
 const slugify = (text: string) =>
   text
@@ -13,27 +18,167 @@ const RecipeDetail = () => {
 
   const recipe = recipes.find((r) => slugify(r.name) === slug);
 
-  if (!recipe) return <div>Recipe Not Found</div>;
+  if (!recipe) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="pt-32 text-center">
+          <h1 className="text-3xl font-serif">Recipe Not Found</h1>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
-    <div className="max-w-4xl mx-auto py-12">
-      <h1 className="text-3xl font-bold mb-4">{recipe.name}</h1>
+    <div className="min-h-screen bg-background">
+      <Header />
 
-      <p className="mb-6 text-muted-foreground">{recipe.description}</p>
+      <main className="pt-20">
+        {/* ================= HERO SECTION ================= */}
+        <section className="py-16">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* LEFT */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-6"
+              >
+                <Link
+                  to={`/destination/${recipe.destination
+                    .toLowerCase()
+                    .replace(/[^a-z0-9\s-]/g, "")
+                    .replace(/\s+/g, "-")
+                    .replace(/-+/g, "-")}`}
+                  state={{ scrollTo: "recipes" }}
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Recipes
+                </Link>
 
-      <h2 className="text-xl font-semibold mt-6">Ingredients</h2>
-      <ul className="list-disc ml-6 mt-2">
-        {recipe.ingredients.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+                <h1 className="font-serif text-5xl font-semibold">
+                  {recipe.name}
+                </h1>
 
-      <h2 className="text-xl font-semibold mt-6">Steps</h2>
-      <ol className="list-decimal ml-6 mt-2">
-        {recipe.steps.map((step, index) => (
-          <li key={index}>{step}</li>
-        ))}
-      </ol>
+                <p className="text-lg text-muted-foreground max-w-xl">
+                  {recipe.description}
+                </p>
+
+                {/* Meta */}
+                <div className="flex gap-6 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    {recipe.prepTime} + {recipe.cookTime}
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <ChefHat className="w-4 h-4" />
+                    {recipe.servings}
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <Flame className="w-4 h-4" />
+                    {recipe.difficulty}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* RIGHT IMAGE */}
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="rounded-2xl overflow-hidden shadow-xl"
+              >
+                <img
+                  src={recipe.image}
+                  alt={recipe.name}
+                  className="w-full h-[450px] object-cover"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <div className="h-[1px] bg-border max-w-5xl mx-auto" />
+
+        {/* ================= MAIN CONTENT ================= */}
+        <section className="py-20">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="grid lg:grid-cols-3 gap-16">
+              {/* INGREDIENTS */}
+              <div className="lg:col-span-1">
+                <div className="bg-card rounded-2xl p-8 border border-border sticky top-24 shadow-sm">
+                  <h2 className="font-serif text-2xl mb-6">Ingredients</h2>
+
+                  <ul className="space-y-3 text-muted-foreground">
+                    {recipe.ingredients.map((item, index) => (
+                      <li key={index} className="flex gap-3">
+                        <span className="text-primary font-bold">•</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {recipe.buyLink && (
+                    <Button asChild className="mt-8 w-full">
+                      <Link to={recipe.buyLink}>
+                        <ShoppingBag className="w-4 h-4 mr-2" />
+                        Buy Authentic Ingredients
+                      </Link>
+                    </Button>
+                  )}
+                </div>
+              </div>
+
+              {/* STEPS */}
+              <div className="lg:col-span-2">
+                <h2 className="font-serif text-3xl mb-12">The Process</h2>
+
+                <div className="relative border-l border-border pl-12 space-y-12">
+                  {recipe.steps.map((step, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4 }}
+                      className="relative"
+                    >
+                      {/* Dot */}
+                      <span className="absolute -left-[30px] top-2 w-3 h-3 rounded-full bg-primary"></span>
+
+                      {/* Step text */}
+                      <p className="text-lg text-muted-foreground leading-relaxed">
+                        {step}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= STORY SECTION ================= */}
+        {recipe.story && (
+          <section className="bg-secondary/30 py-20">
+            <div className="max-w-4xl mx-auto px-6">
+              <h2 className="font-serif text-3xl mb-8 text-center">
+                The Story Behind This Dish
+              </h2>
+
+              <p className="text-lg text-muted-foreground leading-relaxed text-center">
+                {recipe.story}
+              </p>
+            </div>
+          </section>
+        )}
+      </main>
+
+      <Footer />
     </div>
   );
 };
