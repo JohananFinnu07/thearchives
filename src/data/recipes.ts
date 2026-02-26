@@ -206,7 +206,7 @@ export const recipes: Recipe[] = [
     cookTime: "40 mins",
     servings: "Serves 4",
     difficulty: "Medium",
-
+    season: "All Year",
     ingredients: [
       "1 cup ragi flour",
       "2 cups water",

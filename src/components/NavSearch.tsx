@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search } from "lucide-react";
+import { Search, MapPin, Leaf, ChefHat } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -11,6 +11,16 @@ import {
   CommandList,
 } from "@/components/ui/command";
 import { destinations } from "@/data/destinations";
+import { recipes } from "@/data/recipes";
+
+/* 🔹 Normalize for special character safe search */
+const normalize = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
 const slugify = (text: string) =>
   text
@@ -24,7 +34,7 @@ const NavSearch = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  // ⌘K shortcut
+  // ⌘K / Ctrl+K shortcut
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -40,36 +50,59 @@ const NavSearch = () => {
   const results = useMemo(() => {
     if (!search.trim()) return [];
 
-    const lower = search.toLowerCase();
+    const lower = normalize(search);
+
     const matches: {
       title: string;
       subtitle: string;
       route: string;
+      type: "destination" | "product" | "recipe";
     }[] = [];
 
     destinations.forEach((dest) => {
       // Destination match
-      if (dest.name.toLowerCase().includes(lower)) {
+      if (normalize(dest.name).includes(lower)) {
         const DestinationSlug = slugify(dest.id.toLowerCase());
+
         matches.push({
           title: dest.name,
           subtitle: "Destination",
           route: `/destination/${DestinationSlug}`,
+          type: "destination",
         });
       }
 
       // Product match
       dest.products.forEach((product) => {
-        if (product.name.toLowerCase().includes(lower)) {
+        if (normalize(product.name).includes(lower)) {
           const productSlug = slugify(product.name);
 
           matches.push({
             title: product.name,
             subtitle: `Hidden Gem • ${dest.name}`,
             route: `/hidden-gems/${dest.id}/${productSlug}`,
+            type: "product",
           });
         }
       });
+    });
+
+    // Recipes
+    recipes.forEach((recipe) => {
+      const nameMatch = normalize(recipe.name).includes(lower);
+      const ingredientMatch = recipe.ingredients?.some((ing) =>
+        normalize(ing).includes(lower),
+      );
+      const destinationMatch = normalize(recipe.destination).includes(lower);
+
+      if (nameMatch || ingredientMatch || destinationMatch) {
+        matches.push({
+          title: recipe.name,
+          subtitle: `Recipe • ${recipe.destination}`,
+          route: `/recipes/${slugify(recipe.name)}`,
+          type: "recipe",
+        });
+      }
     });
 
     return matches;
@@ -98,7 +131,7 @@ const NavSearch = () => {
           transition={{ repeat: Infinity, duration: 2 }}
           className="ml-2 rounded border px-1.5 py-0.5 text-[10px]"
         >
-          {/* ⌘K */}
+          ⌘K
         </motion.kbd>
       </motion.button>
 
@@ -113,18 +146,18 @@ const NavSearch = () => {
               className="bg-background/80 backdrop-blur-xl rounded-xl"
             >
               <CommandInput
-                placeholder="Search destinations or hidden gems..."
+                placeholder="Search destinations, hidden gems, or recipes..."
                 value={search}
                 onValueChange={setSearch}
               />
 
               <CommandList>
-                {/* 🔎 When user types and no matches */}
+                {/* No results */}
                 {search.trim() && results.length === 0 && (
                   <CommandEmpty>No results found.</CommandEmpty>
                 )}
 
-                {/* 🌿 When search is empty → show suggestions */}
+                {/* Suggestions when empty */}
                 {!search.trim() && (
                   <>
                     <CommandGroup heading="Popular Destinations">
@@ -136,11 +169,14 @@ const NavSearch = () => {
                           }
                           className="cursor-pointer"
                         >
-                          <div>
-                            <p className="font-medium">{dest.name}</p>
-                            <p className="text-xs text-muted-foreground">
-                              {dest.tagline}
-                            </p>
+                          <div className="flex items-center gap-2">
+                            <MapPin className="h-4 w-4 text-green-600" />
+                            <div>
+                              <p className="font-medium">{dest.name}</p>
+                              <p className="text-xs text-muted-foreground">
+                                {dest.tagline}
+                              </p>
+                            </div>
                           </div>
                         </CommandItem>
                       ))}
@@ -170,19 +206,43 @@ const NavSearch = () => {
                             }
                             className="cursor-pointer"
                           >
-                            <div>
-                              <p className="font-medium">{product.name}</p>
-                              <p className="text-xs text-muted-foreground">
-                                Hidden Gem
-                              </p>
+                            <div className="flex items-center gap-2">
+                              <Leaf className="h-4 w-4 text-emerald-600" />
+                              <div>
+                                <p className="font-medium">{product.name}</p>
+                                <p className="text-xs text-muted-foreground">
+                                  Hidden Gem
+                                </p>
+                              </div>
                             </div>
                           </CommandItem>
                         ))}
                     </CommandGroup>
+                    <CommandGroup heading="Popular Recipes">
+                      {recipes.slice(0, 4).map((recipe) => (
+                        <CommandItem
+                          key={recipe.name}
+                          onSelect={() =>
+                            handleSelect(`/recipes/${slugify(recipe.name)}`)
+                          }
+                          className="cursor-pointer"
+                        >
+                          <div className="flex items-center gap-2">
+                            <ChefHat className="h-4 w-4 text-orange-500" />
+                            <div>
+                              <p className="font-medium">{recipe.name}</p>
+                              <p className="text-xs text-muted-foreground">
+                                {recipe.destination}
+                              </p>
+                            </div>
+                          </div>
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
                   </>
                 )}
 
-                {/* 🔎 When matches exist */}
+                {/* Results */}
                 {search.trim() && results.length > 0 && (
                   <CommandGroup heading="Results">
                     {results.map((item, index) => (
@@ -196,11 +256,23 @@ const NavSearch = () => {
                           onSelect={() => handleSelect(item.route)}
                           className="cursor-pointer rounded-md hover:bg-primary/10 transition"
                         >
-                          <div>
-                            <p className="font-medium">{item.title}</p>
-                            <p className="text-xs text-muted-foreground">
-                              {item.subtitle}
-                            </p>
+                          <div className="flex items-center gap-3">
+                            {item.type === "destination" && (
+                              <MapPin className="h-4 w-4 text-green-600" />
+                            )}
+                            {item.type === "product" && (
+                              <Leaf className="h-4 w-4 text-emerald-600" />
+                            )}
+                            {item.type === "recipe" && (
+                              <ChefHat className="h-4 w-4 text-orange-500" />
+                            )}
+
+                            <div>
+                              <p className="font-medium">{item.title}</p>
+                              <p className="text-xs text-muted-foreground">
+                                {item.subtitle}
+                              </p>
+                            </div>
                           </div>
                         </CommandItem>
                       </motion.div>
