@@ -34,6 +34,26 @@ import pottikalluImage from "@/assets/Recipes/JFLIH.jpg";
 import lakkapidathalaImage from "@/assets/Recipes/PCH.jpg";
 import dividiviImage from "@/assets/Recipes/DDTH.jpg";
 
+import dibbarottiImage from "@/assets/Recipes/DRH.jpg";
+import pachipulusuImage from "@/assets/Recipes/PPH.jpg";
+
+import matihandichickenImage from "@/assets/Recipes/MHH.jpg";
+
+import kobbariPulaoImage from "@/assets/Recipes/KPPH.jpg";
+import pulasapulusuImage from "@/assets/Recipes/PCPKH.jpg";
+import pootharekuluImage from "@/assets/Recipes/PPH.jpg";
+import kakindagottamkajaImage from "@/assets/Recipes/KGK.jpg";
+
+import munagaPulihoraImage from "@/assets/Recipes/MPH.jpg";
+import jonnarottiImage from "@/assets/Recipes/JRAH.jpg";
+
+import sarvaPindiImage from "@/assets/Recipes/SPH.jpg";
+import jonnaGatkaImage from "@/assets/Recipes/MJGH.jpg";
+
+import cheppalairuguImage from "@/assets/Recipes/CIH.jpg";
+import neyyikaramDosaImage from "@/assets/Recipes/NKDH.jpg";
+import pindiMiriamImage from "@/assets/Recipes/PMH.jpg";
+
 export interface Recipe {
   name: string;
   description: string;
@@ -942,5 +962,450 @@ export const recipes: Recipe[] = [
     ],
     story:
       "The Divi-Divi tree provided the natural red dye for Etikoppaka toys for centuries. Beyond the craft, tribal elders used the pods to create a potent brew. Rich in tannins, this 'forest tea' was a household remedy for inflammation and stomach health, representing a time when the village lived in total synergy with its flora.",
+  },
+  {
+    name: "Dibba Rotti - Gandikota Style",
+    destination: "Gandikota",
+    description:
+      "A thick and crispy rice-based pancake cooked slowly in an iron pan, popular in Rayalaseema households.",
+    image: dibbarottiImage,
+    prepTime: "6 hours soaking",
+    cookTime: "20 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "Idli rice",
+      "Urad dal",
+      "Chopped onions",
+      "Green chillies",
+      "Cumin seeds",
+      "Salt",
+      "Oil",
+    ],
+    steps: [
+      "Soak rice and urad dal for 5–6 hours.",
+      "Grind into coarse thick batter.",
+      "Add chopped onions, green chillies, cumin and salt.",
+      "Heat oil in a thick iron pan.",
+      "Pour batter thickly and spread gently.",
+      "Cover and cook on low flame for 8–10 minutes.",
+      "Flip carefully and cook until golden brown.",
+      "Serve hot with chutney.",
+    ],
+    story:
+      "Dibba Rotti is a signature Rayalaseema breakfast known for its thick texture and crispy edges. In Gandikota’s dry terrain, this hearty dish provides sustained energy for daily labor. Traditionally cooked in iron pans over slow flame, it reflects the rustic, bold culinary identity of the region.",
+  },
+  {
+    name: "Pachi Pulusu - Gandikota Style",
+    destination: "Gandikota",
+    description:
+      "A raw tamarind-based cooling rasam prepared without boiling, ideal for Rayalaseema’s hot climate.",
+    image: pachipulusuImage,
+    prepTime: "10 mins",
+    cookTime: "No cooking required",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "Summer",
+    ingredients: [
+      "Tamarind pulp",
+      "Finely chopped onions",
+      "Green chillies",
+      "Crushed garlic",
+      "Red chilli powder",
+      "Salt",
+      "Coriander leaves",
+    ],
+    steps: [
+      "Soak tamarind in water and extract pulp.",
+      "Add chopped onions and green chillies.",
+      "Add crushed garlic and red chilli powder.",
+      "Add salt and mix well.",
+      "Stir in fresh coriander leaves.",
+      "Adjust consistency with water.",
+      "Serve fresh without boiling.",
+    ],
+    story:
+      "Pachi Pulusu is a refreshing Rayalaseema specialty prepared without cooking. In the hot climate of Gandikota, this tangy tamarind mixture cools the body while delivering bold flavors. Simple yet powerful, it represents the region’s ability to adapt food to harsh weather conditions using minimal ingredients.",
+  },
+  {
+    name: "Matihandi Chicken - Madagada Style",
+    destination: "Madagada",
+    description:
+      "A rustic tribal chicken curry slow-cooked in an earthen pot over wood fire.",
+    image: matihandichickenImage,
+    prepTime: "20 mins",
+    cookTime: "45 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "Country chicken",
+      "Onions",
+      "Green chillies",
+      "Ginger-garlic paste",
+      "Turmeric",
+      "Red chilli powder",
+      "Salt",
+      "Oil",
+    ],
+    steps: [
+      "Clean and wash chicken pieces thoroughly.",
+      "Heat oil in a clay pot over wood fire.",
+      "Add onions and sauté until soft.",
+      "Add ginger-garlic paste and cook briefly.",
+      "Add chicken pieces and spices.",
+      "Mix well and cover with lid.",
+      "Cook slowly on low flame for 40–45 minutes.",
+      "Stir occasionally and serve hot.",
+    ],
+    story:
+      "Matihandi Chicken is a signature tribal dish of Madagada, cooked slowly in an earthen pot over open fire. The clay enhances flavor while retaining moisture, giving the curry its smoky depth. This traditional cooking method reflects the community’s reliance on natural materials and time-honored culinary practices passed through generations.",
+  },
+  {
+    name: "Kobbari Paalu Pulao",
+    destination: "Konaseema - Godavari",
+    description:
+      "A fragrant rice dish cooked in fresh coconut milk, popular in coastal Andhra households.",
+    image: kobbariPulaoImage,
+    prepTime: "15 mins",
+    cookTime: "25 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "Basmati rice",
+      "Fresh coconut milk",
+      "Green chillies",
+      "Whole spices",
+      "Mint leaves",
+      "Salt",
+      "Oil",
+    ],
+    steps: [
+      "Wash and soak rice for 20 minutes.",
+      "Heat oil and sauté whole spices.",
+      "Add green chillies and mint leaves.",
+      "Add soaked rice and stir gently.",
+      "Pour fresh coconut milk and required water.",
+      "Add salt and mix well.",
+      "Cook covered on low flame until rice is soft.",
+      "Fluff gently before serving.",
+    ],
+    story:
+      "Kobbari Paalu Pulao reflects the coconut-rich culinary tradition of the Godavari region. Fresh coconut milk gives the rice a creamy texture and delicate sweetness. Prepared for family gatherings and festive occasions, this dish highlights the coastal abundance of coconuts and the refined flavor profile of Andhra’s riverine cuisine.",
+  },
+  {
+    name: "Pulasa Pulusu",
+    destination: "Konaseema - Godavari",
+    description:
+      "A prized seasonal curry made with Pulasa (Hilsa) fish cooked in tangy tamarind gravy.",
+    image: pulasapulusuImage,
+    prepTime: "20 mins",
+    cookTime: "30 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "Monsoon",
+    ingredients: [
+      "Pulasa fish pieces",
+      "Tamarind extract",
+      "Onions",
+      "Green chillies",
+      "Turmeric",
+      "Red chilli powder",
+      "Salt",
+      "Oil",
+    ],
+    steps: [
+      "Clean fish pieces gently without breaking.",
+      "Heat oil and sauté onions and green chillies.",
+      "Add turmeric and chilli powder.",
+      "Pour tamarind extract and bring to boil.",
+      "Add fish pieces carefully.",
+      "Cook on low flame without stirring frequently.",
+      "Simmer until gravy thickens.",
+      "Rest before serving.",
+    ],
+    story:
+      "Pulasa fish migrates into the Godavari River during monsoon, making it a prized seasonal delicacy. Known for its rich flavor and high value, Pulasa Pulusu is cooked gently in tangy tamarind gravy. The dish represents the river’s bounty and the deep cultural connection between the Godavari and coastal Andhra cuisine.",
+  },
+  {
+    name: "Potharekulu",
+    destination: "Konaseema - Godavari",
+    description:
+      "A delicate layered sweet made from thin rice starch sheets filled with sugar or jaggery and ghee.",
+    image: pootharekuluImage,
+    prepTime: "Varies",
+    cookTime: "20 mins",
+    servings: "Multiple pieces",
+    difficulty: "Hard",
+    season: "All Year",
+    ingredients: [
+      "Rice starch sheet",
+      "Powdered sugar or jaggery",
+      "Ghee",
+      "Cardamom powder",
+    ],
+    steps: [
+      "Prepare ultra-thin rice starch sheets.",
+      "Spread ghee evenly over sheet.",
+      "Sprinkle powdered sugar or jaggery.",
+      "Add cardamom for flavor.",
+      "Fold gently into layers.",
+      "Roll and cut into portions.",
+      "Store in airtight container.",
+    ],
+    story:
+      "Potharekulu, meaning ‘paper sweet,’ originates from the Godavari region, especially Atreyapuram. The sweet is crafted using delicate rice starch sheets layered with ghee and sugar. Known for its intricate preparation, it represents Andhra’s refined sweet-making tradition and is widely prepared during weddings and festive occasions.",
+  },
+  {
+    name: "Kakinada Gottam Kaja",
+    destination: "Konaseema - Godavari",
+    description:
+      "A crispy layered sweet soaked in sugar syrup, famous in Kakinada.",
+    image: kakindagottamkajaImage,
+    prepTime: "30 mins",
+    cookTime: "40 mins",
+    servings: "Multiple pieces",
+    difficulty: "Hard",
+    season: "All Year",
+    ingredients: ["Maida flour", "Sugar", "Ghee", "Cardamom", "Oil"],
+    steps: [
+      "Prepare dough using maida and ghee.",
+      "Roll into thin sheets and layer with ghee.",
+      "Fold repeatedly to create layers.",
+      "Cut into tube shapes.",
+      "Deep fry until golden brown.",
+      "Prepare sugar syrup separately.",
+      "Dip fried kajas into syrup briefly.",
+      "Allow to cool and serve.",
+    ],
+    story:
+      "Kakinada Gottam Kaja is a renowned sweet from the coastal town of Kakinada. Known for its crisp layers and syrup-filled center, it is prepared during festivals and celebrations. The intricate folding technique gives it a flaky texture, making it one of Andhra Pradesh’s most iconic traditional sweets.",
+  },
+  {
+    name: "Munagaku Pulihora - Papikondalu Style",
+    destination: "Papikondalu",
+    description:
+      "A nutritious tamarind rice prepared with fresh drumstick leaves, combining tangy flavor with forest-grown greens.",
+    image: munagaPulihoraImage,
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Cooked rice",
+      "Fresh drumstick leaves (munagaku)",
+      "Tamarind pulp",
+      "Mustard seeds",
+      "Dry red chillies",
+      "Turmeric",
+      "Peanuts",
+      "Curry leaves",
+      "Salt",
+      "Oil",
+    ],
+    steps: [
+      "Cook rice and spread it to cool completely.",
+      "Wash drumstick leaves thoroughly and drain.",
+      "Heat oil in a pan and add mustard seeds.",
+      "Add dry red chillies, peanuts and curry leaves.",
+      "Add drumstick leaves and sauté until slightly wilted.",
+      "Add turmeric and tamarind pulp.",
+      "Cook until raw tamarind smell disappears.",
+      "Mix the prepared tempering with cooled rice gently.",
+      "Adjust salt and serve.",
+    ],
+    story:
+      "Munagaku Pulihora is a wholesome variation of Andhra’s iconic tamarind rice, enriched with drumstick leaves grown in the fertile Godavari belt. In Papikondalu villages, moringa leaves are valued for their nutrition and availability throughout the year. This dish combines tangy tamarind with earthy greens, creating a balanced meal suited for river journeys and temple offerings alike.",
+  },
+  {
+    name: "Jonna Rotte & Ambali - Papikondalu Style",
+    destination: "Papikondalu",
+    description:
+      "A traditional millet-based meal featuring sorghum flatbread paired with spicy chutney and fermented millet porridge.",
+    image: jonnarottiImage,
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "Jowar (sorghum) flour",
+      "Ragi flour",
+      "Water",
+      "Salt",
+      "Forest-grown green chillies",
+      "Garlic",
+      "Curd (for ambali fermentation)",
+    ],
+    steps: [
+      "Mix jowar flour with warm water and salt to form soft dough.",
+      "Shape into flat discs and pat gently.",
+      "Cook on hot tawa until both sides are done.",
+      "For ambali, mix ragi flour with water and cook into thin porridge.",
+      "Allow to cool and ferment overnight with a spoon of curd.",
+      "Add salt and dilute slightly before serving.",
+      "Grind green chillies and garlic into spicy chutney.",
+      "Serve jonna rotte with chutney and chilled ambali.",
+    ],
+    story:
+      "Jonna Rotte and Ambali form the backbone of tribal food traditions in Papikondalu. Millets like jowar and ragi thrive in the forested terrain and provide sustained energy. Ambali, a lightly fermented millet drink, keeps the body cool and hydrated in humid conditions. Together, this simple meal reflects climate-adaptive nutrition and the self-sufficient lifestyle of river-belt communities.",
+  },
+  {
+    name: "Sarva Pindi - Nallamala Style",
+    destination: "Srisailam – Nallamala Forest",
+    description:
+      "A crispy spiced rice flour flatbread cooked slowly on an iron pan, popular in forest-fringe villages.",
+    image: sarvaPindiImage,
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Rice flour",
+      "Chopped onions",
+      "Green chillies",
+      "Cumin seeds",
+      "Curry leaves",
+      "Peanuts",
+      "Salt",
+      "Oil",
+    ],
+    steps: [
+      "Mix rice flour with chopped onions, chillies, cumin and salt.",
+      "Add water gradually to form soft dough.",
+      "Grease an iron pan lightly with oil.",
+      "Press dough evenly into thick round shape on pan.",
+      "Make small holes on surface for oil.",
+      "Drizzle oil into holes and around edges.",
+      "Cook on low flame until golden and crisp.",
+      "Flip carefully and cook other side.",
+      "Serve hot.",
+    ],
+    story:
+      "Sarva Pindi is a traditional forest-region flatbread prepared in Nallamala villages. Made using rice flour and simple spices, it is cooked slowly over iron pans to achieve crisp edges. This filling dish provides long-lasting energy for agricultural and forest work, reflecting the rustic, practical food culture of the region.",
+  },
+  {
+    name: "Makka Jonna Gatka - Srisailam Style",
+    destination: "Srisailam – Nallamala Forest",
+    description:
+      "A simple maize-based porridge prepared in forest villages for hydration and sustained energy.",
+    image: jonnaGatkaImage,
+    prepTime: "10 mins",
+    cookTime: "20 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Maize flour (makka jonna)",
+      "Water",
+      "Salt",
+      "Buttermilk (optional)",
+    ],
+    steps: [
+      "Boil water in a thick-bottomed pot.",
+      "Add salt and stir.",
+      "Slowly add maize flour while stirring continuously.",
+      "Cook on low flame until thick and smooth.",
+      "Stir continuously to avoid lumps.",
+      "Cook until mixture leaves sides of pot.",
+      "Serve hot or allow to cool slightly.",
+      "Add buttermilk for summer consumption.",
+    ],
+    story:
+      "Makka Jonna Gatka is a staple in Nallamala’s forest settlements. Made from maize flour, it is easy to prepare and highly sustaining. During hot summers near Srisailam, the dish is often paired with buttermilk for hydration. This simple preparation reflects the region’s climate-adaptive and agrarian lifestyle.",
+  },
+  {
+    name: "Chintha Chepala Iguru - Nellore Style",
+    destination: "Nellore",
+    description:
+      "A bold and tangy tamarind-based fish curry known for its rich spice and deep coastal flavor.",
+    image: cheppalairuguImage,
+    prepTime: "20 mins",
+    cookTime: "30 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: [
+      "Fresh fish pieces",
+      "Tamarind pulp",
+      "Onions",
+      "Green chillies",
+      "Turmeric",
+      "Red chilli powder",
+      "Garlic",
+      "Salt",
+      "Oil",
+    ],
+    steps: [
+      "Clean fish pieces gently and keep aside.",
+      "Heat oil and sauté onions and garlic.",
+      "Add turmeric and chilli powder.",
+      "Pour tamarind pulp and bring to boil.",
+      "Add fish pieces carefully.",
+      "Cook on low flame without stirring too much.",
+      "Simmer until gravy thickens.",
+      "Rest before serving for enhanced flavor.",
+    ],
+    story:
+      "Chintha Chepala Iguru is a signature fish curry of Nellore, known for its fiery spice and tangy tamarind base. Located near the coast and Penna River, Nellore is famous for its fresh seafood. This curry reflects the bold Andhra palate and remains a staple in coastal households throughout the year.",
+  },
+  {
+    name: "Neyyi Karam Dosa - Nellore",
+    destination: "Nellore",
+    description:
+      "A crispy dosa generously spread with spicy karam powder and finished with ghee.",
+    image: neyyikaramDosaImage,
+    prepTime: "8 hours fermentation",
+    cookTime: "10 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+    season: "All Year",
+    ingredients: ["Dosa batter", "Karam podi (spice powder)", "Ghee", "Salt"],
+    steps: [
+      "Prepare dosa batter through fermentation.",
+      "Heat tawa and pour thin layer of batter.",
+      "Spread evenly in circular motion.",
+      "Sprinkle karam podi evenly on top.",
+      "Drizzle generous ghee around edges.",
+      "Cook until crisp and golden.",
+      "Fold and serve hot.",
+    ],
+    story:
+      "Neyyi Karam Dosa is a beloved breakfast in Nellore, combining crisp dosa with spicy karam powder and aromatic ghee. The bold spice reflects Rayalaseema influence, while the ghee adds richness. This simple yet flavorful dish showcases Nellore’s love for heat-balanced, satisfying morning meals.",
+  },
+  {
+    name: "Pindi Miriyam - Nellore Style",
+    destination: "Nellore",
+    description:
+      "A pepper-spiced rice flour snack prepared traditionally in Nellore households.",
+    image: pindiMiriamImage,
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+    season: "All Year",
+    ingredients: [
+      "Rice flour",
+      "Crushed black pepper",
+      "Cumin seeds",
+      "Salt",
+      "Water",
+      "Oil",
+    ],
+    steps: [
+      "Mix rice flour with pepper, cumin and salt.",
+      "Add water gradually to form dough.",
+      "Shape into small rounds or discs.",
+      "Heat oil in a deep pan.",
+      "Fry pieces until golden and crisp.",
+      "Drain excess oil.",
+      "Cool and store in airtight container.",
+    ],
+    story:
+      "Pindi Miriyam is a traditional pepper-flavored snack from Nellore, often prepared during winter and festive gatherings. The warmth of black pepper balances the region’s humid climate. Simple ingredients and bold flavor define this rustic snack, reflecting Andhra’s time-tested culinary traditions.",
   },
 ];
