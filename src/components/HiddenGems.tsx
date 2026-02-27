@@ -5,11 +5,14 @@ import GemCard from "./GemCard";
 import coffeeImage from "@/assets/araku-coffee.jpg";
 import craftsImage from "@/assets/tribal-crafts.jpg";
 import honeyImage from "@/assets/wild-honey.jpg";
+import jackfruitchipImage from "@/assets/products/JackfruitHero.jpeg";
+import forestturmericImage from "@/assets/products/ForesttermericHero.jpeg";
+import { slugify } from "@/lib/slugify";
 
 // Get a sample of underrated gems from different destinations for the homepage
 const sampleGems = [
   {
-    name: "Araku Coffee",
+    name: "Araku Valley Coffee",
     location: "Araku Valley",
     locationId: "araku-valley",
     description:
@@ -17,20 +20,20 @@ const sampleGems = [
     image: coffeeImage,
   },
   {
-    name: "Tribal Bamboo Crafts",
+    name: "Jack fruit Chips and Products",
     location: "Paderu Region",
     locationId: "paderu",
     description:
-      "Handwoven baskets, mats, and decorative items crafted by local artisans using traditional techniques passed down through generations.",
-    image: craftsImage,
+      "Sun-dried jackfruit chips and preserves prepared using traditional tribal techniques from locally grown jackfruit.",
+    image: jackfruitchipImage,
   },
   {
-    name: "Wild Forest Honey",
+    name: "Forest Turmeric",
     location: "Maredumilli",
     locationId: "maredumilli",
     description:
-      "Pure, unprocessed honey harvested from forest hives. Rich in medicinal properties and sustainably collected by tribal honey hunters.",
-    image: honeyImage,
+      "Wild forest-grown turmeric known for high curcumin concentration and strong medicinal properties.",
+    image: forestturmericImage,
   },
 ];
 
@@ -72,7 +75,10 @@ const HiddenGems = () => {
         {/* Cards Grid - 3 columns on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {sampleGems.map((gem, index) => (
-            <Link key={gem.name} to={`/hidden-gems/${gem.locationId}`}>
+            <Link
+              key={gem.name}
+              to={`/hidden-gems/${gem.locationId}/${slugify(gem.name)}`}
+            >
               <GemCard
                 name={gem.name}
                 location={gem.location}

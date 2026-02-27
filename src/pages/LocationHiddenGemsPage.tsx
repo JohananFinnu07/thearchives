@@ -330,7 +330,9 @@ const LocationHiddenGemsPage = () => {
         {/* Navigation to Other Destinations */}
         <section className="py-12 border-t border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Desktop Layout (Unchanged) */}
             <div className="flex items-center justify-between">
+              {/* Previous */}
               {prevDestination ? (
                 <Link
                   to={`/hidden-gems/${prevDestination.id}`}
@@ -339,19 +341,25 @@ const LocationHiddenGemsPage = () => {
                   <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                   <div>
                     <p className="text-xs uppercase tracking-wide">Previous</p>
-                    <p className="font-medium">{prevDestination.name}</p>
+                    <p className="font-medium truncate max-w-[180px]">
+                      {prevDestination.name}
+                    </p>
                   </div>
                 </Link>
               ) : (
                 <div />
               )}
 
-              <Button asChild variant="outline" size="sm">
-                <Link to={`/destination/${destination.id}`}>
-                  Explore {destination.name}
-                </Link>
-              </Button>
+              {/* Desktop Explore Button */}
+              <div className="hidden md:block">
+                <Button asChild variant="outline" size="sm">
+                  <Link to={`/destination/${destination.id}`}>
+                    Explore {destination.name}
+                  </Link>
+                </Button>
+              </div>
 
+              {/* Next */}
               {nextDestination ? (
                 <Link
                   to={`/hidden-gems/${nextDestination.id}`}
@@ -359,13 +367,24 @@ const LocationHiddenGemsPage = () => {
                 >
                   <div>
                     <p className="text-xs uppercase tracking-wide">Next</p>
-                    <p className="font-medium">{nextDestination.name}</p>
+                    <p className="font-medium truncate max-w-[180px]">
+                      {nextDestination.name}
+                    </p>
                   </div>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               ) : (
                 <div />
               )}
+            </div>
+
+            {/* Mobile Explore Button (Pushed Down) */}
+            <div className="mt-6 md:hidden">
+              <Button asChild variant="outline" size="sm" className="w-full">
+                <Link to={`/destination/${destination.id}`}>
+                  Explore {destination.name}
+                </Link>
+              </Button>
             </div>
           </div>
         </section>

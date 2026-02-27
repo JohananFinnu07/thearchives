@@ -207,8 +207,7 @@ const NavSearch = () => {
                             key={product.name}
                             onSelect={() =>
                               handleSelect(
-                                `/destination/${destinationId}`,
-                                "famous",
+                                `/hidden-gems/${destinationId}/${slugify(product.name)}`,
                               )
                             }
                             className="cursor-pointer"
