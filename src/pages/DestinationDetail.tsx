@@ -17,6 +17,7 @@ import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import RecipeCard from "@/components/RecipeCard";
 import { recipes } from "@/data/recipes";
+import { slugify } from "@/lib/slugify";
 
 const DestinationDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -56,6 +57,7 @@ const DestinationDetail = () => {
   const underratedProducts = destination.products.filter(
     (p) => p.type === "underrated",
   );
+  const slug = slugify(destination.name);
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -65,11 +67,7 @@ const DestinationDetail = () => {
       });
     }
   };
-  const slug = destination.name
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

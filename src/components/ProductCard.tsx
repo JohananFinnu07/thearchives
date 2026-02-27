@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Product } from "@/data/destinations";
 import { Link, useParams } from "react-router-dom";
-
+import { slugify } from "@/lib/slugify";
 interface ProductCardProps {
   product: Product;
   index: number;
@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, index }: ProductCardProps) => {
   const { id } = useParams();
-  const slug = product.name.toLowerCase().replace(/\s+/g, "-");
+  const slug = slugify(product.name);
 
   return (
     <motion.div
