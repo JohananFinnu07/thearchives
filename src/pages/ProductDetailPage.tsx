@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getDestinationById } from "@/data/destinations";
 import { Button } from "@/components/ui/button";
-
+import { slugify } from "@/lib/slugify";
 const ProductDetailPage = () => {
   const { locationId, productName } = useParams<{
     locationId: string;
@@ -17,7 +17,7 @@ const ProductDetailPage = () => {
   const decodedProductName = productName ? decodeURIComponent(productName) : "";
 
   const product = destination?.products.find(
-    (p) => p.name.toLowerCase().replace(/\s+/g, "-") === decodedProductName,
+    (p) => slugify(p.name) === decodedProductName,
   );
 
   if (!destination || !product) {
@@ -60,13 +60,21 @@ const ProductDetailPage = () => {
               >
                 {/* Breadcrumb */}
                 <Link
-                  to={`/hidden-gems/${destination.id}`}
+                  to={
+                    isUnderrated
+                      ? `/hidden-gems/${destination.id}`
+                      : `/destination/${destination.id}`
+                  }
+                  state={!isUnderrated ? { scrollTo: "famous" } : undefined}
                   className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  <span>Hidden Gems / {product.name}</span>
+                  <span>
+                    {isUnderrated
+                      ? `Hidden Gems / ${product.name}`
+                      : `Famous Products / ${product.name}`}
+                  </span>
                 </Link>
-
                 {/* Title */}
                 <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
                   {product.name}

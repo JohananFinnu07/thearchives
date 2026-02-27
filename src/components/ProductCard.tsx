@@ -20,13 +20,19 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
       className="h-full"
     >
       <div className="bg-card rounded-xl overflow-hidden shadow-sm border p-6 flex flex-col h-full">
-        {/* Image */}
         {product.image && (
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-48 object-cover object-center rounded-lg mb-4"
-          />
+          <Link
+            to={`/hidden-gems/${id}/${slug}`}
+            className="block mb-4 overflow-hidden rounded-lg"
+          >
+            <motion.img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-48 object-cover object-center"
+              whileHover={{ scale: 1.08 }}
+              transition={{ type: "spring", stiffness: 120 }}
+            />
+          </Link>
         )}
 
         {/* Badge */}
@@ -56,7 +62,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
             to={`/hidden-gems/${id}/${slug}`}
             className="inline-block text-primary font-medium hover:underline"
           >
-            Explore →
+            Explore the Story →
           </Link>
         </div>
       </div>

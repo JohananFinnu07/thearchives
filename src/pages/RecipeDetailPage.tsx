@@ -1,11 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Clock, ChefHat, Flame, ShoppingBag } from "lucide-react";
+import {
+  ArrowLeft,
+  Clock,
+  ChefHat,
+  Flame,
+  ShoppingBag,
+  ArrowUpRight,
+} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { recipes } from "@/data/recipes";
-import { Button } from "@/components/ui/button";
-
+import { ingredientAffiliateMap } from "@/data/ingredientAffiliateMap";
 const slugify = (text: string) =>
   text
     .toLowerCase()
@@ -115,22 +121,43 @@ const RecipeDetail = () => {
                   <h2 className="font-serif text-2xl mb-6">Ingredients</h2>
 
                   <ul className="space-y-3 text-muted-foreground">
-                    {recipe.ingredients.map((item, index) => (
-                      <li key={index} className="flex gap-3">
-                        <span className="text-primary font-bold">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                    {recipe.ingredients.map((item, index) => {
+                      const lowerItem = item.toLowerCase();
 
-                  {recipe.buyLink && (
-                    <Button asChild className="mt-8 w-full">
-                      <Link to={recipe.buyLink}>
-                        <ShoppingBag className="w-4 h-4 mr-2" />
-                        Buy Authentic Ingredients
-                      </Link>
-                    </Button>
-                  )}
+                      const matchedKey = Object.keys(
+                        ingredientAffiliateMap,
+                      ).find((key) => lowerItem.includes(key));
+
+                      const affiliate = matchedKey
+                        ? ingredientAffiliateMap[matchedKey]
+                        : null;
+
+                      return (
+                        <li key={index} className="flex gap-3 items-start">
+                          <span className="text-primary font-bold">•</span>
+
+                          {affiliate ? (
+                            <a
+                              href={affiliate.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group inline-flex items-center gap-1 text-primary"
+                            >
+                              {item}
+                              {affiliate.verified && (
+                                <span className="text-[10px] bg-primary/10 text-primary px-2 py-[2px] rounded-full ml-2">
+                                  Verified
+                                </span>
+                              )}
+                              <ArrowUpRight className="ml-1 w-3 h-3 transition-transform duration-200 group-hover:translate-x-1" />
+                            </a>
+                          ) : (
+                            <span>{item}</span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </div>
               </div>
 

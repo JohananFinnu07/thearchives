@@ -1,38 +1,57 @@
-import { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, MapPin, ArrowLeft, ArrowRight, Heart } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { getDestinationById, destinations } from '@/data/destinations';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, MapPin, ArrowLeft, ArrowRight, Heart } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { getDestinationById, destinations } from "@/data/destinations";
+import { Button } from "@/components/ui/button";
 
 const LocationHiddenGemsPage = () => {
   const { id } = useParams<{ id: string }>();
-  const destination = getDestinationById(id || '');
-  
+  const destination = getDestinationById(id || "");
+
   // Track interest for each product
-  const [interests, setInterests] = useState<Record<string, { liked: boolean; count: number }>>({});
-  
+  const [interests, setInterests] = useState<
+    Record<string, { liked: boolean; count: number }>
+  >({});
+  const slugify = (text: string) =>
+    text
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
+
   const initializeInterest = (productName: string) => {
     if (!interests[productName]) {
-      setInterests(prev => ({
+      setInterests((prev) => ({
         ...prev,
-        [productName]: { liked: false, count: Math.floor(Math.random() * 80) + 20 }
+        [productName]: {
+          liked: false,
+          count: Math.floor(Math.random() * 80) + 20,
+        },
       }));
     }
-    return interests[productName] || { liked: false, count: Math.floor(Math.random() * 80) + 20 };
+    return (
+      interests[productName] || {
+        liked: false,
+        count: Math.floor(Math.random() * 80) + 20,
+      }
+    );
   };
 
   const handleInterest = (productName: string) => {
-    setInterests(prev => {
-      const current = prev[productName] || { liked: false, count: Math.floor(Math.random() * 80) + 20 };
+    setInterests((prev) => {
+      const current = prev[productName] || {
+        liked: false,
+        count: Math.floor(Math.random() * 80) + 20,
+      };
       return {
         ...prev,
         [productName]: {
           liked: !current.liked,
-          count: current.liked ? current.count - 1 : current.count + 1
-        }
+          count: current.liked ? current.count - 1 : current.count + 1,
+        },
       };
     });
   };
@@ -42,7 +61,9 @@ const LocationHiddenGemsPage = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-32 pb-16 text-center">
-          <h1 className="font-serif text-3xl text-foreground mb-4">Destination not found</h1>
+          <h1 className="font-serif text-3xl text-foreground mb-4">
+            Destination not found
+          </h1>
           <Link to="/hidden-gems" className="text-primary hover:underline">
             Back to Hidden Gems
           </Link>
@@ -52,11 +73,15 @@ const LocationHiddenGemsPage = () => {
     );
   }
 
-  const underratedProducts = destination.products.filter(p => p.type === 'underrated');
-  const famousProducts = destination.products.filter(p => p.type === 'famous');
+  const underratedProducts = destination.products.filter(
+    (p) => p.type === "underrated",
+  );
+  const famousProducts = destination.products.filter(
+    (p) => p.type === "famous",
+  );
 
   // Get next/prev destinations for navigation
-  const currentIndex = destinations.findIndex(d => d.id === destination.id);
+  const currentIndex = destinations.findIndex((d) => d.id === destination.id);
   const prevDestination = destinations[currentIndex - 1];
   const nextDestination = destinations[currentIndex + 1];
 
@@ -79,24 +104,28 @@ const LocationHiddenGemsPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Link 
-                to="/hidden-gems" 
+              <Link
+                to="/hidden-gems"
                 className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Hidden Gems</span>
               </Link>
-              
+
               <div className="flex items-center gap-3 mb-4">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">{destination.elevation} · {destination.bestTime}</span>
+                <span className="text-muted-foreground">
+                  {destination.elevation} · {destination.bestTime}
+                </span>
               </div>
-              
+
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-4">
-                Hidden Gems of <span className="italic text-primary">{destination.name}</span>
+                Hidden Gems of{" "}
+                <span className="italic text-primary">{destination.name}</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl">
-                {destination.tagline} — Discover the underrated treasures that make this destination truly special.
+                {destination.tagline} — Discover the underrated treasures that
+                make this destination truly special.
               </p>
             </motion.div>
           </div>
@@ -125,11 +154,14 @@ const LocationHiddenGemsPage = () => {
                 {underratedProducts.map((product, index) => {
                   const interest = initializeInterest(product.name);
                   const isLiked = interests[product.name]?.liked || false;
-                  const likeCount = interests[product.name]?.count || interest.count;
-                  
-                    const productSlug = product.name.toLowerCase().replace(/\s+/g, '-');
-                    
-                    return (
+                  const likeCount =
+                    interests[product.name]?.count || interest.count;
+
+                  const productSlug = product.name
+                    .toLowerCase()
+                    .replace(/\s+/g, "-");
+
+                  return (
                     <motion.article
                       key={product.name}
                       initial={{ opacity: 0, y: 30 }}
@@ -142,7 +174,10 @@ const LocationHiddenGemsPage = () => {
                         {/* Main Content */}
                         <div className="lg:col-span-2 space-y-6">
                           <div className="flex items-start justify-between gap-4">
-                            <Link to={`/hidden-gems/${destination.id}/${productSlug}`} className="flex-1">
+                            <Link
+                              to={`/hidden-gems/${destination.id}/${productSlug}`}
+                              className="flex-1"
+                            >
                               <h3 className="font-serif text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                                 {product.name}
                               </h3>
@@ -150,7 +185,7 @@ const LocationHiddenGemsPage = () => {
                                 {product.description}
                               </p>
                             </Link>
-                            
+
                             {/* Interest Button */}
                             <motion.button
                               onClick={(e) => {
@@ -159,9 +194,9 @@ const LocationHiddenGemsPage = () => {
                                 handleInterest(product.name);
                               }}
                               className={`flex-shrink-0 flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-colors ${
-                                isLiked 
-                                  ? 'bg-accent/20 text-accent' 
-                                  : 'bg-secondary/50 text-muted-foreground hover:text-accent hover:bg-accent/10'
+                                isLiked
+                                  ? "bg-accent/20 text-accent"
+                                  : "bg-secondary/50 text-muted-foreground hover:text-accent hover:bg-accent/10"
                               }`}
                               whileTap={{ scale: 0.95 }}
                             >
@@ -171,29 +206,39 @@ const LocationHiddenGemsPage = () => {
                               >
                                 <Heart
                                   className={`w-6 h-6 transition-all duration-300 ${
-                                    isLiked ? 'fill-accent text-accent' : ''
+                                    isLiked ? "fill-accent text-accent" : ""
                                   }`}
                                 />
                               </motion.div>
-                              <span className="text-xs font-medium">{likeCount}</span>
+                              <span className="text-xs font-medium">
+                                {likeCount}
+                              </span>
                               <span className="text-xs">
-                                {isLiked ? 'Interested' : 'Interest'}
+                                {isLiked ? "Interested" : "Interest"}
                               </span>
                             </motion.button>
                           </div>
 
-                          <Link to={`/hidden-gems/${destination.id}/${productSlug}`}>
+                          <Link
+                            to={`/hidden-gems/${destination.id}/${productSlug}`}
+                          >
                             <div className="bg-secondary/30 rounded-xl p-6 hover:bg-secondary/40 transition-colors">
-                              <h4 className="font-medium text-foreground mb-2">Why it matters</h4>
+                              <h4 className="font-medium text-foreground mb-2">
+                                Why it matters
+                              </h4>
                               <p className="text-muted-foreground text-sm leading-relaxed">
                                 {product.significance}
                               </p>
                             </div>
                           </Link>
 
-                          <Link to={`/hidden-gems/${destination.id}/${productSlug}`}>
+                          <Link
+                            to={`/hidden-gems/${destination.id}/${productSlug}`}
+                          >
                             <div className="mt-4">
-                              <h4 className="font-medium text-foreground mb-2">How it's made</h4>
+                              <h4 className="font-medium text-foreground mb-2">
+                                How it's made
+                              </h4>
                               <p className="text-muted-foreground text-sm leading-relaxed">
                                 {product.makingProcess}
                               </p>
@@ -203,7 +248,9 @@ const LocationHiddenGemsPage = () => {
 
                         {/* Uses Sidebar */}
                         <div className="lg:border-l lg:border-border lg:pl-8">
-                          <h4 className="font-medium text-foreground mb-4">Common uses</h4>
+                          <h4 className="font-medium text-foreground mb-4">
+                            Common uses
+                          </h4>
                           <div className="flex flex-wrap gap-2">
                             {product.uses.map((use) => (
                               <span
@@ -214,7 +261,7 @@ const LocationHiddenGemsPage = () => {
                               </span>
                             ))}
                           </div>
-                          <Link 
+                          <Link
                             to={`/hidden-gems/${destination.id}/${productSlug}`}
                             className="inline-block mt-4 text-sm text-primary hover:underline"
                           >
@@ -249,23 +296,32 @@ const LocationHiddenGemsPage = () => {
               </motion.div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {famousProducts.map((product, index) => (
-                  <motion.div
-                    key={product.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-card rounded-xl p-6 border border-border"
-                  >
-                    <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm line-clamp-3">
-                      {product.description}
-                    </p>
-                  </motion.div>
-                ))}
+                {famousProducts.map((product, index) => {
+                  const slug = slugify(product.name);
+
+                  return (
+                    <motion.div
+                      key={product.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      <Link
+                        to={`/hidden-gems/${destination.id}/${slug}`}
+                        className="block bg-card rounded-xl p-6 border border-border hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                      >
+                        <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                          {product.name}
+                        </h3>
+
+                        <p className="text-muted-foreground text-sm line-clamp-3">
+                          {product.description}
+                        </p>
+                      </Link>
+                    </motion.div>
+                  );
+                })}
               </div>
             </div>
           </section>

@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, MapPin, Leaf, ChefHat } from "lucide-react";
+import { Search, MapPin, Sparkles, ChefHat, Star } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -13,7 +13,7 @@ import {
 import { destinations } from "@/data/destinations";
 import { recipes } from "@/data/recipes";
 
-/* 🔹 Normalize for special character safe search */
+/* 🔹 Normalize text for safe searching */
 const normalize = (text: string) =>
   text
     .toLowerCase()
@@ -22,19 +22,20 @@ const normalize = (text: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
+/* 🔹 Central slugify */
 const slugify = (text: string) =>
   text
     .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-")
-    .replace(/[^\w-]+/g, "")
-    .replace(/--+/g, "-");
+    .replace(/-+/g, "-");
 
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  // ⌘K / Ctrl+K shortcut
+  /* ⌘K / Ctrl+K shortcut */
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -42,11 +43,11 @@ const NavSearch = () => {
         setOpen((prev) => !prev);
       }
     };
-
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  /* 🔎 Search Results */
   const results = useMemo(() => {
     if (!search.trim()) return [];
 
@@ -56,38 +57,43 @@ const NavSearch = () => {
       title: string;
       subtitle: string;
       route: string;
-      type: "destination" | "product" | "recipe";
+      type: "destination" | "hidden" | "famous" | "recipe";
+      scrollTo?: string;
     }[] = [];
 
     destinations.forEach((dest) => {
-      // Destination match
+      /* Destination match */
       if (normalize(dest.name).includes(lower)) {
-        const DestinationSlug = slugify(dest.id.toLowerCase());
-
         matches.push({
           title: dest.name,
           subtitle: "Destination",
-          route: `/destination/${DestinationSlug}`,
+          route: `/destination/${dest.id}`,
           type: "destination",
         });
       }
 
-      // Product match
+      /* Product match */
       dest.products.forEach((product) => {
         if (normalize(product.name).includes(lower)) {
           const productSlug = slugify(product.name);
+          const isUnderrated = product.type === "underrated";
 
           matches.push({
             title: product.name,
-            subtitle: `Hidden Gem • ${dest.name}`,
-            route: `/hidden-gems/${dest.id}/${productSlug}`,
-            type: "product",
+            subtitle: isUnderrated
+              ? `Hidden Gem • ${dest.name}`
+              : `Famous Product • ${dest.name}`,
+            route: isUnderrated
+              ? `/hidden-gems/${dest.id}/${productSlug}`
+              : `/hidden-gems/${dest.id}/${productSlug}`,
+            type: isUnderrated ? "hidden" : "famous",
+            scrollTo: isUnderrated ? undefined : "famous",
           });
         }
       });
     });
 
-    // Recipes
+    /* Recipe match */
     recipes.forEach((recipe) => {
       const nameMatch = normalize(recipe.name).includes(lower);
       const ingredientMatch = recipe.ingredients?.some((ing) =>
@@ -108,14 +114,20 @@ const NavSearch = () => {
     return matches;
   }, [search]);
 
-  const handleSelect = (route: string) => {
+  const handleSelect = (route: string, scrollTo?: string) => {
     setOpen(false);
     setSearch("");
-    navigate(route);
+
+    if (scrollTo) {
+      navigate(route, { state: { scrollTo } });
+    } else {
+      navigate(route);
+    }
   };
 
   return (
     <>
+      {/* Search Button */}
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.96 }}
@@ -135,6 +147,7 @@ const NavSearch = () => {
         </motion.kbd>
       </motion.button>
 
+      {/* Search Dialog */}
       <AnimatePresence>
         {open && (
           <CommandDialog open={open} onOpenChange={setOpen}>
@@ -146,35 +159,30 @@ const NavSearch = () => {
               className="bg-background/80 backdrop-blur-xl rounded-xl"
             >
               <CommandInput
-                placeholder="Search destinations, hidden gems, or recipes..."
+                placeholder="Search destinations, famous products, hidden gems, or recipes..."
                 value={search}
                 onValueChange={setSearch}
               />
 
               <CommandList>
-                {/* No results */}
-                {search.trim() && results.length === 0 && (
-                  <CommandEmpty>No results found.</CommandEmpty>
-                )}
-
-                {/* Suggestions when empty */}
+                {/* Default Suggestions */}
                 {!search.trim() && (
                   <>
-                    <CommandGroup heading="Popular Destinations">
-                      {destinations.slice(0, 4).map((dest) => (
+                    <CommandGroup heading="Featured Destinations">
+                      {destinations.slice(0, 2).map((dest) => (
                         <CommandItem
                           key={dest.id}
                           onSelect={() =>
-                            handleSelect(`/destination/${slugify(dest.name)}`)
+                            handleSelect(`/destination/${dest.id}`)
                           }
                           className="cursor-pointer"
                         >
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-3">
                             <MapPin className="h-4 w-4 text-green-600" />
                             <div>
                               <p className="font-medium">{dest.name}</p>
                               <p className="text-xs text-muted-foreground">
-                                {dest.tagline}
+                                Destination
                               </p>
                             </div>
                           </div>
@@ -182,7 +190,43 @@ const NavSearch = () => {
                       ))}
                     </CommandGroup>
 
-                    <CommandGroup heading="Featured Hidden Gems">
+                    <CommandGroup heading="Famous Products">
+                      {destinations
+                        .flatMap((dest) =>
+                          dest.products
+                            .filter((p) => p.type === "famous")
+                            .slice(0, 1)
+                            .map((product) => ({
+                              product,
+                              destinationId: dest.id,
+                            })),
+                        )
+                        .slice(0, 2)
+                        .map(({ product, destinationId }) => (
+                          <CommandItem
+                            key={product.name}
+                            onSelect={() =>
+                              handleSelect(
+                                `/destination/${destinationId}`,
+                                "famous",
+                              )
+                            }
+                            className="cursor-pointer"
+                          >
+                            <div className="flex items-center gap-3">
+                              <Star className="h-4 w-4 text-green-600" />
+                              <div>
+                                <p className="font-medium">{product.name}</p>
+                                <p className="text-xs text-muted-foreground">
+                                  Famous Product
+                                </p>
+                              </div>
+                            </div>
+                          </CommandItem>
+                        ))}
+                    </CommandGroup>
+
+                    <CommandGroup heading="Hidden Gems">
                       {destinations
                         .flatMap((dest) =>
                           dest.products
@@ -193,7 +237,7 @@ const NavSearch = () => {
                               destinationId: dest.id,
                             })),
                         )
-                        .slice(0, 4)
+                        .slice(0, 2)
                         .map(({ product, destinationId }) => (
                           <CommandItem
                             key={product.name}
@@ -206,8 +250,8 @@ const NavSearch = () => {
                             }
                             className="cursor-pointer"
                           >
-                            <div className="flex items-center gap-2">
-                              <Leaf className="h-4 w-4 text-emerald-600" />
+                            <div className="flex items-center gap-3">
+                              <Sparkles className="h-4 w-4 text-orange-500" />
                               <div>
                                 <p className="font-medium">{product.name}</p>
                                 <p className="text-xs text-muted-foreground">
@@ -218,8 +262,9 @@ const NavSearch = () => {
                           </CommandItem>
                         ))}
                     </CommandGroup>
+
                     <CommandGroup heading="Popular Recipes">
-                      {recipes.slice(0, 4).map((recipe) => (
+                      {recipes.slice(0, 2).map((recipe) => (
                         <CommandItem
                           key={recipe.name}
                           onSelect={() =>
@@ -227,7 +272,7 @@ const NavSearch = () => {
                           }
                           className="cursor-pointer"
                         >
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-3">
                             <ChefHat className="h-4 w-4 text-orange-500" />
                             <div>
                               <p className="font-medium">{recipe.name}</p>
@@ -242,7 +287,11 @@ const NavSearch = () => {
                   </>
                 )}
 
-                {/* Results */}
+                {/* Search Results */}
+                {search.trim() && results.length === 0 && (
+                  <CommandEmpty>No results found.</CommandEmpty>
+                )}
+
                 {search.trim() && results.length > 0 && (
                   <CommandGroup heading="Results">
                     {results.map((item, index) => (
@@ -253,15 +302,20 @@ const NavSearch = () => {
                         transition={{ delay: index * 0.03 }}
                       >
                         <CommandItem
-                          onSelect={() => handleSelect(item.route)}
+                          onSelect={() =>
+                            handleSelect(item.route, item.scrollTo)
+                          }
                           className="cursor-pointer rounded-md hover:bg-primary/10 transition"
                         >
                           <div className="flex items-center gap-3">
                             {item.type === "destination" && (
                               <MapPin className="h-4 w-4 text-green-600" />
                             )}
-                            {item.type === "product" && (
-                              <Leaf className="h-4 w-4 text-emerald-600" />
+                            {item.type === "hidden" && (
+                              <Sparkles className="h-4 w-4 text-orange-500" />
+                            )}
+                            {item.type === "famous" && (
+                              <Star className="h-4 w-4 text-green-600" />
                             )}
                             {item.type === "recipe" && (
                               <ChefHat className="h-4 w-4 text-orange-500" />

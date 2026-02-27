@@ -57,31 +57,38 @@ const DestinationsPage = () => {
                     </div>
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      {/* Tagline - Visible Everywhere */}
                       <div className="flex items-center gap-2 mb-2">
                         <MapPin className="w-4 h-4 text-accent" />
                         <span className="text-sm text-white/80">
                           {destination.tagline}
                         </span>
                       </div>
+
+                      {/* Name - Visible Everywhere */}
                       <h3 className="font-serif text-2xl font-bold mb-2">
                         {destination.name}
                       </h3>
-                      <p className="text-white/80 text-sm mb-4 line-clamp-2">
-                        {destination.heroDescription}
-                      </p>
 
-                      <div className="flex flex-wrap gap-4 text-sm">
-                        <div className="flex items-center gap-1">
-                          <Mountain className="w-4 h-4 text-accent" />
-                          <span>{destination.elevation}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Thermometer className="w-4 h-4 text-accent" />
-                          <span>{destination.temperature}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4 text-accent" />
-                          <span>{destination.bestTime}</span>
+                      {/* Desktop Only Content */}
+                      <div className="hidden md:block">
+                        <p className="text-white/80 text-sm mb-4 line-clamp-2">
+                          {destination.heroDescription}
+                        </p>
+
+                        <div className="flex flex-wrap gap-4 text-sm">
+                          <div className="flex items-center gap-1">
+                            <Mountain className="w-4 h-4 text-accent" />
+                            <span>{destination.elevation}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Thermometer className="w-4 h-4 text-accent" />
+                            <span>{destination.temperature}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Calendar className="w-4 h-4 text-accent" />
+                            <span>{destination.bestTime}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
