@@ -1,21 +1,23 @@
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Camera, MapPin, ArrowLeft, ImageIcon } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { getDestinationById } from '@/data/destinations';
-import { Button } from '@/components/ui/button';
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Camera, MapPin, ArrowLeft, ImageIcon } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { getDestinationById } from "@/data/destinations";
+import { Button } from "@/components/ui/button";
 
 const LocationGalleryPage = () => {
   const { id } = useParams<{ id: string }>();
-  const destination = getDestinationById(id || '');
+  const destination = getDestinationById(id || "");
 
   if (!destination) {
     return (
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-32 pb-16 text-center">
-          <h1 className="font-serif text-3xl text-foreground mb-4">Destination not found</h1>
+          <h1 className="font-serif text-3xl text-foreground mb-4">
+            Destination not found
+          </h1>
           <Link to="/gallery" className="text-primary hover:underline">
             Back to Gallery
           </Link>
@@ -44,21 +46,24 @@ const LocationGalleryPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Link 
-                to="/gallery" 
+              <Link
+                to="/gallery"
                 className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Gallery</span>
               </Link>
-              
+
               <div className="flex items-center gap-3 mb-4">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">{destination.elevation}</span>
+                <span className="text-muted-foreground">
+                  {destination.elevation}
+                </span>
               </div>
-              
+
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-4">
-                {destination.name} <span className="italic text-primary">Gallery</span>
+                {destination.name}{" "}
+                <span className="italic text-primary">Gallery</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl">
                 {destination.tagline}
@@ -84,9 +89,10 @@ const LocationGalleryPage = () => {
                 Gallery Coming Soon
               </h2>
               <p className="text-muted-foreground mb-8">
-                We're curating a stunning visual collection for {destination.name}. 
-                Check back soon to explore landscapes, local culture, and hidden treasures 
-                through our immersive photo gallery.
+                We're curating a stunning visual collection for{" "}
+                {destination.name}. Check back soon to explore landscapes, local
+                culture, and hidden treasures through our immersive photo
+                gallery.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild variant="default" className="gradient-forest">

@@ -3,6 +3,7 @@ import { MapPin, Heart, Users, Camera, Compass, BookOpen } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { destinations } from "@/data/destinations";
+import { useState } from "react";
 
 const AboutPage = () => {
   return (
@@ -242,7 +243,75 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </section>
+      {/* Archive Method Section */}
+      {/* Archive Method Section */}
+      <section className="py-20 bg-secondary/20 border-t border-border/50">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <span className="text-primary text-xs tracking-[0.35em] uppercase font-medium block mb-4">
+              The Archive Method
+            </span>
 
+            <h2 className="font-serif text-4xl font-semibold text-foreground">
+              How We Verify What We Share
+            </h2>
+          </div>
+
+          {/* Grid */}
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Field Documentation",
+                description:
+                  "On-site visits to villages, weekly markets, cultivation zones, and artisan workshops ensure documentation is recorded within its natural context.",
+              },
+              {
+                title: "Source Alignment",
+                description:
+                  "Products are traced to identifiable communities, cooperatives, and regional networks to maintain clarity of origin and recognition.",
+              },
+              {
+                title: "Seasonal Validation",
+                description:
+                  "Availability reflects agricultural rhythm and ecological timelines. We do not present products outside their authentic harvest window.",
+              },
+              {
+                title: "Archive Review",
+                description:
+                  "Each feature undergoes internal review for origin confirmation, process accuracy, cultural attribution, and seasonal legitimacy.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                className="group relative p-6 rounded-xl bg-card border border-border/60 shadow-sm hover:shadow-lg transition-all duration-400 overflow-hidden"
+              >
+                {/* Background number */}
+                <div className="absolute -top-4 -right-4 text-[90px] font-serif text-primary/5 select-none pointer-events-none">
+                  0{index + 1}
+                </div>
+
+                {/* Hover glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
+                </div>
+
+                <div className="relative z-10">
+                  <h3 className="font-serif text-xl font-semibold text-primary mb-3">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );
