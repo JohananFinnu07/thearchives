@@ -295,7 +295,7 @@ const LocationHiddenGemsPage = () => {
                 </p>
               </motion.div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 {famousProducts.map((product, index) => {
                   const slug = slugify(product.name);
 
@@ -306,16 +306,17 @@ const LocationHiddenGemsPage = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
+                      className="h-full"
                     >
                       <Link
                         to={`/hidden-gems/${destination.id}/${slug}`}
-                        className="block bg-card rounded-xl p-6 border border-border hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                        className="flex flex-col h-full bg-card rounded-xl p-6 border border-border hover:shadow-md transition-all duration-300 hover:-translate-y-1"
                       >
                         <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                           {product.name}
                         </h3>
 
-                        <p className="text-muted-foreground text-sm line-clamp-3">
+                        <p className="text-muted-foreground text-sm line-clamp-3 flex-grow">
                           {product.description}
                         </p>
                       </Link>
