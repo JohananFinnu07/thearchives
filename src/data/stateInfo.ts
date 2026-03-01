@@ -1,5 +1,6 @@
 export interface StateInfo {
   id: string;
+  slug: string;
   name: string;
   capital: string;
   area: string;
@@ -11,6 +12,7 @@ export interface StateInfo {
 export const stateData: Record<string, StateInfo> = {
   an: {
     id: "an",
+    slug: "andaman-nicobar",
     name: "Andaman and Nicobar Islands",
     capital: "Port Blair",
     area: "8,249 km²",
@@ -21,6 +23,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ap: {
     id: "ap",
+    slug: "andhra-pradesh",
     name: "Andhra Pradesh",
     capital: "Amaravati",
     area: "162,975 km²",
@@ -31,6 +34,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ar: {
     id: "ar",
+    slug: "arunachal-pradesh",
     name: "Arunachal Pradesh",
     capital: "Itanagar",
     area: "83,743 km²",
@@ -40,6 +44,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   as: {
     id: "as",
+    slug: "assam",
     name: "Assam",
     capital: "Dispur",
     area: "78,438 km²",
@@ -50,6 +55,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   br: {
     id: "br",
+    slug: "bihar",
     name: "Bihar",
     capital: "Patna",
     area: "94,163 km²",
@@ -59,6 +65,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ch: {
     id: "ch",
+    slug: "chandigarh",
     name: "Chandigarh",
     capital: "Chandigarh",
     area: "114 km²",
@@ -68,6 +75,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ct: {
     id: "ct",
+    slug: "chatisgarh",
     name: "Chhattisgarh",
     capital: "Raipur",
     area: "135,192 km²",
@@ -77,6 +85,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   dn: {
     id: "dn",
+    slug: "dadra-nagar",
     name: "Dadra and Nagar Haveli",
     capital: "Silvassa",
     area: "491 km²",
@@ -87,6 +96,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   dd: {
     id: "dd",
+    slug: "daman-diu",
     name: "Daman and Diu",
     capital: "Daman",
     area: "112 km²",
@@ -96,6 +106,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   dl: {
     id: "dl",
+    slug: "delhi",
     name: "Delhi",
     capital: "New Delhi",
     area: "1,484 km²",
@@ -106,6 +117,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ga: {
     id: "ga",
+    slug: "goa",
     name: "Goa",
     capital: "Panaji",
     area: "3,702 km²",
@@ -116,6 +128,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   gj: {
     id: "gj",
+    slug: "gujarat",
     name: "Gujarat",
     capital: "Gandhinagar",
     area: "196,024 km²",
@@ -126,6 +139,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   hr: {
     id: "hr",
+    slug: "harsha",
     name: "Haryana",
     capital: "Chandigarh",
     area: "44,212 km²",
@@ -135,6 +149,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   hp: {
     id: "hp",
+    slug: "himachal-pradesh",
     name: "Himachal Pradesh",
     capital: "Shimla",
     area: "55,673 km²",
@@ -145,6 +160,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   jk: {
     id: "jk",
+    slug: "jammu-kashmir",
     name: "Jammu and Kashmir",
     capital: "Srinagar / Jammu",
     area: "42,241 km²",
@@ -155,6 +171,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   jh: {
     id: "jh",
+    slug: "jharkhand",
     name: "Jharkhand",
     capital: "Ranchi",
     area: "79,710 km²",
@@ -164,6 +181,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ka: {
     id: "ka",
+    slug: "karnataka",
     name: "Karnataka",
     capital: "Bengaluru",
     area: "191,791 km²",
@@ -174,6 +192,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   kl: {
     id: "kl",
+    slug: "kerala",
     name: "Kerala",
     capital: "Thiruvananthapuram",
     area: "38,863 km²",
@@ -184,6 +203,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ld: {
     id: "ld",
+    slug: "lakshadweep",
     name: "Lakshadweep",
     capital: "Kavaratti",
     area: "32 km²",
@@ -193,6 +213,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   mp: {
     id: "mp",
+    slug: "madya-pradesh",
     name: "Madhya Pradesh",
     capital: "Bhopal",
     area: "308,252 km²",
@@ -203,6 +224,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   mh: {
     id: "mh",
+    slug: "maharastra",
     name: "Maharashtra",
     capital: "Mumbai",
     area: "307,713 km²",
@@ -213,6 +235,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   mn: {
     id: "mn",
+    slug: "manipur",
     name: "Manipur",
     capital: "Imphal",
     area: "22,327 km²",
@@ -223,6 +246,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ml: {
     id: "ml",
+    slug: "meghalaya",
     name: "Meghalaya",
     capital: "Shillong",
     area: "22,429 km²",
@@ -232,6 +256,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   mz: {
     id: "mz",
+    slug: "mizoram",
     name: "Mizoram",
     capital: "Aizawl",
     area: "21,081 km²",
@@ -241,6 +266,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   nl: {
     id: "nl",
+    slug: "nagaland",
     name: "Nagaland",
     capital: "Kohima",
     area: "16,579 km²",
@@ -250,6 +276,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   or: {
     id: "or",
+    slug: "odisha",
     name: "Odisha",
     capital: "Bhubaneswar",
     area: "155,707 km²",
@@ -260,6 +287,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   pb: {
     id: "pb",
+    slug: "punjab",
     name: "Punjab",
     capital: "Chandigarh",
     area: "50,362 km²",
@@ -269,6 +297,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   rj: {
     id: "rj",
+    slug: "rajasthan",
     name: "Rajasthan",
     capital: "Jaipur",
     area: "342,239 km²",
@@ -279,6 +308,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   sk: {
     id: "sk",
+    slug: "sikkim",
     name: "Sikkim",
     capital: "Gangtok",
     area: "7,096 km²",
@@ -288,6 +318,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   tn: {
     id: "tn",
+    slug: "tamil-nadu",
     name: "Tamil Nadu",
     capital: "Chennai",
     area: "130,058 km²",
@@ -298,6 +329,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   tg: {
     id: "tg",
+    slug: "telangana",
     name: "Telangana",
     capital: "Hyderabad",
     area: "112,077 km²",
@@ -308,6 +340,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   tr: {
     id: "tr",
+    slug: "tripura",
     name: "Tripura",
     capital: "Agartala",
     area: "10,486 km²",
@@ -318,6 +351,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   up: {
     id: "up",
+    slug: "uttar-pradesh",
     name: "Uttar Pradesh",
     capital: "Lucknow",
     area: "240,928 km²",
@@ -328,6 +362,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   ut: {
     id: "ut",
+    slug: "uttarkhand",
     name: "Uttarakhand",
     capital: "Dehradun",
     area: "53,483 km²",
@@ -337,6 +372,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   wb: {
     id: "wb",
+    slug: "west-bengal",
     name: "West Bengal",
     capital: "Kolkata",
     area: "88,752 km²",
@@ -347,6 +383,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   py: {
     id: "py",
+    slug: "puducherry",
     name: "Puducherry",
     capital: "Puducherry",
     area: "479 km²",
@@ -356,6 +393,7 @@ export const stateData: Record<string, StateInfo> = {
   },
   la: {
     id: "la",
+    slug: "ladakh",
     name: "Ladakh",
     capital: "Leh",
     area: "59,146 km²",

@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import indiaMap from "@svg-maps/india";
+import { stateData } from "@/data/stateInfo";
 
 interface TooltipState {
   visible: boolean;
@@ -8,7 +9,10 @@ interface TooltipState {
   y: number;
   name: string;
 }
-
+const stateIdToSlug: Record<string, string> = {
+  "IN-AP": "andhra-pradesh",
+  "IN-TG": "telangana",
+};
 const IndiaMap = () => {
   const navigate = useNavigate();
   const [hoveredState, setHoveredState] = useState<string | null>(null);
@@ -39,8 +43,15 @@ const IndiaMap = () => {
   );
 
   const handleClick = useCallback(
-    (id: string) => {
-      navigate(`/state/${id}`);
+    (svgId: string) => {
+      // Convert "IN-AP" → "ap"
+      const shortId = svgId.replace("IN-", "").toLowerCase();
+
+      const state = stateData[shortId];
+
+      if (state) {
+        navigate(`/${state.slug}`);
+      }
     },
     [navigate],
   );
