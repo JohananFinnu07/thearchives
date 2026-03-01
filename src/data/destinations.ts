@@ -227,7 +227,9 @@ export interface Product {
 }
 
 export interface Destination {
-  id: string;
+  id: string; // internal unique id
+  slug: string; // URL slug (important for routing)
+  state: string; // NEW FIELD
   name: string;
   tagline: string;
   image: string;
@@ -237,12 +239,14 @@ export interface Destination {
   temperature: string;
   about: string;
   products: Product[];
-  culture: string; // REQUIRED (so no undefined issues)
+  culture: string;
 }
 
 export const destinations: Destination[] = [
   {
     id: "araku-valley",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Araku Valley",
     tagline: "Organic Coffee & Tribal Heritage of Andhra Pradesh",
     image: arakuImage,
@@ -417,6 +421,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "lambasingi",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Lambasingi",
     tagline: "Kashmir of Andhra Pradesh",
     image: lambasingiImage,
@@ -513,6 +519,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "vanajangi",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Vanajangi",
     tagline: "Meadows Above the Clouds",
     image: vanajangiImage,
@@ -611,6 +619,8 @@ export const destinations: Destination[] = [
 
   {
     id: "paderu",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Paderu",
     tagline: "Tribal Heritage Gateway",
     image: paderuImage,
@@ -709,6 +719,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "maredumilli",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Maredumilli",
     tagline: "Eco-Tourism Paradise",
     image: maredumilliImage,
@@ -862,6 +874,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "tirupati",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Tirupati",
     tagline: "Where Devotion Meets the Forested Hills",
     image: tirupatiImage,
@@ -916,6 +930,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "visakhapatnam",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Visakhapatnam",
     tagline: "Where the Eastern Ghats Meet the Sea",
     image: vishakapatnamImage,
@@ -991,6 +1007,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "etikoppaka",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Etikoppaka",
     tagline: "A Village That Turns Wood Into Memory",
     image: ethikopakkaImage,
@@ -1065,6 +1083,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "gandikota",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Gandikota",
     tagline: "India’s Silent Canyon of Stone and Wind",
     image: gandikotaImage,
@@ -1121,6 +1141,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "madagada",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Madagada",
     tagline: "Clay Shaped by Fire and Folklore",
     image: madagadaImage,
@@ -1153,6 +1175,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "konaseema",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Konaseema - Godavari",
     tagline: "Where Rivers Write Recipes",
     image: konaseemaImage,
@@ -1239,6 +1263,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "papikondalu",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Papikondalu",
     tagline: "Forests Folded Around a River",
     image: papikondaluImage,
@@ -1271,6 +1297,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "srisailam",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred Hills Guarded by Wilderness",
     image: srisailamImage,
@@ -1329,6 +1357,8 @@ export const destinations: Destination[] = [
   },
   {
     id: "nellore",
+    slug: "araku-valley",
+    state: "andhra-pradesh",
     name: "Nellore",
     tagline: "Fields, Salt Air, and Slow Harvests",
     image: nelloreImage,
@@ -1374,6 +1404,15 @@ export const destinations: Destination[] = [
   },
 ];
 
-export const getDestinationById = (id: string): Destination | undefined => {
-  return destinations.find((dest) => dest.id === id);
+export const getDestinationBySlug = (
+  slug: string,
+  state: string,
+): Destination | undefined => {
+  return destinations.find(
+    (dest) => dest.slug === slug && dest.state === state,
+  );
+};
+
+export const getDestinationsByState = (state: string): Destination[] => {
+  return destinations.filter((dest) => dest.state === state);
 };
