@@ -56,6 +56,7 @@ import pindiMiriamImage from "@/assets/Recipes/PMH.jpg";
 
 export interface Recipe {
   name: string;
+  state: string;
   description: string;
   destination: string;
 
@@ -78,6 +79,7 @@ export interface Recipe {
 export const recipes: Recipe[] = [
   {
     name: "Niger Seed Chutney",
+    state: "andhra-pradesh",
     destination: "Araku Valley",
     description:
       "A deeply roasted tribal-style chutney made from niger seeds, traditionally served with hot millet rotis and steamed rice in the Eastern Ghats.",
@@ -111,6 +113,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Bamboo Chicken",
+    state: "andhra-pradesh",
+
     destination: "Araku Valley",
     description:
       "A smoky tribal delicacy where marinated chicken is slow-cooked inside bamboo over open fire, sealing in aroma and forest flavours.",
@@ -153,6 +157,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Bamboo Biryani",
+    state: "andhra-pradesh",
+
     destination: "Araku Valley",
     description:
       "A forest-style biryani layered inside bamboo and slow-cooked over fire, absorbing smoky and woody undertones.",
@@ -196,6 +202,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Ragi Sankati - Natu Kodi",
+    state: "andhra-pradesh",
+
     destination: "Araku Valley",
     description:
       "A nourishing millet staple served with fiery country chicken curry, deeply rooted in the Eastern Ghats tribal diet.",
@@ -236,6 +244,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Madapa - Tribal Rice Wine",
+    state: "andhra-pradesh",
+
     destination: "Araku Valley",
     description:
       "A traditionally fermented rice drink prepared during festivals and community gatherings in Araku's tribal villages.",
@@ -273,6 +283,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Spicy Country Chicken - Lambasingi Style",
+    state: "andhra-pradesh",
+
     destination: "Lambasingi",
     description:
       "A bold hill-style country chicken curry slow-cooked with strong spices, perfect for Lambasingi’s cold and misty evenings.",
@@ -307,6 +319,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Tribal Pickles & Hill Spices",
+    state: "andhra-pradesh",
+
     destination: "Lambasingi",
     description:
       "Sun-cured tribal pickles and freshly ground spice blends prepared in hill households using locally grown produce.",
@@ -339,6 +353,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Strawberry Delight",
+    state: "andhra-pradesh",
+
     destination: "Lambasingi",
     description:
       "A fresh hill-style dessert made from locally grown Lambasingi strawberries, lightly sweetened to preserve natural flavor.",
@@ -369,6 +385,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Wild Forest Mushroom Fry",
+    state: "andhra-pradesh",
+
     destination: "Lambasingi",
     description:
       "A monsoon-only delicacy made from freshly foraged wild mushrooms sautéed with hill spices.",
@@ -402,6 +420,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Andhra Chicken Pulao - Vanjangi Style",
+    state: "andhra-pradesh",
+
     destination: "Vanajangi",
     description:
       "A fragrant village-style chicken pulao cooked with whole spices and slow-simmered rice, reflecting Vanjangi’s rustic hill cooking traditions.",
@@ -438,6 +458,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Mirapakaya Bajji - Vanjangi Style",
+    state: "andhra-pradesh",
+
     destination: "Vanajangi",
     description:
       "A crispy deep-fried green chilli snack coated in gram flour batter, commonly enjoyed in Vanjangi’s cool evenings.",
@@ -471,6 +493,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Paderu Turmeric Rasam",
+    state: "andhra-pradesh",
+
     destination: "Paderu",
     description:
       "A warm and healing rasam prepared using high-curcumin Paderu turmeric, traditionally consumed during monsoon and winter.",
@@ -503,6 +527,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Korra Upma",
+    state: "andhra-pradesh",
+
     destination: "Paderu",
     description:
       "A nutritious foxtail millet(Korra) breakfast prepared using simple spices, reflecting Paderu’s millet-based diet.",
@@ -535,6 +561,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Millet Idly - Paderu Style",
+    state: "andhra-pradesh",
+
     destination: "Paderu",
     description:
       "Soft steamed idlies made using millets instead of rice, a healthier adaptation of a traditional staple.",
@@ -560,6 +588,8 @@ export const recipes: Recipe[] = [
 
   {
     name: "Bamboo Shoot Curry - Maredumilli",
+    state: "andhra-pradesh",
+
     destination: "Maredumilli",
     description:
       "A seasonal forest delicacy prepared using tender bamboo shoots harvested during monsoon in the Eastern Ghats.",
@@ -592,6 +622,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Adavi Tega Dumpala Koora",
+    state: "andhra-pradesh",
+
     destination: "Maredumilli",
     description:
       "A traditional curry made from wild forest tubers foraged from the hills of Maredumilli.",
@@ -624,6 +656,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Forest Honey Rice - Maredumilli",
+    state: "andhra-pradesh",
+
     destination: "Maredumilli",
     description:
       "A simple sweet dish made by mixing warm rice with raw forest honey collected from hill regions.",
@@ -647,6 +681,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Jackfruit Curry - Panasa Koora",
+    state: "andhra-pradesh",
+
     destination: "Maredumilli",
     description:
       "A summer specialty made with tender raw jackfruit cooked using traditional tribal spice blends.",
@@ -679,6 +715,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Marichi Annam - Tirupati Style",
+    state: "andhra-pradesh",
+
     destination: "Tirupati",
     description:
       "A traditional pepper-infused rice dish prepared with ghee and whole spices, commonly associated with temple-style cooking.",
@@ -712,6 +750,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Renigunta Appam",
+    state: "andhra-pradesh",
+
     destination: "Tirupati",
     description:
       "A traditional sweet appam prepared with rice flour and jaggery, popular in Renigunta households during festivals.",
@@ -744,6 +784,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Pot-Curd Pulihora",
+    state: "andhra-pradesh",
+
     destination: "Tirupati",
     description:
       "A cooling rice dish mixed with fresh curd and tempered spices, traditionally served in clay pots.",
@@ -777,6 +819,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Murri Mixture - Vizag Style",
+    state: "andhra-pradesh",
+
     destination: "Visakhapatnam",
     description:
       "A spicy puffed rice snack mixed with peanuts, onions, and coastal spices, popular as a street-side treat in Vizag.",
@@ -812,6 +856,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Bellam Paramannam",
+    state: "andhra-pradesh",
+
     destination: "Visakhapatnam",
     description:
       "A traditional jaggery rice pudding prepared during festivals and temple celebrations in coastal Andhra.",
@@ -845,6 +891,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Ulava Charu - Coastal Andhra Style",
+    state: "andhra-pradesh",
+
     destination: "Visakhapatnam",
     description:
       "A hearty horse gram soup simmered for hours, served with rice and cream in coastal Andhra households.",
@@ -878,6 +926,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Pottikkalu - Jackfruit Leaf Idlis",
+    state: "andhra-pradesh",
+
     destination: "Etikoppaka",
     description:
       "A unique twist on the traditional idli, steamed inside handmade jackfruit leaf cups to infuse a woody, herbal aroma.",
@@ -910,6 +960,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Lakkapidathala Vantalu - Miniature Heritage",
+    state: "andhra-pradesh",
+
     destination: "Etikoppaka",
     description:
       "A cultural 'recipe' where traditional lacquer toy sets are used to teach children the basics of Andhra culinary arts.",
@@ -938,6 +990,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Divi-Divi Heritage Brew",
+    state: "andhra-pradesh",
+
     destination: "Etikoppaka",
     description:
       "A traditional forest tea made from the pods of the Divi-Divi tree, known for its medicinal tannins and earthy flavor.",
@@ -965,6 +1019,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Dibba Rotti - Gandikota Style",
+    state: "andhra-pradesh",
+
     destination: "Gandikota",
     description:
       "A thick and crispy rice-based pancake cooked slowly in an iron pan, popular in Rayalaseema households.",
@@ -998,6 +1054,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Pachi Pulusu - Gandikota Style",
+    state: "andhra-pradesh",
+
     destination: "Gandikota",
     description:
       "A raw tamarind-based cooling rasam prepared without boiling, ideal for Rayalaseema’s hot climate.",
@@ -1030,6 +1088,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Matihandi Chicken - Madagada Style",
+    state: "andhra-pradesh",
+
     destination: "Madagada",
     description:
       "A rustic tribal chicken curry slow-cooked in an earthen pot over wood fire.",
@@ -1064,6 +1124,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Kobbari Paalu Pulao",
+    state: "andhra-pradesh",
+
     destination: "Konaseema - Godavari",
     description:
       "A fragrant rice dish cooked in fresh coconut milk, popular in coastal Andhra households.",
@@ -1097,6 +1159,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Pulasa Pulusu",
+    state: "andhra-pradesh",
+
     destination: "Konaseema - Godavari",
     description:
       "A prized seasonal curry made with Pulasa (Hilsa) fish cooked in tangy tamarind gravy.",
@@ -1131,6 +1195,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Potharekulu",
+    state: "andhra-pradesh",
+
     destination: "Konaseema - Godavari",
     description:
       "A delicate layered sweet made from thin rice starch sheets filled with sugar or jaggery and ghee.",
@@ -1160,6 +1226,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Kakinada Gottam Kaja",
+    state: "andhra-pradesh",
+
     destination: "Konaseema - Godavari",
     description:
       "A crispy layered sweet soaked in sugar syrup, famous in Kakinada.",
@@ -1185,6 +1253,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Munagaku Pulihora - Papikondalu Style",
+    state: "andhra-pradesh",
+
     destination: "Papikondalu",
     description:
       "A nutritious tamarind rice prepared with fresh drumstick leaves, combining tangy flavor with forest-grown greens.",
@@ -1222,6 +1292,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Jonna Rotte & Ambali - Papikondalu Style",
+    state: "andhra-pradesh",
+
     destination: "Papikondalu",
     description:
       "A traditional millet-based meal featuring sorghum flatbread paired with spicy chutney and fermented millet porridge.",
@@ -1255,6 +1327,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Sarva Pindi - Nallamala Style",
+    state: "andhra-pradesh",
+
     destination: "Srisailam – Nallamala Forest",
     description:
       "A crispy spiced rice flour flatbread cooked slowly on an iron pan, popular in forest-fringe villages.",
@@ -1290,6 +1364,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Makka Jonna Gatka - Srisailam Style",
+    state: "andhra-pradesh",
+
     destination: "Srisailam – Nallamala Forest",
     description:
       "A simple maize-based porridge prepared in forest villages for hydration and sustained energy.",
@@ -1320,6 +1396,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Chintha Chepala Iguru - Nellore Style",
+    state: "andhra-pradesh",
+
     destination: "Nellore",
     description:
       "A bold and tangy tamarind-based fish curry known for its rich spice and deep coastal flavor.",
@@ -1355,6 +1433,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Neyyi Karam Dosa - Nellore",
+    state: "andhra-pradesh",
+
     destination: "Nellore",
     description:
       "A crispy dosa generously spread with spicy karam powder and finished with ghee.",
@@ -1379,6 +1459,8 @@ export const recipes: Recipe[] = [
   },
   {
     name: "Pindi Miriyam - Nellore Style",
+    state: "andhra-pradesh",
+
     destination: "Nellore",
     description:
       "A pepper-spiced rice flour snack prepared traditionally in Nellore households.",

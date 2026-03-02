@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import StateHeader from "@/components/StateHeader";
 import Hero from "@/components/Hero";
 import Destinations from "@/components/Destinations";
 import HiddenGems from "@/components/HiddenGems";
@@ -18,25 +18,27 @@ import StateComingSoon from "./StateComingSoon";
 const StateHomePage = () => {
   const { state } = useParams<{ state: string }>();
 
-  // Check if state exists in full India list
-  const stateInfo = state ? stateData[state] : undefined;
+  if (!state) return <NotFound />;
 
-  // Check if state is launched (exists in stateConfig)
-  const launchedState = state ? stateConfig[state] : undefined;
+  // Check if state exists in India dataset
+  const stateInfo = stateData[state];
 
   if (!stateInfo) {
     return <NotFound />;
   }
 
+  // Check if state is launched
+  const launchedState = stateConfig[state];
+
   if (!launchedState) {
     return <StateComingSoon state={stateInfo} />;
   }
 
-  const stateDestinations = getDestinationsByState(state!);
+  const stateDestinations = getDestinationsByState(state);
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <StateHeader />
 
       <main>
         <Hero state={launchedState} />

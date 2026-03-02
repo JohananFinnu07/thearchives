@@ -4,7 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import Index from "./pages/StateLandingPage";
+
+import IndiaLandingPage from "./pages/IndiaMapLandingPage";
+import StateHomePage from "./pages/StateLandingPage";
 import DestinationDetail from "./pages/DestinationDetail";
 import DestinationsPage from "./pages/DestinationsPage";
 import HiddenGemsPage from "./pages/HiddenGemsPage";
@@ -27,38 +29,44 @@ const App = () => (
       <HashRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/destinations" element={<DestinationsPage />} />
-          <Route path="/hidden-gems" element={<HiddenGemsPage />} />
-          <Route path="/hidden-gems/:id" element={<LocationHiddenGemsPage />} />
+          {/* India Landing */}
+          <Route path="/" element={<IndiaLandingPage />} />
+
+          {/* State Landing */}
+          <Route path="/:state" element={<StateHomePage />} />
+
+          {/* Destinations */}
+          <Route path="/:state/destinations" element={<DestinationsPage />} />
           <Route
-            path="/hidden-gems/:locationId/:productName"
+            path="/:state/destination/:slug"
+            element={<DestinationDetail />}
+          />
+
+          {/* Hidden Gems */}
+          <Route path="/:state/hidden-gems" element={<HiddenGemsPage />} />
+          <Route
+            path="/:state/hidden-gems/:slug"
+            element={<LocationHiddenGemsPage />}
+          />
+          <Route
+            path="/:state/hidden-gems/:slug/:productSlug"
             element={<ProductDetailPage />}
           />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/gallery/:id" element={<LocationGalleryPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/destination/:id" element={<DestinationDetail />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/destinations" element={<DestinationsPage />} />
+
+          {/* Gallery */}
+          <Route path="/:state/gallery" element={<GalleryPage />} />
           <Route
-            path="/destination/:destinationId"
-            element={<DestinationsPage />}
+            path="/:state/gallery/:slug"
+            element={<LocationGalleryPage />}
           />
 
-          <Route path="/hidden-gems" element={<HiddenGemsPage />} />
-          <Route
-            path="/hidden-gems/:destinationId"
-            element={<HiddenGemsPage />}
-          />
-          <Route
-            path="/hidden-gems/:destinationId/:productSlug"
-            element={<HiddenGemsPage />}
-          />
+          {/* Recipes */}
+          <Route path="/:state/recipes/:slug" element={<RecipeDetailPage />} />
 
-          <Route path="/recipes/:slug" element={<RecipeDetailPage />} />
+          {/* About (Global) */}
+          <Route path="/:state/about" element={<AboutPage />} />
 
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>

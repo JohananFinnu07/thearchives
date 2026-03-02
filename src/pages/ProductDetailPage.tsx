@@ -1,34 +1,38 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MapPin, ArrowLeft, Leaf, Heart, Sparkles } from "lucide-react";
-import Header from "@/components/Header";
+import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
-import { getDestinationById } from "@/data/destinations";
+import { getDestinationBySlug } from "@/data/destinations";
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/slugify";
+import { stateConfig } from "@/data/stateConfig";
 const ProductDetailPage = () => {
-  const { locationId, productName } = useParams<{
-    locationId: string;
-    productName: string;
+  const { state, slug, productSlug } = useParams<{
+    state: string;
+    slug: string;
+    productSlug: string;
   }>();
 
-  const destination = getDestinationById(locationId || "");
-
-  const decodedProductName = productName ? decodeURIComponent(productName) : "";
+  const destination =
+    state && slug ? getDestinationBySlug(slug, state) : undefined;
 
   const product = destination?.products.find(
-    (p) => slugify(p.name) === decodedProductName,
+    (p) => slugify(p.name) === productSlug,
   );
+
+  const prefix = (path: string) => (state ? `/${state}${path}` : path);
 
   if (!destination || !product) {
     return (
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-32 pb-16 text-center">
-          <h1 className="font-serif text-3xl text-foreground mb-4">
-            Product not found
-          </h1>
-          <Link to="/hidden-gems" className="text-primary hover:underline">
+          <h1 className="font-serif text-3xl mb-4">Product not found</h1>
+          <Link
+            to={prefix(`/hidden-gems/${slug}`)}
+            className="text-primary hover:underline"
+          >
             Back to Hidden Gems
           </Link>
         </main>
@@ -44,28 +48,27 @@ const ProductDetailPage = () => {
       <Header />
 
       <main className="pt-20">
-        {/* ================= HERO SECTION ================= */}
-        <section className="relative bg-background py-16">
+        {/* ================= HERO ================= */}
+        <section className="relative py-16">
           <div className="container mx-auto px-6 lg:px-12 relative">
             {/* Subtle Background Panel */}
             <div className="absolute top-0 right-0 w-[45%] h-full bg-secondary/20 rounded-l-[60px] -z-10" />
 
             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-              {/* LEFT – TEXT */}
+              {/* LEFT CONTENT */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                {/* Breadcrumb */}
                 <Link
                   to={
                     isUnderrated
-                      ? `/hidden-gems/${destination.id}`
-                      : `/destination/${destination.id}`
+                      ? prefix(`/hidden-gems/${slug}`)
+                      : prefix(`/destination/${slug}`)
                   }
-                  state={!isUnderrated ? { scrollTo: "famous" } : undefined}
+                  state={isUnderrated ? undefined : { scrollTo: "famous" }}
                   className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
@@ -76,7 +79,7 @@ const ProductDetailPage = () => {
                   </span>
                 </Link>
                 {/* Title */}
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
+                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
                   {product.name}
                 </h1>
 
@@ -84,7 +87,7 @@ const ProductDetailPage = () => {
                 <div className="flex items-center gap-2 text-primary">
                   <MapPin className="w-5 h-5" />
                   <span className="text-lg">
-                    From {destination.name}, Andhra Pradesh
+                    From {destination.name}, {stateConfig?.[state!]?.name}
                   </span>
                 </div>
 
@@ -115,14 +118,13 @@ const ProductDetailPage = () => {
                 </p>
               </motion.div>
 
-              {/* RIGHT – IMAGE */}
+              {/* RIGHT IMAGE */}
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="relative"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
                     src={product.image || destination.image}
                     alt={product.name}
@@ -133,6 +135,8 @@ const ProductDetailPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Divider */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
@@ -146,14 +150,14 @@ const ProductDetailPage = () => {
             <div className="grid lg:grid-cols-3 gap-16">
               {/* LEFT CONTENT */}
               <div className="lg:col-span-2 space-y-16">
-                {/* Cultivation & Harvesting */}
+                {/* Cultivation & Significance Cards */}
                 <div>
-                  <h2 className="font-serif text-2xl font-semibold text-foreground mb-8">
-                    Cultivation & Harvesting
+                  <h2 className="font-serif text-2xl font-semibold mb-8">
+                    Cultivation & Significance
                   </h2>
 
                   <div className="grid sm:grid-cols-2 gap-8">
-                    {/* Making Process */}
+                    {/* Making */}
                     <div className="bg-card rounded-2xl p-6 border border-border">
                       <div className="aspect-video rounded-xl overflow-hidden mb-4">
                         <img
@@ -168,7 +172,7 @@ const ProductDetailPage = () => {
                       </div>
 
                       <h3 className="font-serif text-lg font-semibold mb-2">
-                        {product.name}
+                        Cultivation & Making
                       </h3>
 
                       <p className="text-muted-foreground text-sm leading-relaxed">
@@ -185,13 +189,13 @@ const ProductDetailPage = () => {
                             product.image ||
                             destination.image
                           }
-                          alt="Flavor profile"
+                          alt="Significance"
                           className="w-full h-full object-cover"
                         />
                       </div>
 
                       <h3 className="font-serif text-lg font-semibold mb-2">
-                        Significance
+                        Cultural Significance
                       </h3>
 
                       <p className="text-muted-foreground text-sm leading-relaxed">
@@ -203,12 +207,12 @@ const ProductDetailPage = () => {
 
                 {/* Benefits */}
                 <div>
-                  <h2 className="font-serif text-2xl font-semibold text-foreground mb-8">
+                  <h2 className="font-serif text-2xl font-semibold mb-8">
                     Benefits & Uses
                   </h2>
 
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {product.uses.map((use, index) => (
+                    {product.uses.map((use) => (
                       <div
                         key={use}
                         className="bg-secondary/50 rounded-xl p-4 flex items-center gap-3"
@@ -217,18 +221,16 @@ const ProductDetailPage = () => {
                           <Leaf className="w-5 h-5 text-primary" />
                         </div>
 
-                        <span className="text-foreground font-medium text-sm">
-                          {use}
-                        </span>
+                        <span className="text-sm font-medium">{use}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
 
-              {/* RIGHT SIDEBAR */}
+              {/* SIDEBAR */}
               <div className="space-y-8">
-                <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-card">
+                <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={destination.image}
@@ -247,9 +249,7 @@ const ProductDetailPage = () => {
                     </p>
 
                     <Button asChild variant="outline" className="w-full">
-                      <Link to={`/destination/${destination.id}`}>
-                        View Destination
-                      </Link>
+                      <Link to={prefix(`/${slug}`)}>View Destination</Link>
                     </Button>
                   </div>
                 </div>

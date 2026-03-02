@@ -10,7 +10,7 @@ const StateComingSoon = ({ state }: Props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-background">
       <h1 className="text-4xl font-display font-bold mb-4">{state.name}</h1>
 
       <p className="text-muted-foreground max-w-md mb-6">
@@ -20,9 +20,10 @@ const StateComingSoon = ({ state }: Props) => {
 
       <button
         onClick={() => navigate("/")}
-        className="flex items-center gap-2 text-primary hover:underline"
+        className="flex items-center gap-2 text-primary hover:underline transition-colors"
       >
-        <ArrowLeft size={18} /> Back to India Map
+        <ArrowLeft size={18} />
+        Back to India Map
       </button>
     </div>
   );

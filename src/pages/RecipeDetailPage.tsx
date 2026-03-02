@@ -1,28 +1,23 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  ArrowLeft,
-  Clock,
-  ChefHat,
-  Flame,
-  ShoppingBag,
-  ArrowUpRight,
-} from "lucide-react";
-import Header from "@/components/Header";
+import { ArrowLeft, Clock, ChefHat, Flame, ArrowUpRight } from "lucide-react";
+import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
 import { recipes } from "@/data/recipes";
 import { ingredientAffiliateMap } from "@/data/ingredientAffiliateMap";
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+import { slugify } from "@/lib/slugify";
 
 const RecipeDetail = () => {
-  const { slug } = useParams();
+  const { state, slug } = useParams<{
+    state: string;
+    slug: string;
+  }>();
 
-  const recipe = recipes.find((r) => slugify(r.name) === slug);
+  const recipe = recipes.find(
+    (r) => slugify(r.name) === slug && r.state === state,
+  );
+
+  const prefix = (path: string) => (state ? `/${state}${path}` : path);
 
   if (!recipe) {
     return (
@@ -30,18 +25,26 @@ const RecipeDetail = () => {
         <Header />
         <div className="pt-32 text-center">
           <h1 className="text-3xl font-serif">Recipe Not Found</h1>
+          <Link
+            to={prefix("/")}
+            className="text-primary underline mt-4 inline-block"
+          >
+            Return Home
+          </Link>
         </div>
         <Footer />
       </div>
     );
   }
 
+  const destinationSlug = slugify(recipe.destination);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
       <main className="pt-20">
-        {/* ================= HERO SECTION ================= */}
+        {/* HERO */}
         <section className="py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -53,16 +56,12 @@ const RecipeDetail = () => {
                 className="space-y-6"
               >
                 <Link
-                  to={`/destination/${recipe.destination
-                    .toLowerCase()
-                    .replace(/[^a-z0-9\s-]/g, "")
-                    .replace(/\s+/g, "-")
-                    .replace(/-+/g, "-")}`}
+                  to={prefix(`/destination/${destinationSlug}`)}
                   state={{ scrollTo: "recipes" }}
                   className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  Back to Recipes
+                  Back to {recipe.destination}
                 </Link>
 
                 <h1 className="font-serif text-5xl font-semibold">
@@ -92,7 +91,7 @@ const RecipeDetail = () => {
                 </div>
               </motion.div>
 
-              {/* RIGHT IMAGE */}
+              {/* IMAGE */}
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -111,12 +110,12 @@ const RecipeDetail = () => {
 
         <div className="h-[1px] bg-border max-w-5xl mx-auto" />
 
-        {/* ================= MAIN CONTENT ================= */}
+        {/* CONTENT */}
         <section className="py-20">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-3 gap-16">
               {/* INGREDIENTS */}
-              <div className="lg:col-span-1">
+              <div>
                 <div className="bg-card rounded-2xl p-8 border border-border sticky top-24 shadow-sm">
                   <h2 className="font-serif text-2xl mb-6">Ingredients</h2>
 
@@ -149,7 +148,7 @@ const RecipeDetail = () => {
                                   Verified
                                 </span>
                               )}
-                              <ArrowUpRight className="ml-1 w-3 h-3 transition-transform duration-200 group-hover:translate-x-1" />
+                              <ArrowUpRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition" />
                             </a>
                           ) : (
                             <span>{item}</span>
@@ -174,10 +173,7 @@ const RecipeDetail = () => {
                       transition={{ duration: 0.4 }}
                       className="relative"
                     >
-                      {/* Dot */}
                       <span className="absolute -left-[30px] top-2 w-3 h-3 rounded-full bg-primary"></span>
-
-                      {/* Step text */}
                       <p className="text-lg text-muted-foreground leading-relaxed">
                         {step}
                       </p>
@@ -189,15 +185,15 @@ const RecipeDetail = () => {
           </div>
         </section>
 
-        {/* ================= STORY SECTION ================= */}
+        {/* STORY */}
         {recipe.story && (
           <section className="bg-secondary/30 py-20">
-            <div className="max-w-4xl mx-auto px-6">
-              <h2 className="font-serif text-3xl mb-8 text-center">
+            <div className="max-w-4xl mx-auto px-6 text-center">
+              <h2 className="font-serif text-3xl mb-8">
                 The Story Behind This Dish
               </h2>
 
-              <p className="text-lg text-muted-foreground leading-relaxed text-center">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 {recipe.story}
               </p>
             </div>

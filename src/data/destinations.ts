@@ -421,7 +421,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "lambasingi",
-    slug: "araku-valley",
+    slug: "lambasingi",
     state: "andhra-pradesh",
     name: "Lambasingi",
     tagline: "Kashmir of Andhra Pradesh",
@@ -519,7 +519,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "vanajangi",
-    slug: "araku-valley",
+    slug: "vanajangi",
     state: "andhra-pradesh",
     name: "Vanajangi",
     tagline: "Meadows Above the Clouds",
@@ -619,7 +619,7 @@ export const destinations: Destination[] = [
 
   {
     id: "paderu",
-    slug: "araku-valley",
+    slug: "paderu",
     state: "andhra-pradesh",
     name: "Paderu",
     tagline: "Tribal Heritage Gateway",
@@ -719,7 +719,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "maredumilli",
-    slug: "araku-valley",
+    slug: "maredumilli",
     state: "andhra-pradesh",
     name: "Maredumilli",
     tagline: "Eco-Tourism Paradise",
@@ -874,7 +874,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "tirupati",
-    slug: "araku-valley",
+    slug: "tirupati",
     state: "andhra-pradesh",
     name: "Tirupati",
     tagline: "Where Devotion Meets the Forested Hills",
@@ -930,7 +930,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "visakhapatnam",
-    slug: "araku-valley",
+    slug: "visakhapatnam",
     state: "andhra-pradesh",
     name: "Visakhapatnam",
     tagline: "Where the Eastern Ghats Meet the Sea",
@@ -1007,7 +1007,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "etikoppaka",
-    slug: "araku-valley",
+    slug: "etikoppaka",
     state: "andhra-pradesh",
     name: "Etikoppaka",
     tagline: "A Village That Turns Wood Into Memory",
@@ -1083,7 +1083,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "gandikota",
-    slug: "araku-valley",
+    slug: "gandikota",
     state: "andhra-pradesh",
     name: "Gandikota",
     tagline: "India’s Silent Canyon of Stone and Wind",
@@ -1141,7 +1141,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "madagada",
-    slug: "araku-valley",
+    slug: "madagada",
     state: "andhra-pradesh",
     name: "Madagada",
     tagline: "Clay Shaped by Fire and Folklore",
@@ -1175,7 +1175,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "konaseema",
-    slug: "araku-valley",
+    slug: "konaseema",
     state: "andhra-pradesh",
     name: "Konaseema - Godavari",
     tagline: "Where Rivers Write Recipes",
@@ -1263,7 +1263,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "papikondalu",
-    slug: "araku-valley",
+    slug: "papikondalu",
     state: "andhra-pradesh",
     name: "Papikondalu",
     tagline: "Forests Folded Around a River",
@@ -1297,7 +1297,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "srisailam",
-    slug: "araku-valley",
+    slug: "srisailam",
     state: "andhra-pradesh",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred Hills Guarded by Wilderness",
@@ -1357,7 +1357,7 @@ export const destinations: Destination[] = [
   },
   {
     id: "nellore",
-    slug: "araku-valley",
+    slug: "nellore",
     state: "andhra-pradesh",
     name: "Nellore",
     tagline: "Fields, Salt Air, and Slow Harvests",

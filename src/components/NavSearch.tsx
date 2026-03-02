@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, MapPin, Sparkles, ChefHat, Star } from "lucide-react";
 import {
@@ -24,6 +24,7 @@ const slugify = (text: string) =>
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const { state } = useParams<{ state: string }>(); // ✅ NEW
 
   /* ⌘K / Ctrl+K */
   useEffect(() => {
@@ -37,9 +38,15 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  // ✅ UPDATED
   const handleSelect = (route: string) => {
     setOpen(false);
-    navigate(route);
+
+    if (state) {
+      navigate(`/${state}${route}`);
+    } else {
+      navigate(route);
+    }
   };
 
   /* Flatten products */
@@ -89,8 +96,6 @@ const NavSearch = () => {
               <CommandInput placeholder="Search destinations, products, or recipes..." />
 
               <CommandList className="max-h-[60vh] overflow-y-auto">
-                {/* Default / Filtered automatically by cmdk */}
-
                 <CommandEmpty>No results found.</CommandEmpty>
 
                 {/* Destinations */}

@@ -1,10 +1,29 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom"; // ✅ added useParams
 import heroImage from "@/assets/hero-araku.jpg";
+import { stateConfig } from "@/data/stateConfig"; // ✅ theme source
 
-const Hero = () => {
+interface HeroProps {
+  state?: any; // optional for flexibility
+}
+
+const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
+  const { state } = useParams<{ state: string }>();
+
+  // Prefer passed state (from StateLandingPage), fallback to URL
+  const activeState = passedState || (state ? stateConfig[state] : null);
+
+  // ✅ Dynamic hero image fallback
+  const backgroundImage = activeState?.heroImage || heroImage;
+
+  // ✅ Prefix helper
+  const prefix = (path: string) => {
+    if (!state) return path;
+    return `/${state}${path}`;
+  };
+
   return (
     <section
       id="home"
@@ -13,8 +32,8 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
-          alt="Scenic view of Araku Valley"
+          src={backgroundImage}
+          alt="Scenic view"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 gradient-hero" />
@@ -34,7 +53,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-sage font-medium tracking-widest uppercase text-sm mb-6"
           >
-            Hidden Local Products & Destinations of Andhra Pradesh
+            {activeState
+              ? `Hidden Local Products & Destinations of ${activeState.name}`
+              : "Hidden Local Products & Destinations of India"}
           </motion.p>
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6">
@@ -45,8 +66,8 @@ const Hero = () => {
 
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
             We document famous and underrated regional products, tribal crafts,
-            traditional foods, and cultural treasures across the Eastern Ghats
-            and beyond — before they disappear from national memory.
+            traditional foods, and cultural treasures — before they disappear
+            from national memory.
           </p>
 
           <motion.div
@@ -60,15 +81,16 @@ const Hero = () => {
               className="gradient-forest text-primary-foreground border-0 px-8 py-6 text-base font-medium shadow-elevated hover:scale-105 transition-transform"
               asChild
             >
-              <Link to="/destinations">Start Exploring</Link>
+              <Link to={prefix("/destinations")}>Start Exploring</Link>
             </Button>
+
             <Button
               size="lg"
               variant="outline"
               className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 px-8 py-6 text-base"
               asChild
             >
-              <Link to="/hidden-gems">Find Hidden Gems</Link>
+              <Link to={prefix("/hidden-gems")}>Find Hidden Gems</Link>
             </Button>
           </motion.div>
         </motion.div>

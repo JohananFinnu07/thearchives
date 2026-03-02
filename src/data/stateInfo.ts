@@ -10,7 +10,7 @@ export interface StateInfo {
 }
 
 export const stateData: Record<string, StateInfo> = {
-  an: {
+  andaman: {
     id: "an",
     slug: "andaman-nicobar",
     name: "Andaman and Nicobar Islands",
@@ -21,7 +21,7 @@ export const stateData: Record<string, StateInfo> = {
     description:
       "A union territory of India comprising 572 islands in the Bay of Bengal.",
   },
-  ap: {
+  "andhra-pradesh": {
     id: "ap",
     slug: "andhra-pradesh",
     name: "Andhra Pradesh",
@@ -327,7 +327,7 @@ export const stateData: Record<string, StateInfo> = {
     description:
       "A Dravidian cultural heartland with ancient temples and cuisine.",
   },
-  tg: {
+  telangana: {
     id: "tg",
     slug: "telangana",
     name: "Telangana",

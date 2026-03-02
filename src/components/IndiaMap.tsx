@@ -42,19 +42,21 @@ const IndiaMap = () => {
     [tooltip.visible],
   );
 
-  const handleClick = useCallback(
-    (svgId: string) => {
-      // Convert "IN-AP" → "ap"
-      const shortId = svgId.replace("IN-", "").toLowerCase();
+  const handleClick = (svgId: string) => {
+    const mapping: Record<string, string> = {
+      ap: "andhra-pradesh",
+      tg: "telangana",
+      an: "andaman",
+    };
 
-      const state = stateData[shortId];
+    const slug = mapping[svgId];
 
-      if (state) {
-        navigate(`/${state.slug}`);
-      }
-    },
-    [navigate],
-  );
+    if (slug) {
+      navigate(`/${slug}`);
+    } else {
+      console.warn("No mapping for:", svgId);
+    }
+  };
 
   return (
     <div
@@ -73,7 +75,6 @@ const IndiaMap = () => {
           {tooltip.name}
         </div>
       )}
-
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox={indiaMap.viewBox}
@@ -85,7 +86,6 @@ const IndiaMap = () => {
             key={location.id}
             id={location.id}
             d={location.path}
-            className="cursor-pointer transition-all duration-300 ease-out"
             fill={
               hoveredState === location.id
                 ? "hsl(var(--map-hover))"
@@ -93,10 +93,10 @@ const IndiaMap = () => {
             }
             stroke="hsl(var(--map-stroke))"
             strokeWidth={0.8}
-            onMouseEnter={() => handleMouseEnter(location.id, location.name)}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick(location.id)}
+            pointerEvents="visiblePainted" // 🔥 THIS IS THE FIX
             style={{
+              cursor: "pointer",
+              transition: "all 0.3s ease",
               filter:
                 hoveredState === location.id
                   ? "drop-shadow(0 2px 6px hsl(var(--map-hover) / 0.4))"
@@ -104,6 +104,12 @@ const IndiaMap = () => {
               transform:
                 hoveredState === location.id ? "scale(1.01)" : "scale(1)",
               transformOrigin: "center",
+            }}
+            onMouseEnter={() => handleMouseEnter(location.id, location.name)}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => {
+              console.log("CLICKED:", location.id);
+              handleClick(location.id);
             }}
           />
         ))}
