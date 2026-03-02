@@ -2,10 +2,8 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Link, useParams } from "react-router-dom"; // ✅ added
-import {
-  destinations as allDestinations,
-  Destination,
-} from "@/data/destinations";
+import { allDestinations } from "@/data/destinations";
+import { Destination } from "@/data/types";
 import { stateConfig } from "@/data/stateConfig"; // ✅ for state name
 
 interface DestinationsProps {
@@ -133,7 +131,7 @@ const Destinations: React.FC<DestinationsProps> = ({ destinations }) => {
               className="flex-shrink-0 snap-center"
             >
               <Link
-                to={`/${state}/destination/${destination.slug}`}
+                to={prefix(`/destination/${destination.slug}`)}
                 className="group block relative w-[320px] sm:w-[400px] lg:w-[480px] h-[400px] sm:h-[480px] lg:h-[520px] rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow duration-500"
               >
                 <div className="absolute inset-0">

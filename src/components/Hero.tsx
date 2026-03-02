@@ -47,27 +47,29 @@ const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
+          {/* Caption */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-sage font-medium tracking-widest uppercase text-sm mb-6"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sage font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-6"
           >
-            {activeState
-              ? `Hidden Local Products & Destinations of ${activeState.name}`
-              : "Hidden Local Products & Destinations of India"}
+            Step Into the Story
           </motion.p>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-tight mb-6">
-            The <span className="italic text-[#D6A84F]">Archive</span> Of Hidden
-            <br />
-            <span className="italic">Local Gems</span>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight text-primary-foreground mb-6 max-w-4xl">
+            The <span className="italic">Living</span> Treasures{" "}
+            <br className="hidden sm:block" />
+            of{" "}
+            <span className="text-amber-300 font-semibold">
+              {activeState ? activeState.name : "India"}
+            </span>
           </h1>
 
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            We document famous and underrated regional products, tribal crafts,
-            traditional foods, and cultural treasures — before they disappear
-            from national memory.
+            We document famous and overlooked regional products, tribal crafts,
+            traditional foods, and cultural treasures — preserving the stories
+            that define a place.
           </p>
 
           <motion.div

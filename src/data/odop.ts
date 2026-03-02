@@ -262,7 +262,320 @@ export const odopAndhraPradesh: ODOPDistrict[] = [
     ],
   },
 ];
-
+export const odopTelangana: ODOPDistrict[] = [
+  {
+    id: "adilabad",
+    name: "Adilabad",
+    anchorProduct: "Soybean based products",
+    anchorProductDescription:
+      "Soybean cultivation supports oil extraction and protein-rich food production.",
+    culturalSignificance:
+      "Soybean farming contributes significantly to the district’s agrarian economy.",
+    hiddenGems: [],
+  },
+  {
+    id: "bhadadri-kothagudem",
+    name: "Bhadadri Kothagudem",
+    anchorProduct: "Chillies based Products",
+    anchorProductDescription:
+      "Locally grown chillies known for their heat and vibrant color.",
+    culturalSignificance:
+      "Chilli cultivation supports tribal and rural livelihoods.",
+    hiddenGems: [],
+  },
+  {
+    id: "hyderabad",
+    name: "Hyderabad",
+    anchorProduct: "Ready to eat (Snacks and Savouries)",
+    anchorProductDescription:
+      "Processed snacks and savory products catering to urban markets.",
+    culturalSignificance:
+      "Hyderabad’s food industry blends tradition with large-scale processing.",
+    hiddenGems: [],
+  },
+  {
+    id: "jagitial",
+    name: "Jagitial",
+    anchorProduct: "Mango based Products",
+    anchorProductDescription:
+      "Seasonal mango cultivation used for pulp, pickles, and processed goods.",
+    culturalSignificance:
+      "Mango farming is deeply integrated into rural income cycles.",
+    hiddenGems: [],
+  },
+  {
+    id: "jangaon",
+    name: "Jangaon",
+    anchorProduct: "Rice based products (Scented Rice- Chittimuthyalu)",
+    anchorProductDescription:
+      "Traditional aromatic rice variety known for its fragrance and taste.",
+    culturalSignificance:
+      "Chittimuthyalu rice represents Telangana’s native grain heritage.",
+    hiddenGems: [],
+  },
+  {
+    id: "jayashankar-bhupalpally",
+    name: "Jayashankar Bhupalpally",
+    anchorProduct: "Chillies based Products",
+    anchorProductDescription:
+      "Spice cultivation contributing to regional spice trade.",
+    culturalSignificance:
+      "Chillies form a key agricultural output for small farmers.",
+    hiddenGems: [],
+  },
+  {
+    id: "jogulamba-gadwal",
+    name: "Jogulamba Gadwal",
+    anchorProduct: "Groundnut based products",
+    anchorProductDescription:
+      "Groundnut farming supports oil and snack production.",
+    culturalSignificance:
+      "Groundnut cultivation sustains dryland farming communities.",
+    hiddenGems: [],
+  },
+  {
+    id: "kamareddy",
+    name: "Kamareddy",
+    anchorProduct: "Soybean based products",
+    anchorProductDescription:
+      "Soybean used for oil extraction and protein-based products.",
+    culturalSignificance:
+      "Soybean farming plays a key role in local agriculture.",
+    hiddenGems: [],
+  },
+  {
+    id: "karimnagar",
+    name: "Karimnagar",
+    anchorProduct: "Rice based products",
+    anchorProductDescription:
+      "Rice processing and milling units serve domestic markets.",
+    culturalSignificance:
+      "Rice cultivation has shaped Karimnagar’s agrarian identity.",
+    hiddenGems: [],
+  },
+  {
+    id: "khammam",
+    name: "Khammam",
+    anchorProduct: "Chillies based Products",
+    anchorProductDescription:
+      "High-quality red chillies grown for spice markets.",
+    culturalSignificance:
+      "Chilli trade has historically connected Khammam to regional markets.",
+    hiddenGems: [],
+  },
+  {
+    id: "komaram-bheem",
+    name: "Komaram Bheem",
+    anchorProduct: "Millet based products",
+    anchorProductDescription:
+      "Millets cultivated in tribal regions for nutrition and resilience.",
+    culturalSignificance:
+      "Millets are integral to tribal diets and sustainable farming.",
+    hiddenGems: [],
+  },
+  {
+    id: "mahabubabad",
+    name: "Mahabubabad",
+    anchorProduct: "Chillies based Products",
+    anchorProductDescription:
+      "Chilli farming supports small-scale cultivators.",
+    culturalSignificance:
+      "Chillies contribute significantly to local spice production.",
+    hiddenGems: [],
+  },
+  {
+    id: "mahabubnagar",
+    name: "Mahabubnagar",
+    anchorProduct: "Millet based products",
+    anchorProductDescription:
+      "Nutritious millets grown in semi-arid conditions.",
+    culturalSignificance:
+      "Millet farming has sustained generations in drought-prone regions.",
+    hiddenGems: [],
+  },
+  {
+    id: "mancherial",
+    name: "Mancherial",
+    anchorProduct: "Mango based Products",
+    anchorProductDescription:
+      "Mango orchards produce fruit for fresh and processed markets.",
+    culturalSignificance: "Mango cultivation boosts seasonal employment.",
+    hiddenGems: [],
+  },
+  {
+    id: "medak",
+    name: "Medak",
+    anchorProduct: "Ready to eat (Snacks and Savouries)",
+    anchorProductDescription:
+      "Snack production units catering to regional demand.",
+    culturalSignificance:
+      "Food processing adds value to local agricultural produce.",
+    hiddenGems: [],
+  },
+  {
+    id: "medchal-malkajgiri",
+    name: "Medchal-Malkajgiri",
+    anchorProduct: "Ready to eat (Snacks and Savouries)",
+    anchorProductDescription:
+      "Processed food sector supporting urban consumption.",
+    culturalSignificance:
+      "Proximity to Hyderabad fuels packaged snack industries.",
+    hiddenGems: [],
+  },
+  {
+    id: "mulugu",
+    name: "Mulugu",
+    anchorProduct: "Chillies based Products",
+    anchorProductDescription: "Chillies cultivated in forest-adjacent regions.",
+    culturalSignificance:
+      "Agriculture supports tribal communities in the district.",
+    hiddenGems: [],
+  },
+  {
+    id: "nagarkurnool",
+    name: "Nagarkurnool",
+    anchorProduct: "Mango based Products",
+    anchorProductDescription: "Mango cultivation for pulp and pickles.",
+    culturalSignificance: "Mango orchards are key to seasonal farm income.",
+    hiddenGems: [],
+  },
+  {
+    id: "nalgonda",
+    name: "Nalgonda",
+    anchorProduct: "Sweet Orange based Products",
+    anchorProductDescription:
+      "Citrus orchards produce sweet oranges for fresh and processed markets.",
+    culturalSignificance:
+      "Citrus cultivation strengthens horticulture in the district.",
+    hiddenGems: [],
+  },
+  {
+    id: "narayanpet",
+    name: "Narayanpet",
+    anchorProduct: "Groundnut based products",
+    anchorProductDescription:
+      "Groundnuts processed into oil and snack products.",
+    culturalSignificance: "Groundnut farming supports dryland agriculture.",
+    hiddenGems: [],
+  },
+  {
+    id: "nirmal",
+    name: "Nirmal",
+    anchorProduct: "Soyabean based products",
+    anchorProductDescription:
+      "Soybean contributes to edible oil and feed industries.",
+    culturalSignificance: "Soybean cultivation supports farmer livelihoods.",
+    hiddenGems: [],
+  },
+  {
+    id: "nizamabad",
+    name: "Nizamabad",
+    anchorProduct: "Turmeric",
+    anchorProductDescription:
+      "High-curcumin turmeric known for quality and export potential.",
+    culturalSignificance:
+      "Turmeric farming plays a central role in the district’s spice economy.",
+    hiddenGems: [],
+  },
+  {
+    id: "peddapalli",
+    name: "Peddapalli",
+    anchorProduct: "Rice based products",
+    anchorProductDescription: "Rice processing supports local grain markets.",
+    culturalSignificance:
+      "Rice cultivation forms a major part of the rural economy.",
+    hiddenGems: [],
+  },
+  {
+    id: "rajanna-sircilla",
+    name: "Rajanna Sircilla",
+    anchorProduct: "Fish based products",
+    anchorProductDescription: "Inland fisheries and processed fish products.",
+    culturalSignificance:
+      "Aquaculture supports livelihoods across water bodies.",
+    hiddenGems: [],
+  },
+  {
+    id: "ranga-reddy",
+    name: "Ranga Reddy",
+    anchorProduct: "Vegetable processing",
+    anchorProductDescription:
+      "Processing of vegetables for urban supply chains.",
+    culturalSignificance:
+      "Proximity to Hyderabad supports agri-processing growth.",
+    hiddenGems: [],
+  },
+  {
+    id: "sangareddy",
+    name: "Sangareddy",
+    anchorProduct: "Milk based Products",
+    anchorProductDescription:
+      "Dairy processing including milk and value-added products.",
+    culturalSignificance: "Dairy farming strengthens rural household incomes.",
+    hiddenGems: [],
+  },
+  {
+    id: "siddipet",
+    name: "Siddipet",
+    anchorProduct: "Vegetable processing",
+    anchorProductDescription:
+      "Vegetable cultivation and processing for regional markets.",
+    culturalSignificance: "Vegetable farming supports diversified agriculture.",
+    hiddenGems: [],
+  },
+  {
+    id: "suryapet",
+    name: "Suryapet",
+    anchorProduct: "Milk based Products",
+    anchorProductDescription: "Dairy and milk-based food production.",
+    culturalSignificance: "Dairy cooperatives contribute to rural prosperity.",
+    hiddenGems: [],
+  },
+  {
+    id: "vikarabad",
+    name: "Vikarabad",
+    anchorProduct: "Vegetable processing",
+    anchorProductDescription: "Processing units for locally grown vegetables.",
+    culturalSignificance: "Vegetable farming supports small farmers.",
+    hiddenGems: [],
+  },
+  {
+    id: "wanaparthy",
+    name: "Wanaparthy",
+    anchorProduct: "Groundnut products",
+    anchorProductDescription: "Groundnut oil and snack production.",
+    culturalSignificance: "Groundnut farming thrives in semi-arid soils.",
+    hiddenGems: [],
+  },
+  {
+    id: "warangal-rural",
+    name: "Warangal Rural",
+    anchorProduct: "Chillies (Bamboo Chilli) based Products",
+    anchorProductDescription: "Specialty bamboo chillies grown in rural belts.",
+    culturalSignificance:
+      "Unique chilli varieties contribute to regional spice identity.",
+    hiddenGems: [],
+  },
+  {
+    id: "warangal-urban",
+    name: "Warangal Urban",
+    anchorProduct: "Ready to eat (Snacks and Savouries)",
+    anchorProductDescription:
+      "Snack processing industries catering to urban demand.",
+    culturalSignificance:
+      "Urban food enterprises connect tradition with scale.",
+    hiddenGems: [],
+  },
+  {
+    id: "yadadri-bhuvanagiri",
+    name: "Yadadri Bhuvanagiri",
+    anchorProduct: "Milk based Products",
+    anchorProductDescription: "Dairy farming and milk-based processing.",
+    culturalSignificance:
+      "Dairy supports agricultural livelihoods across the district.",
+    hiddenGems: [],
+  },
+];
 /* ---------------- SCALABLE STATE REGISTRY ---------------- */
 
 /**
@@ -271,6 +584,7 @@ export const odopAndhraPradesh: ODOPDistrict[] = [
  */
 export const odopData: Record<string, ODOPDistrict[]> = {
   "andhra-pradesh": odopAndhraPradesh,
+  telangana: odopTelangana,
 
   // Future states:
   // "telangana": odopTelangana,

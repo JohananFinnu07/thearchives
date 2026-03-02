@@ -64,7 +64,7 @@ const App = () => (
           <Route path="/:state/recipes/:slug" element={<RecipeDetailPage />} />
 
           {/* About (Global) */}
-          <Route path="/:state/about" element={<AboutPage />} />
+          <Route path="about" element={<AboutPage />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />

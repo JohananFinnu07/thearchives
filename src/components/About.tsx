@@ -18,7 +18,7 @@ const About = () => {
       title: "Real Stories",
       description:
         "Artisans, farmers, and tribal communities behind every product.",
-      link: `/${state}/about`,
+      link: `/about`,
     },
     {
       icon: Leaf,

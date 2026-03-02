@@ -27,7 +27,7 @@ const IndiaHeader = () => {
           </div>
 
           {/* Search */}
-          <NavSearch />
+          {/*<NavSearch />*/}
         </div>
       </div>
     </motion.header>

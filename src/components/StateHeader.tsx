@@ -7,11 +7,11 @@ import NavSearch from "@/components/NavSearch";
 import { stateConfig } from "@/data/stateConfig"; // ✅ theme source
 
 const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "/", global: true },
   { name: "Destinations", href: "/destinations" },
   { name: "Hidden Gems", href: "/hidden-gems" },
   { name: "Gallery", href: "/gallery" },
-  { name: "About", href: "/about" },
+  { name: "About", href: "/about", global: true },
 ];
 
 const Header = () => {
@@ -55,7 +55,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2 leading-none">
             <MapPin className="w-6 h-6 text-primary relative top-[1px]" />
             <span className="font-serif text-xl lg:text-2xl font-semibold text-foreground">
-              TheArchives
+              IntoOrigins
             </span>
           </Link>
 
@@ -64,7 +64,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={prefix(link.href)}
+                to={link.global ? link.href : prefix(link.href)}
                 className="relative text-[17px] font-normal font-sans text-muted-foreground hover:text-foreground transition-colors duration-200 group"
               >
                 {link.name}
@@ -128,7 +128,7 @@ const Header = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={prefix(link.href)}
+                  to={link.global ? link.href : prefix(link.href)}
                   onClick={() => setIsMenuOpen(false)}
                   className="text-foreground py-2 font-medium"
                 >

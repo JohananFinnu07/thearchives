@@ -51,7 +51,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                to={`${basePath}/about`}
+                to={`/about`}
                 className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
               >
                 About Us

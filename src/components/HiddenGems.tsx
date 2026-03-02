@@ -1,49 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link, useParams } from "react-router-dom"; // ✅ added
+import { Link, useParams } from "react-router-dom";
+import { useMemo } from "react";
 import GemCard from "./GemCard";
-import coffeeImage from "@/assets/araku-coffee.jpg";
-import craftsImage from "@/assets/tribal-crafts.jpg";
-import honeyImage from "@/assets/wild-honey.jpg";
-import jackfruitchipImage from "@/assets/products/JackfruitHero.jpeg";
-import forestturmericImage from "@/assets/products/ForesttermericHero.jpeg";
 import { slugify } from "@/lib/slugify";
-import { stateConfig } from "@/data/stateConfig"; // ✅ added
+import { stateConfig } from "@/data/stateConfig";
+import { allDestinations } from "@/data/destinations";
 
-interface HiddenGemsProps {
-  state?: string;
-}
-
-// Sample data unchanged
-const sampleGems = [
-  {
-    name: "Araku Valley Coffee",
-    location: "Araku Valley",
-    locationId: "araku-valley",
-    description:
-      "Organic, shade-grown coffee cultivated by tribal communities. Award-winning beans with a unique flavor profile shaped by the Eastern Ghats.",
-    image: coffeeImage,
-  },
-  {
-    name: "Jack fruit Chips and Products",
-    location: "Paderu Region",
-    locationId: "paderu",
-    description:
-      "Sun-dried jackfruit chips and preserves prepared using traditional tribal techniques from locally grown jackfruit.",
-    image: jackfruitchipImage,
-  },
-  {
-    name: "Forest Turmeric",
-    location: "Maredumilli",
-    locationId: "maredumilli",
-    description:
-      "Wild forest-grown turmeric known for high curcumin concentration and strong medicinal properties.",
-    image: forestturmericImage,
-  },
-];
-
-const HiddenGems: React.FC<HiddenGemsProps> = () => {
-  const { state } = useParams<{ state: string }>();
+const HiddenGems: React.FC = () => {
+  const { state } = useParams<{ state?: string }>();
   const currentState = state ? stateConfig[state] : null;
 
   const prefix = (path: string) => {
@@ -51,10 +16,38 @@ const HiddenGems: React.FC<HiddenGemsProps> = () => {
     return `/${state}${path}`;
   };
 
+  /* ---------------- FILTER DESTINATIONS ---------------- */
+
+  const filteredDestinations = useMemo(() => {
+    if (!state) return allDestinations;
+
+    return allDestinations.filter(
+      (d) => d.state.toLowerCase() === state.toLowerCase(),
+    );
+  }, [state]);
+
+  /* ---------------- EXTRACT 3 RANDOM UNDERRATED ---------------- */
+
+  const hiddenGems = useMemo(() => {
+    const gems = filteredDestinations.flatMap((destination) =>
+      destination.products
+        .filter((product) => product.type === "underrated")
+        .map((product) => ({
+          name: product.name,
+          location: destination.name,
+          locationId: destination.id,
+          description: product.description,
+          image: product.image,
+        })),
+    );
+
+    return gems.sort(() => 0.5 - Math.random()).slice(0, 3);
+  }, [filteredDestinations]);
+
   return (
     <section id="gems" className="py-24 lg:py-38 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,11 +81,11 @@ const HiddenGems: React.FC<HiddenGemsProps> = () => {
           </Button>
         </motion.div>
 
-        {/* Cards Grid */}
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {sampleGems.map((gem, index) => (
+          {hiddenGems.map((gem, index) => (
             <Link
-              key={gem.name}
+              key={`${gem.locationId}-${gem.name}`}
               to={prefix(`/hidden-gems/${gem.locationId}/${slugify(gem.name)}`)}
             >
               <GemCard

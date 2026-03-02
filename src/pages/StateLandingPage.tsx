@@ -18,23 +18,23 @@ import StateComingSoon from "./StateComingSoon";
 const StateHomePage = () => {
   const { state } = useParams<{ state: string }>();
 
-  if (!state) return <NotFound />;
+  // Check if state exists in full India list
+  const stateInfo = state ? stateData[state] : undefined;
 
-  // Check if state exists in India dataset
-  const stateInfo = stateData[state];
+  // Check if state is launched (exists in stateConfig)
+  const launchedState = state ? stateConfig[state] : undefined;
 
   if (!stateInfo) {
     return <NotFound />;
   }
 
-  // Check if state is launched
-  const launchedState = stateConfig[state];
-
   if (!launchedState) {
     return <StateComingSoon state={stateInfo} />;
   }
-
-  const stateDestinations = getDestinationsByState(state);
+  if (!state) {
+    return <NotFound />;
+  }
+  const stateDestinations = getDestinationsByState(state!);
 
   return (
     <div className="min-h-screen bg-background">
@@ -43,7 +43,7 @@ const StateHomePage = () => {
       <main>
         <Hero state={launchedState} />
         <Destinations destinations={stateDestinations} />
-        <HiddenGems state={state} />
+        <HiddenGems />
         <ODOPDiscovery state={state} />
         <About />
       </main>
