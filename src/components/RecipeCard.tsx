@@ -1,7 +1,5 @@
-// src/components/RecipeCard.tsx
-
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface RecipeCardProps {
   recipe: {
@@ -20,16 +18,22 @@ const slugify = (text: string) =>
     .replace(/-+/g, "-");
 
 const RecipeCard = ({ recipe }: RecipeCardProps) => {
-  const slug = slugify(recipe.name);
+  const { state, slug: destinationSlug } = useParams<{
+    state: string;
+    slug: string;
+  }>();
+
+  const recipeSlug = slugify(recipe.name);
+
+  const prefix = (path: string) => (state ? `/${state}${path}` : path);
+
+  const recipePath = prefix(`/recipes/${recipeSlug}`);
 
   return (
     <div className="bg-card rounded-xl overflow-hidden shadow-sm border p-6">
       {/* Image */}
       {recipe.image && (
-        <Link
-          to={`/recipes/${slug}`}
-          className="block mb-4 overflow-hidden rounded-lg"
-        >
+        <Link to={recipePath} className="block mb-4 overflow-hidden rounded-lg">
           <motion.img
             src={recipe.image}
             alt={recipe.name}
@@ -55,7 +59,7 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
 
       {/* CTA */}
       <Link
-        to={`/recipes/${slug}`}
+        to={recipePath}
         className="inline-block text-primary font-medium hover:underline"
       >
         Inside the Recipe →

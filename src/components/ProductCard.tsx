@@ -1,15 +1,28 @@
 import { motion } from "framer-motion";
-import { Product } from "@/data/destinations";
+import { Product } from "@/data/types";
 import { Link, useParams } from "react-router-dom";
 import { slugify } from "@/lib/slugify";
+
 interface ProductCardProps {
   product: Product;
   index: number;
 }
 
 const ProductCard = ({ product, index }: ProductCardProps) => {
-  const { id } = useParams();
-  const slug = slugify(product.name);
+  const { state, slug: destinationSlug } = useParams<{
+    state: string;
+    slug: string;
+  }>();
+
+  const productSlug = slugify(product.name);
+
+  // Prefix helper for state-aware routing
+  const prefix = (path: string) => {
+    if (!state) return path;
+    return `/${state}${path}`;
+  };
+
+  const productPath = prefix(`/hidden-gems/${destinationSlug}/${productSlug}`);
 
   return (
     <motion.div
@@ -22,7 +35,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
       <div className="bg-card rounded-xl overflow-hidden shadow-sm border p-6 flex flex-col h-full">
         {product.image && (
           <Link
-            to={`/hidden-gems/${id}/${slug}`}
+            to={productPath}
             className="block mb-4 overflow-hidden rounded-lg"
           >
             <motion.img
@@ -56,10 +69,10 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
           {product.description}
         </p>
 
-        {/* CTA aligned bottom */}
+        {/* CTA */}
         <div className="mt-auto">
           <Link
-            to={`/hidden-gems/${id}/${slug}`}
+            to={productPath}
             className="inline-block text-primary font-medium hover:underline"
           >
             Explore the Story →

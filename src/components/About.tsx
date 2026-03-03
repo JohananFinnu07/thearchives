@@ -1,38 +1,40 @@
 import { motion } from "framer-motion";
 import { Mountain, Users, Leaf, Camera } from "lucide-react";
-import { Link } from "react-router-dom";
-
-const features = [
-  {
-    icon: Mountain,
-    title: "Uncharted Destinations",
-    description:
-      "Offbeat places in the Eastern Ghats where traditions remain intact.",
-    link: "/destinations",
-  },
-  {
-    icon: Users,
-    title: "Real Stories",
-    description:
-      "Artisans, farmers, and tribal communities behind every product.",
-    link: "/about",
-  },
-  {
-    icon: Leaf,
-    title: "Local Economy",
-    description: "Supporting families who sustain generations of knowledge.",
-    link: "/hidden-gems",
-  },
-  {
-    icon: Camera,
-    title: "Visual Archive",
-    description:
-      "Documenting products and practices that may not exist in another decade.",
-    link: "/gallery",
-  },
-];
-
+import { Link, useParams } from "react-router-dom";
+import { stateConfig } from "@/data/stateConfig";
 const About = () => {
+  const { state } = useParams<{ state: string }>();
+
+  const features = [
+    {
+      icon: Mountain,
+      title: "Uncharted Destinations",
+      description:
+        "Offbeat places in the Eastern Ghats where traditions remain intact.",
+      link: `/${state}/destinations`,
+    },
+    {
+      icon: Users,
+      title: "Real Stories",
+      description:
+        "Artisans, farmers, and tribal communities behind every product.",
+      link: `/about`,
+    },
+    {
+      icon: Leaf,
+      title: "Local Economy",
+      description: "Supporting families who sustain generations of knowledge.",
+      link: `/${state}/hidden-gems`,
+    },
+    {
+      icon: Camera,
+      title: "Visual Archive",
+      description:
+        "Documenting products and practices that may not exist in another decade.",
+      link: `/${state}/gallery`,
+    },
+  ];
+
   return (
     <section id="about" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

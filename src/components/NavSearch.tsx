@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useMemo } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, MapPin, Sparkles, ChefHat, Star } from "lucide-react";
 import {
@@ -10,7 +10,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { destinations } from "@/data/destinations";
+import { allDestinations } from "@/data/destinations";
 import { recipes } from "@/data/recipes";
 
 /* Slugify */
@@ -24,6 +24,7 @@ const slugify = (text: string) =>
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const { state } = useParams<{ state?: string }>();
 
   /* ⌘K / Ctrl+K */
   useEffect(() => {
@@ -37,29 +38,52 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  /* Filtered Data */
+  const filteredDestinations = useMemo(() => {
+    if (!state) return allDestinations;
+    return allDestinations.filter(
+      (d) => d.state?.toLowerCase() === state.toLowerCase(),
+    );
+  }, [state]);
+
+  const famousProducts = useMemo(() => {
+    return filteredDestinations.flatMap((d) =>
+      d.products
+        .filter((p) => p.type === "famous")
+        .map((p) => ({
+          name: p.name,
+          route: `/hidden-gems/${d.id}/${slugify(p.name)}`,
+        })),
+    );
+  }, [filteredDestinations]);
+
+  const hiddenProducts = useMemo(() => {
+    return filteredDestinations.flatMap((d) =>
+      d.products
+        .filter((p) => p.type === "underrated")
+        .map((p) => ({
+          name: p.name,
+          route: `/hidden-gems/${d.id}/${slugify(p.name)}`,
+        })),
+    );
+  }, [filteredDestinations]);
+
+  const filteredRecipes = useMemo(() => {
+    if (!state) return recipes;
+    return recipes.filter(
+      (r) => r.state?.toLowerCase() === state.toLowerCase(),
+    );
+  }, [state]);
+
   const handleSelect = (route: string) => {
     setOpen(false);
-    navigate(route);
+
+    if (state) {
+      navigate(`/${state}${route}`);
+    } else {
+      navigate(route);
+    }
   };
-
-  /* Flatten products */
-  const famousProducts = destinations.flatMap((d) =>
-    d.products
-      .filter((p) => p.type === "famous")
-      .map((p) => ({
-        name: p.name,
-        route: `/hidden-gems/${d.id}/${slugify(p.name)}`,
-      })),
-  );
-
-  const hiddenProducts = destinations.flatMap((d) =>
-    d.products
-      .filter((p) => p.type === "underrated")
-      .map((p) => ({
-        name: p.name,
-        route: `/hidden-gems/${d.id}/${slugify(p.name)}`,
-      })),
-  );
 
   return (
     <>
@@ -75,7 +99,6 @@ const NavSearch = () => {
         <kbd className="ml-2 rounded border px-1.5 py-0.5 text-[10px]">⌘K</kbd>
       </motion.button>
 
-      {/* Dialog */}
       <AnimatePresence>
         {open && (
           <CommandDialog open={open} onOpenChange={setOpen}>
@@ -89,67 +112,73 @@ const NavSearch = () => {
               <CommandInput placeholder="Search destinations, products, or recipes..." />
 
               <CommandList className="max-h-[60vh] overflow-y-auto">
-                {/* Default / Filtered automatically by cmdk */}
-
                 <CommandEmpty>No results found.</CommandEmpty>
 
                 {/* Destinations */}
-                <CommandGroup heading="Destinations">
-                  {destinations.map((dest) => (
-                    <CommandItem
-                      key={dest.id}
-                      value={dest.name}
-                      onSelect={() => handleSelect(`/destination/${dest.id}`)}
-                    >
-                      <MapPin className="h-4 w-4 text-green-600 mr-2" />
-                      {dest.name}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
+                {filteredDestinations.length > 0 && (
+                  <CommandGroup heading="Destinations">
+                    {filteredDestinations.map((dest) => (
+                      <CommandItem
+                        key={dest.id}
+                        value={dest.name}
+                        onSelect={() => handleSelect(`/destination/${dest.id}`)}
+                      >
+                        <MapPin className="h-4 w-4 text-green-600 mr-2" />
+                        {dest.name}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                )}
 
                 {/* Famous */}
-                <CommandGroup heading="Famous Products">
-                  {famousProducts.map((item) => (
-                    <CommandItem
-                      key={item.route}
-                      value={item.name}
-                      onSelect={() => handleSelect(item.route)}
-                    >
-                      <Star className="h-4 w-4 text-green-600 mr-2" />
-                      {item.name}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
+                {famousProducts.length > 0 && (
+                  <CommandGroup heading="Famous Products">
+                    {famousProducts.map((item) => (
+                      <CommandItem
+                        key={item.route}
+                        value={item.name}
+                        onSelect={() => handleSelect(item.route)}
+                      >
+                        <Star className="h-4 w-4 text-green-600 mr-2" />
+                        {item.name}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                )}
 
                 {/* Hidden */}
-                <CommandGroup heading="Hidden Gems">
-                  {hiddenProducts.map((item) => (
-                    <CommandItem
-                      key={item.route}
-                      value={item.name}
-                      onSelect={() => handleSelect(item.route)}
-                    >
-                      <Sparkles className="h-4 w-4 text-orange-500 mr-2" />
-                      {item.name}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
+                {hiddenProducts.length > 0 && (
+                  <CommandGroup heading="Hidden Gems">
+                    {hiddenProducts.map((item) => (
+                      <CommandItem
+                        key={item.route}
+                        value={item.name}
+                        onSelect={() => handleSelect(item.route)}
+                      >
+                        <Sparkles className="h-4 w-4 text-orange-500 mr-2" />
+                        {item.name}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                )}
 
                 {/* Recipes */}
-                <CommandGroup heading="Recipes">
-                  {recipes.map((recipe) => (
-                    <CommandItem
-                      key={recipe.name}
-                      value={`${recipe.name} ${recipe.destination}`}
-                      onSelect={() =>
-                        handleSelect(`/recipes/${slugify(recipe.name)}`)
-                      }
-                    >
-                      <ChefHat className="h-4 w-4 text-orange-500 mr-2" />
-                      {recipe.name}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
+                {filteredRecipes.length > 0 && (
+                  <CommandGroup heading="Recipes">
+                    {filteredRecipes.map((recipe) => (
+                      <CommandItem
+                        key={recipe.name}
+                        value={`${recipe.name} ${recipe.destination}`}
+                        onSelect={() =>
+                          handleSelect(`/recipes/${slugify(recipe.name)}`)
+                        }
+                      >
+                        <ChefHat className="h-4 w-4 text-orange-500 mr-2" />
+                        {recipe.name}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                )}
               </CommandList>
             </motion.div>
           </CommandDialog>

@@ -1,11 +1,22 @@
 import { motion } from "framer-motion";
 import { MapPin, Mountain, Thermometer, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
-import Header from "@/components/Header";
+import { Link, useParams } from "react-router-dom";
+import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
-import { destinations } from "@/data/destinations";
+import { getDestinationsByState } from "@/data/destinations";
+import { stateConfig } from "@/data/stateConfig";
 
 const DestinationsPage = () => {
+  const { state } = useParams<{ state: string }>();
+
+  const currentState = state ? stateConfig[state] : null;
+  const destinations = state ? getDestinationsByState(state) : [];
+
+  const prefix = (path: string) => {
+    if (!state) return path;
+    return `/${state}${path}`;
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -20,15 +31,17 @@ const DestinationsPage = () => {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Explore Our <span className="text-primary">Destinations</span>
+              Explore{" "}
+              <span className="text-primary">
+                {currentState?.name || "Our"} Destinations
+              </span>
             </h1>
+
             <p className="text-lg text-muted-foreground">
-              From the misty hills of Araku Valley and Lambasingi to the river
-              landscapes of Konaseema and Papikondalu, explore culturally rich
-              destinations across Andhra Pradesh and the Eastern Ghats. Discover
-              famous regional products, underrated local specialties, tribal
-              crafts, traditional foods, and authentic heritage experiences that
-              define the true identity of each place.
+              Discover culturally rich destinations across{" "}
+              {currentState?.name || "India"} — from famous regional products to
+              hidden local specialties, traditional foods, crafts, and heritage
+              experiences that define each place.
             </p>
           </motion.div>
         </div>
@@ -40,12 +53,12 @@ const DestinationsPage = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {destinations.map((destination, index) => (
               <motion.div
-                key={destination.id}
+                key={destination.slug}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link to={`/destination/${destination.id}`}>
+                <Link to={prefix(`/destination/${destination.slug}`)}>
                   <div className="group relative bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300">
                     <div className="aspect-[16/10] overflow-hidden">
                       <img
@@ -57,7 +70,6 @@ const DestinationsPage = () => {
                     </div>
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      {/* Tagline - Visible Everywhere */}
                       <div className="flex items-center gap-2 mb-2">
                         <MapPin className="w-4 h-4 text-accent" />
                         <span className="text-sm text-white/80">
@@ -65,12 +77,10 @@ const DestinationsPage = () => {
                         </span>
                       </div>
 
-                      {/* Name - Visible Everywhere */}
                       <h3 className="font-serif text-2xl font-bold mb-2">
                         {destination.name}
                       </h3>
 
-                      {/* Desktop Only Content */}
                       <div className="hidden md:block">
                         <p className="text-white/80 text-sm mb-4 line-clamp-2">
                           {destination.heroDescription}
@@ -81,10 +91,12 @@ const DestinationsPage = () => {
                             <Mountain className="w-4 h-4 text-accent" />
                             <span>{destination.elevation}</span>
                           </div>
+
                           <div className="flex items-center gap-1">
                             <Thermometer className="w-4 h-4 text-accent" />
                             <span>{destination.temperature}</span>
                           </div>
+
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4 text-accent" />
                             <span>{destination.bestTime}</span>
@@ -107,7 +119,7 @@ const DestinationsPage = () => {
             {[
               { label: "Destinations", value: destinations.length },
               { label: "Local Products", value: "30+" },
-              { label: "Communities & Traditions Featured", value: "15+" },
+              { label: "Communities Featured", value: "15+" },
               { label: "Stories Preserved", value: "40+" },
             ].map((stat, index) => (
               <motion.div
