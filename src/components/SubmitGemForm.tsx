@@ -260,7 +260,7 @@ Contact Email: ${formData.email || "Not provided"}
 
                       <p className="text-xs text-muted-foreground text-center">
                         By submitting, you agree that we may feature your
-                        discovery on TheArchives.
+                        discovery on IntoOrigins.
                       </p>
                     </motion.form>
                   )}

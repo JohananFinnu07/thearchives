@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Product } from "@/data/destinations";
+import { Product } from "@/data/types";
 import { Link, useParams } from "react-router-dom";
 import { slugify } from "@/lib/slugify";
 

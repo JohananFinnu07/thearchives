@@ -147,14 +147,14 @@ const LocationHiddenGemsPage = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.08 }}
                       whileHover={{ y: -6 }}
-                      className="bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col md:flex-row h-[380px]"
+                      className="bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col md:flex-row md:h-[380px]"
                     >
                       {/* IMAGE */}
                       <Link
                         to={prefix(
                           `/hidden-gems/${destination.slug}/${productSlug}`,
                         )}
-                        className="group md:w-[40%] w-full h-48 md:h-full relative overflow-hidden"
+                        className="group w-full md:w-[40%] h-60 md:h-full relative overflow-hidden"
                       >
                         <motion.img
                           src={product.image}
@@ -185,12 +185,12 @@ const LocationHiddenGemsPage = () => {
                         </Link>
 
                         {/* Description */}
-                        <p className="text-muted-foreground mt-4 text-base leading-relaxed line-clamp-2">
+                        <p className="text-muted-foreground mt-4 text-sm md:text-base leading-relaxed line-clamp-2">
                           {product.description}
                         </p>
 
                         {/* Info Blocks */}
-                        <div className="mt-6 grid grid-cols-2 gap-4">
+                        <div className="hidden md:grid mt-6 grid-cols-2 gap-4">
                           <div className="bg-secondary/40 rounded-xl p-4">
                             <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
                               Why It Matters
