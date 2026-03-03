@@ -1,5 +1,8 @@
 import APHeroImage from "@/assets/hero-araku.jpg";
 import TGHeroImage from "@/assets/State Hero/TGHero.jpg";
+import ARHeroImage from "@/assets/State Hero/ARHero.jpg";
+import ANHeroImage from "@/assets/State Hero/ANHero.jpg";
+
 export interface StateConfig {
   slug: string;
   name: string;
@@ -14,6 +17,12 @@ export const stateConfig: Record<string, StateConfig> = {
     heroImage: APHeroImage,
     theme: "forest",
   },
+  ar: {
+    slug: "arunachal-pradesh",
+    name: "Arunachal Pradesh",
+    heroImage: ARHeroImage,
+    theme: "",
+  },
   telangana: {
     slug: "telangana",
     name: "Telangana",
@@ -23,6 +32,7 @@ export const stateConfig: Record<string, StateConfig> = {
   andaman: {
     slug: "andaman",
     name: "Andaman",
+    heroImage: ANHeroImage,
     theme: "gold",
   },
 };

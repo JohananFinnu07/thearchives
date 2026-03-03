@@ -10,8 +10,11 @@ interface TooltipState {
   name: string;
 }
 const stateIdToSlug: Record<string, string> = {
-  "IN-AP": "andhra-pradesh",
-  "IN-TG": "telangana",
+  ap: "andhra-pradesh",
+  tg: "telangana",
+  ar: "arunachal-pradesh",
+  an: "andaman",
+  as: "assam",
 };
 const IndiaMap = () => {
   const navigate = useNavigate();
@@ -47,6 +50,34 @@ const IndiaMap = () => {
       ap: "andhra-pradesh",
       tg: "telangana",
       an: "andaman",
+      ar: "ar", // Arunachal Pradesh
+      as: "as", // Assam
+      br: "br", // Bihar
+      ct: "ct", // Chhattisgarh
+      ga: "ga", // Goa
+      gj: "gj", // Gujarat
+      hr: "hr", // Haryana
+      hp: "hp", // Himachal Pradesh
+      jh: "jh", // Jharkhand
+      ka: "ka", // Karnataka
+      kl: "kl", // Kerala
+      mp: "mp", // Madhya Pradesh
+      mh: "mh", // Maharashtra
+      mn: "mn", // Manipur
+      ml: "ml", // Meghalaya
+      mz: "mz", // Mizoram
+      nl: "nl", // Nagaland
+      or: "or", // Odisha
+      pb: "pb", // Punjab
+      rj: "rj", // Rajasthan
+      sk: "sk", // Sikkim
+      tn: "tn", // Tamil Nadu
+      tr: "tr", // Tripura
+      up: "up", // Uttar Pradesh
+      ut: "ut", // Uttarakhand
+      wb: "wb", // West Bengal
+      dl: "dl", //Delhi
+      jk: "jk", //Jammu Kashmir
     };
 
     const slug = mapping[svgId];

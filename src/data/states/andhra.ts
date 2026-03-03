@@ -1,4 +1,4 @@
-import { Destination } from "../destinations";
+import { Destination } from "../types";
 
 import arakuImage from "@/assets/araku-card.jpg";
 import lambasingiImage from "@/assets/lambasingi-card.jpg";
