@@ -1,95 +1,128 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 import IndiaMap from "@/components/IndiaMap";
 import IndiaHeader from "@/components/IndiaHeader";
-import IndiaHero from "@/assets/IndiaHero.jpg";
-const IndiaMapLandingPage = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+import AshokaChakra from "@/assets/India/chakra-image.png";
+import SaffornImage from "@/assets/India/saffronsection.jpg";
+import whiteImage from "@/assets/India/whitesection.jpg";
+import greenImage from "@/assets/India/greenLandscape.jpg";
 
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, -80]); // slow parallax
-  const scale = useTransform(scrollY, [0, 1000], [1, 1.05]);
+const IndiaMapLandingPage = () => {
+  /* Cursor Glow Effect */
+  useEffect(() => {
+    const move = (e: MouseEvent) => {
+      document.documentElement.style.setProperty("--x", e.clientX + "px");
+      document.documentElement.style.setProperty("--y", e.clientY + "px");
+    };
+
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
+  }, []);
 
   return (
     <div className="relative min-h-screen overflow-x-hidden text-[#1E2A22]">
-      {/* ===== Background Image Layer ===== */}
-      <motion.div style={{ y, scale }} className="fixed inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${IndiaHero})`,
-          }}
-        />
+      {/* 🇮🇳 Animated Flag Background */}
+      <div className="flag-bg fixed inset-0 -z-30" />
 
-        {/* Soft archival overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F4F1EA]/90 via-[#ECE6DC]/85 to-[#E5DDD0]/95" />
-      </motion.div>
+      {/* Cursor Glow */}
+      <div className="flag-hover fixed inset-0 -z-20 pointer-events-none" />
 
-      {/* ===== Content Layer ===== */}
-      <div className="relative z-10">
-        <IndiaHeader />
+      <IndiaHeader />
 
-        <main className="pt-28 pb-24 px-6">
-          {/* HERO SECTION */}
-          <motion.section
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-28"
-          >
-            <h1 className="text-5xl md:text-7xl font-display font-bold">
-              The Living{" "}
-              <span className="text-[#C6A34F]">Archive of India</span>
+      {/* ===== 3 SECTION GRID ===== */}
+      <main className="grid grid-rows-[90vh_auto_90vh] md:grid-rows-[100vh_100vh_100vh]">
+        {/* HERO SECTION */}
+        <section className="relative h-[100vh] flex items-center justify-center text-center">
+          {/* background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${SaffornImage})`,
+            }}
+          />
+
+          {/* saffron overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FF9933]/20 via-[#F4F1EA]/10 to-[#F4F1EA]" />
+
+          {/* text */}
+          <div className="relative z-10 px-6">
+            <h1 className="text-6xl md:text-8xl font-display font-bold text-white drop-shadow-lg">
+              The Living <span className="text-[#FFD27F]">Archive</span>
+              <br />
+              of India
             </h1>
 
-            <p className="mt-6 max-w-2xl mx-auto text-[#6B6254] text-lg">
+            <p className="mt-8 text-white/90 max-w-xl mx-auto text-lg">
               Discover destinations, hidden gems, traditions and cultural
               systems documented with depth and authenticity.
             </p>
-          </motion.section>
+          </div>
+        </section>
 
-          {/* CURATED SECTION (Glass Effect) */}
-          <motion.section
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-6xl mx-auto mb-28"
-          >
-            <div>
-              <h2 className="text-3xl font-semibold text-center mb-10">
-                Curated Destinations
-              </h2>
+        {/* MAP SECTION */}
+        <section className="relative flex flex-col items-center justify-center px-6">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center z-0"
+            style={{ backgroundImage: `url(${whiteImage})` }}
+          />
 
-              <p className="text-center text-[#6B6254] max-w-2xl mx-auto">
-                Explore handpicked locations that represent the ecological,
-                cultural and artisanal diversity of India.
-              </p>
+          {/* White Overlay */}
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-10" />
+
+          {/* Content */}
+          <div className="relative z-30 flex flex-col items-center">
+            <h2 className="text-3xl font-semibold mb-14 text-[#2C2A26]">
+              Explore India by State
+            </h2>
+
+            <div className="relative flex justify-center items-center">
+              {/* Chakra ABOVE overlay */}
+              <motion.img
+                src={AshokaChakra}
+                alt="Ashoka Chakra"
+                className="absolute w-[420px] md:w-[520px] lg:w-[620px] opacity-20 chakra-rotate pointer-events-none z-20"
+              />
+
+              {/* Map Glow */}
+              <div className="absolute w-[650px] h-[650px] bg-[#C6A34F]/10 blur-[160px] rounded-full -z-10" />
+
+              {/* India Map */}
+              <div className="relative z-30 w-[90%] md:w-[650px] lg:w-[750px]">
+                <IndiaMap />
+              </div>
             </div>
-          </motion.section>
+          </div>
+        </section>
+        {/* CURATED SECTION */}
+        <section className="relative flex flex-col items-center justify-center text-center px-6">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${greenImage})` }}
+          />
 
-          {/* INDIA MAP SECTION */}
-          <motion.section
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto"
-          >
-            <div>
-              <h2 className="text-3xl font-semibold text-center mb-10">
-                Explore by State
-              </h2>
+          {/* Green overlay */}
+          <div className="absolute inset-0 bg-green-900/20 backdrop-blur-[1px]" />
 
-              <IndiaMap />
-            </div>
-          </motion.section>
-        </main>
+          {/* Content */}
+          <div className="relative z-10">
+            <h2 className="text-4xl font-display mb-6 text-white">
+              Curated Destinations
+            </h2>
 
-        <footer className="text-center py-10 text-sm text-[#6B6254]">
-          Cultural Atlas — 28 States & 8 Union Territories
-        </footer>
-      </div>
+            <p className="max-w-xl text-white/90">
+              Explore handpicked locations representing India's ecological,
+              cultural and artisanal diversity.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      {/* FOOTER */}
+      <footer className="text-center py-8 text-sm text-[#4F473B]">
+        Cultural Atlas — 28 States & 8 Union Territories
+      </footer>
     </div>
   );
 };

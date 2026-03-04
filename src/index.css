@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -51,19 +51,42 @@
     --radius: 0.75rem;
 
     /* Typography */
-    --font-serif: 'Playfair Display', Georgia, serif;
-    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", system-ui, sans-serif;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsla(25, 25%, 15%, 0.4) 0%, hsla(25, 25%, 15%, 0.7) 100%);
-    --gradient-card: linear-gradient(135deg, hsla(40, 40%, 98%, 0.95) 0%, hsla(35, 30%, 95%, 0.9) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(18, 65%, 50%) 0%, hsl(25, 70%, 45%) 100%);
-    --gradient-forest: linear-gradient(135deg, hsl(152, 35%, 25%) 0%, hsl(152, 40%, 20%) 100%);
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsla(25, 25%, 15%, 0.4) 0%,
+      hsla(25, 25%, 15%, 0.7) 100%
+    );
+    --gradient-card: linear-gradient(
+      135deg,
+      hsla(40, 40%, 98%, 0.95) 0%,
+      hsla(35, 30%, 95%, 0.9) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(18, 65%, 50%) 0%,
+      hsl(25, 70%, 45%) 100%
+    );
+    --gradient-forest: linear-gradient(
+      135deg,
+      hsl(152, 35%, 25%) 0%,
+      hsl(152, 40%, 20%) 100%
+    );
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -2px hsla(25, 25%, 15%, 0.08);
     --shadow-card: 0 8px 30px -4px hsla(25, 25%, 15%, 0.12);
     --shadow-elevated: 0 20px 50px -10px hsla(25, 25%, 15%, 0.2);
+
+    /* India Map */
+    /* India Map Colors */
+    --map-default: 152 35% 25%; /* primary forest green */
+    --map-hover: 40 35% 92%; /* off-white hover */
+    --map-stroke: 35 25% 88%; /* soft border */
+    --map-active: 152 35% 25%;
 
     --sidebar-background: 40 33% 96%;
     --sidebar-foreground: 25 25% 15%;
@@ -110,6 +133,12 @@
     --input: 25 15% 20%;
     --ring: 152 30% 45%;
 
+    /* India Map Colors (Dark Mode) */
+    --map-default: 25 15% 25%;
+    --map-hover: 18 55% 55%;
+    --map-stroke: 25 15% 35%;
+    --map-active: 152 30% 45%;
+
     --sidebar-background: 25 25% 10%;
     --sidebar-foreground: 40 30% 95%;
     --sidebar-primary: 152 30% 45%;
@@ -120,7 +149,27 @@
     --sidebar-ring: 152 30% 45%;
   }
 }
+.chakra-rotate {
+  animation: chakraSpin 30s linear infinite;
+}
 
+@keyframes chakraSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flag-hover {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.2),
+    transparent 60%
+  );
+  transition: background 0.2s ease;
+}
 @layer base {
   * {
     @apply border-border;
@@ -134,7 +183,12 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
