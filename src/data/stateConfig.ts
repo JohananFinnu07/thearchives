@@ -18,7 +18,7 @@ export const stateConfig: Record<string, StateConfig> = {
     theme: "forest",
   },
   ar: {
-    slug: "arunachal-pradesh",
+    slug: "ar",
     name: "Arunachal Pradesh",
     heroImage: ARHeroImage,
     theme: "",
