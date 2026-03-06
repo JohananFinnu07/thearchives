@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===============================
+   ROOT DESIGN TOKENS
+================================ */
 
 @layer base {
   :root {
@@ -10,14 +14,14 @@
     --background: 40 33% 96%;
     --foreground: 25 25% 15%;
 
-    /* Cards with soft cream */
+    /* Cards */
     --card: 40 40% 98%;
     --card-foreground: 25 25% 15%;
 
     --popover: 40 40% 98%;
     --popover-foreground: 25 25% 15%;
 
-    /* Deep Forest Green Primary */
+    /* Forest Green Primary */
     --primary: 152 35% 25%;
     --primary-foreground: 40 40% 98%;
 
@@ -33,11 +37,11 @@
     --accent: 18 65% 50%;
     --accent-foreground: 40 40% 98%;
 
-    /* Sage Green for subtle elements */
+    /* Sage */
     --sage: 140 20% 75%;
     --sage-foreground: 152 35% 20%;
 
-    /* Gold/Honey highlight */
+    /* Gold */
     --gold: 42 85% 55%;
     --gold-foreground: 25 25% 15%;
 
@@ -51,29 +55,49 @@
     --radius: 0.75rem;
 
     /* Typography */
-    --font-serif: 'Playfair Display', Georgia, serif;
-    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", system-ui, sans-serif;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsla(25, 25%, 15%, 0.4) 0%, hsla(25, 25%, 15%, 0.7) 100%);
-    --gradient-card: linear-gradient(135deg, hsla(40, 40%, 98%, 0.95) 0%, hsla(35, 30%, 95%, 0.9) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(18, 65%, 50%) 0%, hsl(25, 70%, 45%) 100%);
-    --gradient-forest: linear-gradient(135deg, hsl(152, 35%, 25%) 0%, hsl(152, 40%, 20%) 100%);
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsla(25, 25%, 15%, 0.4) 0%,
+      hsla(25, 25%, 15%, 0.7) 100%
+    );
+
+    --gradient-card: linear-gradient(
+      135deg,
+      hsla(40, 40%, 98%, 0.95) 0%,
+      hsla(35, 30%, 95%, 0.9) 100%
+    );
+
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(18, 65%, 50%) 0%,
+      hsl(25, 70%, 45%) 100%
+    );
+
+    --gradient-forest: linear-gradient(
+      135deg,
+      hsl(152, 35%, 25%) 0%,
+      hsl(152, 40%, 20%) 100%
+    );
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -2px hsla(25, 25%, 15%, 0.08);
     --shadow-card: 0 8px 30px -4px hsla(25, 25%, 15%, 0.12);
     --shadow-elevated: 0 20px 50px -10px hsla(25, 25%, 15%, 0.2);
 
-    --sidebar-background: 40 33% 96%;
-    --sidebar-foreground: 25 25% 15%;
-    --sidebar-primary: 152 35% 25%;
-    --sidebar-primary-foreground: 40 40% 98%;
-    --sidebar-accent: 35 30% 90%;
-    --sidebar-accent-foreground: 25 25% 15%;
-    --sidebar-border: 35 25% 88%;
-    --sidebar-ring: 152 35% 25%;
+    /* India Map Colors */
+    --map-default: 220 36% 35%;
+    --map-hover: 40 35% 92%;
+    --map-stroke: 35 25% 88%;
+    --map-active: 152 35% 25%;
   }
+
+  /* ===============================
+     DARK MODE
+  ================================ */
 
   .dark {
     --background: 25 25% 8%;
@@ -97,31 +121,13 @@
     --accent: 18 55% 55%;
     --accent-foreground: 40 40% 98%;
 
-    --sage: 140 15% 30%;
-    --sage-foreground: 140 20% 75%;
-
-    --gold: 42 75% 50%;
-    --gold-foreground: 25 25% 8%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 25 15% 20%;
     --input: 25 15% 20%;
     --ring: 152 30% 45%;
-
-    --sidebar-background: 25 25% 10%;
-    --sidebar-foreground: 40 30% 95%;
-    --sidebar-primary: 152 30% 45%;
-    --sidebar-primary-foreground: 25 25% 8%;
-    --sidebar-accent: 25 15% 18%;
-    --sidebar-accent-foreground: 40 30% 95%;
-    --sidebar-border: 25 15% 20%;
-    --sidebar-ring: 152 30% 45%;
   }
-}
 
-@layer base {
+  /* Global styles */
+
   * {
     @apply border-border;
   }
@@ -134,12 +140,49 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
 
+/* ===============================
+   ANIMATIONS
+================================ */
+
+.chakra-rotate {
+  animation: chakraSpin 30s linear infinite;
+}
+
+@keyframes chakraSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flag-hover {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.2),
+    transparent 60%
+  );
+  transition: background 0.2s ease;
+}
+
+/* ===============================
+   UTILITIES
+================================ */
+
 @layer utilities {
+  /* Typography helpers */
+
   .font-serif {
     font-family: var(--font-serif);
   }
@@ -151,6 +194,8 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Gradients */
 
   .gradient-hero {
     background: var(--gradient-hero);
@@ -168,6 +213,8 @@
     background: var(--gradient-forest);
   }
 
+  /* Shadows */
+
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
@@ -178,5 +225,60 @@
 
   .shadow-elevated {
     box-shadow: var(--shadow-elevated);
+  }
+
+  /* ==================================
+     ATLAS SECTION BACKGROUND
+  =================================== */
+
+  .bg-atlas {
+    background:
+      radial-gradient(
+        circle at 50% 30%,
+        rgba(255, 215, 160, 0.15),
+        transparent 60%
+      ),
+      linear-gradient(180deg, hsl(40 33% 96%) 0%, hsl(40 30% 92%) 100%);
+  }
+
+  /* ==================================
+     CARD HOVER (STATE EXPLORER)
+  =================================== */
+
+  .card-hover {
+    transition:
+      transform 0.5s ease,
+      box-shadow 0.5s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* ==================================
+     ATLAS TEXTURE
+  =================================== */
+
+  .atlas-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+
+  /* ==================================
+     HIDE SCROLLBAR (CAROUSELS)
+  =================================== */
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 }

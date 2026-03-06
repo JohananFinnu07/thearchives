@@ -23,7 +23,7 @@ const IndiaHeader = () => {
 
           {/* Center Tagline (Optional but nice for India view) */}
           <div className="hidden md:block text-sm text-muted-foreground">
-            Explore India’s Cultural Landscape
+            Discover India’s Hidden Origins
           </div>
 
           {/* Search */}
