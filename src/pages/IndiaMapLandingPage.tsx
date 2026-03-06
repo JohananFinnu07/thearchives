@@ -7,6 +7,7 @@ import AshokaChakra from "@/assets/India/chakra-image.png";
 import SaffornImage from "@/assets/India/saffronsection.jpg";
 import whiteImage from "@/assets/India/whitesection.jpg";
 import greenImage from "@/assets/India/greenLandscape.jpg";
+import heroVideo from "@/assets/India/heroBV.mp4";
 
 import {
   Leaf,
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 import { Compass, Church, Map, Globe, BookOpen } from "lucide-react";
 import StateExplorer from "@/components/StateExplorer";
+import SeasonExplorer from "@/components/SeasonExplorer";
 
 const IndiaMapLandingPage = () => {
   const heroRef = useRef(null);
@@ -59,20 +61,28 @@ const IndiaMapLandingPage = () => {
 
       <main className="flex flex-col">
         {/* HERO SECTION */}
+        {/* HERO SECTION */}
         <motion.section
           ref={heroRef}
           style={{ opacity: heroOpacity, scale: heroScale }}
-          className="relative min-h-[calc(100vh-80px)] flex items-center justify-center text-center px-6 pt-28 pb-[35vh] overflow-hidden"
+          className="relative min-h-[90vh] md:min-h-[calc(100vh-80px)] flex items-center justify-center text-center px-5 md:px-6 pt-24 md:pt-28 pb-24 md:pb-[30vh] overflow-hidden"
         >
-          {/* Raw Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${SaffornImage})` }}
-          />
+          {/* Background Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-[45%_center] scale-110 pointer-events-none"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
 
-          {/* Floating cultural icons */}
-          {/* Floating cultural icons */}
-          <div className="absolute inset-0 z-10">
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-black/40" />
+
+          {/* Floating cultural icons (hidden on mobile) */}
+          <div className="absolute inset-0 z-10 hidden md:block">
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 8 }}
@@ -82,8 +92,8 @@ const IndiaMapLandingPage = () => {
 
               <span
                 className="absolute left-1/2 -translate-x-1/2 top-12 whitespace-nowrap
-    bg-black/70 text-white text-xs px-3 py-1 rounded-md
-    opacity-0 group-hover:opacity-100 transition"
+        bg-black/70 text-white text-xs px-3 py-1 rounded-md
+        opacity-0 group-hover:opacity-100 transition"
               >
                 Tribal Produce
               </span>
@@ -98,8 +108,8 @@ const IndiaMapLandingPage = () => {
 
               <span
                 className="absolute left-1/2 -translate-x-1/2 top-12 whitespace-nowrap
-    bg-black/70 text-white text-xs px-3 py-1 rounded-md
-    opacity-0 group-hover:opacity-100 transition"
+        bg-black/70 text-white text-xs px-3 py-1 rounded-md
+        opacity-0 group-hover:opacity-100 transition"
               >
                 Sacred Landscapes
               </span>
@@ -114,8 +124,8 @@ const IndiaMapLandingPage = () => {
 
               <span
                 className="absolute left-1/2 -translate-x-1/2 top-12 whitespace-nowrap
-    bg-black/70 text-white text-xs px-3 py-1 rounded-md
-    opacity-0 group-hover:opacity-100 transition"
+        bg-black/70 text-white text-xs px-3 py-1 rounded-md
+        opacity-0 group-hover:opacity-100 transition"
               >
                 Hidden Foods
               </span>
@@ -130,40 +140,32 @@ const IndiaMapLandingPage = () => {
 
               <span
                 className="absolute left-1/2 -translate-x-1/2 top-12 whitespace-nowrap
-    bg-black/70 text-white text-xs px-3 py-1 rounded-md
-    opacity-0 group-hover:opacity-100 transition"
+        bg-black/70 text-white text-xs px-3 py-1 rounded-md
+        opacity-0 group-hover:opacity-100 transition"
               >
                 Heritage Crafts
               </span>
             </motion.div>
           </div>
-
           {/* Hero Content */}
-          <div className="relative z-20 max-w-4xl">
+          <div className="relative z-20 max-w-md sm:max-w-lg md:max-w-4xl mx-auto flex flex-col items-center justify-center">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold drop-shadow-lg leading-[1.2]"
+              className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold drop-shadow-lg leading-[1.2]"
             >
-              {/* INDIA tricolor 
-              <span className="bg-gradient-to-b from-[#FF9933] via-white to-[#128807] bg-clip-text text-transparent tracking-widest">
-                INDIA
-              </span>
-*/}
-              <br />
-
-              {/* Archive line */}
               <span className="text-white block mt-2">
                 The Living <span className="text-[#FFD27F]">Archive</span> of
                 Origins
               </span>
             </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="mt-8 max-w-xl mx-auto text-lg leading-relaxed text-[#F8F5EF] drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]"
+              className="mt-6 md:mt-8 max-w-sm sm:max-w-md md:max-w-xl mx-auto text-base md:text-lg leading-relaxed text-[#F8F5EF] drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]"
             >
               India is not a single story, but a million origins.
               <span className="text-[#FFD27F]">
@@ -176,7 +178,7 @@ const IndiaMapLandingPage = () => {
 
             {/* Keywords */}
             <motion.div
-              className="mt-12 flex items-center justify-center gap-4 text-sm md:text-base text-[#D8CBB5]/90 tracking-wide"
+              className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-3 md:gap-4 text-xs sm:text-sm md:text-base text-[#D8CBB5]/90 tracking-wide"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
@@ -191,13 +193,16 @@ const IndiaMapLandingPage = () => {
               <span className="opacity-50">·</span>
               <span>Village Traditions</span>
             </motion.div>
+
             {/* Scroll cue */}
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
-              className="mt-10 flex flex-col items-center gap-2 text-white/80"
+              className="mt-8 md:mt-10 flex flex-col items-center gap-2 text-white/80"
             >
-              <span className="text-xs tracking-widest">SCROLL TO EXPLORE</span>
+              <span className="text-[10px] md:text-xs tracking-widest">
+                SCROLL TO EXPLORE
+              </span>
 
               <motion.div
                 animate={{ rotate: 360 }}
@@ -282,7 +287,23 @@ const IndiaMapLandingPage = () => {
           </div>
         </section>
         {/* SECTION 3 */}
-        <StateExplorer />
+        <section className="relative py-15 px-4 overflow-hidden">
+          {/* Background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-2"
+            style={{ backgroundImage: `url(${greenImage})` }}
+          />
+
+          {/* soft overlay 
+          <div className="absolute inset-0 bg-[#F4F1EA]/40" /> */}
+
+          {/* content */}
+          <div className="relative z-10">
+            <StateExplorer />
+          </div>
+        </section>
+
+        <SeasonExplorer />
       </main>
       <footer className="bg-[#1F3D35] text-[#F4F1EA] mt-24 border-t border-[#2E5248]">
         {/* Top Statistics */}
