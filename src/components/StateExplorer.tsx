@@ -9,64 +9,61 @@ const StateExplorer = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const container = containerRef.current; // ✅ FIXED
     const section = sectionRef.current;
-    const container = containerRef.current;
 
-    if (!section || !container) return;
-
-    let interval: NodeJS.Timeout;
-    let inactivityTimer: NodeJS.Timeout;
-    let observer: IntersectionObserver;
+    if (!container || !section) return;
 
     let index = 0;
     let direction = 1;
+    let interval: any;
+    let inactivityTimer: any;
+    let observer: IntersectionObserver;
+
+    let lastScrollLeft = 0;
 
     const getCardWidth = () => {
       const card = container.querySelector(".state-card") as HTMLElement;
-      if (!card) return 0;
+      return card?.offsetWidth + 24 || 420;
+    };
 
-      const gap =
-        parseInt(
-          window.getComputedStyle(container).columnGap.replace("px", ""),
-        ) || 24;
-
-      return card.offsetWidth + gap;
+    const syncIndexWithScroll = () => {
+      const cardWidth = getCardWidth();
+      index = Math.round(container.scrollLeft / cardWidth);
     };
 
     const startAutoScroll = () => {
       clearInterval(interval);
 
+      syncIndexWithScroll();
+
       interval = setInterval(() => {
         const cards = container.querySelectorAll(".state-card");
-
         if (!cards.length) return;
 
         const cardWidth = getCardWidth();
 
         index += direction;
 
-        if (index >= cards.length - 1) {
-          direction = -1;
-        }
-
-        if (index <= 0) {
-          direction = 1;
-        }
+        if (index >= cards.length - 1) direction = -1;
+        if (index <= 0) direction = 1;
 
         container.scrollTo({
           left: index * cardWidth,
           behavior: "smooth",
         });
-      }, 400);
+      }, 2000); // slightly faster
     };
 
     const resetInactivity = () => {
       clearInterval(interval);
       clearTimeout(inactivityTimer);
 
+      syncIndexWithScroll();
+
       inactivityTimer = setTimeout(() => {
         startAutoScroll();
-      }, 2000);
+      }, 1800);
     };
 
     observer = new IntersectionObserver(
@@ -82,13 +79,24 @@ const StateExplorer = () => {
 
     observer.observe(section);
 
-    /* Pause on user interaction */
+    /* Detect user scroll direction */
+    const detectDirection = () => {
+      const currentScroll = container.scrollLeft;
+
+      if (currentScroll > lastScrollLeft) direction = 1;
+      else if (currentScroll < lastScrollLeft) direction = -1;
+
+      lastScrollLeft = currentScroll;
+    };
+
+    /* Pause on hover */
     const pause = () => clearInterval(interval);
 
     container.addEventListener("mouseenter", pause);
     container.addEventListener("touchstart", pause);
 
-    /* Restart after inactivity */
+    container.addEventListener("scroll", detectDirection);
+
     container.addEventListener("wheel", resetInactivity);
     container.addEventListener("mousedown", resetInactivity);
     container.addEventListener("scroll", resetInactivity);
@@ -100,6 +108,8 @@ const StateExplorer = () => {
 
       container.removeEventListener("mouseenter", pause);
       container.removeEventListener("touchstart", pause);
+
+      container.removeEventListener("scroll", detectDirection);
 
       container.removeEventListener("wheel", resetInactivity);
       container.removeEventListener("mousedown", resetInactivity);

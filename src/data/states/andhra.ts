@@ -223,6 +223,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Araku Valley",
     tagline: "Organic Coffee & Tribal Heritage of Andhra Pradesh",
+    mapsQuery: "Araku valley, Andhra Pradesh",
     image: arakuImage,
     heroDescription:
       "A scenic hill station in the Eastern Ghats of Andhra Pradesh, Araku Valley is globally known for its organic coffee plantations, tribal culture, forest produce, and traditional artisan crafts.",
@@ -399,6 +400,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Lambasingi",
     tagline: "Kashmir of Andhra Pradesh",
+    mapsQuery: "lambasingi, Andhra Pradesh",
     image: lambasingiImage,
     heroDescription:
       "The coldest place in South India, famous for frost mornings, pepper plantations, and mist-covered forest hills.",
@@ -497,6 +499,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Vanajangi",
     tagline: "Meadows Above the Clouds",
+    mapsQuery: "vanjangi - Andhra Pradesh",
     image: vanajangiImage,
     heroDescription:
       "High-altitude meadows offering sunrise views above clouds, rolling grasslands, and untouched Eastern Ghats beauty.",
@@ -597,6 +600,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Paderu",
     tagline: "Tribal Heritage Gateway",
+    mapsQuery: "Paderu, Andhra Pradesh",
     image: paderuImage,
     heroDescription:
       "The commercial and cultural heart of the Eastern Ghats tribal region, famous for vibrant weekly markets and indigenous heritage.",
@@ -697,6 +701,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Maredumilli",
     tagline: "Eco-Tourism Paradise",
+    mapsQuery: "maredumilli, Andhra Pradesh",
     image: maredumilliImage,
     heroDescription:
       "A pristine Eastern Ghats forest destination known for eco-tourism, waterfalls, tribal culture, and rich biodiversity.",
@@ -852,6 +857,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Tirupati",
     tagline: "Where Devotion Meets the Forested Hills",
+    mapsQuery: "Tirupati, , Andhra Pradesh",
     image: tirupatiImage,
     heroDescription:
       "A sacred pilgrimage city where temple traditions, forest produce, and heritage crafts shape a timeless cultural landscape.",
@@ -908,6 +914,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Visakhapatnam",
     tagline: "Where the Eastern Ghats Meet the Sea",
+    mapsQuery: "Visakhapatnam, Andhra Pradesh",
     image: vishakapatnamImage,
     heroDescription:
       "A coastal gateway where tribal hills, fishing traditions, spices, and sea trade shape a layered cultural identity.",
@@ -985,6 +992,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Etikoppaka",
     tagline: "A Village That Turns Wood Into Memory",
+    mapsQuery: "Etikoppaka, Andhra Pradesh",
     image: ethikopakkaImage,
     heroDescription:
       "Home of India’s iconic lacquered wooden toys, where natural dyes and hand-turned craft preserve centuries of storytelling.",
@@ -1061,6 +1069,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Gandikota",
     tagline: "India’s Silent Canyon of Stone and Wind",
+    mapsQuery: "Gandikota, Andhra Pradesh",
     image: gandikotaImage,
     heroDescription:
       "A dramatic canyon landscape shaped by erosion, survival foods, stone craftsmanship, and resilient village traditions.",
@@ -1119,6 +1128,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Madagada",
     tagline: "Clay Shaped by Fire and Folklore",
+    mapsQuery: "Madagada, Andhra Pradesh",
     image: madagadaImage,
     heroDescription:
       "A heritage pottery village where earthen cookware preserves flavor, ritual, and indigenous food wisdom.",
@@ -1153,6 +1163,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Konaseema - Godavari",
     tagline: "Where Rivers Write Recipes",
+    mapsQuery: "east godavari, Andhra Pradesh",
     image: konaseemaImage,
     heroDescription:
       "A fertile delta shaped by coconuts, river fish, jaggery sweets, and slow-cooked traditions.",
@@ -1241,6 +1252,8 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Papikondalu",
     tagline: "Forests Folded Around a River",
+    mapsQuery:
+      "3 18-17-11, behind Venkateswara Apartments, Krishna Nagar, Aryapuram, Rajamahendravaram, Andhra Pradesh 533104",
     image: papikondaluImage,
     heroDescription:
       "Mist-covered hills where tribal ecology, forest foods, and the Godavari flow together.",
@@ -1275,6 +1288,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred Hills Guarded by Wilderness",
+    mapsQuery: "Srisailam, Andhra-Pradesh",
     image: srisailamImage,
     heroDescription:
       "A spiritual center surrounded by one of South India’s oldest forest ecosystems.",
@@ -1335,6 +1349,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Nellore",
     tagline: "Fields, Salt Air, and Slow Harvests",
+    mapsQuery: "Nellore, Andhra-Pradesh",
     image: nelloreImage,
     heroDescription:
       "A coastal agricultural region known for rice, seafood, and patient preservation traditions.",

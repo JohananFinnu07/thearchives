@@ -1,8 +1,10 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useActiveState } from "@/hooks/use-ActiveState";
 
 const NotFound = () => {
   const location = useLocation();
+  const activeState = useActiveState();
 
   useEffect(() => {
     console.error(
@@ -11,11 +13,11 @@ const NotFound = () => {
     );
   }, [location.pathname]);
 
-  // Extract first segment (state if exists)
-  const pathSegments = location.pathname.split("/").filter(Boolean);
-  const possibleState = pathSegments[0];
+  const homePath = activeState ? `/${activeState}` : "/";
 
-  const homePath = possibleState ? `/${possibleState}` : "/";
+  const label = activeState
+    ? `Return to ${activeState.replace("-", " ")}`
+    : "Return to Home";
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
@@ -30,7 +32,7 @@ const NotFound = () => {
           to={homePath}
           className="text-primary underline hover:text-primary/90"
         >
-          Return to Home
+          {label}
         </Link>
       </div>
     </div>

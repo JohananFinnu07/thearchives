@@ -19,7 +19,7 @@ const StateComingSoon = ({ state }: Props) => {
           className="flex items-center gap-2 text-primary hover:underline transition-colors mb-10"
         >
           <ArrowLeft size={18} />
-          Back to India Map
+          Back Into Origins
         </button>
 
         {/* Header */}

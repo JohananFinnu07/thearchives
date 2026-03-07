@@ -1,5 +1,6 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import IndiaMap from "@/components/IndiaMap";
 import IndiaHeader from "@/components/IndiaHeader";
 
@@ -22,7 +23,8 @@ import SeasonExplorer from "@/components/SeasonExplorer";
 
 const IndiaMapLandingPage = () => {
   const heroRef = useRef(null);
-
+  const location = useLocation();
+  const section2Ref = useRef<HTMLDivElement | null>(null);
   /* Cursor Glow */
   useEffect(() => {
     const move = (e: MouseEvent) => {
@@ -33,7 +35,23 @@ const IndiaMapLandingPage = () => {
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, []);
+  useEffect(() => {
+    if (location.state?.scrollTo === "india-map") {
+      setTimeout(() => {
+        if (section2Ref.current) {
+          const y =
+            section2Ref.current.getBoundingClientRect().top +
+            window.pageYOffset -
+            80;
 
+          window.scrollTo({
+            top: y,
+            behavior: "smooth",
+          });
+        }
+      }, 200);
+    }
+  }, [location]);
   /* Hero cinematic scroll fade */
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -214,7 +232,10 @@ const IndiaMapLandingPage = () => {
           </div>
         </motion.section>
         {/* SECTION 2*/}
-        <section className="relative flex items-center justify-center min-h-[140vh] px-6 overflow-hidden">
+        <section
+          ref={section2Ref}
+          className="relative flex items-center justify-center min-h-[140vh] px-6 overflow-hidden"
+        >
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center z-0"

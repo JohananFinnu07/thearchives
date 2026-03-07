@@ -1,6 +1,6 @@
 import { useParams, Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
   MapPin,
@@ -9,6 +9,7 @@ import {
   Mountain,
   Sparkles,
   Star,
+  Compass,
 } from "lucide-react";
 
 import { getDestinationBySlug } from "@/data/destinations";
@@ -82,6 +83,20 @@ const DestinationDetail = () => {
   );
 
   const slug = slugify(destination.name);
+
+  const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+    destination.mapsQuery + ", " + currentState?.name + ", India",
+  )}`;
+  const [showNavButton, setShowNavButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowNavButton(window.scrollY > 250);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -336,6 +351,24 @@ const DestinationDetail = () => {
         </div>
       </section>
 
+      {/* FLOATING NAVIGATION BUTTON */}
+      {/* Floating Navigate Button */}
+      <motion.a
+        href={mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 1, type: "spring", stiffness: 200 }}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2 rounded-full gradient-forest text-primary-foreground shadow-elevated hover:scale-105 transition-transform"
+        aria-label={`Navigate to ${destination.name}`}
+      >
+        <Compass className="w-5 h-5" />
+
+        <span className="font-medium text-xs hidden sm:inline">
+          Into {destination.name}
+        </span>
+      </motion.a>
       <Footer />
     </div>
   );

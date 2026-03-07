@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, MapPin, Sparkles, ChefHat, Star } from "lucide-react";
 import {
@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/command";
 import { allDestinations } from "@/data/destinations";
 import { recipes } from "@/data/recipes";
+import { useActiveState } from "@/hooks/use-ActiveState";
 
 /* Slugify */
 const slugify = (text: string) =>
@@ -24,7 +25,8 @@ const slugify = (text: string) =>
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-  const { state } = useParams<{ state?: string }>();
+
+  const activeState = useActiveState();
 
   /* ⌘K / Ctrl+K */
   useEffect(() => {
@@ -34,18 +36,21 @@ const NavSearch = () => {
         setOpen((prev) => !prev);
       }
     };
+
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  /* Filtered Data */
+  /* Filter Destinations */
   const filteredDestinations = useMemo(() => {
-    if (!state) return allDestinations;
-    return allDestinations.filter(
-      (d) => d.state?.toLowerCase() === state.toLowerCase(),
-    );
-  }, [state]);
+    if (!activeState) return allDestinations;
 
+    return allDestinations.filter(
+      (d) => d.state?.toLowerCase() === activeState.toLowerCase(),
+    );
+  }, [activeState]);
+
+  /* Famous Products */
   const famousProducts = useMemo(() => {
     return filteredDestinations.flatMap((d) =>
       d.products
@@ -57,6 +62,7 @@ const NavSearch = () => {
     );
   }, [filteredDestinations]);
 
+  /* Hidden Products */
   const hiddenProducts = useMemo(() => {
     return filteredDestinations.flatMap((d) =>
       d.products
@@ -68,18 +74,21 @@ const NavSearch = () => {
     );
   }, [filteredDestinations]);
 
+  /* Recipes */
   const filteredRecipes = useMemo(() => {
-    if (!state) return recipes;
-    return recipes.filter(
-      (r) => r.state?.toLowerCase() === state.toLowerCase(),
-    );
-  }, [state]);
+    if (!activeState) return recipes;
 
+    return recipes.filter(
+      (r) => r.state?.toLowerCase() === activeState.toLowerCase(),
+    );
+  }, [activeState]);
+
+  /* Navigation */
   const handleSelect = (route: string) => {
     setOpen(false);
 
-    if (state) {
-      navigate(`/${state}${route}`);
+    if (activeState) {
+      navigate(`/${activeState}${route}`);
     } else {
       navigate(route);
     }
@@ -130,7 +139,7 @@ const NavSearch = () => {
                   </CommandGroup>
                 )}
 
-                {/* Famous */}
+                {/* Famous Products */}
                 {famousProducts.length > 0 && (
                   <CommandGroup heading="Famous Products">
                     {famousProducts.map((item) => (
@@ -146,7 +155,7 @@ const NavSearch = () => {
                   </CommandGroup>
                 )}
 
-                {/* Hidden */}
+                {/* Hidden Gems */}
                 {hiddenProducts.length > 0 && (
                   <CommandGroup heading="Hidden Gems">
                     {hiddenProducts.map((item) => (

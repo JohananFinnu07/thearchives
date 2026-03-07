@@ -1,24 +1,21 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useParams } from "react-router-dom"; // ✅ added useParams
+import { Link, useParams } from "react-router-dom";
 import heroImage from "@/assets/hero-araku.jpg";
-import { stateConfig } from "@/data/stateConfig"; // ✅ theme source
+import { stateConfig } from "@/data/stateConfig";
 
 interface HeroProps {
-  state?: any; // optional for flexibility
+  state?: any;
 }
 
 const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
   const { state } = useParams<{ state: string }>();
 
-  // Prefer passed state (from StateLandingPage), fallback to URL
   const activeState = passedState || (state ? stateConfig[state] : null);
 
-  // ✅ Dynamic hero image fallback
   const backgroundImage = activeState?.heroImage || heroImage;
 
-  // ✅ Prefix helper
   const prefix = (path: string) => {
     if (!state) return path;
     return `/${state}${path}`;
@@ -29,6 +26,20 @@ const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Back to India Button (ONLY on state pages) */}
+      {state && (
+        <Link
+          to="/"
+          state={{ scrollTo: "india-map" }}
+          className="absolute top-24 left-6 z-30 flex items-center gap-2
+          bg-black/40 backdrop-blur-md text-white px-4 py-2 rounded-full
+          hover:bg-black/60 transition-all duration-300"
+        >
+          <MapPin className="w-4 h-4" />
+          <span className="text-sm tracking-wide">Back to India</span>
+        </Link>
+      )}
+
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -47,7 +58,6 @@ const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Caption */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
           </motion.p>
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight text-primary-foreground mb-6 max-w-4xl">
-            The <span className="italic">Living</span> Treasures{" "}
+            The <span className="italic">Living</span> Treasures
             <br className="hidden sm:block" />
             of{" "}
             <span className="text-amber-300 font-semibold">
@@ -107,13 +117,8 @@ const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 1.5, repeat: Infinity }}
           className="flex flex-col items-center gap-2 cursor-pointer"
-          onClick={() =>
-            document
-              .getElementById("destinations")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
         >
           <span className="text-primary-foreground/60 text-xs tracking-widest uppercase">
             Discover
