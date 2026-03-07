@@ -87,16 +87,24 @@ const NavSearch = () => {
       >
         <Search className="h-4 w-4" />
         <span>Search...</span>
-        <kbd className="ml-2 rounded border px-1.5 py-0.5 text-[10px]">⌘K</kbd>
+        <kbd className="ml-2 hidden sm:inline rounded border px-1.5 py-0.5 text-[10px]">
+          ⌘K
+        </kbd>
       </motion.button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <div className="flex flex-col h-[85vh] sm:h-auto sm:max-h-[70vh]">
-          <CommandInput placeholder="Search destinations, products, or recipes..." />
+        {/* 1. Removed all custom motion wrappers.
+          2. Added 'flex flex-col' and 'overflow-hidden' logic.
+        */}
+        <div className="flex flex-col h-full max-h-[85vh] md:max-h-[70vh]">
+          <CommandInput placeholder="Search destinations..." />
 
           <CommandList
-            className="flex-1 overflow-y-auto"
-            style={{ WebkitOverflowScrolling: "touch" }}
+            className="flex-1 overflow-y-auto scrolling-touch"
+            style={{
+              WebkitOverflowScrolling: "touch", // Essential for smooth iOS scrolling
+              maxHeight: "calc(85vh - 50px)", // Ensures space for the input
+            }}
           >
             <CommandEmpty>No results found.</CommandEmpty>
 
@@ -115,7 +123,7 @@ const NavSearch = () => {
               </CommandGroup>
             )}
 
-            {/* Famous Products */}
+            {/* Products & Recipes (Same structure) */}
             {famousProducts.length > 0 && (
               <CommandGroup heading="Famous Products">
                 {famousProducts.map((item) => (
@@ -130,7 +138,6 @@ const NavSearch = () => {
               </CommandGroup>
             )}
 
-            {/* Hidden Gems */}
             {hiddenProducts.length > 0 && (
               <CommandGroup heading="Hidden Gems">
                 {hiddenProducts.map((item) => (
@@ -145,7 +152,6 @@ const NavSearch = () => {
               </CommandGroup>
             )}
 
-            {/* Recipes */}
             {filteredRecipes.length > 0 && (
               <CommandGroup heading="Recipes">
                 {filteredRecipes.map((recipe) => (
