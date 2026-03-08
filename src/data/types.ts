@@ -16,6 +16,7 @@ export interface Destination {
   state: string;
   name: string;
   tagline: string;
+  mapsQuery: string;
   image: string;
   heroDescription: string;
   elevation: string;
@@ -24,4 +25,25 @@ export interface Destination {
   about: string;
   products: Product[];
   culture: string;
+}
+
+export interface Recipe {
+  name: string;
+  state: string;
+  description: string;
+  destination: string;
+  id: string;
+  image: string;
+
+  prepTime: string;
+  cookTime: string;
+  servings: string;
+  difficulty: "Easy" | "Medium" | "Hard";
+
+  ingredients: string[];
+  steps: string[];
+
+  story?: string;
+  season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal";
+  buyLink?: string;
 }
