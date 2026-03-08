@@ -93,17 +93,21 @@ const NavSearch = () => {
       </motion.button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
-        {/* 1. Removed all custom motion wrappers.
-          2. Added 'flex flex-col' and 'overflow-hidden' logic.
-        */}
-        <div className="flex flex-col h-full max-h-[85vh] md:max-h-[70vh]">
-          <CommandInput placeholder="Search destinations..." />
+        <div className="flex flex-col max-h-[85vh] md:max-h-[70vh] w-full max-w-lg overflow-hidden">
+          {/* Sticky Search Input */}
+          <div className="sticky top-0 z-10 bg-background border-b">
+            <CommandInput
+              placeholder="Search destinations, foods, recipes..."
+              className="h-12 text-base"
+            />
+          </div>
 
+          {/* Scrollable Results */}
           <CommandList
-            className="flex-1 overflow-y-auto scrolling-touch"
+            className="flex-1 overflow-y-auto overscroll-contain"
             style={{
-              WebkitOverflowScrolling: "touch", // Essential for smooth iOS scrolling
-              maxHeight: "calc(85vh - 50px)", // Ensures space for the input
+              WebkitOverflowScrolling: "touch",
+              scrollBehavior: "smooth",
             }}
           >
             <CommandEmpty>No results found.</CommandEmpty>
@@ -115,43 +119,48 @@ const NavSearch = () => {
                   <CommandItem
                     key={dest.id}
                     onSelect={() => handleSelect(`/destination/${dest.id}`)}
+                    className="flex items-center gap-3 py-3 text-base"
                   >
-                    <MapPin className="h-4 w-4 text-green-600 mr-2" />
+                    <MapPin className="h-4 w-4 text-green-600" />
                     {dest.name}
                   </CommandItem>
                 ))}
               </CommandGroup>
             )}
 
-            {/* Products & Recipes (Same structure) */}
+            {/* Famous Products */}
             {famousProducts.length > 0 && (
               <CommandGroup heading="Famous Products">
                 {famousProducts.map((item) => (
                   <CommandItem
                     key={item.route}
                     onSelect={() => handleSelect(item.route)}
+                    className="flex items-center gap-3 py-3 text-base"
                   >
-                    <Star className="h-4 w-4 text-green-600 mr-2" />
+                    <Star className="h-4 w-4 text-green-600" />
                     {item.name}
                   </CommandItem>
                 ))}
               </CommandGroup>
             )}
 
+            {/* Hidden Gems */}
             {hiddenProducts.length > 0 && (
               <CommandGroup heading="Hidden Gems">
                 {hiddenProducts.map((item) => (
                   <CommandItem
                     key={item.route}
                     onSelect={() => handleSelect(item.route)}
+                    className="flex items-center gap-3 py-3 text-base"
                   >
-                    <Sparkles className="h-4 w-4 text-orange-500 mr-2" />
+                    <Sparkles className="h-4 w-4 text-orange-500" />
                     {item.name}
                   </CommandItem>
                 ))}
               </CommandGroup>
             )}
 
+            {/* Recipes */}
             {filteredRecipes.length > 0 && (
               <CommandGroup heading="Recipes">
                 {filteredRecipes.map((recipe) => (
@@ -160,8 +169,9 @@ const NavSearch = () => {
                     onSelect={() =>
                       handleSelect(`/recipes/${slugify(recipe.name)}`)
                     }
+                    className="flex items-center gap-3 py-3 text-base"
                   >
-                    <ChefHat className="h-4 w-4 text-orange-500 mr-2" />
+                    <ChefHat className="h-4 w-4 text-orange-500" />
                     {recipe.name}
                   </CommandItem>
                 ))}

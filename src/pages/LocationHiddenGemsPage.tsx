@@ -228,7 +228,7 @@ const LocationHiddenGemsPage = () => {
                             )}
                             className="inline-flex items-center text-primary text-base font-medium hover:underline"
                           >
-                            Explore the Story →
+                            Into the Story →
                           </Link>
                         </div>
                       </div>

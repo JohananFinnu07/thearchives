@@ -37,7 +37,7 @@ const RecipeDetail = () => {
     );
   }
 
-  const destinationSlug = slugify(recipe.destination);
+  const destinationSlug = slugify(recipe.id);
 
   return (
     <div className="min-h-screen bg-background">

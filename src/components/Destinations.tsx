@@ -101,7 +101,7 @@ const Destinations: React.FC<DestinationsProps> = ({ destinations }) => {
           left: index * cardWidth,
           behavior: "smooth",
         });
-      }, 1800);
+      }, 1000);
     };
 
     const resetInactivity = () => {
@@ -112,7 +112,7 @@ const Destinations: React.FC<DestinationsProps> = ({ destinations }) => {
 
       inactivityTimer = setTimeout(() => {
         startAutoScroll();
-      }, 2500);
+      }, 500);
     };
 
     observer = new IntersectionObserver(

@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ state: passedState }) => {
           hover:bg-black/60 transition-all duration-300"
         >
           <MapPin className="w-4 h-4" />
-          <span className="text-sm tracking-wide">Back to India</span>
+          <span className="text-sm tracking-wide">Back to Origins</span>
         </Link>
       )}
 

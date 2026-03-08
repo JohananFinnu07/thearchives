@@ -75,7 +75,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
             to={productPath}
             className="inline-block text-primary font-medium hover:underline"
           >
-            Explore the Story →
+            Into the Story →
           </Link>
         </div>
       </div>

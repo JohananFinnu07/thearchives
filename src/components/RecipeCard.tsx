@@ -62,7 +62,7 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
         to={recipePath}
         className="inline-block text-primary font-medium hover:underline"
       >
-        Inside the Recipe →
+        The Making →
       </Link>
     </div>
   );
