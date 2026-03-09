@@ -246,6 +246,14 @@ import kalamkariBlockImage from "@/assets/products/MKWBH.jpg";
 import kalamkariBlockMake from "@/assets/products/MKWBM.jpg";
 import kalamkariBlockFlavor from "@/assets/products/MKWBF.jpg";
 
+import tribalmilletsImage from "@/assets/products/MDTM.jpg";
+import tribalmilletsMake from "@/assets/products/MDTM.jpg";
+import tribalmilletsFlavor from "@/assets/products/MDTMF.jpg";
+
+import potteryWheelImage from "@/assets/products/BBPWH.jpg";
+import potteryWheelMake from "@/assets/products/BBPWM.jpg";
+import potteryWheelFlavor from "@/assets/products/BBPWF.jpg";
+
 export const andhraDestinations: Destination[] = [
   {
     id: "araku-valley",
@@ -1181,6 +1189,47 @@ export const andhraDestinations: Destination[] = [
         image: madagadaBPotteryImage,
         makingImage: madagadaBPotteryMake,
         flavorImage: madagadaBPotteryFlavor,
+      },
+      {
+        name: "Madagada Tribal Millets",
+        type: "underrated",
+        description:
+          "Nutrient-dense, heirloom grains like Ragi, Samalu, and Korra, grown by tribal farmers in the hilly terrains of Madagada using ancient shifting cultivation methods.",
+        significance:
+          "These millets are the backbone of tribal food security and are cultivated without any synthetic fertilizers. They represent a sustainable, drought-resistant agricultural heritage that has sustained the Eastern Ghats communities for centuries.",
+        makingProcess:
+          "The process begins with 'Podu' (shifting) cultivation on hill slopes. Grains are hand-harvested and sun-dried on traditional dung-plastered courtyards. Processing is done using stone 'Chakki' or wooden pounders to preserve the bran and nutritional value, keeping the grain 100% organic and raw.",
+        uses: [
+          "Nutritional staple food",
+          "Traditional Ambali (millet porridge)",
+          "Gluten-free baking alternatives",
+          "Immunity-boosting diet",
+          "Sustainable livestock fodder",
+        ],
+        image: tribalmilletsImage,
+        makingImage: tribalmilletsMake,
+        flavorImage: tribalmilletsFlavor,
+      },
+
+      {
+        name: "Ball-Bearing Potter's Wheel",
+        type: "underrated",
+        description:
+          "A unique local innovation where traditional heavy stone wheels are retrofitted with recycled ball bearings to improve rotational speed and efficiency for the potters.",
+        significance:
+          "This represents the 'Jugaad' or grassroots engineering of the Madagada artisans. It bridges the gap between ancient stone-wheel techniques and modern mechanical efficiency, allowing potters to create thinner, more symmetrical earthenware with less physical exertion.",
+        makingProcess:
+          "Artisans source high-quality bearings from old machinery. A heavy circular base made of a mixture of stone, clay, and lac is perfectly balanced on a central pivot containing the bearing. The wheel is then hand-spun with a stick, where the bearing allows it to maintain momentum for several minutes without a motor.",
+        uses: [
+          "High-precision pottery shaping",
+          "Artisan tool heritage",
+          "Sustainable manufacturing",
+          "Educational demonstrations",
+          "Local engineering artifact",
+        ],
+        image: potteryWheelImage,
+        makingImage: potteryWheelMake,
+        flavorImage: potteryWheelFlavor,
       },
     ],
 

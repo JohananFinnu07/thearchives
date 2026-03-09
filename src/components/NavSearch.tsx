@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/command";
 import { allDestinations } from "@/data/destinations";
 import { recipes } from "@/data/recipes";
+import { places } from "@/data/places";
 
 const slugify = (text: string) =>
   text
@@ -71,6 +72,12 @@ const NavSearch = () => {
     return recipes.filter(
       (r) => r.state?.toLowerCase() === state.toLowerCase(),
     );
+  }, [state]);
+
+  const filteredPlaces = useMemo(() => {
+    if (!state) return places;
+
+    return places.filter((p) => p.state?.toLowerCase() === state.toLowerCase());
   }, [state]);
 
   const handleSelect = (route: string) => {
@@ -159,7 +166,25 @@ const NavSearch = () => {
                 ))}
               </CommandGroup>
             )}
-
+            {/* Places */}
+            {filteredPlaces.length > 0 && (
+              <CommandGroup heading="Places">
+                {filteredPlaces.map((place) => (
+                  <CommandItem
+                    key={place.slug}
+                    onSelect={() =>
+                      handleSelect(
+                        `/${slugify(place.destination)}/${place.slug}`,
+                      )
+                    }
+                    className="flex items-center gap-3 py-3 text-base"
+                  >
+                    <MapPin className="h-4 w-4 text-blue-500" />
+                    {place.name}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            )}
             {/* Recipes */}
             {filteredRecipes.length > 0 && (
               <CommandGroup heading="Recipes">
