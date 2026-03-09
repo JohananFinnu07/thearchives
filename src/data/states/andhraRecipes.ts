@@ -56,6 +56,13 @@ import cheppalairuguImage from "@/assets/Recipes/CIH.jpg";
 import neyyikaramDosaImage from "@/assets/Recipes/NKDH.jpg";
 import pindiMiriamImage from "@/assets/Recipes/PMH.jpg";
 
+import rayaRagiImage from "@/assets/Recipes/RRSH.jpg";
+import rayaGroundChutney from "@/assets/Recipes/RGCH.jpg";
+import rayaMirchibajji from "@/assets/Recipes/RMBH.jpg";
+
+import bandarHalwa from "@/assets/Recipes/BH.jpg";
+import RoyyalaPacchadi from "@/assets/Recipes/MRP.jpg";
+
 export const andhraRecipes: Recipe[] = [
   {
     name: "Niger Seed Chutney",
@@ -1470,5 +1477,209 @@ export const andhraRecipes: Recipe[] = [
     ],
     story:
       "Pindi Miriyam is a traditional pepper-flavored snack from Nellore, often prepared during winter and festive gatherings. The warmth of black pepper balances the region’s humid climate. Simple ingredients and bold flavor define this rustic snack, reflecting Andhra’s time-tested culinary traditions.",
+  },
+  {
+    id: "anantapur",
+    name: "Ragi Sangati with Natukodi Pulusu",
+    state: "andhra-pradesh",
+    destination: "Anantapur",
+    description:
+      "A traditional Rayalaseema meal made with soft ragi balls served alongside spicy country chicken curry.",
+    image: rayaRagiImage,
+
+    prepTime: "15 mins",
+    cookTime: "45 mins",
+    servings: "4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup ragi flour",
+      "½ cup rice",
+      "Country chicken pieces",
+      "2 onions (chopped)",
+      "2 tomatoes",
+      "2 tbsp ginger garlic paste",
+      "2 tsp red chili powder",
+      "1 tsp turmeric",
+      "Curry leaves",
+      "Whole spices (cloves, cinnamon)",
+      "Oil",
+      "Salt",
+    ],
+
+    steps: [
+      "Cook rice in water until soft.",
+      "Add ragi flour gradually and mix continuously to form a thick dough.",
+      "Shape the mixture into soft balls (Sangati).",
+      "Heat oil in a pan and sauté onions, ginger garlic paste, and whole spices.",
+      "Add chicken pieces and cook until browned.",
+      "Add tomatoes, turmeric, chili powder, and salt.",
+      "Pour water and simmer until the chicken is tender.",
+      "Serve hot ragi sangati with natukodi pulusu.",
+    ],
+
+    story:
+      "Ragi Sangati is the staple food of Rayalaseema farmers. Rich in calcium and energy, it helped agricultural workers sustain long hours in the dry fields of Anantapur.",
+    season: "All Year",
+  },
+  {
+    id: "anantapur",
+    name: "Rayalaseema Groundnut Chutney",
+    state: "andhra-pradesh",
+    destination: "Anantapur",
+    description:
+      "A creamy and spicy chutney made from roasted peanuts, commonly served with dosa, idli, or ragi sangati.",
+    image: rayaGroundChutney,
+
+    prepTime: "10 mins",
+    cookTime: "5 mins",
+    servings: "4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup roasted groundnuts",
+      "3 dried red chilies",
+      "2 garlic cloves",
+      "Small piece tamarind",
+      "Salt",
+      "Water",
+      "1 tsp mustard seeds",
+      "Curry leaves",
+      "1 tbsp oil",
+    ],
+
+    steps: [
+      "Roast groundnuts until aromatic.",
+      "Grind groundnuts, red chilies, garlic, tamarind, salt, and water into a smooth paste.",
+      "Heat oil in a small pan and add mustard seeds.",
+      "Once they splutter, add curry leaves.",
+      "Pour the tempering over the chutney.",
+      "Serve with dosa, idli, or rice.",
+    ],
+
+    story:
+      "Groundnuts are the backbone crop of Anantapur's drylands. This chutney evolved as a simple protein-rich accompaniment for farmers' meals.",
+    season: "All Year",
+  },
+  {
+    id: "anantapur",
+    name: "Rayalaseema Mirapakaya Bajji",
+    state: "andhra-pradesh",
+    destination: "Anantapur",
+    description:
+      "A spicy street snack made with large green chilies coated in gram flour batter and deep fried.",
+    image: rayaMirchibajji,
+
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "8 large green chilies",
+      "1 cup gram flour (besan)",
+      "2 tbsp rice flour",
+      "1 tsp chili powder",
+      "½ tsp turmeric",
+      "Salt",
+      "Water",
+      "Oil for frying",
+    ],
+
+    steps: [
+      "Slit the green chilies and remove seeds if desired.",
+      "Mix gram flour, rice flour, chili powder, turmeric, salt, and water to make a thick batter.",
+      "Dip each chili into the batter.",
+      "Deep fry in hot oil until golden and crisp.",
+      "Serve hot with chopped onions and lemon.",
+    ],
+
+    story:
+      "Mirapakaya Bajji is a beloved evening snack across Rayalaseema towns, where roadside stalls serve it fresh during cooler evenings.",
+    season: "Winter",
+  },
+  {
+    id: "machilipatnam",
+    name: "Bandar Halwa",
+    state: "andhra-pradesh",
+    destination: "Machilipatnam",
+    description:
+      "A traditional wheat-based halwa known for its glossy texture and rich ghee flavor.",
+    image: bandarHalwa,
+
+    prepTime: "8 hours",
+    cookTime: "45 mins",
+    servings: "6",
+    difficulty: "Hard",
+
+    ingredients: [
+      "1 cup wheat flour",
+      "2 cups sugar",
+      "½ cup ghee",
+      "Cashews",
+      "Cardamom powder",
+      "Water",
+    ],
+
+    steps: [
+      "Soak wheat flour overnight and extract wheat milk.",
+      "Strain the liquid to remove solids.",
+      "Heat the mixture in a thick pan.",
+      "Add sugar and cook while stirring continuously.",
+      "Add ghee gradually until the halwa thickens.",
+      "Add cashews and cardamom.",
+      "Cook until glossy and non-sticky.",
+      "Serve warm.",
+    ],
+
+    story:
+      "Bandar Halwa was once a specialty sweet sold in traditional sweet shops of Machilipatnam but gradually lost popularity to Bandar Laddu.",
+    season: "All Year",
+  },
+  {
+    id: "machilipatnam",
+    name: "Royyala Pachadi (Coastal Prawn Pickle)",
+    state: "andhra-pradesh",
+    destination: "Machilipatnam",
+    description:
+      "A fiery coastal Andhra pickle made with prawns preserved in red chili, garlic, and aromatic spices. Popular in Machilipatnam’s fishing communities, it is served as a bold accompaniment with hot rice and ghee.",
+    image: RoyyalaPacchadi,
+
+    prepTime: "20 mins",
+    cookTime: "25 mins",
+    servings: "6",
+    difficulty: "Medium",
+
+    ingredients: [
+      "500 g fresh prawns (cleaned and deveined)",
+      "6–8 garlic cloves",
+      "2 tbsp ginger garlic paste",
+      "3 tbsp red chili powder",
+      "1 tsp turmeric powder",
+      "1 tsp fenugreek powder",
+      "1 tbsp mustard seeds",
+      "2 tbsp lemon juice or tamarind pulp",
+      "1 cup gingelly oil (sesame oil)",
+      "Salt to taste",
+      "Curry leaves",
+    ],
+
+    steps: [
+      "Clean and devein the prawns thoroughly and pat them dry.",
+      "Heat a pan and fry the prawns lightly in a little oil until they release moisture and become slightly firm.",
+      "Remove and keep them aside to cool.",
+      "In another pan heat sesame oil and add mustard seeds and curry leaves.",
+      "Add ginger garlic paste and sauté until fragrant.",
+      "Add turmeric, chili powder, fenugreek powder, and salt.",
+      "Mix in the fried prawns and cook on low heat for 5–7 minutes.",
+      "Add lemon juice or tamarind pulp and stir well.",
+      "Allow the mixture to cool and store in a clean airtight glass jar.",
+      "The pickle develops deeper flavor after resting for a day.",
+    ],
+
+    story:
+      "Royyala Pachadi reflects the coastal food traditions of Machilipatnam, where fishermen preserve fresh prawns using oil, chili, and spices so that seafood can be enjoyed even when the catch is scarce. The pickle is known for its intense flavor and long shelf life.",
+
+    season: "All Year",
   },
 ];

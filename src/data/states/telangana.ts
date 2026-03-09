@@ -8,6 +8,7 @@ export const telanganaDestinations: Destination[] = [
     name: "Warangal",
     tagline: "The Kakatiya Capital of Stone and Glory",
     image: "/images/destinations/warangal.jpg",
+    mapsQuery: "",
     heroDescription:
       "Warangal stands as a living memory of the Kakatiya dynasty, with majestic temples, carved gateways, and stone architecture narrating centuries of Telangana heritage.",
     elevation: "302 m",
@@ -27,6 +28,7 @@ export const telanganaDestinations: Destination[] = [
     name: "Adilabad",
     tagline: "Waterfalls, Forests, and Tribal Roots",
     image: "/images/destinations/adilabad.jpg",
+    mapsQuery: "",
     heroDescription:
       "Nestled in northern Telangana, Adilabad is known for cascading waterfalls, dense forests, and vibrant tribal communities.",
     elevation: "264 m",
@@ -46,6 +48,7 @@ export const telanganaDestinations: Destination[] = [
     name: "Karimnagar",
     tagline: "Heartland of Crafts and Agriculture",
     image: "/images/destinations/karimnagar.jpg",
+    mapsQuery: "",
     heroDescription:
       "Karimnagar represents the agricultural backbone of Telangana, enriched with historic forts and traditional silver craftsmanship.",
     elevation: "332 m",
@@ -65,6 +68,7 @@ export const telanganaDestinations: Destination[] = [
     name: "Nizamabad",
     tagline: "Turmeric Capital of Telangana",
     image: "/images/destinations/nizamabad.jpg",
+    mapsQuery: "",
     heroDescription:
       "Nizamabad is renowned for its turmeric farms, historic forts, and lush agricultural fields that define its identity.",
     elevation: "384 m",
@@ -84,6 +88,7 @@ export const telanganaDestinations: Destination[] = [
     name: "Mulugu",
     tagline: "Telangana’s Forest Escape",
     image: "/images/destinations/mulugu.jpg",
+    mapsQuery: "",
     heroDescription:
       "Mulugu is Telangana’s gateway to forests, lakes, and tribal heartlands, offering raw and untouched natural beauty.",
     elevation: "170 m",
@@ -103,6 +108,7 @@ export const telanganaDestinations: Destination[] = [
     name: "Hyderabad (Old City)",
     tagline: "Where Heritage Meets Flavor",
     image: "/images/destinations/hyderabad.jpg",
+    mapsQuery: "",
     heroDescription:
       "Beyond the IT skyline lies the Old City of Hyderabad — a blend of royal palaces, bustling bazaars, and iconic architecture.",
     elevation: "542 m",
