@@ -47,3 +47,19 @@ export interface Recipe {
   season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal";
   buyLink?: string;
 }
+
+export interface Place {
+  state: string;
+  destination: string;
+  name: string;
+  slug: string;
+  type: "must-visit" | "underrated";
+  image: string;
+  description: string;
+  about: string;
+  distance: string;
+  highlights: string[];
+  bestTime: string;
+  travelTips: string[];
+  mapsQuery: string;
+}
