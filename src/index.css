@@ -125,7 +125,14 @@
     --input: 25 15% 20%;
     --ring: 152 30% 45%;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   /* Global styles */
 
   * {

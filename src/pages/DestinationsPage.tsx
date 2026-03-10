@@ -5,6 +5,8 @@ import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
 import { getDestinationsByState } from "@/data/destinations";
 import { stateConfig } from "@/data/stateConfig";
+import { recipes } from "@/data/recipes";
+import { getRecipesByState } from "@/data/recipes";
 
 const DestinationsPage = () => {
   const { state } = useParams<{ state: string }>();
@@ -16,7 +18,15 @@ const DestinationsPage = () => {
     if (!state) return path;
     return `/${state}${path}`;
   };
+  const totalProducts = destinations.reduce(
+    (total, dest) => total + dest.products.length,
+    0,
+  );
+  const totalCultures = destinations.filter(
+    (d) => d.culture && d.culture.trim() !== "",
+  ).length;
 
+  const stateRecipes = state ? getRecipesByState(state) : recipes;
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -118,9 +128,9 @@ const DestinationsPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { label: "Destinations", value: destinations.length },
-              { label: "Local Products", value: "30+" },
-              { label: "Communities Featured", value: "15+" },
-              { label: "Stories Preserved", value: "40+" },
+              { label: "Local Products", value: totalProducts },
+              { label: "Cultures Featured", value: totalCultures },
+              { label: "Stories Preserved", value: stateRecipes.length },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

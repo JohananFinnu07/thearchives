@@ -18,7 +18,7 @@ import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
 import SearchPage from "./components/NavSearch";
 import RecipeDetailPage from "./pages/RecipeDetailPage";
-
+import PlaceDetail from "./pages/PlaceDetail";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -34,7 +34,10 @@ const App = () => (
 
           {/* State Landing */}
           <Route path="/:state" element={<StateHomePage />} />
-
+          <Route
+            path="/:state/:destinationSlug/:placeSlug"
+            element={<PlaceDetail />}
+          />
           {/* Destinations */}
           <Route path="/:state/destinations" element={<DestinationsPage />} />
           <Route

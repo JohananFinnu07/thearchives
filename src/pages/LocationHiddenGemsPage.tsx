@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sparkles, MapPin, ArrowLeft, ArrowRight, Heart } from "lucide-react";
+import {
+  Sparkles,
+  MapPin,
+  ArrowLeft,
+  ArrowRight,
+  Heart,
+  Compass,
+} from "lucide-react";
 
 import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
@@ -11,7 +18,7 @@ import {
 } from "@/data/destinations";
 import { slugify } from "@/lib/slugify";
 import { Button } from "@/components/ui/button";
-
+import { stateConfig } from "@/data/stateConfig";
 const LocationHiddenGemsPage = () => {
   const { state, slug } = useParams<{
     state: string;
@@ -24,6 +31,9 @@ const LocationHiddenGemsPage = () => {
   const stateDestinations = state ? getDestinationsByState(state) : [];
 
   const prefix = (path: string) => (state ? `/${state}${path}` : path);
+  const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+    `${destination.mapsQuery}, ${stateConfig?.[state!]?.name}`,
+  )}`;
 
   const [saved, setSaved] = useState<Record<string, boolean>>({});
 
@@ -218,7 +228,7 @@ const LocationHiddenGemsPage = () => {
                             )}
                             className="inline-flex items-center text-primary text-base font-medium hover:underline"
                           >
-                            Explore the Story →
+                            Into the Story →
                           </Link>
                         </div>
                       </div>
@@ -293,7 +303,7 @@ const LocationHiddenGemsPage = () => {
                 size="sm"
                 className="w-full md:w-auto"
               >
-                <Link to={prefix(`/${destination.slug}`)}>
+                <Link to={prefix(`/destination/${destination.slug}`)}>
                   Explore {destination.name}
                 </Link>
               </Button>
@@ -318,7 +328,23 @@ const LocationHiddenGemsPage = () => {
           </div>
         </section>
       </main>
+      {/* Floating Navigate Button */}
+      <motion.a
+        href={mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 1, type: "spring", stiffness: 200 }}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2 rounded-full gradient-forest text-primary-foreground shadow-elevated hover:scale-105 transition-transform"
+        aria-label={`Navigate to ${destination.name}`}
+      >
+        <Compass className="w-5 h-5" />
 
+        <span className="font-medium text-xs hidden sm:inline">
+          Into {destination.id}
+        </span>
+      </motion.a>
       <Footer />
     </div>
   );

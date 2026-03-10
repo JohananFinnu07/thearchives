@@ -1,6 +1,6 @@
 import { useParams, Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
   MapPin,
@@ -9,6 +9,7 @@ import {
   Mountain,
   Sparkles,
   Star,
+  Compass,
 } from "lucide-react";
 
 import { getDestinationBySlug } from "@/data/destinations";
@@ -17,8 +18,11 @@ import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import RecipeCard from "@/components/RecipeCard";
-import { recipes } from "@/data/recipes";
+import { getRecipesByDestination } from "@/data/recipes";
 import { slugify } from "@/lib/slugify";
+
+import PlaceCard from "@/components/PlaceCard";
+import { getPlacesByDestination } from "@/data/places";
 
 const DestinationDetail = () => {
   const { state, slug: destinationSlug } = useParams<{
@@ -41,6 +45,13 @@ const DestinationDetail = () => {
   const location = useLocation() as {
     state?: { scrollTo?: string };
   };
+
+  const destinationPlaces = destination
+    ? getPlacesByDestination(destination.name)
+    : [];
+
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -77,11 +88,23 @@ const DestinationDetail = () => {
     (p) => p.type === "underrated",
   );
 
-  const destinationRecipes = recipes.filter(
-    (recipe) => recipe.destination === destination.name,
-  );
+  const destinationRecipes = getRecipesByDestination(destination.name);
 
-  const slug = slugify(destination.name);
+  const destinationSlugified = slugify(destination.name);
+
+  const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+    destination.mapsQuery + ", " + currentState?.name + ", India",
+  )}`;
+  const [showNavButton, setShowNavButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowNavButton(window.scrollY > 250);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -89,7 +112,117 @@ const DestinationDetail = () => {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+  /* ================= AUTO SCROLL SYSTEM ================= */
 
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    const section = sectionRef.current;
+
+    if (!container || !section) return;
+
+    let index = 0;
+    let direction = 1;
+    let interval: any;
+    let inactivityTimer: any;
+    let observer: IntersectionObserver;
+
+    let lastScrollLeft = 0;
+
+    const getCardWidth = () => {
+      const card = container.querySelector(".state-card") as HTMLElement;
+      return card?.offsetWidth + 24 || 400;
+    };
+
+    const syncIndexWithScroll = () => {
+      const cardWidth = getCardWidth();
+      index = Math.round(container.scrollLeft / cardWidth);
+    };
+
+    const startAutoScroll = () => {
+      clearInterval(interval);
+
+      syncIndexWithScroll();
+
+      interval = setInterval(() => {
+        const cards = container.querySelectorAll(".state-card");
+        if (!cards.length) return;
+
+        const cardWidth = getCardWidth();
+
+        index += direction;
+
+        if (index >= cards.length - 1) direction = -1;
+        if (index <= 0) direction = 1;
+
+        container.scrollTo({
+          left: index * cardWidth,
+          behavior: "smooth",
+        });
+      }, 500);
+    };
+
+    const resetInactivity = () => {
+      clearInterval(interval);
+      clearTimeout(inactivityTimer);
+
+      syncIndexWithScroll();
+
+      inactivityTimer = setTimeout(() => {
+        startAutoScroll();
+      }, 1500);
+    };
+
+    observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          resetInactivity();
+        } else {
+          clearInterval(interval);
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    observer.observe(section);
+
+    const detectDirection = () => {
+      const currentScroll = container.scrollLeft;
+
+      if (currentScroll > lastScrollLeft) direction = 1;
+      else if (currentScroll < lastScrollLeft) direction = -1;
+
+      lastScrollLeft = currentScroll;
+    };
+
+    const pause = () => clearInterval(interval);
+
+    container.addEventListener("mouseenter", pause);
+    container.addEventListener("touchstart", pause);
+
+    const handleScroll = () => {
+      detectDirection();
+      resetInactivity();
+    };
+
+    container.addEventListener("scroll", handleScroll);
+    container.addEventListener("wheel", resetInactivity);
+    container.addEventListener("mousedown", resetInactivity);
+
+    return () => {
+      observer.disconnect();
+      clearInterval(interval);
+      clearTimeout(inactivityTimer);
+
+      container.removeEventListener("mouseenter", pause);
+      container.removeEventListener("touchstart", pause);
+
+      container.removeEventListener("scroll", detectDirection);
+
+      container.removeEventListener("wheel", resetInactivity);
+      container.removeEventListener("mousedown", resetInactivity);
+      container.removeEventListener("scroll", resetInactivity);
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -190,8 +323,63 @@ const DestinationDetail = () => {
           </div>
         </div>
       </section>
+      {/* Must Explore Places */}
+      <section
+        id="explore"
+        ref={sectionRef}
+        className="py-16 scroll-mt-24 overflow-hidden"
+      >
+        <div className="container mx-auto px-4">
+          <div className="mb-12">
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-4">
+              Explore Around {destination.name}
+            </h2>
 
-      {/* FAMOUS */}
+            <p className="text-muted-foreground text-lg max-w-2xl">
+              From iconic landmarks to hidden local gems worth discovering.
+            </p>
+          </div>
+
+          {/* Horizontal Scroll Container */}
+
+          <div
+            ref={scrollContainerRef}
+            className="
+    flex gap-6
+    overflow-x-auto
+    scroll-smooth
+    snap-x snap-mandatory
+    touch-pan-x
+    no-scrollbar
+    px-[calc((100vw-260px)/2)]
+    sm:px-[calc((100vw-300px)/2)]
+    lg:px-0
+    pb-4
+  "
+          >
+            {destinationPlaces.map((place) => (
+              <div
+                key={place.slug}
+                className="
+        state-card
+        min-w-[260px]
+        sm:min-w-[300px]
+        lg:min-w-[320px]
+        flex-shrink-0
+        snap-center
+      "
+              >
+                <PlaceCard
+                  place={place}
+                  state={state!}
+                  destinationSlug={destinationSlugified}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Signature */}
       <section id="famous" className="py-16 bg-muted/30 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="mb-12">
@@ -203,7 +391,7 @@ const DestinationDetail = () => {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-              Famous Products of {destination.name}
+              Signature Products of {destination.name}
             </h2>
 
             <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed mb-10">
@@ -328,7 +516,7 @@ const DestinationDetail = () => {
           </Link>
 
           <Link
-            to={prefix(`/gallery/${slug}`)}
+            to={prefix(`/gallery/${destinationSlugified}`)}
             className="bg-primary-foreground text-foreground px-6 py-3 rounded-full"
           >
             Explore Gallery
@@ -336,6 +524,24 @@ const DestinationDetail = () => {
         </div>
       </section>
 
+      {/* FLOATING NAVIGATION BUTTON */}
+      {/* Floating Navigate Button */}
+      <motion.a
+        href={mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 1, type: "spring", stiffness: 200 }}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2 rounded-full gradient-forest text-primary-foreground shadow-elevated hover:scale-105 transition-transform"
+        aria-label={`Navigate to ${destination.name}`}
+      >
+        <Compass className="w-5 h-5" />
+
+        <span className="font-medium text-xs hidden sm:inline">
+          Into {destination.name}
+        </span>
+      </motion.a>
       <Footer />
     </div>
   );

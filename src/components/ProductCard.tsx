@@ -56,7 +56,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
               : "bg-accent/10 text-accent"
           }`}
         >
-          {product.type === "famous" ? "Famous" : "Hidden Gem"}
+          {product.type === "famous" ? "Signature" : "Hidden Gem"}
         </span>
 
         {/* Title */}
@@ -75,7 +75,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
             to={productPath}
             className="inline-block text-primary font-medium hover:underline"
           >
-            Explore the Story →
+            Into the Story →
           </Link>
         </div>
       </div>

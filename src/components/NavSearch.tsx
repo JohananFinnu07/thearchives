@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Search, MapPin, Sparkles, ChefHat, Star } from "lucide-react";
 import {
   CommandDialog,
@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/command";
 import { allDestinations } from "@/data/destinations";
 import { recipes } from "@/data/recipes";
+import { places } from "@/data/places";
 
-/* Slugify */
 const slugify = (text: string) =>
   text
     .toLowerCase()
@@ -26,7 +26,6 @@ const NavSearch = () => {
   const navigate = useNavigate();
   const { state } = useParams<{ state?: string }>();
 
-  /* ⌘K / Ctrl+K */
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -38,7 +37,7 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  /* Filtered Data */
+  /* Data Memoization (Kept same) */
   const filteredDestinations = useMemo(() => {
     if (!state) return allDestinations;
     return allDestinations.filter(
@@ -75,115 +74,137 @@ const NavSearch = () => {
     );
   }, [state]);
 
+  const filteredPlaces = useMemo(() => {
+    if (!state) return places;
+
+    return places.filter((p) => p.state?.toLowerCase() === state.toLowerCase());
+  }, [state]);
+
   const handleSelect = (route: string) => {
     setOpen(false);
-
-    if (state) {
-      navigate(`/${state}${route}`);
-    } else {
-      navigate(route);
-    }
+    navigate(state ? `/${state}${route}` : route);
   };
 
   return (
     <>
-      {/* Search Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.96 }}
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-full border border-border bg-muted/40 px-6 py-2 text-sm text-muted-foreground transition hover:bg-muted shadow-sm hover:shadow-md"
+        className="flex items-center gap-2 rounded-full border border-border bg-muted/40 px-6 py-2 text-sm text-muted-foreground shadow-sm"
       >
         <Search className="h-4 w-4" />
         <span>Search...</span>
-        <kbd className="ml-2 rounded border px-1.5 py-0.5 text-[10px]">⌘K</kbd>
+        <kbd className="ml-2 hidden sm:inline rounded border px-1.5 py-0.5 text-[10px]">
+          ⌘K
+        </kbd>
       </motion.button>
 
-      <AnimatePresence>
-        {open && (
-          <CommandDialog open={open} onOpenChange={setOpen}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.2 }}
-              className="bg-background/95 backdrop-blur-xl rounded-xl max-h-[80vh] flex flex-col"
-            >
-              <CommandInput placeholder="Search destinations, products, or recipes..." />
+      <CommandDialog open={open} onOpenChange={setOpen}>
+        <div className="flex flex-col max-h-[85vh] md:max-h-[70vh] w-full max-w-lg overflow-hidden">
+          {/* Sticky Search Input */}
+          <div className="sticky top-0 z-10 bg-background border-b">
+            <CommandInput
+              placeholder="Search destinations, foods, recipes..."
+              className="h-12 text-base"
+            />
+          </div>
 
-              <CommandList className="max-h-[60vh] overflow-y-auto">
-                <CommandEmpty>No results found.</CommandEmpty>
+          {/* Scrollable Results */}
+          <CommandList
+            className="flex-1 overflow-y-auto overscroll-contain"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              scrollBehavior: "smooth",
+            }}
+          >
+            <CommandEmpty>No results found.</CommandEmpty>
 
-                {/* Destinations */}
-                {filteredDestinations.length > 0 && (
-                  <CommandGroup heading="Destinations">
-                    {filteredDestinations.map((dest) => (
-                      <CommandItem
-                        key={dest.id}
-                        value={dest.name}
-                        onSelect={() => handleSelect(`/destination/${dest.id}`)}
-                      >
-                        <MapPin className="h-4 w-4 text-green-600 mr-2" />
-                        {dest.name}
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                )}
+            {/* Destinations */}
+            {filteredDestinations.length > 0 && (
+              <CommandGroup heading="Destinations">
+                {filteredDestinations.map((dest) => (
+                  <CommandItem
+                    key={dest.id}
+                    onSelect={() => handleSelect(`/destination/${dest.id}`)}
+                    className="flex items-center gap-3 py-3 text-base"
+                  >
+                    <MapPin className="h-4 w-4 text-green-600" />
+                    {dest.name}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            )}
 
-                {/* Famous */}
-                {famousProducts.length > 0 && (
-                  <CommandGroup heading="Famous Products">
-                    {famousProducts.map((item) => (
-                      <CommandItem
-                        key={item.route}
-                        value={item.name}
-                        onSelect={() => handleSelect(item.route)}
-                      >
-                        <Star className="h-4 w-4 text-green-600 mr-2" />
-                        {item.name}
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                )}
+            {/* Famous Products */}
+            {famousProducts.length > 0 && (
+              <CommandGroup heading="Famous Products">
+                {famousProducts.map((item) => (
+                  <CommandItem
+                    key={item.route}
+                    onSelect={() => handleSelect(item.route)}
+                    className="flex items-center gap-3 py-3 text-base"
+                  >
+                    <Star className="h-4 w-4 text-green-600" />
+                    {item.name}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            )}
 
-                {/* Hidden */}
-                {hiddenProducts.length > 0 && (
-                  <CommandGroup heading="Hidden Gems">
-                    {hiddenProducts.map((item) => (
-                      <CommandItem
-                        key={item.route}
-                        value={item.name}
-                        onSelect={() => handleSelect(item.route)}
-                      >
-                        <Sparkles className="h-4 w-4 text-orange-500 mr-2" />
-                        {item.name}
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                )}
-
-                {/* Recipes */}
-                {filteredRecipes.length > 0 && (
-                  <CommandGroup heading="Recipes">
-                    {filteredRecipes.map((recipe) => (
-                      <CommandItem
-                        key={recipe.name}
-                        value={`${recipe.name} ${recipe.destination}`}
-                        onSelect={() =>
-                          handleSelect(`/recipes/${slugify(recipe.name)}`)
-                        }
-                      >
-                        <ChefHat className="h-4 w-4 text-orange-500 mr-2" />
-                        {recipe.name}
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                )}
-              </CommandList>
-            </motion.div>
-          </CommandDialog>
-        )}
-      </AnimatePresence>
+            {/* Hidden Gems */}
+            {hiddenProducts.length > 0 && (
+              <CommandGroup heading="Hidden Gems">
+                {hiddenProducts.map((item) => (
+                  <CommandItem
+                    key={item.route}
+                    onSelect={() => handleSelect(item.route)}
+                    className="flex items-center gap-3 py-3 text-base"
+                  >
+                    <Sparkles className="h-4 w-4 text-orange-500" />
+                    {item.name}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            )}
+            {/* Places */}
+            {filteredPlaces.length > 0 && (
+              <CommandGroup heading="Places">
+                {filteredPlaces.map((place) => (
+                  <CommandItem
+                    key={place.slug}
+                    onSelect={() =>
+                      handleSelect(
+                        `/${slugify(place.destination)}/${place.slug}`,
+                      )
+                    }
+                    className="flex items-center gap-3 py-3 text-base"
+                  >
+                    <MapPin className="h-4 w-4 text-blue-500" />
+                    {place.name}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            )}
+            {/* Recipes */}
+            {filteredRecipes.length > 0 && (
+              <CommandGroup heading="Recipes">
+                {filteredRecipes.map((recipe) => (
+                  <CommandItem
+                    key={recipe.name}
+                    onSelect={() =>
+                      handleSelect(`/recipes/${slugify(recipe.name)}`)
+                    }
+                    className="flex items-center gap-3 py-3 text-base"
+                  >
+                    <ChefHat className="h-4 w-4 text-orange-500" />
+                    {recipe.name}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            )}
+          </CommandList>
+        </div>
+      </CommandDialog>
     </>
   );
 };

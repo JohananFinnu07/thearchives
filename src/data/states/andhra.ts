@@ -14,6 +14,8 @@ import srisailamImage from "@/assets/srisailam.jpg";
 import vishakapatnamImage from "@/assets/visakhapatnam.jpg";
 import nelloreImage from "@/assets/nellore.jpg";
 import konaseemaImage from "@/assets/konaseema.jpg";
+import lepakshiImage from "@/assets/lepakshi.jpg";
+import machilipatnamImage from "@/assets/Machilipatnam.jpg";
 
 // Product images
 import arakuCoffeeImage from "@/assets/products/araku-coffee-beans.jpg";
@@ -216,6 +218,46 @@ import pachgavyaImage from "@/assets/products/PGPH.jpg";
 import pachgavyaMake from "@/assets/products/PGPM.jpg";
 import pachgavyaFlavor from "@/assets/products/PGPF.jpg";
 
+import lepakshiCraftImage from "@/assets/products/LCH.jpg";
+import lepakshiCraftMake from "@/assets/products/LCM.jpg";
+import lepakshiCraftFlavor from "@/assets/products/LCF.jpg";
+
+import anantapurGroundnutSnackImage from "@/assets/products/LGH.jpg";
+import anantapurGroundnutSnackMake from "@/assets/products/LGM.jpg";
+import anantapurGroundnutSnackFlavor from "@/assets/products/LGF.jpg";
+
+import dharmaSilkSareesImage from "@/assets/products/DSSH.jpg";
+import dharmaSilkSareesMake from "@/assets/products/DSSM.jpg";
+import dharmaSilkSareesFlavor from "@/assets/products/DSSF.jpg";
+
+import kalamkariSilkImage from "@/assets/products/MKSH.jpg";
+import kalamkariSilkMake from "@/assets/products/MKSM.jpg";
+import kalamkariSilkFlavor from "@/assets/products/MKSF.jpg";
+
+import bandarLadduImage from "@/assets/products/MBLH.jpg";
+import bandarLadduMake from "@/assets/products/MBLM.jpg";
+import bandarLadduFlavor from "@/assets/products/MBLF.jpg";
+
+import tatiBellamImage from "@/assets/products/MPJH.jpg";
+import tatiBellamMake from "@/assets/products/MPJM.jpg";
+import tatiBellamFlavor from "@/assets/products/MPJF.jpg";
+
+import kalamkariBlockImage from "@/assets/products/MKWBH.jpg";
+import kalamkariBlockMake from "@/assets/products/MKWBM.jpg";
+import kalamkariBlockFlavor from "@/assets/products/MKWBF.jpg";
+
+import tribalmilletsImage from "@/assets/products/MDTM.jpg";
+import tribalmilletsMake from "@/assets/products/MDTM.jpg";
+import tribalmilletsFlavor from "@/assets/products/MDTMF.jpg";
+
+import potteryWheelImage from "@/assets/products/BBPWH.jpg";
+import potteryWheelMake from "@/assets/products/BBPWM.jpg";
+import potteryWheelFlavor from "@/assets/products/BBPWF.jpg";
+
+import timberProductsImage from "@/assets/products/PTH.jpg";
+import timberProductsMake from "@/assets/products/PTM.jpg";
+import timberProductsFlavor from "@/assets/products/PTF.jpg";
+
 export const andhraDestinations: Destination[] = [
   {
     id: "araku-valley",
@@ -223,6 +265,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Araku Valley",
     tagline: "Organic Coffee & Tribal Heritage of Andhra Pradesh",
+    mapsQuery: "Araku valley, Andhra Pradesh",
     image: arakuImage,
     heroDescription:
       "A scenic hill station in the Eastern Ghats of Andhra Pradesh, Araku Valley is globally known for its organic coffee plantations, tribal culture, forest produce, and traditional artisan crafts.",
@@ -399,6 +442,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Lambasingi",
     tagline: "Kashmir of Andhra Pradesh",
+    mapsQuery: "lambasingi, Andhra Pradesh",
     image: lambasingiImage,
     heroDescription:
       "The coldest place in South India, famous for frost mornings, pepper plantations, and mist-covered forest hills.",
@@ -497,6 +541,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Vanajangi",
     tagline: "Meadows Above the Clouds",
+    mapsQuery: "vanjangi - Andhra Pradesh",
     image: vanajangiImage,
     heroDescription:
       "High-altitude meadows offering sunrise views above clouds, rolling grasslands, and untouched Eastern Ghats beauty.",
@@ -597,6 +642,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Paderu",
     tagline: "Tribal Heritage Gateway",
+    mapsQuery: "Paderu, Andhra Pradesh",
     image: paderuImage,
     heroDescription:
       "The commercial and cultural heart of the Eastern Ghats tribal region, famous for vibrant weekly markets and indigenous heritage.",
@@ -697,6 +743,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Maredumilli",
     tagline: "Eco-Tourism Paradise",
+    mapsQuery: "maredumilli, Andhra Pradesh",
     image: maredumilliImage,
     heroDescription:
       "A pristine Eastern Ghats forest destination known for eco-tourism, waterfalls, tribal culture, and rich biodiversity.",
@@ -852,6 +899,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Tirupati",
     tagline: "Where Devotion Meets the Forested Hills",
+    mapsQuery: "Tirupati, , Andhra Pradesh",
     image: tirupatiImage,
     heroDescription:
       "A sacred pilgrimage city where temple traditions, forest produce, and heritage crafts shape a timeless cultural landscape.",
@@ -908,6 +956,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Visakhapatnam",
     tagline: "Where the Eastern Ghats Meet the Sea",
+    mapsQuery: "Visakhapatnam, Andhra Pradesh",
     image: vishakapatnamImage,
     heroDescription:
       "A coastal gateway where tribal hills, fishing traditions, spices, and sea trade shape a layered cultural identity.",
@@ -985,6 +1034,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Etikoppaka",
     tagline: "A Village That Turns Wood Into Memory",
+    mapsQuery: "Etikoppaka, Andhra Pradesh",
     image: ethikopakkaImage,
     heroDescription:
       "Home of India’s iconic lacquered wooden toys, where natural dyes and hand-turned craft preserve centuries of storytelling.",
@@ -1061,6 +1111,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Gandikota",
     tagline: "India’s Silent Canyon of Stone and Wind",
+    mapsQuery: "Gandikota, Andhra Pradesh",
     image: gandikotaImage,
     heroDescription:
       "A dramatic canyon landscape shaped by erosion, survival foods, stone craftsmanship, and resilient village traditions.",
@@ -1119,6 +1170,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Madagada",
     tagline: "Clay Shaped by Fire and Folklore",
+    mapsQuery: "Madagada, Andhra Pradesh",
     image: madagadaImage,
     heroDescription:
       "A heritage pottery village where earthen cookware preserves flavor, ritual, and indigenous food wisdom.",
@@ -1142,6 +1194,47 @@ export const andhraDestinations: Destination[] = [
         makingImage: madagadaBPotteryMake,
         flavorImage: madagadaBPotteryFlavor,
       },
+      {
+        name: "Madagada Tribal Millets",
+        type: "underrated",
+        description:
+          "Nutrient-dense, heirloom grains like Ragi, Samalu, and Korra, grown by tribal farmers in the hilly terrains of Madagada using ancient shifting cultivation methods.",
+        significance:
+          "These millets are the backbone of tribal food security and are cultivated without any synthetic fertilizers. They represent a sustainable, drought-resistant agricultural heritage that has sustained the Eastern Ghats communities for centuries.",
+        makingProcess:
+          "The process begins with 'Podu' (shifting) cultivation on hill slopes. Grains are hand-harvested and sun-dried on traditional dung-plastered courtyards. Processing is done using stone 'Chakki' or wooden pounders to preserve the bran and nutritional value, keeping the grain 100% organic and raw.",
+        uses: [
+          "Nutritional staple food",
+          "Traditional Ambali (millet porridge)",
+          "Gluten-free baking alternatives",
+          "Immunity-boosting diet",
+          "Sustainable livestock fodder",
+        ],
+        image: tribalmilletsImage,
+        makingImage: tribalmilletsMake,
+        flavorImage: tribalmilletsFlavor,
+      },
+
+      {
+        name: "Ball-Bearing Potter's Wheel",
+        type: "underrated",
+        description:
+          "A unique local innovation where traditional heavy stone wheels are retrofitted with recycled ball bearings to improve rotational speed and efficiency for the potters.",
+        significance:
+          "This represents the 'Jugaad' or grassroots engineering of the Madagada artisans. It bridges the gap between ancient stone-wheel techniques and modern mechanical efficiency, allowing potters to create thinner, more symmetrical earthenware with less physical exertion.",
+        makingProcess:
+          "Artisans source high-quality bearings from old machinery. A heavy circular base made of a mixture of stone, clay, and lac is perfectly balanced on a central pivot containing the bearing. The wheel is then hand-spun with a stick, where the bearing allows it to maintain momentum for several minutes without a motor.",
+        uses: [
+          "High-precision pottery shaping",
+          "Artisan tool heritage",
+          "Sustainable manufacturing",
+          "Educational demonstrations",
+          "Local engineering artifact",
+        ],
+        image: potteryWheelImage,
+        makingImage: potteryWheelMake,
+        flavorImage: potteryWheelFlavor,
+      },
     ],
 
     culture:
@@ -1153,6 +1246,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Konaseema - Godavari",
     tagline: "Where Rivers Write Recipes",
+    mapsQuery: "east godavari, Andhra Pradesh",
     image: konaseemaImage,
     heroDescription:
       "A fertile delta shaped by coconuts, river fish, jaggery sweets, and slow-cooked traditions.",
@@ -1241,6 +1335,8 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Papikondalu",
     tagline: "Forests Folded Around a River",
+    mapsQuery:
+      "3 18-17-11, behind Venkateswara Apartments, Krishna Nagar, Aryapuram, Rajamahendravaram, Andhra Pradesh 533104",
     image: papikondaluImage,
     heroDescription:
       "Mist-covered hills where tribal ecology, forest foods, and the Godavari flow together.",
@@ -1264,6 +1360,25 @@ export const andhraDestinations: Destination[] = [
         makingImage: bambooFishTrapsMake,
         flavorImage: bambooFishTrapsFlavor,
       },
+      {
+        name: "Godavari Timber Products",
+        type: "famous",
+        description:
+          "Exquisite furniture and decorative items crafted from high-quality teak and rosewood sourced from the Papi Hills forests.",
+        significance:
+          "The region is renowned for its durable, grain-rich timber, reflecting the deep-rooted woodworking heritage of the Godavari districts.",
+        makingProcess:
+          "Seasoned logs are hand-carved or machine-cut by local artisans, often incorporating traditional motifs like the 'Godavari Wave' or temple-inspired engravings.",
+        uses: [
+          "Home decor",
+          "Structural furniture",
+          "Souvenirs",
+          "Traditional dowry gifts",
+        ],
+        image: timberProductsImage,
+        makingImage: timberProductsMake,
+        flavorImage: timberProductsFlavor,
+      },
     ],
 
     culture:
@@ -1275,6 +1390,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Srisailam – Nallamala Forest",
     tagline: "Sacred Hills Guarded by Wilderness",
+    mapsQuery: "Srisailam, Andhra-Pradesh",
     image: srisailamImage,
     heroDescription:
       "A spiritual center surrounded by one of South India’s oldest forest ecosystems.",
@@ -1335,6 +1451,7 @@ export const andhraDestinations: Destination[] = [
     state: "andhra-pradesh",
     name: "Nellore",
     tagline: "Fields, Salt Air, and Slow Harvests",
+    mapsQuery: "Nellore, Andhra-Pradesh",
     image: nelloreImage,
     heroDescription:
       "A coastal agricultural region known for rice, seafood, and patient preservation traditions.",
@@ -1375,5 +1492,148 @@ export const andhraDestinations: Destination[] = [
 
     culture:
       "Nellore serves as a fascinating cultural crossroads, blending rich agrarian traditions with deep-seated spiritual legacies. The region’s identity is defined by the unique Rottela Panduga (Roti Festival) at the Bara Shaheed Dargah, where people of all faiths exchange rotis to fulfill vows—a testament to the area's communal harmony. Historically shaped by the Chola and Vijayanagara empires, its heritage is preserved in the intricate Udayagiri wooden cutlery and the architectural grandeur of the Ranganatha Swamy Temple. While Telugu is the primary language, the presence of a Tamil-speaking minority and the indigenous Yanadi tribe, with their traditional Kula Panchayats, adds to the social complexity. As the rice bowl of Andhra, Nellore’s spicy coastal cuisine and mica-mining history further anchor its regional significance.",
+  },
+  {
+    id: "anantapur",
+    slug: "anantapur",
+    state: "andhra-pradesh",
+    name: "Anantapur",
+    tagline: "Granite Legends and Vijayanagara Art",
+    mapsQuery: "Lepakshi Temple, Anantapur, Andhra Pradesh",
+    image: lepakshiImage,
+    heroDescription:
+      "A historic Vijayanagara town famed for its hanging pillar temple and monumental Nandi sculpture.",
+    elevation: "335 m",
+    bestTime: "October – February",
+    temperature: "18°C – 39°C",
+    about:
+      "Lepakshi in Anantapur district is one of South India’s finest examples of Vijayanagara architecture. The Veerabhadra Temple complex is known for its intricate frescoes, carved pillars, and the famous 'hanging pillar' engineering marvel. The surrounding region of Anantapur is characterized by dryland agriculture, peanut cultivation, and a long history of temple art and sculpture.",
+
+    products: [
+      {
+        name: "Lepakshi Handicrafts",
+        type: "famous",
+        description:
+          "Traditional handicrafts inspired by Vijayanagara temple motifs.",
+        significance:
+          "Represents the artistic heritage of Lepakshi temple architecture.",
+        makingProcess:
+          "Artisans carve stone or wood pieces and decorate them with temple-inspired patterns.",
+        uses: ["Home décor", "Souvenirs"],
+        image: lepakshiCraftImage,
+        makingImage: lepakshiCraftMake,
+        flavorImage: lepakshiCraftFlavor,
+      },
+      {
+        name: "Dharmavaram Silk Sarees",
+        type: "famous",
+        description:
+          "Luxurious silk sarees known for their rich zari borders, muted body colors, and heavy golden pallus.",
+        significance:
+          "Dharmavaram sarees are one of India’s most prestigious silk weaving traditions and carry a Geographical Indication (GI) tag.",
+        makingProcess:
+          "Pure silk yarn is dyed in vibrant shades and woven on handlooms with intricate zari borders and traditional motifs.",
+        uses: [
+          "Wedding sarees",
+          "Festival attire",
+          "Traditional ceremonial wear",
+        ],
+        image: dharmaSilkSareesImage,
+        makingImage: dharmaSilkSareesMake,
+        flavorImage: dharmaSilkSareesFlavor,
+      },
+      {
+        name: "Anantapur Groundnut Snacks",
+        type: "underrated",
+        description:
+          "Roasted and spiced peanut snacks made from locally grown groundnuts.",
+        significance:
+          "Groundnuts are one of the district’s most important agricultural products.",
+        makingProcess:
+          "Peanuts are roasted in sand or iron pans and seasoned with spices.",
+        uses: ["Snacks", "Street food"],
+        image: anantapurGroundnutSnackImage,
+        makingImage: anantapurGroundnutSnackMake,
+        flavorImage: anantapurGroundnutSnackFlavor,
+      },
+    ],
+
+    culture:
+      "Anantapur’s culture is a vibrant blend of historical grandeur and enduring folk traditions, deeply influenced by the Vijayanagara Empire. The district is a spiritual hub, home to the architectural marvel of the Veerabhadra Temple in Lepakshi, famous for its hanging pillar, and the global spiritual center of Puttaparthi. Religious life is marked by grand festivals like the Kadiri Lakshmi Narasimha Swamy Brahmotsavam, featuring massive chariot processions. Unique communal harmony is seen at sites like the Babayya Darga inside Penukonda Fort, revered by both Hindus and Muslims.",
+  },
+  {
+    id: "machilipatnam",
+    slug: "machilipatnam",
+    state: "andhra-pradesh",
+    name: "Machilipatnam",
+    tagline: "Coastal Port of Kalamkari",
+    mapsQuery: "Machilipatnam, Andhra Pradesh",
+    image: machilipatnamImage,
+    heroDescription:
+      "A historic port town famous for Kalamkari textiles and centuries-old maritime trade.",
+    elevation: "14 m",
+    bestTime: "November – February",
+    temperature: "24°C – 34°C",
+    about:
+      "Machilipatnam, historically known as Masulipatnam, was once a thriving port connecting India to Persia, Arabia, and Europe. The town gained global recognition for its Kalamkari textile art, where intricate designs are block printed and hand-painted using natural dyes. Its coastal culture also features fishing communities, seafood cuisine, and traditional sweet preparations.",
+
+    products: [
+      {
+        name: "Machilipatnam Kalamkari",
+        type: "famous",
+        description: "Hand-block printed textiles dyed with natural colors.",
+        significance: "One of India’s oldest textile traditions with a GI tag.",
+        makingProcess:
+          "Cotton fabric is block printed with carved wooden blocks and dyed with natural pigments.",
+        uses: ["Sarees", "Wall hangings", "Garments"],
+        image: kalamkariSilkImage,
+        makingImage: kalamkariSilkMake,
+        flavorImage: kalamkariSilkFlavor,
+      },
+      {
+        name: "Bandar Laddu",
+        type: "famous",
+        description: "A sweet delicacy made from gram flour and sugar syrup.",
+        significance:
+          "A traditional sweet strongly associated with the town’s culinary identity.",
+        makingProcess:
+          "Gram flour pearls are fried, soaked in syrup, and shaped into laddus.",
+        uses: ["Desserts", "Festival sweets"],
+        image: bandarLadduImage,
+        makingImage: bandarLadduMake,
+        flavorImage: bandarLadduFlavor,
+      },
+      {
+        name: "Tati Bellam (Palm Jaggery)",
+        type: "underrated",
+        description:
+          "Natural jaggery made from palm tree sap, known for its rich caramel flavor and nutritional value.",
+        significance:
+          "A traditional sweetener used in coastal Andhra households and Ayurvedic preparations.",
+        makingProcess:
+          "Palm sap is collected from trees and boiled slowly until thickened, then poured into molds to solidify.",
+        uses: ["Traditional sweets", "Natural sweetener", "Herbal drinks"],
+        image: tatiBellamImage,
+        makingImage: tatiBellamMake,
+        flavorImage: tatiBellamFlavor,
+      },
+      {
+        name: "Kalamkari Wooden Block Printing Tools",
+        type: "underrated",
+        description:
+          "Hand-carved wooden blocks used for printing intricate Kalamkari textile patterns.",
+        significance:
+          "These blocks form the foundation of Machilipatnam’s Kalamkari printing tradition and preserve generational design knowledge.",
+        makingProcess:
+          "Artisans carve intricate patterns into hardwood blocks which are then dipped in dye and pressed onto cotton fabric.",
+        uses: ["Textile printing", "Craft tools", "Traditional artisan work"],
+        image: kalamkariBlockImage,
+        makingImage: kalamkariBlockMake,
+        flavorImage: kalamkariBlockFlavor,
+      },
+    ],
+
+    culture:
+      "Machilipatnam’s coastal history shaped a cosmopolitan culture influenced by Arab, Persian, and European traders. Kalamkari workshops continue centuries-old dyeing and printing techniques using natural pigments derived from plants and minerals. Traditional sweets like Bandar Laddu and the town’s seafood cuisine further enrich its cultural identity as one of Andhra’s historic maritime centers.",
   },
 ];

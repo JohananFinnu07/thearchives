@@ -3,7 +3,10 @@ import { MapPin, Heart, Users, Camera, Compass, BookOpen } from "lucide-react";
 import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
 import { allDestinations } from "@/data/destinations";
-
+const totalProducts = allDestinations.reduce(
+  (total, dest) => total + dest.products.length,
+  0,
+);
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -90,7 +93,7 @@ const AboutPage = () => {
                 },
                 {
                   icon: Heart,
-                  label: "30+ Products",
+                  label: totalProducts + " Products",
                   sublabel: "Researched at Source",
                 },
                 {

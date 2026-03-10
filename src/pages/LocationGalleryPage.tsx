@@ -1,11 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MapPin, ArrowLeft, ImageIcon } from "lucide-react";
+import { MapPin, ArrowLeft, ImageIcon, Compass } from "lucide-react";
 import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
 import { getDestinationBySlug } from "@/data/destinations";
 import { Button } from "@/components/ui/button";
-
+import { stateConfig } from "@/data/stateConfig";
 const LocationGalleryPage = () => {
   const { state, slug } = useParams<{
     state: string;
@@ -19,7 +19,9 @@ const LocationGalleryPage = () => {
     if (!state) return path;
     return `/${state}${path}`;
   };
-
+  const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+    `${destination.mapsQuery}, ${stateConfig?.[state!]?.name}`,
+  )}`;
   if (!destination) {
     return (
       <div className="min-h-screen bg-background">
@@ -128,6 +130,22 @@ const LocationGalleryPage = () => {
           </div>
         </section>
       </main>
+      <motion.a
+        href={mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 1, type: "spring", stiffness: 200 }}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2 rounded-full gradient-forest text-primary-foreground shadow-elevated hover:scale-105 transition-transform"
+        aria-label={`Navigate to ${destination.name}`}
+      >
+        <Compass className="w-5 h-5" />
+
+        <span className="font-medium text-xs hidden sm:inline">
+          Into {destination.id}
+        </span>
+      </motion.a>
       <Footer />
     </div>
   );
