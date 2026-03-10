@@ -63,6 +63,8 @@ import rayaMirchibajji from "@/assets/Recipes/RMBH.jpg";
 import bandarHalwa from "@/assets/Recipes/BH.jpg";
 import RoyyalaPacchadi from "@/assets/Recipes/MRP.jpg";
 
+import madugulaHalwa from "@/assets/Recipes/PMDH.jpg";
+
 export const andhraRecipes: Recipe[] = [
   {
     name: "Niger Seed Chutney",
@@ -512,6 +514,49 @@ export const andhraRecipes: Recipe[] = [
     ],
     story:
       "Paderu is known for its organically grown, high-curcumin turmeric cultivated in the Eastern Ghats. This turmeric rasam is especially popular during monsoon and winter for its warmth and immunity benefits. Simple yet powerful, it reflects the region’s agricultural richness and traditional medicinal knowledge.",
+  },
+  {
+    name: "Madugula Halwa",
+    state: "andhra-pradesh",
+    id: "paderu",
+    destination: "Paderu",
+
+    description:
+      "A famous traditional wheat halwa from Madugula village near Visakhapatnam, known for its rich ghee flavor, chewy texture, and slow-cooked preparation.",
+
+    image: madugulaHalwa,
+
+    prepTime: "8 hrs (wheat soaking & extraction)",
+    cookTime: "1 hr",
+    servings: "Serves 6",
+    difficulty: "Medium",
+
+    ingredients: [
+      "2 cups whole wheat",
+      "1½ cups sugar",
+      "1 cup ghee",
+      "4 tbsp cashews",
+      "2 tbsp raisins",
+      "4 cardamom pods (powdered)",
+      "3 cups water",
+    ],
+
+    steps: [
+      "Soak whole wheat overnight and grind it with water to extract thick wheat milk.",
+      "Strain the mixture to separate the wheat milk and allow it to settle for a few hours.",
+      "Heat a heavy-bottomed pan and cook the wheat milk slowly while stirring continuously.",
+      "Add sugar gradually and continue stirring as the mixture thickens.",
+      "Pour ghee little by little while cooking until the halwa becomes glossy and leaves the sides of the pan.",
+      "Add roasted cashews, raisins, and cardamom powder for aroma.",
+      "Cook until the mixture reaches a chewy halwa consistency and serve warm.",
+    ],
+
+    story:
+      "Madugula Halwa is one of the most famous traditional sweets from the Madugula region near Visakhapatnam. The sweet gained popularity during the local zamindari period when it was prepared for royal guests and festivals. Even today, Madugula sweet shops continue the slow-cooking method that gives the halwa its signature chewy texture and deep ghee aroma.",
+
+    season: "All Year",
+
+    buyLink: "https://amzn.to/4s4Oio5",
   },
   {
     name: "Korra Upma",
