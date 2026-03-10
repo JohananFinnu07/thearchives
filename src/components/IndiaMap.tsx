@@ -211,29 +211,6 @@ const IndiaMap = () => {
         </motion.div>
       )}
 
-      {/* Buttons */}
-      {isMobile && !showDots && (
-        <div className="flex justify-center mb-3">
-          <button
-            onClick={() => setShowDots(true)}
-            className="px-4 py-2 rounded-full bg-[#C6A34F] text-white text-sm shadow"
-          >
-            View States
-          </button>
-        </div>
-      )}
-
-      {showDots && (
-        <div className="flex justify-center mb-3">
-          <button
-            onClick={() => setShowDots(false)}
-            className="px-4 py-2 rounded-full bg-white/70 backdrop-blur text-sm shadow"
-          >
-            Back to Map
-          </button>
-        </div>
-      )}
-
       {/* Map */}
       <div className="relative w-full max-w-[1100px] lg:max-w-[1300px] mx-auto px-4 py-8">
         <svg
@@ -405,6 +382,28 @@ const IndiaMap = () => {
               </motion.g>
             ))}
         </svg>
+        {/* Buttons */}
+        {isMobile && !showDots && (
+          <div className="flex justify-center mb-3">
+            <button
+              onClick={() => setShowDots(true)}
+              className="px-4 py-2 rounded-full bg-[#C6A34F] text-white text-sm shadow"
+            >
+              View States
+            </button>
+          </div>
+        )}
+
+        {showDots && (
+          <div className="flex justify-center mb-3">
+            <button
+              onClick={() => setShowDots(false)}
+              className="px-4 py-2 rounded-full bg-white/70 backdrop-blur text-sm shadow"
+            >
+              Back to Map
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

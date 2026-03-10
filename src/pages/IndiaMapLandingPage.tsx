@@ -322,7 +322,7 @@ const IndiaMapLandingPage = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="relative w-[95vw] max-w-[820px] pt-16 md:pt-0"
+              className="relative w-[105vw] max-w-[820px] pt-16 md:pt-0"
             >
               <IndiaMap />
             </motion.div>
@@ -337,7 +337,7 @@ const IndiaMapLandingPage = () => {
           />
 
           {/* Glass blur layer */}
-          <div className="absolute inset-0 backdrop-blur-[8px] bg-white/7" />
+          <div className="absolute inset-0 backdrop-blur-[7px] bg-white/7" />
 
           {/* Subtle raindrops */}
           <div className="pointer-events-none absolute inset-0">
