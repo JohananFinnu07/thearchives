@@ -66,6 +66,60 @@ import venkatMuseum from "@/assets/Places/TVM.jpg";
 import japaliTeertham from "@/assets/Places/TJT.jpg";
 import chandragiriFort from "@/assets/Places/TCF.jpg";
 
+/* ================= ETIKOPPAKA ================= */
+import varahaRiver from "@/assets/Places/EVRB.jpg";
+import toyWorkshops from "@/assets/Places/ELTW.jpg";
+import kondakarlaLake from "@/assets/Places/EKAL.jpg";
+import toyMaking from "@/assets/Places/ETMW.jpg";
+
+/* ================= KONASEEMA ================= */
+import antarvediTemple from "@/assets/Places/KAT.jpg";
+import dindiBackwaters from "@/assets/Places/KDBW.jpg";
+import appanapalliTemple from "@/assets/Places/KAPT.jpg";
+import coconutCanalBoat from "@/assets/Places/KCCB.jpg";
+import villageHomestays from "@/assets/Places/KVHS.jpg";
+import adduruStupa from "@/assets/Places/KABS.jpg";
+
+/* ================= PAPIKONDAlU ================= */
+import godavariCruise from "@/assets/Places/PGRC.jpg";
+import perantlapalliVillage from "@/assets/Places/PPV.jpg";
+import papiViewpoint from "@/assets/Places/PVP.jpg";
+import kolluruHuts from "@/assets/Places/PKBH.jpg";
+import forestTrekR from "@/assets/Places/PFTR.jpg";
+
+/* ================= SRISAILAM ================= */
+import mallikarjunaTemple from "@/assets/Places/SMT.jpg";
+import srisailamDam from "@/assets/Places/SD.jpg";
+import patalGanga from "@/assets/Places/SPR.jpg";
+import octopusViewpoint from "@/assets/Places/SOVP.jpg";
+import istakameshwariTemple from "@/assets/Places/SIKT.jpg";
+import akkaMahadevi from "@/assets/Places/SAMC.jpg";
+
+/* ================= NELLORE ================= */
+import pulicatLake from "@/assets/Places/NPL.jpg";
+import mypaduBeach from "@/assets/Places/NMB.jpg";
+import ranganathTemple from "@/assets/Places/NRT.jpg";
+import nelapattuBird from "@/assets/Places/NNBS.jpg";
+import barashahidDargah from "@/assets/Places/NBD.jpg";
+import udayagiriFort from "@/assets/Places/NUF.jpg";
+
+/* ================= ANANTAPUR ================= */
+import lepakshiTemple from "@/assets/Places/AVT.jpg";
+import thimmammaBanyan from "@/assets/Places/ATMB.jpg";
+import penukondaFort from "@/assets/Places/APF.jpg";
+import narasimhaTemple from "@/assets/Places/AKT.jpg";
+import rayadurgFort from "@/assets/Places/ARF.jpg";
+import alarukonaWaterfalls from "@/assets/Places/AAKW.jpg";
+
+/* ================= MACHILIPATNAM ================= */
+import manginapudiBeach from "@/assets/Places/MMB.jpg";
+import dutchCemetry from "@/assets/Places/MDC.jpg";
+import pandurangaTemple from "@/assets/Places/MPST.jpg";
+import kalamkariSaree from "@/assets/Places/MPKS.jpg";
+import machilipatnamPort from "@/assets/Places/MPR.jpeg";
+import diviseemaVillages from "@/assets/Places/MDDV.jpg";
+import oldColonialWarehouse from "@/assets/Places/MOCW.jpg";
+
 export const andhraPlaces: Place[] = [
   {
     destination: "Araku Valley",
@@ -1662,5 +1716,1369 @@ export const andhraPlaces: Place[] = [
     ],
 
     mapsQuery: "Chandragiri Fort",
+  },
+  /* ================= ETIKOPPAKA ================= */
+  {
+    destination: "Etikoppaka",
+    state: "andhra-pradesh",
+    name: "Toy-Making Workshops",
+    slug: "etikoppaka-toy-making-workshops",
+    type: "must-visit",
+
+    image: toyMaking,
+
+    description:
+      "Interactive workshops where visitors can learn the traditional craft of making lacquer toys.",
+
+    about:
+      "Several artisan families in Etikoppaka conduct small toy-making workshops where visitors can experience the craft firsthand. These sessions demonstrate how wooden blocks are shaped on manual lathes and colored using natural lacquer dyes derived from plants.",
+
+    distance: "Within Etikoppaka Village",
+
+    highlights: [
+      "Hands-on traditional craft experience",
+      "Manual wood-turning techniques",
+      "Natural vegetable dye coloring",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Call ahead or check locally for workshop timings.",
+      "Participate respectfully in artisan spaces.",
+      "Great activity for children and craft enthusiasts.",
+    ],
+
+    mapsQuery: "Etikoppaka Toy Making Workshops",
+  },
+
+  {
+    destination: "Etikoppaka",
+    state: "andhra-pradesh",
+    name: "Varaha River Banks",
+    slug: "varaha-river-banks-etikoppaka",
+    type: "underrated",
+
+    image: varahaRiver,
+
+    description:
+      "A peaceful stretch of the Varaha River flowing beside Etikoppaka village surrounded by rural greenery.",
+
+    about:
+      "The Varaha River flows gently beside Etikoppaka village and has historically supported the local ecosystem where Ankudu trees grow. The scenic riverbanks provide a quiet rural setting and beautiful natural views around the craft village.",
+
+    distance: "Inside Etikoppaka",
+
+    highlights: [
+      "Peaceful riverside landscape",
+      "Natural surroundings near the craft village",
+      "Great photography spot",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Visit early morning for calm views.",
+      "Avoid visiting during heavy monsoon floods.",
+      "Carry drinking water if exploring the banks.",
+    ],
+
+    mapsQuery: "Varaha River Etikoppaka",
+  },
+
+  {
+    destination: "Etikoppaka",
+    state: "andhra-pradesh",
+    name: "Laccaware Toy Workshops",
+    slug: "laccaware-toy-workshops-etikoppaka",
+    type: "underrated",
+
+    image: toyWorkshops,
+
+    description:
+      "Small workshops where artisans produce intricate lacquer toys using heated natural lac on spinning wood.",
+
+    about:
+      "Lacquerware toy workshops demonstrate the signature Etikoppaka craft technique where heated lac sticks are applied to spinning wooden pieces. The friction melts the lac and creates vibrant patterns and colors on the toys.",
+
+    distance: "Inside Etikoppaka",
+
+    highlights: [
+      "Traditional lacquer finishing technique",
+      "Bright natural colors on wood",
+      "Unique Indian craft heritage",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Observe carefully as tools and lathes operate quickly.",
+      "Children should stay supervised.",
+      "Best visited during working hours.",
+    ],
+
+    mapsQuery: "Etikoppaka Lacquer Toy Workshops",
+  },
+
+  {
+    destination: "Etikoppaka",
+    state: "andhra-pradesh",
+    name: "Kondakarla Ava Lake",
+    slug: "kondakarla-ava-lake",
+    type: "underrated",
+
+    image: kondakarlaLake,
+
+    description:
+      "A large freshwater lake near Etikoppaka known for birdlife, scenic landscapes, and peaceful boat rides.",
+
+    about:
+      "Kondakarla Ava Lake is the second-largest freshwater lake in Andhra Pradesh and an important wetland ecosystem. Located a short drive from Etikoppaka, the lake attracts migratory birds and supports local fishing communities. Its calm waters and natural beauty make it a hidden gem near the craft village.",
+
+    distance: "25 km from Etikoppaka",
+
+    highlights: [
+      "Second-largest freshwater lake in Andhra Pradesh",
+      "Birdwatching and migratory birds",
+      "Scenic boat rides and sunset views",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Visit early morning for birdwatching.",
+      "Carry binoculars and camera.",
+      "Avoid littering near the wetland.",
+    ],
+
+    mapsQuery: "Kondakarla Ava Lake",
+  },
+  /* ================= KONASEEMA ================= */
+
+  {
+    destination: "Konaseema - Godavari",
+    state: "andhra-pradesh",
+    name: "Antarvedi Temple",
+    slug: "antarvedi-temple",
+    type: "must-visit",
+
+    image: antarvediTemple,
+
+    description:
+      "A sacred temple dedicated to Lord Lakshmi Narasimha located where the Godavari River meets the Bay of Bengal.",
+
+    about:
+      "Antarvedi Temple is one of the most important pilgrimage sites in the Konaseema region. Situated at the confluence of the Vasishta Godavari River and the Bay of Bengal, the temple is dedicated to Lord Lakshmi Narasimha. Pilgrims visit the temple to experience both the spiritual atmosphere and the scenic coastal surroundings.",
+
+    distance: "60 km from Amalapuram",
+
+    highlights: [
+      "Sacred Lakshmi Narasimha temple",
+      "Godavari river meeting the sea",
+      "Beautiful coastal landscape",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit during sunrise or sunset for beautiful views.",
+      "Combine temple visit with Antarvedi beach trip.",
+      "Festivals like Kalyanotsavam attract large crowds.",
+    ],
+
+    mapsQuery: "Antarvedi Lakshmi Narasimha Swamy Temple",
+  },
+
+  {
+    destination: "Konaseema - Godavari",
+    state: "andhra-pradesh",
+    name: "Dindi Backwaters",
+    slug: "dindi-backwaters",
+    type: "must-visit",
+
+    image: dindiBackwaters,
+
+    description:
+      "A serene network of backwaters surrounded by coconut groves often compared to Kerala's famous waterways.",
+
+    about:
+      "Dindi Backwaters is one of the most scenic destinations in Konaseema where canals, rivers, and coconut plantations create a peaceful landscape. Visitors can experience houseboat rides, kayaking, and village life while cruising through the calm waterways.",
+
+    distance: "20 km from Amalapuram",
+
+    highlights: [
+      "Scenic backwater boat rides",
+      "Lush coconut groves",
+      "Houseboat and kayaking experiences",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Book houseboats in advance during peak season.",
+      "Sunset boat rides offer the best views.",
+      "Carry mosquito repellent when visiting villages.",
+    ],
+
+    mapsQuery: "Dindi Backwaters Konaseema",
+  },
+
+  {
+    destination: "Konaseema - Godavari",
+    state: "andhra-pradesh",
+    name: "Appanapalli Temple",
+    slug: "appanapalli-temple",
+    type: "must-visit",
+
+    image: appanapalliTemple,
+
+    description:
+      "A popular temple dedicated to Lord Balaji located in the scenic Konaseema delta region.",
+
+    about:
+      "Appanapalli Temple, officially known as Bala Balaji Temple, is an important pilgrimage center in Konaseema. Devotees believe that visiting the temple brings prosperity and blessings. The temple is surrounded by lush greenery and peaceful village landscapes.",
+
+    distance: "20 km from Amalapuram",
+
+    highlights: [
+      "Famous Balaji temple in Konaseema",
+      "Peaceful rural surroundings",
+      "Important regional pilgrimage center",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Weekdays are less crowded.",
+      "Visit early morning for peaceful darshan.",
+      "Explore nearby coconut plantations.",
+    ],
+
+    mapsQuery: "Appanapalli Bala Balaji Temple",
+  },
+
+  {
+    destination: "Konaseema - Godavari",
+    state: "andhra-pradesh",
+    name: "Coconut Canal Boat Rides",
+    slug: "konaseema-coconut-canal-boat-rides",
+    type: "underrated",
+
+    image: coconutCanalBoat,
+
+    description:
+      "Peaceful boat rides through narrow canals surrounded by dense coconut plantations.",
+
+    about:
+      "Konaseema is famous for its scenic canals that pass through endless coconut groves and traditional villages. Small boat rides through these waterways offer an authentic experience of the region’s rural beauty and agricultural life.",
+
+    distance: "Various villages across Konaseema",
+
+    highlights: [
+      "Scenic coconut-lined canals",
+      "Peaceful village landscapes",
+      "Traditional rural life experience",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Early morning rides are most scenic.",
+      "Carry sunscreen and water.",
+      "Respect local village communities.",
+    ],
+
+    mapsQuery: "Konaseema Canal Boat Ride",
+  },
+
+  {
+    destination: "Konaseema - Godavari",
+    state: "andhra-pradesh",
+    name: "Konaseema Village Homestays",
+    slug: "konaseema-village-homestays",
+    type: "underrated",
+
+    image: villageHomestays,
+
+    description:
+      "Traditional village homes offering immersive stays among coconut groves and paddy fields.",
+
+    about:
+      "Village homestays in Konaseema allow visitors to experience the authentic lifestyle of the delta region. Guests can enjoy traditional Andhra meals, explore coconut farms, and experience the peaceful rhythm of rural life.",
+
+    distance: "Across Konaseema region",
+
+    highlights: [
+      "Authentic village hospitality",
+      "Traditional Konaseema cuisine",
+      "Coconut grove landscapes",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Book verified homestays in advance.",
+      "Try local seafood and coconut-based dishes.",
+      "Respect local customs and traditions.",
+    ],
+
+    mapsQuery: "Konaseema Village Homestay",
+  },
+
+  {
+    destination: "Konaseema - Godavari",
+    state: "andhra-pradesh",
+    name: "Aduru Buddhist Stupa",
+    slug: "aduru-buddhist-stupa",
+    type: "underrated",
+
+    image: adduruStupa,
+
+    description:
+      "An ancient 2nd-century Buddhist Mahastupa hidden among coconut groves near Konaseema villages.",
+
+    about:
+      "Aduru Buddhist Stupa is an important archaeological site believed to date back to the 2nd century. The site includes the remains of a large Mahastupa and monastery complex that reflects the spread of Buddhism along the coastal trade routes of ancient Andhra. Surrounded by quiet coconut plantations, it remains a peaceful historical landmark.",
+
+    distance: "40 km from Amalapuram",
+
+    highlights: [
+      "2nd-century Buddhist Mahastupa",
+      "Ancient monastery remains",
+      "Quiet historical site surrounded by coconut groves",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during daytime as facilities are limited.",
+      "Carry water and sun protection.",
+      "Combine the visit with nearby Konaseema villages.",
+    ],
+
+    mapsQuery: "Adurru Buddhist Stupa",
+  },
+  /* ================= PAPIKONDAlU ================= */
+
+  {
+    destination: "Papikondalu",
+    state: "andhra-pradesh",
+    name: "Godavari River Cruise",
+    slug: "godavari-river-cruise-papikondalu",
+    type: "must-visit",
+
+    image: godavariCruise,
+
+    description:
+      "A scenic boat journey through the breathtaking Papikondalu hills along the Godavari River.",
+
+    about:
+      "The Godavari River Cruise through Papikondalu is one of the most beautiful river journeys in South India. Boats travel between lush green hills of the Eastern Ghats while the Godavari River curves through deep valleys. The cruise offers stunning views of forest-covered mountains, tribal villages, and untouched landscapes.",
+
+    distance: "Cruise starts from Rajamahendravaram (Rajahmundry)",
+
+    highlights: [
+      "Spectacular Godavari river valley views",
+      "Boat journey through Papikondalu hills",
+      "Experience tribal and forest landscapes",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Book cruise tickets in advance during peak season.",
+      "Carry sunscreen and hats for daytime cruises.",
+      "Sit on the upper deck for the best views.",
+    ],
+
+    mapsQuery: "Papikondalu Boat Cruise",
+  },
+
+  {
+    destination: "Papikondalu",
+    state: "andhra-pradesh",
+    name: "Perantalapalli Village",
+    slug: "perantalapalli-village",
+    type: "must-visit",
+
+    image: perantlapalliVillage,
+
+    description:
+      "A small tribal village on the banks of the Godavari known for its peaceful setting and spiritual temple.",
+
+    about:
+      "Perantalapalli is a quiet tribal village located along the Godavari River in the Papikondalu region. The village is known for the Sri Ramakrishna Munivatam temple and its serene natural surroundings. Visitors often stop here during river cruises to explore the village, interact with locals, and enjoy the calm riverside atmosphere.",
+
+    distance: "Accessible mainly via Godavari boat cruise",
+
+    highlights: [
+      "Peaceful tribal village atmosphere",
+      "Sri Ramakrishna Munivatam temple",
+      "Beautiful Godavari riverbank views",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during river cruise stops.",
+      "Support locals by purchasing tribal handicrafts.",
+      "Respect local customs and village traditions.",
+    ],
+
+    mapsQuery: "Perantalapalli Village Papikondalu",
+  },
+
+  {
+    destination: "Papikondalu",
+    state: "andhra-pradesh",
+    name: "Papikondalu Viewpoints",
+    slug: "papikondalu-viewpoints",
+    type: "must-visit",
+
+    image: papiViewpoint,
+
+    description:
+      "Scenic viewpoints offering breathtaking views of the Papikondalu hill ranges and the winding Godavari River.",
+
+    about:
+      "The Papikondalu hill range forms part of the Eastern Ghats and creates dramatic landscapes where the Godavari River winds through narrow valleys. Several viewpoints along the river and nearby hills provide spectacular panoramic views of forests, mountains, and river bends.",
+
+    distance: "Viewpoints along Papikondalu river route",
+
+    highlights: [
+      "Panoramic Eastern Ghats landscapes",
+      "Spectacular Godavari river curves",
+      "Perfect photography locations",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit during sunrise or sunset for best lighting.",
+      "Carry a camera or binoculars.",
+      "Weather can be humid, carry water.",
+    ],
+
+    mapsQuery: "Papikondalu View Point",
+  },
+
+  {
+    destination: "Papikondalu",
+    state: "andhra-pradesh",
+    name: "Kolluru Bamboo Huts",
+    slug: "kolluru-bamboo-huts",
+    type: "underrated",
+
+    image: kolluruHuts,
+
+    description:
+      "Eco-friendly bamboo cottages located near the Papikondalu hills offering a unique forest stay experience.",
+
+    about:
+      "Kolluru Bamboo Huts are eco-tourism cottages built using bamboo and natural materials along the banks of the Godavari River. These huts provide visitors with a peaceful stay surrounded by forest hills, river views, and tribal culture. It is one of the most unique accommodations in the Papikondalu region.",
+
+    distance: "Located near Kolluru village in Papikondalu region",
+
+    highlights: [
+      "Eco-friendly bamboo cottages",
+      "Stay surrounded by forest and river",
+      "Authentic tribal region experience",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Book stays through Andhra Pradesh tourism or operators.",
+      "Electricity and mobile signal may be limited.",
+      "Carry essentials during overnight stays.",
+    ],
+
+    mapsQuery: "Kolluru Bamboo Huts Papikondalu",
+  },
+
+  {
+    destination: "Papikondalu",
+    state: "andhra-pradesh",
+    name: "Forest Trekking Routes",
+    slug: "papikondalu-forest-trekking-routes",
+    type: "underrated",
+
+    image: forestTrekR,
+
+    description:
+      "Trekking trails through dense forests of the Eastern Ghats offering adventure and scenic nature views.",
+
+    about:
+      "The forests surrounding Papikondalu offer several trekking paths through the Eastern Ghats. These trails pass through dense forests, tribal settlements, and scenic hill slopes, providing a unique opportunity to explore the biodiversity and natural beauty of the region.",
+
+    distance: "Various trekking trails across Papikondalu region",
+
+    highlights: [
+      "Eastern Ghats forest trekking",
+      "Rich biodiversity and wildlife",
+      "Adventure trails with scenic views",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Always trek with a local guide.",
+      "Carry sufficient water and snacks.",
+      "Avoid trekking during heavy monsoon.",
+    ],
+
+    mapsQuery: "Papikondalu Trekking",
+  },
+  /* ================= SRISAILAM ================= */
+
+  {
+    destination: "Srisailam",
+    state: "andhra-pradesh",
+    name: "Mallikarjuna Temple",
+    slug: "mallikarjuna-temple-srisailam",
+    type: "must-visit",
+
+    image: mallikarjunaTemple,
+
+    description:
+      "One of the twelve Jyotirlinga temples dedicated to Lord Shiva located on the sacred Srisailam hills.",
+
+    about:
+      "The Mallikarjuna Temple in Srisailam is one of the twelve Jyotirlingas of Lord Shiva and also one of the eighteen Shakti Peethas of Goddess Parvati. Located in the Nallamala Hills along the Krishna River, the temple has immense religious significance and attracts pilgrims from across India.",
+
+    distance: "230 km from Hyderabad",
+
+    highlights: [
+      "One of the 12 Jyotirlinga temples",
+      "Sacred Shaivite pilgrimage center",
+      "Ancient temple architecture",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning to avoid heavy crowds.",
+      "Book accommodation in advance during festivals.",
+      "Follow temple dress code guidelines.",
+    ],
+
+    mapsQuery: "Mallikarjuna Swamy Temple Srisailam",
+  },
+
+  {
+    destination: "Srisailam",
+    state: "andhra-pradesh",
+    name: "Srisailam Dam",
+    slug: "srisailam-dam",
+    type: "must-visit",
+
+    image: srisailamDam,
+
+    description:
+      "One of the largest dams in India built across the Krishna River surrounded by the scenic Nallamala Hills.",
+
+    about:
+      "Srisailam Dam is a massive hydroelectric and irrigation project constructed across the Krishna River. Surrounded by the forested Nallamala Hills, the dam offers breathtaking views of the reservoir and the surrounding landscape.",
+
+    distance: "14 km from Srisailam Temple",
+
+    highlights: [
+      "Massive Krishna river dam",
+      "Panoramic hill and reservoir views",
+      "Important hydroelectric project",
+    ],
+
+    bestTime: "September – February",
+
+    travelTips: [
+      "Visit during monsoon or post-monsoon to see full water levels.",
+      "Carry a camera for scenic viewpoints.",
+      "Avoid visiting late at night.",
+    ],
+
+    mapsQuery: "Srisailam Dam",
+  },
+
+  {
+    destination: "Srisailam",
+    state: "andhra-pradesh",
+    name: "Patalganga Ropeway",
+    slug: "patalganga-ropeway",
+    type: "must-visit",
+
+    image: patalGanga,
+
+    description:
+      "A scenic ropeway ride connecting the hilltop temple area to the Krishna River at Patalganga.",
+
+    about:
+      "The Patalganga Ropeway offers visitors a breathtaking cable car ride down the steep Srisailam hills to reach the Krishna River. Pilgrims use this route to take a holy dip in the sacred river before visiting the temple.",
+
+    distance: "2 km from Mallikarjuna Temple",
+
+    highlights: [
+      "Cable car ride across Nallamala hills",
+      "Views of Krishna River valley",
+      "Access to sacred Patalganga river",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Expect queues during weekends and holidays.",
+      "Hold cameras securely during ropeway ride.",
+      "Visit early morning for shorter waiting times.",
+    ],
+
+    mapsQuery: "Patalganga Ropeway Srisailam",
+  },
+
+  {
+    destination: "Srisailam",
+    state: "andhra-pradesh",
+    name: "Octopus Viewpoint",
+    slug: "octopus-viewpoint-srisailam",
+    type: "underrated",
+
+    image: octopusViewpoint,
+
+    description:
+      "A famous viewpoint offering a unique aerial perspective of the winding Krishna River resembling an octopus shape.",
+
+    about:
+      "Octopus Viewpoint is one of the most scenic viewpoints near Srisailam. From this elevated location, visitors can see the Krishna River branching into multiple curves through the Nallamala forest, forming a pattern that resembles an octopus.",
+
+    distance: "40 km from Srisailam",
+
+    highlights: [
+      "Unique octopus-shaped river pattern",
+      "Panoramic valley landscape",
+      "Popular photography viewpoint",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during sunrise or sunset.",
+      "Carry binoculars for better views.",
+      "Road access may require careful driving.",
+    ],
+
+    mapsQuery: "Octopus View Point Srisailam",
+  },
+
+  {
+    destination: "Srisailam",
+    state: "andhra-pradesh",
+    name: "Akka Mahadevi Caves",
+    slug: "akka-mahadevi-caves",
+    type: "underrated",
+
+    image: akkaMahadevi,
+
+    description:
+      "Ancient natural caves along the Krishna River associated with the 12th-century saint Akka Mahadevi.",
+
+    about:
+      "Akka Mahadevi Caves are located deep within the Nallamala forest along the banks of the Krishna River. According to legend, the famous Kannada saint Akka Mahadevi meditated here. Visitors usually reach the caves by boat followed by a short walk.",
+
+    distance: "Accessible by boat from Srisailam",
+
+    highlights: [
+      "Ancient cave formations",
+      "Spiritual meditation site",
+      "Boat journey through Krishna River",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Carry a torch for exploring inside caves.",
+      "Wear comfortable footwear.",
+      "Visit with authorized boat operators.",
+    ],
+
+    mapsQuery: "Akka Mahadevi Caves Srisailam",
+  },
+
+  {
+    destination: "Srisailam",
+    state: "andhra-pradesh",
+    name: "Istakameswari Temple",
+    slug: "istakameswari-temple",
+    type: "underrated",
+
+    image: istakameshwariTemple,
+
+    description:
+      "A hidden forest temple dedicated to Goddess Istakameswari deep inside the Nallamala forest.",
+
+    about:
+      "Istakameswari Temple is a secluded shrine located deep inside the Nallamala forest. Devotees believe the goddess fulfills wishes, and the temple is unique because visitors touch the deity's idol to offer prayers. The journey to the temple itself is an adventurous forest drive.",
+
+    distance: "20 km forest route from Srisailam",
+
+    highlights: [
+      "Hidden forest temple",
+      "Unique ritual of touching the deity",
+      "Adventure drive through Nallamala forest",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Travel with local guides familiar with the forest route.",
+      "Visit during daytime only.",
+      "Carry essentials as facilities are limited.",
+    ],
+
+    mapsQuery: "Istakameswari Temple Srisailam",
+  },
+  /* ================= NELLORE ================= */
+
+  {
+    destination: "Nellore",
+    state: "andhra-pradesh",
+    name: "Pulicat Lake Bird Sanctuary",
+    slug: "pulicat-lake-bird-sanctuary",
+    type: "must-visit",
+
+    image: pulicatLake,
+
+    description:
+      "A vast brackish water lagoon and bird sanctuary known for migratory flamingos and diverse birdlife.",
+
+    about:
+      "Pulicat Lake Bird Sanctuary is the second-largest brackish water lagoon in India and an important winter habitat for migratory birds. Thousands of flamingos, pelicans, and other water birds arrive here every year, making it one of the most significant birdwatching destinations in South India.",
+
+    distance: "90 km from Nellore",
+
+    highlights: [
+      "Second-largest brackish water lagoon in India",
+      "Flamingo migration season",
+      "Beautiful wetlands and birdwatching spots",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Carry binoculars for birdwatching.",
+      "Visit early morning for best sightings.",
+      "Maintain silence to avoid disturbing birds.",
+    ],
+
+    mapsQuery: "Pulicat Lake Bird Sanctuary",
+  },
+
+  {
+    destination: "Nellore",
+    state: "andhra-pradesh",
+    name: "Mypadu Beach",
+    slug: "mypadu-beach",
+    type: "must-visit",
+
+    image: mypaduBeach,
+
+    description:
+      "A scenic and peaceful beach along the Bay of Bengal known for its golden sands and calm surroundings.",
+
+    about:
+      "Mypadu Beach is one of the most popular coastal destinations near Nellore. The long stretch of sandy shoreline and relatively calm waters make it ideal for relaxing beach walks, sunset views, and enjoying the coastal atmosphere.",
+
+    distance: "25 km from Nellore",
+
+    highlights: [
+      "Clean sandy beach",
+      "Beautiful sunrise and sunset views",
+      "Peaceful coastal environment",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Avoid swimming during rough sea conditions.",
+      "Carry water and snacks.",
+      "Best visited during evening hours.",
+    ],
+
+    mapsQuery: "Mypadu Beach",
+  },
+
+  {
+    destination: "Nellore",
+    state: "andhra-pradesh",
+    name: "Ranganathaswamy Temple",
+    slug: "ranganathaswamy-temple-nellore",
+    type: "must-visit",
+
+    image: ranganathTemple,
+
+    description:
+      "A historic temple dedicated to Lord Ranganatha, an incarnation of Lord Vishnu.",
+
+    about:
+      "The Sri Ranganathaswamy Temple in Nellore is an ancient temple dedicated to Lord Vishnu in his reclining form as Ranganatha. The temple showcases traditional South Indian architecture and remains an important pilgrimage site in the region.",
+
+    distance: "Located within Nellore city",
+
+    highlights: [
+      "Ancient Vishnu temple",
+      "Traditional Dravidian architecture",
+      "Important regional pilgrimage center",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for peaceful darshan.",
+      "Festivals attract large crowds.",
+      "Follow temple dress guidelines.",
+    ],
+
+    mapsQuery: "Sri Ranganathaswamy Temple Nellore",
+  },
+
+  {
+    destination: "Nellore",
+    state: "andhra-pradesh",
+    name: "Nelapattu Bird Sanctuary",
+    slug: "nelapattu-bird-sanctuary",
+    type: "underrated",
+
+    image: nelapattuBird,
+
+    description:
+      "A protected bird sanctuary famous for pelicans and other migratory bird species.",
+
+    about:
+      "Nelapattu Bird Sanctuary is one of the largest pelican habitats in South India. Located near Pulicat Lake, the sanctuary protects wetlands and nesting sites for several migratory bird species including pelicans, storks, and herons.",
+
+    distance: "50 km from Nellore",
+
+    highlights: [
+      "Large pelican nesting colony",
+      "Protected wetland ecosystem",
+      "Excellent birdwatching opportunities",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Carry binoculars and camera.",
+      "Visit during morning hours.",
+      "Respect sanctuary rules.",
+    ],
+
+    mapsQuery: "Nelapattu Bird Sanctuary",
+  },
+
+  {
+    destination: "Nellore",
+    state: "andhra-pradesh",
+    name: "Barashahid Dargah",
+    slug: "barashahid-dargah",
+    type: "underrated",
+
+    image: barashahidDargah,
+
+    description:
+      "A historic Sufi shrine dedicated to twelve martyrs located near the coast of Nellore.",
+
+    about:
+      "Barashahid Dargah is a revered Islamic shrine dedicated to twelve martyrs who are believed to have sacrificed their lives centuries ago. The site attracts devotees from different communities and is known for its spiritual significance and peaceful surroundings.",
+
+    distance: "16 km from Nellore",
+
+    highlights: [
+      "Historic Sufi shrine",
+      "Spiritual pilgrimage site",
+      "Cultural heritage landmark",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Respect religious customs when visiting.",
+      "Visit during daylight hours.",
+      "Dress modestly.",
+    ],
+
+    mapsQuery: "Barashahid Dargah Nellore",
+  },
+
+  {
+    destination: "Nellore",
+    state: "andhra-pradesh",
+    name: "Udayagiri Fort",
+    slug: "udayagiri-fort-nellore",
+    type: "underrated",
+
+    image: udayagiriFort,
+
+    description:
+      "A historic hill fort built during the Vijayanagara period offering panoramic views of the surrounding landscape.",
+
+    about:
+      "Udayagiri Fort is an ancient hilltop fortress associated with the Vijayanagara Empire. The fort complex includes massive stone walls, temples, and gateways that reflect the military architecture of the period. The elevated location provides scenic views of the surrounding hills and countryside.",
+
+    distance: "100 km from Nellore",
+
+    highlights: [
+      "Historic Vijayanagara fort",
+      "Hilltop panoramic views",
+      "Ancient temples inside the fort",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear comfortable footwear for climbing.",
+      "Carry water during exploration.",
+      "Visit during morning or evening.",
+    ],
+
+    mapsQuery: "Udayagiri Fort Nellore",
+  },
+  /* ================= ANANTAPUR ================= */
+
+  {
+    destination: "Anantapur",
+    state: "andhra-pradesh",
+    name: "Lepakshi Veerabhadra Temple",
+    slug: "lepakshi-veerabhadra-temple",
+    type: "must-visit",
+
+    image: lepakshiTemple,
+
+    description:
+      "A magnificent Vijayanagara-era temple famous for its hanging pillar and intricate stone carvings.",
+
+    about:
+      "Lepakshi Veerabhadra Temple is one of the most architecturally remarkable temples in South India. Built during the Vijayanagara Empire in the 16th century, the temple is famous for its mysterious hanging pillar, elaborate murals, and detailed sculptures. The temple also features the massive monolithic Nandi statue located nearby.",
+
+    distance: "120 km from Anantapur",
+
+    highlights: [
+      "Mysterious hanging pillar",
+      "Vijayanagara-era fresco paintings",
+      "Beautiful stone carvings and sculptures",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning to avoid crowds.",
+      "Explore the nearby monolithic Nandi statue.",
+      "Photography lovers should carry wide-angle lenses.",
+    ],
+
+    mapsQuery: "Lepakshi Veerabhadra Temple",
+  },
+
+  {
+    destination: "Anantapur",
+    state: "andhra-pradesh",
+    name: "Thimmamma Marrimanu",
+    slug: "thimmamma-marrimanu",
+    type: "must-visit",
+
+    image: thimmammaBanyan,
+
+    description:
+      "One of the largest banyan trees in the world spreading across more than five acres.",
+
+    about:
+      "Thimmamma Marrimanu is a massive banyan tree believed to be more than 500 years old. Recognized in the Guinness Book of World Records, the tree covers over five acres and forms a vast canopy supported by thousands of aerial roots.",
+
+    distance: "75 km from Anantapur",
+
+    highlights: [
+      "One of the largest banyan trees in the world",
+      "Massive natural canopy",
+      "Historic and spiritual significance",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Carry water as the area can be hot.",
+      "Visit during early morning hours.",
+      "Avoid peak afternoon heat.",
+    ],
+
+    mapsQuery: "Thimmamma Marrimanu",
+  },
+
+  {
+    destination: "Anantapur",
+    state: "andhra-pradesh",
+    name: "Penukonda Fort",
+    slug: "penukonda-fort",
+    type: "must-visit",
+
+    image: penukondaFort,
+
+    description:
+      "A historic hill fort that served as the capital of the Vijayanagara Empire after the fall of Hampi.",
+
+    about:
+      "Penukonda Fort was an important stronghold of the Vijayanagara Empire. The fort complex includes impressive stone walls, temples, and the Gagan Mahal palace. The site reflects the strategic and architectural brilliance of the Vijayanagara rulers.",
+
+    distance: "70 km from Anantapur",
+
+    highlights: [
+      "Former Vijayanagara capital",
+      "Gagan Mahal palace ruins",
+      "Massive hill fort architecture",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear comfortable shoes for exploring.",
+      "Carry water during the climb.",
+      "Visit early morning for pleasant weather.",
+    ],
+
+    mapsQuery: "Penukonda Fort",
+  },
+
+  {
+    destination: "Anantapur",
+    state: "andhra-pradesh",
+    name: "Sri Kadiri Lakshmi Narasimha Swamy Temple",
+    slug: "kadiri-lakshmi-narasimha-temple",
+    type: "must-visit",
+
+    image: narasimhaTemple,
+
+    description:
+      "A sacred temple dedicated to Lord Narasimha and an important pilgrimage center in Rayalaseema.",
+
+    about:
+      "The Sri Kadiri Lakshmi Narasimha Swamy Temple is one of the most revered temples in the Rayalaseema region. The temple is known for its spiritual significance and unique idol of Lord Narasimha believed to self-manifest (Swayambhu).",
+
+    distance: "90 km from Anantapur",
+
+    highlights: [
+      "Important Narasimha temple",
+      "Major pilgrimage site in Rayalaseema",
+      "Traditional temple architecture",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit during festivals for vibrant celebrations.",
+      "Early morning visits offer peaceful darshan.",
+      "Respect temple dress code.",
+    ],
+
+    mapsQuery: "Kadiri Lakshmi Narasimha Swamy Temple",
+  },
+  {
+    destination: "Anantapur",
+    state: "andhra-pradesh",
+    name: "Rayadurg Fort",
+    slug: "rayadurg-fort",
+    type: "underrated",
+
+    image: rayadurgFort,
+
+    description:
+      "A massive hill fort offering panoramic views of the surrounding Rayalaseema landscape.",
+
+    about:
+      "Rayadurg Fort is a historic hilltop fortress featuring ancient gateways, temples, and strong defensive walls. The fort provides stunning views of the surrounding hills and plains.",
+
+    distance: "110 km from Anantapur",
+
+    highlights: [
+      "Massive hill fort complex",
+      "Panoramic landscape views",
+      "Historic stone gateways",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear trekking shoes.",
+      "Carry water during the climb.",
+      "Visit during sunrise or sunset.",
+    ],
+
+    mapsQuery: "Rayadurg Fort",
+  },
+
+  {
+    destination: "Anantapur",
+    state: "andhra-pradesh",
+    name: "Aluru Kona Waterfalls",
+    slug: "aluru-kona-waterfalls",
+    type: "underrated",
+
+    image: alarukonaWaterfalls,
+
+    description:
+      "A seasonal waterfall hidden within forested hills offering a peaceful nature retreat.",
+
+    about:
+      "Aluru Kona Waterfalls is a hidden natural spot located within forested hills of the Anantapur region. The waterfall flows mainly during the monsoon season and provides a refreshing escape surrounded by greenery.",
+
+    distance: "65 km from Anantapur",
+
+    highlights: [
+      "Seasonal forest waterfall",
+      "Peaceful natural surroundings",
+      "Hidden nature destination",
+    ],
+
+    bestTime: "July – November",
+
+    travelTips: [
+      "Visit during or after monsoon season.",
+      "Road access may require local guidance.",
+      "Carry water and essentials.",
+    ],
+
+    mapsQuery: "Aluru Kona Waterfalls",
+  },
+  /* ================= MACHILIPATNAM ================= */
+
+  {
+    destination: "Machilipatnam",
+    state: "andhra-pradesh",
+    name: "Manginapudi Beach",
+    slug: "manginapudi-beach",
+    type: "must-visit",
+
+    image: manginapudiBeach,
+
+    description:
+      "A unique beach known for its rare black sand coastline along the Bay of Bengal.",
+
+    about:
+      "Manginapudi Beach is one of the most popular coastal attractions near Machilipatnam. Unlike many beaches in India, the shore here is covered with dark-colored sand, giving the beach a distinctive appearance. The beach is a favorite destination for evening walks, sunset views, and enjoying the coastal breeze.",
+
+    distance: "11 km from Machilipatnam",
+
+    highlights: [
+      "Unique black sand shoreline",
+      "Beautiful sunset views",
+      "Popular local beach destination",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Evenings offer the best weather and views.",
+      "Avoid swimming during rough sea conditions.",
+      "Carry drinking water and sun protection.",
+    ],
+
+    mapsQuery: "Manginapudi Beach",
+  },
+
+  {
+    destination: "Machilipatnam",
+    state: "andhra-pradesh",
+    name: "Machilipatnam Dutch Cemetery",
+    slug: "machilipatnam-dutch-cemetery",
+    type: "must-visit",
+
+    image: dutchCemetry,
+
+    description:
+      "A colonial-era cemetery built by Dutch traders during the 17th century.",
+
+    about:
+      "Machilipatnam was once a major port for European traders including the Dutch, British, and French. The Dutch Cemetery stands as a reminder of the town’s colonial trading history. The site contains old tombs with European architectural styles and inscriptions dating back several centuries.",
+
+    distance: "Located within Machilipatnam town",
+
+    highlights: [
+      "Historic Dutch trading era site",
+      "European-style tomb architecture",
+      "Important colonial heritage landmark",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit during daytime hours.",
+      "Respect the heritage nature of the site.",
+      "Combine the visit with nearby colonial landmarks.",
+    ],
+
+    mapsQuery: "Machilipatnam Dutch Cemetery",
+  },
+
+  {
+    destination: "Machilipatnam",
+    state: "andhra-pradesh",
+    name: "Panduranga Swamy Temple",
+    slug: "panduranga-swamy-temple-machilipatnam",
+    type: "must-visit",
+
+    image: pandurangaTemple,
+
+    description:
+      "An ancient temple dedicated to Lord Panduranga (a form of Lord Vishnu).",
+
+    about:
+      "The Panduranga Swamy Temple is one of the oldest temples in Machilipatnam and holds deep spiritual importance for devotees in the region. The temple architecture reflects traditional South Indian styles and attracts pilgrims throughout the year.",
+
+    distance: "Located in Machilipatnam city",
+
+    highlights: [
+      "Ancient Vishnu temple",
+      "Important regional pilgrimage site",
+      "Traditional South Indian temple architecture",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for peaceful darshan.",
+      "Temple festivals attract large crowds.",
+      "Follow temple dress code.",
+    ],
+
+    mapsQuery: "Panduranga Swamy Temple Machilipatnam",
+  },
+
+  {
+    destination: "Machilipatnam",
+    state: "andhra-pradesh",
+    name: "Pedana Kalamkari Village",
+    slug: "pedana-kalamkari-village",
+    type: "must-visit",
+
+    image: kalamkariSaree,
+
+    description:
+      "A traditional village famous worldwide for its handcrafted Kalamkari textile art.",
+
+    about:
+      "Pedana village near Machilipatnam is renowned for its Kalamkari textile art, a traditional hand-painted fabric technique using natural dyes. The craft has received a Geographical Indication (GI) tag and remains an important cultural and economic activity in the region.",
+
+    distance: "10 km from Machilipatnam",
+
+    highlights: [
+      "GI-tagged Kalamkari textile art",
+      "Traditional hand-painted fabrics",
+      "Local artisan workshops",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit artisan workshops to see the process.",
+      "Support artisans by buying authentic products.",
+      "Carry cash for small craft purchases.",
+    ],
+
+    mapsQuery: "Pedana Kalamkari Village",
+  },
+  {
+    destination: "Machilipatnam",
+    state: "andhra-pradesh",
+    name: "Machilipatnam Port Ruins",
+    slug: "machilipatnam-port-ruins",
+    type: "underrated",
+
+    image: machilipatnamPort,
+
+    description:
+      "Remains of the historic trading port that once connected Machilipatnam with global maritime routes.",
+
+    about:
+      "Machilipatnam was one of the most important trading ports on the Coromandel Coast during the medieval and colonial periods. The port ruins and surrounding areas reflect the town’s rich maritime history when European traders exported textiles and spices from here.",
+
+    distance: "Near Machilipatnam coast",
+
+    highlights: [
+      "Historic maritime trading port",
+      "Colonial trading history",
+      "Important Coromandel Coast heritage site",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Explore during daytime for safety.",
+      "Combine with nearby beaches.",
+      "Carry water and sun protection.",
+    ],
+
+    mapsQuery: "Machilipatnam Port",
+  },
+
+  {
+    destination: "Machilipatnam",
+    state: "andhra-pradesh",
+    name: "Diviseema Delta Villages",
+    slug: "diviseema-delta-villages",
+    type: "underrated",
+
+    image: diviseemaVillages,
+
+    description:
+      "Scenic villages located in the Krishna River delta known for agriculture and coastal culture.",
+
+    about:
+      "The Diviseema region lies in the fertile Krishna River delta near Machilipatnam. The villages here are surrounded by lush paddy fields, canals, and traditional fishing communities. Visitors can experience rural delta life and scenic landscapes.",
+
+    distance: "30–40 km from Machilipatnam",
+
+    highlights: [
+      "Krishna river delta landscapes",
+      "Traditional coastal villages",
+      "Agricultural countryside views",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Explore by road through village routes.",
+      "Respect local community spaces.",
+      "Carry water and essentials.",
+    ],
+
+    mapsQuery: "Diviseema Delta",
+  },
+
+  {
+    destination: "Machilipatnam",
+    state: "andhra-pradesh",
+    name: "Old Colonial Warehouses",
+    slug: "machilipatnam-colonial-warehouses",
+    type: "underrated",
+
+    image: oldColonialWarehouse,
+
+    description:
+      "Historic warehouse structures from the era when Machilipatnam was a thriving trading port.",
+
+    about:
+      "During the colonial period, Machilipatnam was a bustling trade hub where goods like textiles and spices were stored in large warehouses before export. Some of these old structures still remain, offering glimpses of the town's rich trading past.",
+
+    distance: "Within Machilipatnam town",
+
+    highlights: [
+      "Historic colonial trade structures",
+      "Remnants of global maritime trade",
+      "Architectural heritage of port city",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Some structures may be in ruins; explore carefully.",
+      "Combine with other heritage spots in town.",
+      "Photography enthusiasts will enjoy the textures.",
+    ],
+
+    mapsQuery: "Machilipatnam Old Port Area",
   },
 ];

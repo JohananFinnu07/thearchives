@@ -254,6 +254,10 @@ import potteryWheelImage from "@/assets/products/BBPWH.jpg";
 import potteryWheelMake from "@/assets/products/BBPWM.jpg";
 import potteryWheelFlavor from "@/assets/products/BBPWF.jpg";
 
+import timberProductsImage from "@/assets/products/PTH.jpg";
+import timberProductsMake from "@/assets/products/PTM.jpg";
+import timberProductsFlavor from "@/assets/products/PTF.jpg";
+
 export const andhraDestinations: Destination[] = [
   {
     id: "araku-valley",
@@ -1355,6 +1359,25 @@ export const andhraDestinations: Destination[] = [
         image: bambooFishTrapsImage,
         makingImage: bambooFishTrapsMake,
         flavorImage: bambooFishTrapsFlavor,
+      },
+      {
+        name: "Godavari Timber Products",
+        type: "famous",
+        description:
+          "Exquisite furniture and decorative items crafted from high-quality teak and rosewood sourced from the Papi Hills forests.",
+        significance:
+          "The region is renowned for its durable, grain-rich timber, reflecting the deep-rooted woodworking heritage of the Godavari districts.",
+        makingProcess:
+          "Seasoned logs are hand-carved or machine-cut by local artisans, often incorporating traditional motifs like the 'Godavari Wave' or temple-inspired engravings.",
+        uses: [
+          "Home decor",
+          "Structural furniture",
+          "Souvenirs",
+          "Traditional dowry gifts",
+        ],
+        image: timberProductsImage,
+        makingImage: timberProductsMake,
+        flavorImage: timberProductsFlavor,
       },
     ],
 
