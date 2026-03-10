@@ -45,8 +45,6 @@ const mapping: Record<string, string> = {
   jk: "jk",
 };
 
-const introStates = ["mp", "ct", "mh", "tg"];
-
 const IndiaMap = () => {
   const navigate = useNavigate();
 
@@ -120,15 +118,16 @@ const IndiaMap = () => {
   useEffect(() => {
     if (!showDots || dots.length === 0) return;
 
-    const centerDot = dots.find((d) => introStates.includes(d.id));
+    const randomIndex = Math.floor(Math.random() * dots.length);
+    const randomDot = dots[randomIndex];
 
-    if (centerDot) {
-      setIntroDot(centerDot.id);
+    setIntroDot(randomDot.id);
 
-      setTimeout(() => {
-        setIntroDot(null);
-      }, 5000);
-    }
+    const timer = setTimeout(() => {
+      setIntroDot(null);
+    }, 5000);
+
+    return () => clearTimeout(timer);
   }, [dots, showDots]);
 
   /* Hover logic */
