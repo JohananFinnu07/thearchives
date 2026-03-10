@@ -10,12 +10,16 @@ interface Props {
 const StateComingSoon = ({ state }: Props) => {
   const navigate = useNavigate();
 
+  const handleBack = () => {
+    navigate("/", { state: { scrollTo: "india-map" } });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-secondary/20 to-background px-6 py-20">
       <div className="max-w-4xl mx-auto">
         {/* Back Button */}
         <button
-          onClick={() => navigate("/")}
+          onClick={handleBack}
           className="flex items-center gap-2 text-primary hover:underline transition-colors mb-10"
         >
           <ArrowLeft size={18} />
@@ -24,9 +28,9 @@ const StateComingSoon = ({ state }: Props) => {
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold">
@@ -38,11 +42,11 @@ const StateComingSoon = ({ state }: Props) => {
           </p>
         </motion.div>
 
-        {/* State Stats Card */}
+        {/* State Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.15, duration: 0.7 }}
           className="bg-card border border-border/50 rounded-3xl shadow-xl p-8 md:p-10"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -82,11 +86,11 @@ const StateComingSoon = ({ state }: Props) => {
           </div>
         </motion.div>
 
-        {/* Coming Soon Notice */}
+        {/* Coming Soon */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.45 }}
           className="mt-12 text-center"
         >
           <div className="inline-block bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-medium">

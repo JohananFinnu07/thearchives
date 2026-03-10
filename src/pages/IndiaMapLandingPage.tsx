@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+
 import IndiaMap from "@/components/IndiaMap";
 import IndiaHeader from "@/components/IndiaHeader";
 
@@ -57,7 +58,26 @@ const IndiaMapLandingPage = () => {
     target: heroRef,
     offset: ["start start", "end start"],
   });
+  const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      if (video.duration - video.currentTime < 0.05) {
+        video.currentTime = 0;
+        video.play();
+      }
+    };
+
+    video.addEventListener("timeupdate", handleTimeUpdate);
+
+    return () => {
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, []);
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
   const keywords = [
@@ -87,15 +107,16 @@ const IndiaMapLandingPage = () => {
         >
           {/* Background Video */}
           <video
+            ref={videoRef}
             autoPlay
             muted
-            loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-[45%_center] scale-110 pointer-events-none"
+            preload="auto"
+            disablePictureInPicture
+            className="absolute -bottom-8 inset-x-0 w-full h-[110%] object-cover scale-110 translate-y-[2%] pointer-events-none"
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
-
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-black/40" />
 
@@ -234,7 +255,7 @@ const IndiaMapLandingPage = () => {
         {/* SECTION 2*/}
         <section
           ref={section2Ref}
-          className="relative flex items-center justify-center min-h-[140vh] px-6 overflow-hidden"
+          className="relative flex items-center justify-center min-h-[100vh] md:min-h-[15vh] lg:min-h-[180vh] px-6 overflow-visible"
         >
           {/* Background Image */}
           <div
@@ -254,7 +275,7 @@ const IndiaMapLandingPage = () => {
             className="hidden md:block relative z-20 text-center max-w-3xl mx-auto mb-6 md:mb-16 px-6 py-6 rounded-2xl bg-white/30 backdrop-blur-md shadow-lg"
           >
             <p className="text-xs md:text-sm tracking-[0.35em] text-[#2C2A26]/70">
-              SELECT A STATE
+              TAP A STATE TO
             </p>
 
             <h2 className="mt-3 text-2xl md:text-4xl lg:text-5xl font-serif text-[#2C2A26] leading-tight">
@@ -268,11 +289,11 @@ const IndiaMapLandingPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="block md:hidden absolute -top-20 left-0 right-0 flex justify-center"
+              className="block md:hidden absolute -top-10 left-0 right-0 flex justify-center"
             >
               <div className="w-[90%] text-center px-5 py-4 rounded-xl bg-white/30 backdrop-blur-md shadow-md">
                 <p className="text-[11px] tracking-[0.35em] text-[#2C2A26]/70">
-                  SELECT A STATE
+                  TAP A STATE TO
                 </p>
 
                 <h2 className="mt-1 text-xl font-serif text-[#2C2A26] leading-tight">
@@ -311,19 +332,30 @@ const IndiaMapLandingPage = () => {
         <section className="relative py-15 px-4 overflow-hidden">
           {/* Background image */}
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-2"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${greenImage})` }}
           />
 
-          {/* soft overlay 
-          <div className="absolute inset-0 bg-[#F4F1EA]/40" /> */}
+          {/* Glass blur layer */}
+          <div className="absolute inset-0 backdrop-blur-[8px] bg-white/7" />
 
-          {/* content */}
+          {/* Subtle raindrops */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute w-6 h-6 rounded-full bg-white/25 blur-[2px] top-[20%] left-[25%]" />
+            <div className="absolute w-4 h-4 rounded-full bg-white/20 blur-[1px] top-[40%] left-[60%]" />
+            <div className="absolute w-5 h-5 rounded-full bg-white/25 blur-[2px] top-[65%] left-[35%]" />
+            <div className="absolute w-4 h-4 rounded-full bg-white/20 blur-[1px] top-[50%] right-[20%]" />
+            <div className="absolute w-6 h-6 rounded-full bg-white/25 blur-[2px] bottom-[25%] right-[40%]" />
+          </div>
+
+          {/* Soft light reflection */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none" />
+
+          {/* Content */}
           <div className="relative z-10">
             <StateExplorer />
           </div>
         </section>
-
         <SeasonExplorer />
       </main>
       <footer className="bg-[#1F3D35] text-[#F4F1EA] mt-24 border-t border-[#2E5248]">
