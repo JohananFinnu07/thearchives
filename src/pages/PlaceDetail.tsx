@@ -4,7 +4,9 @@ import { ArrowLeft, MapPin, Clock, Compass } from "lucide-react";
 
 import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
-import { andhraPlaces } from "@/data/states/andhraPlaces";
+
+import { places } from "@/data/places";
+
 import { slugify } from "@/lib/slugify";
 
 const PlaceDetail = () => {
@@ -14,7 +16,7 @@ const PlaceDetail = () => {
     placeSlug: string;
   }>();
 
-  const place = andhraPlaces.find(
+  const place = places.find(
     (p) =>
       slugify(p.slug) === placeSlug &&
       slugify(p.destination) === destinationSlug &&
@@ -45,7 +47,7 @@ const PlaceDetail = () => {
   }
 
   const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    place.mapsQuery + ", Andhra Pradesh, India",
+    place.mapsQuery + place.state + ", India",
   )}`;
 
   return (

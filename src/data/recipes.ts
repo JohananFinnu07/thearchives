@@ -2,8 +2,10 @@
 
 import { Recipe } from "./types";
 import { andhraRecipes } from "./states/andhraRecipes";
+import { telanganaRecipes } from "./states/telanganaRecipes";
+
 import { slugify } from "@/lib/slugify";
-export const recipes: Recipe[] = [...andhraRecipes];
+export const recipes: Recipe[] = [...andhraRecipes, ...telanganaRecipes];
 
 export const getRecipesByState = (state: string): Recipe[] => {
   return recipes.filter((recipe) => recipe.state === state);
