@@ -79,9 +79,9 @@ import hyderabadiAttar from "@/assets/TG/Products/HAH.jpg";
 import hyderabadiAttarMake from "@/assets/TG/Products/HAM.jpg";
 import hyderabadiAttarFlavor from "@/assets/TG/Products/HAF.jpg";
 
-import hyderabadiHaleem from "@/assets/TG/Products/HAH.jpg";
-import hyderabadiHaleemMake from "@/assets/TG/Products/HAM.jpg";
-import hyderabadiHaleemFlavor from "@/assets/TG/Products/HAF.jpg";
+import hyderabadiHaleem from "@/assets/TG/Products/HHH.jpg";
+import hyderabadiHaleemMake from "@/assets/TG/Products/HHM.jpg";
+import hyderabadiHaleemFlavor from "@/assets/TG/Products/HHF.jpg";
 
 import deccaniKalamkari from "@/assets/TG/Products/HDKTH.jpg";
 import deccaniKalamkariMake from "@/assets/TG/Products/DKTM.jpg";
