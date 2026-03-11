@@ -1,5 +1,7 @@
 import { Destination } from "../types";
 
+import warangalHero from "@/assets/TG/Destinations/warangal.jpg";
+
 export const telanganaDestinations: Destination[] = [
   {
     id: "warangal",
@@ -7,7 +9,7 @@ export const telanganaDestinations: Destination[] = [
     state: "telangana",
     name: "Warangal",
     tagline: "The Kakatiya Capital of Stone and Glory",
-    image: "/images/destinations/warangal.jpg",
+    image: warangalHero,
     mapsQuery: "",
     heroDescription:
       "Warangal stands as a living memory of the Kakatiya dynasty, with majestic temples, carved gateways, and stone architecture narrating centuries of Telangana heritage.",
