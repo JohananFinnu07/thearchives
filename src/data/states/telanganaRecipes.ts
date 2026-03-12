@@ -21,6 +21,24 @@ import bagaraBaingan from "@/assets/TG/Recipes/HBB.jpg";
 import hyderabadiLukhmi from "@/assets/TG/Recipes/HLS.jpg";
 import hyderabadiKhattiDal from "@/assets/TG/Recipes/HKD.jpg";
 
+/* ============== GADWAL ================== */
+import muddaPappu from "@/assets/TG/Recipes/GMP.jpg";
+import palliChutney from "@/assets/TG/Recipes/GPC.jpg";
+import ulavaCharu from "@/assets/TG/Recipes/GUC.jpg";
+import korraAnnam from "@/assets/TG/Recipes/GKA.jpg";
+import sajjaRotte from "@/assets/TG/Recipes/GSR.jpg";
+
+/* ============== BHADRADRI ================== */
+import bambooChicken from "@/assets/TG/Recipes/BBC.jpg";
+import godavariFishCurry from "@/assets/TG/Recipes/BGCP.jpg";
+import templePulihora from "@/assets/TG/Recipes/BTR.jpg";
+import godavariPullattu from "@/assets/TG/Recipes/BPA.jpg";
+import teegalaKura from "@/assets/TG/Recipes/BPSC.jpg";
+import isukaDonthuluFry from "@/assets/TG/Recipes/BIDF.jpg";
+
+/* ============== BUPALAPALLY ================== */
+import chiliPickle from "@/assets/TG/Recipes/JBCP.jpg";
+
 export const telanganaRecipes: Recipe[] = [
   {
     name: "Sarvapindi",
@@ -628,6 +646,486 @@ export const telanganaRecipes: Recipe[] = [
       "Khatti Dal is a staple comfort food in Hyderabadi homes. The tangy flavor from tamarind distinguishes it from other Indian dals and pairs perfectly with rice, papad, and pickles.",
 
     season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Mudda Pappu",
+    state: "telangana",
+    id: "jogulamba-gadwal",
+    destination: "Jogulamba Gadwal",
+
+    description:
+      "A simple yet comforting dish made from boiled toor dal, traditionally served with rice and ghee.",
+
+    image: muddaPappu,
+
+    prepTime: "5 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Toor dal",
+      "2 cups Water",
+      "Salt to taste",
+      "1 tbsp Ghee",
+      "Optional: green chilies",
+    ],
+
+    steps: [
+      "Wash the toor dal thoroughly.",
+      "Cook the dal with water in a pressure cooker until soft.",
+      "Mash the dal lightly to achieve a smooth texture.",
+      "Add salt and mix well.",
+      "Serve hot with rice and a spoon of ghee.",
+    ],
+
+    story:
+      "Mudda Pappu is a comfort food across Telangana and Andhra homes. In Gadwal, it is often made with locally grown Chennangi dal, known for its rich aroma and creamy texture.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Palli Chutney",
+    state: "telangana",
+    id: "jogulamba-gadwal",
+    destination: "Jogulamba Gadwal",
+
+    description:
+      "A spicy peanut chutney made from roasted groundnuts, reflecting the region’s groundnut farming tradition.",
+
+    image: palliChutney,
+
+    prepTime: "10 mins",
+    cookTime: "5 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Roasted groundnuts",
+      "3 dried red chilies",
+      "2 cloves Garlic",
+      "1 tbsp Tamarind pulp",
+      "Salt to taste",
+      "Water as needed",
+    ],
+
+    steps: [
+      "Roast groundnuts lightly and remove skins.",
+      "Add peanuts, chilies, garlic, tamarind, and salt to a grinder.",
+      "Grind into a smooth paste with a little water.",
+      "Transfer to a bowl and optionally add a tempering of mustard seeds and curry leaves.",
+      "Serve with rotte, dosa, or rice.",
+    ],
+
+    story:
+      "Because Gadwal produces high-quality groundnuts, peanut-based chutneys are extremely popular in local households. The nutty flavor adds richness to otherwise simple millet meals.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Ulava Charu",
+    state: "telangana",
+    id: "jogulamba-gadwal",
+    destination: "Jogulamba Gadwal",
+
+    description:
+      "A rich and earthy soup made from slow-cooked horse gram, known for its deep flavor and nutritional value.",
+
+    image: ulavaCharu,
+
+    prepTime: "15 mins",
+    cookTime: "45 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup Horse gram (Ulava)",
+      "1 Onion chopped",
+      "2 Green chilies",
+      "1 tsp Tamarind pulp",
+      "Salt to taste",
+      "1 tsp Mustard seeds",
+      "Curry leaves",
+    ],
+
+    steps: [
+      "Wash and soak horse gram for a few hours.",
+      "Cook the gram until soft and grind part of it into a paste.",
+      "Add tamarind pulp, onions, chilies, and salt to the broth.",
+      "Simmer until the flavors combine.",
+      "Prepare a tempering with mustard seeds and curry leaves.",
+      "Serve hot with rice or rotte.",
+    ],
+
+    story:
+      "Ulava Charu has long been a nourishing dish among farming communities in the Deccan. Packed with protein and warmth, it is traditionally eaten during cooler months or after long hours of labor in the fields.",
+
+    season: "Winter",
+    buyLink: "",
+  },
+  {
+    name: "Gadwal Korra Annam",
+    state: "telangana",
+    id: "jogulamba-gadwal",
+    destination: "Jogulamba Gadwal",
+
+    description:
+      "A nutritious Foxtail Millet (Korra) preparation that has been a staple in the dry regions of Gadwal for centuries.",
+
+    image: korraAnnam,
+
+    prepTime: "30 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "2 cups Foxtail Millet (Korra)",
+      "5 cups Water",
+      "1/2 tsp Salt",
+      "1 tsp Ghee (optional)",
+    ],
+
+    steps: [
+      "Wash the foxtail millet thoroughly under running water.",
+      "Soak the millet in water for at least 30 minutes to ensure even cooking.",
+      "Bring 5 cups of water to a boil in a thick-bottomed vessel.",
+      "Add the soaked millet and salt to the boiling water.",
+      "Reduce the flame to low, cover with a lid, and simmer until all water is absorbed.",
+      "Fluff with a fork and add a dollop of ghee before serving.",
+    ],
+
+    story:
+      "Before the green revolution, millets like Korra were the primary grains of Gadwal. Unlike rice, these hardy grains thrive in the local semi-arid soil. It is traditionally served with spicy groundnut chutney or 'Pappu' (dal) made from local Chennangi varieties.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Sajja Rotte (Pearl Millet Flatbread)",
+    state: "telangana",
+    id: "jogulamba-gadwal",
+    destination: "Jogulamba Gadwal",
+
+    description:
+      "A hearty, gluten-free flatbread made from pearl millet, providing essential warmth and energy.",
+
+    image: sajjaRotte,
+
+    prepTime: "20 mins",
+    cookTime: "15 mins",
+    servings: "Serves 2",
+    difficulty: "Hard",
+
+    ingredients: [
+      "2 cups Pearl Millet flour (Sajja pindi)",
+      "1 cup Hot water",
+      "A pinch of salt",
+      "1 tsp Sesame seeds (optional)",
+    ],
+
+    steps: [
+      "Sieve the flour into a wide mixing bowl and add salt.",
+      "Gradually add hot water and knead into a soft, pliable dough while it's still warm.",
+      "Take a small ball of dough and pat it into a thin circle using your palms on a dusted surface (the tapping method).",
+      "Optional: sprinkle sesame seeds on top while patting.",
+      "Place the rotte on a hot iron tawa.",
+      "Apply a little water on the top surface with a cloth and cook both sides until brown spots appear.",
+    ],
+
+    story:
+      "Sajja Rotte is the strength food of Gadwal's farming community. Tapping the rotte by hand is a traditional skill passed down through generations. It is famously paired with Jonna Ambali or spicy garlic chutneys.",
+
+    season: "Winter",
+    buyLink: "",
+  },
+  {
+    name: "Bamboo Chicken (Bongu Chicken)",
+    state: "telangana",
+    id: "bhadradri-kothagudem",
+    destination: "Bhadradri Kothagudem",
+
+    description:
+      "A tribal delicacy where marinated chicken is slow-cooked inside a bamboo tube over an open fire.",
+
+    image: bambooChicken,
+
+    prepTime: "20 mins",
+    cookTime: "40 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "500 g Chicken pieces",
+      "2 tbsp Ginger garlic paste",
+      "1 tsp Turmeric",
+      "2 tbsp Red chili powder",
+      "Salt to taste",
+      "Fresh coriander leaves",
+      "1 fresh bamboo tube",
+    ],
+
+    steps: [
+      "Clean and marinate the chicken with spices, ginger-garlic paste, and salt.",
+      "Stuff the marinated chicken into a hollow bamboo tube.",
+      "Seal the opening with banana leaf or dough.",
+      "Place the bamboo tube over a slow wood fire.",
+      "Rotate occasionally until the chicken cooks inside its own juices.",
+      "Break open the bamboo and serve hot.",
+    ],
+
+    story:
+      "This dish originates from tribal communities living in the forests around the Godavari basin. Cooking inside bamboo gives the meat a smoky aroma and keeps it incredibly tender.",
+
+    season: "Winter",
+    buyLink: "",
+  },
+  {
+    name: "Godavari Chepala Pulusu",
+    state: "telangana",
+    id: "bhadradri-kothagudem",
+    destination: "Bhadradri Kothagudem",
+
+    description:
+      "A tangy and spicy fish curry prepared with fresh river fish from the Godavari.",
+
+    image: godavariFishCurry,
+
+    prepTime: "15 mins",
+    cookTime: "30 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "500 g Fresh river fish",
+      "2 tbsp Tamarind pulp",
+      "1 Onion chopped",
+      "2 Tomatoes chopped",
+      "2 tsp Red chili powder",
+      "1 tsp Turmeric",
+      "Salt to taste",
+      "Curry leaves",
+    ],
+
+    steps: [
+      "Heat oil in a clay pot and sauté onions until golden.",
+      "Add tomatoes, turmeric, and chili powder and cook until soft.",
+      "Pour tamarind pulp and water to create the curry base.",
+      "Add fish pieces gently and simmer without stirring too much.",
+      "Cook until the fish absorbs the spicy gravy.",
+      "Garnish with curry leaves and serve hot.",
+    ],
+
+    story:
+      "Fishing communities along the Godavari river have prepared this fiery fish curry for generations. The strong tamarind and chili flavors reflect the bold taste preferences of the region.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Temple Style Pulihora",
+    state: "telangana",
+    id: "bhadradri-kothagudem",
+    destination: "Bhadradri Kothagudem",
+
+    description:
+      "A tangy tamarind rice commonly served as prasadam in temples across the Bhadrachalam region.",
+
+    image: templePulihora,
+
+    prepTime: "15 mins",
+    cookTime: "15 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "3 cups Cooked rice",
+      "2 tbsp Tamarind pulp",
+      "2 tbsp Peanuts",
+      "1 tsp Mustard seeds",
+      "Curry leaves",
+      "2 dried red chilies",
+      "Turmeric",
+      "Salt to taste",
+    ],
+
+    steps: [
+      "Heat oil and fry peanuts until golden.",
+      "Add mustard seeds, red chilies, and curry leaves.",
+      "Mix tamarind pulp, turmeric, and salt.",
+      "Add cooked rice and mix well until evenly coated.",
+      "Cook for a few minutes for the flavors to blend.",
+      "Serve warm or at room temperature.",
+    ],
+
+    story:
+      "Pulihora is a staple temple offering across Andhra and Telangana. In Bhadrachalam, it is prepared daily as prasadam for devotees visiting the Sri Rama temple.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Godavari Pullattu",
+    state: "telangana",
+    id: "bhadrachalam",
+    destination: "Bhadradri Kothagudem",
+
+    description:
+      "A tangy, fermented crepe made from aged dosa batter, a breakfast staple found in the small eateries along the Godavari ghats.",
+
+    image: godavariPullattu,
+
+    prepTime: "12 hours (fermentation)",
+    cookTime: "10 mins",
+    servings: "Serves 2",
+    difficulty: "Easy",
+
+    ingredients: [
+      "2 cups Sour dosa batter",
+      "1 tsp Cumin seeds",
+      "2 Green chilies, finely chopped",
+      "1/2 cup Finely chopped onions",
+      "Oil for drizzling",
+    ],
+
+    steps: [
+      "Ensure the batter is slightly sour for the authentic Pullattu taste.",
+      "Mix cumin seeds, green chilies, and onions into the batter.",
+      "Heat a cast-iron tawa and grease lightly with oil.",
+      "Pour a ladle of batter and spread it thick like a pancake.",
+      "Cook on medium flame until the edges turn golden and crisp.",
+      "Flip and cook the other side briefly. Serve hot with ginger chutney.",
+    ],
+
+    story:
+      "In Bhadrachalam, breakfast often begins with the tangy taste of Pullattu. Originally a clever way to use leftover fermented batter in the humid Godavari climate, it has become a beloved local delicacy often paired with the famous Gottam Chitti snack.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Teegala Kura (Palmyra Sprout Curry)",
+    state: "telangana",
+    id: "kothagudem-agency",
+    destination: "Bhadradri Kothagudem",
+
+    description:
+      "A rare, seasonal tribal curry made from the tender sprouts of the Palmyra palm (Gunjalu/Teegalu).",
+
+    image: teegalaKura,
+
+    prepTime: "20 mins",
+    cookTime: "25 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+
+    ingredients: [
+      "2 cups Boiled and sliced Palmyra sprouts",
+      "1 large Onion, sliced",
+      "2 tsp Red chili powder (Dummugudem style)",
+      "1/4 tsp Turmeric",
+      "1/2 cup Grated coconut or poppy seed paste",
+      "Salt and tempering spices",
+    ],
+
+    steps: [
+      "Peel the tough outer skin of the sprouts and boil them until tender.",
+      "Slice the boiled sprouts into thin discs.",
+      "Heat oil in a pan, add tempering, and sauté onions until translucent.",
+      "Add sprout slices, salt, turmeric, and chili powder.",
+      "Mix in coconut or poppy seed paste for richness.",
+      "Simmer for 10 minutes until the flavors combine. Serve with Sajja Rotte.",
+    ],
+
+    story:
+      "This is a traditional dish from the Koya tribal regions around Kothagudem. Palmyra sprouts are a seasonal forest ingredient known for their earthy flavor and high fiber content.",
+
+    season: "Winter",
+    buyLink: "",
+  },
+  {
+    name: "Godavari Isuka Donthulu Fry",
+    state: "telangana",
+    id: "bhadrachalam",
+    destination: "Bhadradri Kothagudem",
+
+    description:
+      "A spicy, crispy fry made with small fresh-water fish caught from the Godavari river.",
+
+    image: isukaDonthuluFry,
+
+    prepTime: "15 mins",
+    cookTime: "15 mins",
+    servings: "Serves 2",
+    difficulty: "Medium",
+
+    ingredients: [
+      "250 g Fresh-water small fish",
+      "1 tbsp Ginger-garlic paste",
+      "2 tbsp Rice flour",
+      "1 tsp Garam masala",
+      "Curry leaves",
+      "Green chilies",
+      "Oil for frying",
+    ],
+
+    steps: [
+      "Clean the small fish thoroughly while keeping them whole.",
+      "Marinate with ginger-garlic paste, chili powder, and salt.",
+      "Dust lightly with rice flour for crispiness.",
+      "Heat oil and fry the fish with curry leaves and green chilies.",
+      "Cook until deep brown and crunchy.",
+      "Serve hot as a snack or side dish.",
+    ],
+
+    story:
+      "Communities along the Godavari river consider Isuka Donthulu a prized catch. These tiny fish gather near river sandbanks and are known for their intense flavor and crunchy texture when fried.",
+
+    season: "Winter",
+    buyLink: "",
+  },
+  {
+    name: "Chili Pickle (Telangana Pachadi)",
+    state: "telangana",
+    id: "jayashankar-bhupalpally",
+    destination: "Jayashankar Bhupalpally",
+
+    description:
+      "A fiery traditional pickle made using fresh or dried red chillies, oil, and aromatic spices.",
+
+    image: chiliPickle,
+
+    prepTime: "20 mins",
+    cookTime: "10 mins",
+    servings: "Serves 10",
+    difficulty: "Easy",
+
+    ingredients: [
+      "250 g Fresh red or green chillies",
+      "2 tbsp Mustard powder",
+      "1 tbsp Fenugreek powder",
+      "2 tbsp Tamarind pulp",
+      "1 cup Sesame oil",
+      "Salt to taste",
+      "Garlic cloves",
+    ],
+
+    steps: [
+      "Wash and dry the chillies completely.",
+      "Cut them into small pieces or grind lightly.",
+      "Mix mustard powder, fenugreek powder, tamarind pulp, salt, and garlic.",
+      "Heat sesame oil until warm and mix into the spice blend.",
+      "Combine with the chopped chillies and mix thoroughly.",
+      "Store in a clean jar and allow the pickle to mature for a few days.",
+    ],
+
+    story:
+      "Pickles are an essential part of Telangana cuisine. In Bhupalpally villages, chili pickle is often prepared during harvest seasons and stored for months to accompany simple millet meals.",
+
+    season: "Summer",
     buyLink: "",
   },
 ];

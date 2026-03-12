@@ -3,6 +3,10 @@ import { Destination } from "../types";
 import warangalHero from "@/assets/TG/Destinations/warangal.jpg";
 import adilabadHero from "@/assets/TG/Destinations/adilabad.jpg";
 import hyderabadHero from "@/assets/TG/Destinations/hyderabad.jpg";
+import gadwalHero from "@/assets/TG/Destinations/gadwal.jpg";
+import badhradriHero from "@/assets/TG/Destinations/badhradri.jpg";
+import bupalapallyHero from "@/assets/TG/Destinations/bhupalapally.jpg";
+import sircillaHero from "@/assets/TG/Destinations/sirisilla.jpg";
 
 /* =================== WARANGAL ======================== */
 import warangalDurriesHero from "@/assets/TG/Products/WDH.jpg";
@@ -90,6 +94,77 @@ import deccaniKalamkariFlavor from "@/assets/TG/Products/HDKTF.jpg";
 import bidriwareCraft from "@/assets/TG/Products/HBDH.jpg";
 import bidriwareCraftMake from "@/assets/TG/Products/HBDM.jpg";
 import bidriwareCraftFlavor from "@/assets/TG/Products/HBRM.jpg";
+
+/* =================== GADWAL ======================== */
+import gadwalSaree from "@/assets/TG/Products/GSSH.jpg";
+import gadwalSareeWeaving from "@/assets/TG/Products/GSSM.jpg";
+import gadwalSareeDetail from "@/assets/TG/Products/GSSF.jpg";
+
+import gadwalDhoti from "@/assets/TG/Products/GHDH.jpg";
+import gadwalDhotiWeaving from "@/assets/TG/Products/GHDM.jpg";
+import gadwalDhotiDetail from "@/assets/TG/Products/GHDF.jpg";
+
+import gadwalTowel from "@/assets/TG/Products/GHTH.jpg";
+import gadwalTowelWeaving from "@/assets/TG/Products/GHTM.jpg";
+import gadwalTowelTexture from "@/assets/TG/Products/GHTF.jpg";
+
+import gadwalGroundnut from "@/assets/TG/Products/GGH.jpg";
+import gadwalGroundnutProcessing from "@/assets/TG/Products/GGM.jpg";
+import gadwalGroundnutOil from "@/assets/TG/Products/GGF.jpg";
+
+import gadwalPomegranate from "@/assets/TG/Products/GPH.jpg";
+import pomegranateHarvest from "@/assets/TG/Products/GPM.jpg";
+import pomegranateArils from "@/assets/TG/Products/GPF.jpg";
+
+import chennangiDal from "@/assets/TG/Products/GCDH.jpg";
+import chennangiHarvest from "@/assets/TG/Products/GCDM.jpg";
+import chennangiPappu from "@/assets/TG/Products/GCDF.jpg";
+
+import beechupallyPottery from "@/assets/TG/Products/GBPH.jpg";
+import beechupallyWheel from "@/assets/TG/Products/GBPM.jpg";
+import terracottaFinish from "@/assets/TG/Products/GBPF.jpg";
+
+/* =================== BADRADRI ======================== */
+import singareniCoal from "@/assets/TG/Products/BSCH.jpg";
+import singareniMining from "@/assets/TG/Products/BSCM.jpg";
+import coalTexture from "@/assets/TG/Products/BSCF.jpg";
+
+import bhadrachalamPrasadam from "@/assets/TG/Products/BTPH.jpg";
+import templeKitchenPrasadam from "@/assets/TG/Products/BTPM.jpg";
+import templePulihora from "@/assets/TG/Products/BTPF.jpg";
+
+import forestHoney from "@/assets/TG/Products/BGFHH.jpg";
+import tribalHoneyCollection from "@/assets/TG/Products/BGFHM.jpg";
+import honeyCombTexture from "@/assets/TG/Products/BGFHF.jpg";
+
+import dummugudemSpices from "@/assets/TG/Products/BSH.jpg";
+import spiceMortarProcess from "@/assets/TG/Products/BSM.jpg";
+import redChiliPowder from "@/assets/TG/Products/BSF.jpg";
+
+import palmLeafCraft from "@/assets/TG/Products/BLWCH.jpg";
+import leafWeaving from "@/assets/TG/Products/BPLWCM.jpg";
+import leafTexture from "@/assets/TG/Products/BPLWCF.jpg";
+
+/* =================== BADRADRI ======================== */
+import bhupalpallyChillies from "@/assets/TG/Products/JBRCH.jpg";
+import chilliDrying from "@/assets/TG/Products/JBRCM.jpg";
+import chilliPowderTexture from "@/assets/TG/Products/JBRCF.jpg";
+
+import bhupalpallyRice from "@/assets/TG/Products/JBPRH.jpg";
+import riceHarvest from "@/assets/TG/Products/JBPRM.jpg";
+import riceGrains from "@/assets/TG/Products/JBPRF.jpg";
+
+import bambooBasketCraft from "@/assets/TG/Products/JBBBCH.jpg";
+import bambooWeaving from "@/assets/TG/Products/JBBBCM.jpg";
+import bambooTexture from "@/assets/TG/Products/JBBBCF.jpg";
+
+import nainpakaTerracotta from "@/assets/TG/Products/JBNTFH.jpg";
+import terracottaMolding from "@/assets/TG/Products/JBTFM.jpg";
+import earthyClayTexture from "@/assets/TG/Products/JBTFF.jpg";
+
+import mahuaFlowers from "@/assets/TG/Products/JBMFH.jpg";
+import mahuaDrying from "@/assets/TG/Products/JBMFM.jpg";
+import mahuaSyrup from "@/assets/TG/Products/JBMFF.jpg";
 
 export const telanganaDestinations: Destination[] = [
   {
@@ -688,7 +763,7 @@ export const telanganaDestinations: Destination[] = [
     state: "telangana",
     name: "Jogulamba Gadwal",
     tagline: "Sacred Temples and Timeless Handlooms",
-    image: "/images/destinations/jogulamba-gadwal.jpg",
+    image: gadwalHero,
     mapsQuery: "Jogulamba Gadwal Telangana",
 
     heroDescription:
@@ -702,7 +777,498 @@ export const telanganaDestinations: Destination[] = [
       "Jogulamba Gadwal district in southern Telangana is known for its powerful spiritual significance and rich weaving heritage. The town of Alampur, located near the confluence of the Tungabhadra and Krishna rivers, is home to the Jogulamba Temple — one of the eighteen revered Shakti Peethas in India. The region also preserves the legacy of the Chalukya dynasty through the Nava Brahma temples, which display remarkable early temple architecture.",
 
     culture:
-      "The culture of Jogulamba Gadwal blends temple traditions with vibrant textile craftsmanship. Gadwal sarees, known for their lightweight cotton body and rich silk borders, have been woven here for centuries and are highly valued across India. Religious festivals, temple rituals, and the thriving handloom community together shape the unique cultural identity of this historic district.",
+      "Gadwal, the cultural heartbeat of the Jogulamba district, represents a unique confluence of Telugu and Kannada influences. At its core is the 19th-century handloom tradition, where over 10,000 families masterfully craft the iconic Gadwal saree using silk borders and intricate interlocked-weft techniques. This artistic legacy extends to sacred offerings like the Sesha Vastram for Tirupati. The town's identity is anchored by the 17th-century Gadwal Fort and spiritual landmarks like the Sri Chennakesava Swamy Temple. Festivals such as Bathukamma and Bonalu bring the region to life, often accompanied by traditional folk arts like Oggu Katha and the powerful Perini Sivatandavam dance. This heritage-rich community remains dedicated to preserving its historical significance and specialized weaving industry, making it a vital pillar of Telangana's diverse cultural landscape.",
+
+    products: [
+      {
+        name: "Gadwal Saree",
+        type: "famous",
+
+        image: gadwalSaree,
+        makingImage: gadwalSareeWeaving,
+        flavorImage: gadwalSareeDetail,
+
+        description:
+          "A luxurious handwoven saree known for its silk borders, cotton body, and intricate zari work.",
+
+        significance:
+          "Gadwal sarees from Jogulamba Gadwal district are among Telangana’s most celebrated handloom textiles and even received a Geographical Indication (GI) tag. Traditionally worn by royalty and temple dancers, these sarees are admired for their lightweight cotton body combined with rich silk borders and pallu.",
+
+        makingProcess:
+          "Skilled artisans weave the cotton body separately from the silk borders and then interlock them using a unique 'kuttu' technique. Fine zari threads are used to create intricate temple motifs and traditional patterns.",
+
+        uses: [
+          "Traditional festive wear",
+          "Wedding sarees",
+          "Cultural ceremonies",
+          "Temple rituals",
+          "Luxury handloom fashion",
+        ],
+      },
+      {
+        name: "Gadwal Handloom Dhoti",
+        type: "famous",
+
+        image: gadwalDhoti,
+        makingImage: gadwalDhotiWeaving,
+        flavorImage: gadwalDhotiDetail,
+
+        description:
+          "A traditional handwoven cotton dhoti featuring elegant silk borders and subtle zari detailing.",
+
+        significance:
+          "Handloom dhotis from Gadwal are an important part of traditional Telangana attire. Worn by priests, scholars, and during ceremonies, they showcase the same weaving excellence that made Gadwal sarees famous.",
+
+        makingProcess:
+          "Local weavers use handlooms to weave fine cotton fabric and attach decorative silk or zari borders. The weaving technique ensures the fabric remains breathable while retaining a premium finish.",
+
+        uses: [
+          "Traditional men's attire",
+          "Religious ceremonies",
+          "Temple rituals",
+          "Festive clothing",
+          "Cultural events",
+        ],
+      },
+      {
+        name: "Gadwal Handloom Towels (Thundu)",
+        type: "underrated",
+
+        image: gadwalTowel,
+        makingImage: gadwalTowelWeaving,
+        flavorImage: gadwalTowelTexture,
+
+        description:
+          "Simple yet durable handwoven cotton towels traditionally used in households across Telangana.",
+
+        significance:
+          "Before the rise of factory textiles, handloom towels from Gadwal villages were commonly used across rural Telangana. Known for their absorbency and durability, they reflect the everyday weaving heritage of the region.",
+
+        makingProcess:
+          "Local artisans weave pure cotton threads on handlooms to create lightweight yet highly absorbent towels. The towels often feature simple stripes or traditional patterns.",
+
+        uses: [
+          "Bath towels",
+          "Daily household use",
+          "Farm and field work",
+          "Traditional clothing accessory",
+          "Travel towel",
+        ],
+      },
+      {
+        name: "Gadwal Groundnuts",
+        type: "famous",
+
+        image: gadwalGroundnut,
+        makingImage: gadwalGroundnutProcessing,
+        flavorImage: gadwalGroundnutOil,
+
+        description:
+          "High-quality groundnuts (peanuts) recognized under the 'One District One Product' (ODOP) initiative for the region.",
+
+        significance:
+          "Gadwal is one of Telangana's primary groundnut clusters. The local soil and semi-arid climate produce nuts with a high oil content and a distinct nutty sweetness, making them highly sought after for both direct consumption and oil extraction.",
+
+        makingProcess:
+          "Grown as a major Kharif and Rabi crop, the nuts are harvested, sun-dried in local fields, and processed in specialized decorticated units across the district to maintain their natural flavor and crunch.",
+
+        uses: [
+          "Cold-pressed groundnut oil",
+          "Roasted snacks and 'Chikki'",
+          "Culinary base for Andhra chutneys",
+          "Export-grade raw kernels",
+          "Protein-rich peanut flour",
+        ],
+      },
+      {
+        name: "Basavala Cheruvu Pomegranates",
+        type: "famous",
+
+        image: gadwalPomegranate,
+        makingImage: pomegranateHarvest,
+        flavorImage: pomegranateArils,
+
+        description:
+          "Premium quality pomegranates known for their deep red arils and high sugar-to-acid ratio.",
+
+        significance:
+          "The region around Basavala Cheruvu in Jogulamba Gadwal has emerged as a powerhouse for pomegranate cultivation. Local farmers have gained national attention for producing export-quality fruit that rivals the traditional belts of Maharashtra.",
+
+        makingProcess:
+          "Cultivated using advanced micro-irrigation techniques to manage the dry climate, the fruits are hand-plucked at peak ripeness to ensure the vibrant color and juiciness of the seeds.",
+
+        uses: [
+          "Fresh table fruit",
+          "Premium fruit juices",
+          "Gourmet salads and desserts",
+          "Natural food coloring",
+          "Export to international markets",
+        ],
+      },
+      {
+        name: "Gadwal Chennangi Dal",
+        type: "underrated",
+
+        image: chennangiDal,
+        makingImage: chennangiHarvest,
+        flavorImage: chennangiPappu,
+
+        description:
+          "An heirloom variety of pigeon pea (Toor Dal) grown in the black cotton soils of the Krishna-Tungabhadra basin.",
+
+        significance:
+          "Locals prize this specific variety for its superior taste and aroma compared to commercial dal. It is an underrated gem because it is rarely branded and usually sold only in local village markets.",
+
+        makingProcess:
+          "The dal is rain-fed and grown with minimal intervention. Once harvested, it is traditionally sun-dried and split using stone mills (tirugali), which preserves the natural oils and nutty flavor profile.",
+
+        uses: [
+          "Traditional Mudda Pappu",
+          "Festival Puran Polis (Bobbattu)",
+          "Daily Andhra dal preparations",
+          "High-protein dietary staple",
+        ],
+      },
+      {
+        name: "Beechupally Handmade Pottery",
+        type: "underrated",
+
+        image: beechupallyPottery,
+        makingImage: beechupallyWheel,
+        flavorImage: terracottaFinish,
+
+        description:
+          "Functional terracotta earthenware crafted by communities settled along the banks of the Krishna River.",
+
+        significance:
+          "Near the Beechupally shrine, potters use the unique river-bed silt to create vessels known for their cooling properties. These are essential local technology for surviving the intense Gadwal summers.",
+
+        makingProcess:
+          "The clay is gathered from the river banks, refined, and thrown on manual wheels. The pieces are then fired in traditional open kilns using dried hay and wood, giving them a distinct smoky terracotta hue.",
+
+        uses: [
+          "Natural water cooling pots (Ranjans)",
+          "Traditional curd setting bowls",
+          "Cooking pots for slow-fire stews",
+          "Eco-friendly home decor",
+        ],
+      },
+    ],
+  },
+  {
+    id: "bhadradri-kothagudem",
+    slug: "bhadradri-kothagudem",
+    state: "telangana",
+    name: "Bhadradri Kothagudem",
+    tagline: "Sacred Hills of Bhadrachalam & the Godavari Forest Belt",
+    image: badhradriHero,
+    mapsQuery: "Bhadradri Kothagudem Telangana",
+
+    heroDescription:
+      "Bhadradri Kothagudem is a district of dense forests, sacred temples, and river landscapes along the Godavari, best known for the historic Bhadrachalam Temple dedicated to Lord Rama.",
+
+    elevation: "107 m",
+    bestTime: "October – February",
+    temperature: "20°C – 40°C",
+
+    about:
+      "Located in eastern Telangana along the banks of the Godavari River, Bhadradri Kothagudem blends spiritual heritage with natural beauty. The district is home to the revered Bhadrachalam temple, coal mining regions around Kothagudem, and forest landscapes connected to the Eastern Ghats.",
+
+    culture:
+      "Bhadradri Kothagudem is a profound cultural mosaic where ancient Hindu pilgrimage traditions meet vibrant Adivasi heritage. Centered on the 17th-century Bhadrachalam Temple built by Bhakta Ramadasu, the region is a spiritual beacon tied to Ramayana history and the sacred Godavari River. This religious landscape coexists with the deep-rooted customs of the Raj Gond and Koya tribes, whose sustainable bamboo handicrafts and clan-based rituals define the district's social fabric. From the massive Sammakka-Saralamma Jatara to prehistoric Megalithic burial sites at Janampet, the area bridges millennia of human history. Furthermore, the presence of the Singareni Collieries introduces a unique industrial worker-oriented culture. Together, these elements create a diverse identity where traditional forest lifestyles, ancient Buddhist remnants, and modern industrial energy converge within a single landscape.",
+
+    products: [
+      {
+        name: "Singareni Coal",
+        type: "famous",
+
+        image: singareniCoal,
+        makingImage: singareniMining,
+        flavorImage: coalTexture,
+
+        description:
+          "High-grade coal mined from the Singareni coalfields, one of India's oldest and most important coal mining regions.",
+
+        significance:
+          "The Singareni Collieries Company Limited has been the backbone of Bhadradri Kothagudem’s economy for over a century. The coal extracted here powers thermal power stations across Telangana and southern India, making the region an industrial energy hub.",
+
+        makingProcess:
+          "Coal is extracted through both underground and open-cast mining methods. Large excavators, drilling systems, and conveyor belts transport the coal to processing units where it is graded and distributed to power plants.",
+
+        uses: [
+          "Thermal power generation",
+          "Industrial fuel",
+          "Steel and cement industries",
+          "Railway energy supply",
+          "Electricity production across Telangana",
+        ],
+      },
+      {
+        name: "Bhadrachalam Temple Prasadam",
+        type: "famous",
+
+        image: bhadrachalamPrasadam,
+        makingImage: templeKitchenPrasadam,
+        flavorImage: templePulihora,
+
+        description:
+          "Sacred prasadam prepared at the Sri Rama Temple in Bhadrachalam, including traditional pulihora and laddus offered to devotees.",
+
+        significance:
+          "The temple prasadam of Bhadrachalam holds deep spiritual value among devotees visiting the Sri Sita Ramachandra Swamy Temple. Prepared following temple traditions, the offerings symbolize devotion and community sharing during festivals and daily rituals.",
+
+        makingProcess:
+          "Rice is cooked and mixed with tamarind, turmeric, and spices to prepare pulihora, while laddus are made with gram flour, sugar, and ghee. The food is prepared in temple kitchens and offered to the deity before being distributed to devotees.",
+
+        uses: [
+          "Temple offerings",
+          "Devotional prasadam for pilgrims",
+          "Festival distribution",
+          "Religious ceremonies",
+          "Sacred food for devotees",
+        ],
+      },
+      {
+        name: "Godavari Forest Honey",
+        type: "famous",
+
+        image: forestHoney,
+        makingImage: tribalHoneyCollection,
+        flavorImage: honeyCombTexture,
+
+        description:
+          "Raw wild honey collected by tribal communities from forest beehives across the Godavari river forests.",
+
+        significance:
+          "Tribal communities living in the forests of Bhadradri Kothagudem have harvested wild honey for generations. The honey is valued for its purity, medicinal qualities, and rich floral flavors derived from forest plants.",
+
+        makingProcess:
+          "Experienced tribal honey gatherers locate wild beehives deep within forest areas. Using smoke and traditional techniques, the honeycombs are carefully harvested and filtered to produce raw forest honey.",
+
+        uses: [
+          "Natural sweetener",
+          "Traditional medicine",
+          "Herbal remedies",
+          "Ayurvedic preparations",
+          "Health drinks and desserts",
+        ],
+      },
+      {
+        name: "Dummugudem Hand-Pounded Spices",
+        type: "underrated",
+
+        image: dummugudemSpices,
+        makingImage: spiceMortarProcess,
+        flavorImage: redChiliPowder,
+
+        description:
+          "Small-batch, stone-ground spices and chili powders sourced from the fertile riverbanks of Dummugudem.",
+
+        significance:
+          "While commercial spices dominate the market, locals in the Bhadradri region prefer spices processed in Dummugudem villages. The humid climate near the Godavari river produces chilies with a deep red color and distinctive heat that retains flavor longer than industrial powders.",
+
+        makingProcess:
+          "Sun-dried chilies and turmeric are hand-pounded using traditional stone mortars and wooden pestles. This slow grinding method avoids heat buildup and preserves the natural oils and aroma of the spices.",
+
+        uses: [
+          "Traditional Godavari fish curries",
+          "Pickle spice blends",
+          "Authentic garam masala mixes",
+          "Artisanal culinary gifting",
+        ],
+      },
+      {
+        name: "Palm Leaf Weaver Crafts",
+        type: "underrated",
+
+        image: palmLeafCraft,
+        makingImage: leafWeaving,
+        flavorImage: leafTexture,
+
+        description:
+          "Handwoven household items such as fans, hats, and storage containers crafted from dried palmyra leaves.",
+
+        significance:
+          "Palm leaf weaving is an eco-friendly craft found in villages around Parnasala and the Bhadrachalam region. These lightweight products were historically essential for travelers and pilgrims coping with the intense summer heat.",
+
+        makingProcess:
+          "Young palm leaves are harvested and sun-dried until they turn pale. Artisans then split them into thin strips and weave them into structured shapes using intricate interlocking techniques.",
+
+        uses: [
+          "Traditional hand fans (Visanakarra)",
+          "Eco-friendly storage baskets",
+          "Decorative wall hangings",
+          "Traditional summer hats",
+        ],
+      },
+    ],
+  },
+  {
+    id: "jayashankar-bhupalpally",
+    slug: "jayashankar-bhupalpally",
+    state: "telangana",
+    name: "Jayashankar Bhupalpally",
+    tagline: "Gateway to the Forests of the Godavari Basin",
+    image: bupalapallyHero,
+    mapsQuery: "Jayashankar Bhupalpally Telangana",
+
+    heroDescription:
+      "Jayashankar Bhupalpally is known for its dense forests, tribal heritage, and natural landmarks like Bogatha Waterfalls, one of Telangana’s most spectacular cascades.",
+
+    elevation: "170 m",
+    bestTime: "October – February",
+    temperature: "20°C – 41°C",
+
+    about:
+      "Located in northern Telangana near the borders of Chhattisgarh and Maharashtra, Jayashankar Bhupalpally is a district defined by forests, rivers, and tribal culture. Much of the region lies within the Godavari basin and the Eastern Ghats landscape, making it rich in biodiversity and natural beauty. The district gained recognition for Bogatha Waterfalls, often called the 'Niagara of Telangana', along with forest tourism and traditional livelihoods.",
+
+    culture:
+      "Jayashankar Bhupalpally is a cultural sanctuary where the architectural legacy of the Kakatiya dynasty meets the prehistoric roots of human civilization. The district is defined by its deep-rooted spiritual traditions, most notably exemplified by the Kaleshwara Mukteshwara Swamy Temple, where two Shiva Lingams stand at the sacred confluence of the Godavari and Pranahita rivers. This heritage is mirrored in the ancient Kotagullu temple cluster and the monolithic Nainpaka rock-cut temple. Beyond these monuments, the district hosts the Medaram Jatara, one of the world's largest tribal congregations, celebrating indigenous history alongside vibrant folk festivals like Bathukamma and Bonalu. From the Paleolithic rock art of Pandavula Gutta to the 400-year-old Cheriyal Nakashi scroll paintings, the region offers a continuous, multi-layered identity shaped by centuries of dynastic influence and enduring Sanatan heritage.",
+
+    products: [
+      {
+        name: "Bhupalpally Red Chillies",
+        type: "famous",
+
+        image: bhupalpallyChillies,
+        makingImage: chilliDrying,
+        flavorImage: chilliPowderTexture,
+
+        description:
+          "Bright red, aromatic chillies cultivated across the agricultural fields of Jayashankar Bhupalpally district.",
+
+        significance:
+          "Chilli cultivation is an important part of the district’s farming economy. The fertile soil and warm climate help produce chillies known for their deep color and strong heat, widely used in Telangana cuisine.",
+
+        makingProcess:
+          "Fresh chillies are harvested from farms, washed, and sun-dried in large open yards. Once dried, they are processed into whole spice, chilli powder, or spice blends.",
+
+        uses: [
+          "Traditional Telangana curries",
+          "Pickle preparation",
+          "Spice powder blends",
+          "Local and regional markets",
+        ],
+      },
+      {
+        name: "Bhupalpally Paddy Rice",
+        type: "famous",
+
+        image: bhupalpallyRice,
+        makingImage: riceHarvest,
+        flavorImage: riceGrains,
+
+        description:
+          "Rice grown in the fertile plains of the Godavari basin surrounding Jayashankar Bhupalpally.",
+
+        significance:
+          "Rice cultivation forms the backbone of agriculture in the district and is the staple food for most households in the region.",
+
+        makingProcess:
+          "Farmers cultivate paddy during the Kharif and Rabi seasons. After harvesting, the grains are dried, milled, and processed into rice for local consumption and markets.",
+
+        uses: [
+          "Daily staple food",
+          "Temple offerings",
+          "Local rice dishes",
+          "Regional grain trade",
+        ],
+      },
+      {
+        name: "Bhupalpally Bamboo Basket Crafts",
+        type: "underrated",
+
+        image: bambooBasketCraft,
+        makingImage: bambooWeaving,
+        flavorImage: bambooTexture,
+
+        description:
+          "Handwoven bamboo baskets and tools crafted by tribal communities living in the forests of Jayashankar Bhupalpally.",
+
+        significance:
+          "Bamboo grows abundantly in the forests surrounding the district. Tribal communities such as the Koya and Gond have long used bamboo to create durable baskets and tools used in agriculture and daily household life.",
+
+        makingProcess:
+          "Fresh bamboo stems are split into thin strips and softened. Artisans then weave the strips into baskets, trays, and containers using traditional cross-weaving techniques.",
+
+        uses: [
+          "Agricultural harvest baskets",
+          "Household storage containers",
+          "Market carrying baskets",
+          "Eco-friendly home decor",
+        ],
+      },
+      {
+        name: "Nainpaka Terracotta Figurines",
+        type: "underrated",
+
+        image: nainpakaTerracotta,
+        makingImage: terracottaMolding,
+        flavorImage: earthyClayTexture,
+
+        description:
+          "Hand-pressed clay idols and votive animal figurines crafted by artisans from the village of Nainpaka.",
+
+        significance:
+          "Artisans in the Nainpaka region maintain a traditional terracotta craft that reflects the ancient artistic heritage of the forest belt. These figurines are commonly used in local rituals and represent the rustic folk art traditions of tribal communities.",
+
+        makingProcess:
+          "Riverbed clay is cleaned and shaped by hand into figurines. The pieces are dried and fired in open pits using husks and wood, producing natural earthy colors and a smoky finish.",
+
+        uses: [
+          "Traditional ritual offerings",
+          "Folk art home decor",
+          "Sustainable garden ornaments",
+          "Cultural collectibles",
+        ],
+      },
+      {
+        name: "Wild Mahua Flower Concentrates",
+        type: "underrated",
+
+        image: mahuaFlowers,
+        makingImage: mahuaDrying,
+        flavorImage: mahuaSyrup,
+
+        description:
+          "A naturally sweet syrup and dried concentrate prepared from forest-harvested mahua flowers.",
+
+        significance:
+          "In the forest belt around Tadvai and nearby villages, mahua flowers are valued as an important seasonal food resource. Apart from traditional fermented drinks, locals also produce non-alcoholic concentrates used as natural sweeteners and health tonics.",
+
+        makingProcess:
+          "Fresh mahua flowers are gathered from forest floors, sun-dried, and then slowly boiled to produce a thick syrup that preserves the flower’s natural sweetness and aroma.",
+
+        uses: [
+          "Natural energy booster",
+          "Traditional dessert sweetener",
+          "Iron-rich dietary supplement",
+          "Alternative to refined honey",
+        ],
+      },
+    ],
+  },
+  {
+    id: "rajanna-sircilla",
+    slug: "rajanna-sircilla",
+    state: "telangana",
+    name: "Rajanna Sircilla",
+    tagline: "The Loom Town of Telangana",
+    image: sircillaHero,
+    mapsQuery: "Rajanna Sircilla Telangana",
+
+    heroDescription:
+      "Rajanna Sircilla is known for its rich handloom heritage, vibrant weaving communities, and the famous Rajarajeshwara Temple at Vemulawada.",
+
+    elevation: "280 m",
+    bestTime: "October – February",
+    temperature: "20°C – 38°C",
+
+    about:
+      "Rajanna Sircilla district is a major textile hub of Telangana, often referred to as the 'Textile Town'. Thousands of weavers here produce traditional fabrics and garments on both handlooms and power looms. Alongside its industrial identity, the district is also home to the historic Vemulawada Rajarajeshwara Temple, one of the most important pilgrimage centers in the region.",
+
+    culture:
+      "Weaving traditions define everyday life in Sircilla, where generations of families have worked in the textile industry. Festivals and temple rituals at Vemulawada bring together pilgrims and local communities, while the rhythms of loom weaving remain a defining sound of the town.",
 
     products: [],
   },

@@ -51,6 +51,26 @@ import gadwalFort from "@/assets/TG/Places/GGF.jpg";
 import juralaDam from "@/assets/TG/Places/GJD.jpg";
 import beechupallyTemple from "@/assets/TG/Places/GBT.jpg";
 
+/*=================== BHADRADRI ======================= */
+import bhadrachalamTemple from "@/assets/TG/Places/BBT.jpg";
+import parnasalaTemple from "@/assets/TG/Places/BPT.jpg";
+import bogathaWaterfalls from "@/assets/TG/Places/BBWF.jpg";
+import kinnerasaniSanctuary from "@/assets/TG/Places/BKWS.jpg";
+import kothagudemPowerPlant from "@/assets/TG/Places/BTPP.jpg";
+
+/*=================== BUPALAPALLY ======================= */
+import pandavulaGutta from "@/assets/TG/Places/JBPG.jpg";
+import kaleshwaramTemple from "@/assets/TG/Places/JBKT.jpg";
+
+/*=================== SIRCILLA ======================= */
+import vemulawadaTemple from "@/assets/TG/Places/SVT.jpg";
+import lowerManairDam from "@/assets/TG/Places/SLMD.jpg";
+import kondagattuTemple from "@/assets/TG/Places/SKAT.jpg";
+import sircillaTextilePark from "@/assets/TG/Places/STP.jpg";
+import midManairDam from "@/assets/TG/Places/SMMD.jpg";
+import singasamudramCheruvu from "@/assets/TG/Places/SSSC.jpg";
+import nampallyGuttaTemple from "@/assets/TG/Places/SGNT.jpg";
+
 export const telanganaPlaces: Place[] = [
   {
     destination: "Warangal",
@@ -1343,5 +1363,549 @@ export const telanganaPlaces: Place[] = [
       "Weekends can be crowded.",
     ],
     mapsQuery: "Beechupally Anjaneya Temple",
+  },
+  {
+    destination: "Bhadradri Kothagudem",
+    state: "telangana",
+    name: "Bhadrachalam Temple",
+    slug: "bhadrachalam-temple",
+    type: "must-visit",
+    image: bhadrachalamTemple,
+
+    description:
+      "A revered temple dedicated to Lord Rama located on the banks of the Godavari River.",
+
+    about:
+      "Bhadrachalam Temple is one of the most sacred pilgrimage sites in South India. Associated with the Ramayana, it is believed that Lord Rama stayed in the surrounding forests during his exile. The temple is famous for its grand Sri Rama Navami celebrations that attract thousands of devotees every year.",
+
+    distance: "35 km from Kothagudem",
+
+    highlights: [
+      "Sri Rama Navami celebrations",
+      "Godavari river ghats",
+      "Historic Ramayana connection",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for peaceful darshan.",
+      "Take a walk along the Godavari river ghats.",
+      "Plan your trip during Sri Rama Navami for cultural festivities.",
+    ],
+
+    mapsQuery: "Sri Sita Ramachandra Swamy Temple Bhadrachalam",
+  },
+  {
+    destination: "Bhadradri Kothagudem",
+    state: "telangana",
+    name: "Parnasala",
+    slug: "parnasala",
+    type: "must-visit",
+    image: parnasalaTemple,
+
+    description:
+      "A forest pilgrimage site associated with the Ramayana, believed to be the place where Lord Rama, Sita, and Lakshmana stayed during exile.",
+
+    about:
+      "Located amidst dense forests near Bhadrachalam, Parnasala is believed to be the location where Ravana abducted Sita according to the Ramayana. The site features Ramayana-themed sculptures, a temple, and scenic forest surroundings that make it both a spiritual and cultural destination.",
+
+    distance: "32 km from Bhadrachalam",
+
+    highlights: [
+      "Ramayana-themed sculpture park",
+      "Forest temple setting",
+      "Historic mythological site",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Combine with Bhadrachalam temple visit.",
+      "Visit during morning hours to enjoy the forest scenery.",
+      "Carry water as facilities are limited.",
+    ],
+
+    mapsQuery: "Parnasala Ramayana site Telangana",
+  },
+  {
+    destination: "Bhadradri Kothagudem",
+    state: "telangana",
+    name: "Bogatha Waterfalls",
+    slug: "bogatha-waterfalls",
+    type: "must-visit",
+    image: bogathaWaterfalls,
+
+    description:
+      "The largest waterfall in Telangana, often called the 'Niagara of Telangana'.",
+
+    about:
+      "Bogatha Waterfalls is a spectacular cascade located deep within forested hills near the Telangana–Chhattisgarh border. Surrounded by lush greenery and rocky cliffs, it is one of the most scenic natural attractions in the region.",
+
+    distance: "120 km from Kothagudem",
+
+    highlights: [
+      "Largest waterfall in Telangana",
+      "Forest trekking trails",
+      "Scenic photography spot",
+    ],
+
+    bestTime: "July – February",
+
+    travelTips: [
+      "Visit after the monsoon for the best water flow.",
+      "Wear comfortable trekking footwear.",
+      "Carry snacks and water as shops are limited.",
+    ],
+
+    mapsQuery: "Bogatha Waterfalls Telangana",
+  },
+  {
+    destination: "Bhadradri Kothagudem",
+    state: "telangana",
+    name: "Kinnerasani Wildlife Sanctuary",
+    slug: "kinnerasani-wildlife-sanctuary",
+    type: "underrated",
+    image: kinnerasaniSanctuary,
+
+    description:
+      "A tranquil forest sanctuary known for its reservoir, wildlife, and eco-tourism spots.",
+
+    about:
+      "Spread across dense forest landscapes, Kinnerasani Wildlife Sanctuary protects diverse flora and fauna of the Eastern Ghats region. The sanctuary also features the scenic Kinnerasani Dam reservoir which attracts nature lovers and birdwatchers.",
+
+    distance: "25 km from Kothagudem",
+
+    highlights: [
+      "Kinnerasani dam reservoir",
+      "Wildlife spotting and birdwatching",
+      "Forest viewpoints",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for wildlife sightings.",
+      "Carry binoculars for birdwatching.",
+      "Follow forest department guidelines.",
+    ],
+
+    mapsQuery: "Kinnerasani Wildlife Sanctuary Telangana",
+  },
+  {
+    destination: "Bhadradri Kothagudem",
+    state: "telangana",
+    name: "Kothagudem Thermal Power Station Viewpoint",
+    slug: "kothagudem-thermal-power-station",
+    type: "underrated",
+    image: kothagudemPowerPlant,
+
+    description:
+      "One of the major power generation centers in Telangana, symbolizing the district's industrial significance.",
+
+    about:
+      "The Kothagudem Thermal Power Station is a major electricity-producing facility fueled by coal mined in the Singareni coalfields nearby. The massive cooling towers and industrial infrastructure reflect the region's energy backbone.",
+
+    distance: "Within Kothagudem",
+
+    highlights: [
+      "Massive cooling towers",
+      "Industrial landscape photography",
+      "Singareni coal mining region",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "View from designated public areas only.",
+      "Best photographed during sunset.",
+      "Combine with visits to nearby eco-tourism spots.",
+    ],
+
+    mapsQuery: "Kothagudem Thermal Power Station",
+  },
+  {
+    destination: "Jayashankar Bhupalpally",
+    state: "telangana",
+    name: "Pandavula Gutta",
+    slug: "pandavula-gutta",
+    type: "underrated",
+    image: pandavulaGutta,
+
+    description:
+      "A prehistoric rock art site with ancient cave paintings located in the forest hills.",
+
+    about:
+      "Pandavula Gutta is an archaeological treasure featuring prehistoric rock art believed to date back thousands of years. The site sits atop rocky hills and is surrounded by dense forest landscapes.",
+
+    distance: "60 km from Bhupalpally",
+
+    highlights: [
+      "Ancient cave paintings",
+      "Rock formations and hill views",
+      "Archaeological heritage site",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear comfortable shoes for hiking.",
+      "Carry water during the trek.",
+      "Best explored with a local guide.",
+    ],
+
+    mapsQuery: "Pandavula Gutta Telangana",
+  },
+  {
+    destination: "Jayashankar Bhupalpally",
+    state: "telangana",
+    name: "Kaleshwaram Mukteswara Swamy Temple",
+    slug: "kaleshwaram-temple",
+    type: "must-visit",
+    image: kaleshwaramTemple,
+
+    description:
+      "A sacred Shiva temple located at the confluence of the Godavari and Pranahita rivers.",
+
+    about:
+      "Kaleshwaram is one of the most important pilgrimage centers in Telangana. The temple houses the unique Kaleshwara Mukteshwara Shiva Lingam and is located at the scenic confluence of two rivers, making it both a spiritual and scenic destination.",
+
+    distance: "70 km from Bhupalpally",
+
+    highlights: [
+      "Sacred river confluence",
+      "Historic Shiva temple",
+      "Kaleshwaram Lift Irrigation Project nearby",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit during Maha Shivaratri for celebrations.",
+      "Explore the river ghats nearby.",
+      "Combine with nearby forest attractions.",
+    ],
+
+    mapsQuery: "Kaleshwaram Mukteswara Swamy Temple Telangana",
+  },
+  {
+    destination: "Jayashankar Bhupalpally",
+    state: "telangana",
+    name: "Eturnagaram Wildlife Sanctuary",
+    slug: "eturnagaram-wildlife-sanctuary",
+    type: "must-visit",
+    image: eturnagaramSanctuary,
+
+    description:
+      "A vast forest sanctuary known for its wildlife, trekking routes, and scenic Godavari river landscapes.",
+
+    about:
+      "Eturnagaram Wildlife Sanctuary is one of the oldest wildlife reserves in Telangana and covers large forest areas along the Godavari river basin. It is home to species such as deer, leopards, wolves, and several birds.",
+
+    distance: "40 km from Bhupalpally",
+
+    highlights: [
+      "Wildlife spotting",
+      "Forest trekking trails",
+      "River valley landscapes",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for wildlife sightings.",
+      "Carry binoculars for bird watching.",
+      "Follow forest department guidelines.",
+    ],
+
+    mapsQuery: "Eturnagaram Wildlife Sanctuary Telangana",
+  },
+  {
+    destination: "Jayashankar Bhupalpally",
+    state: "telangana",
+    name: "Bogatha Waterfalls",
+    slug: "bogatha-waterfalls",
+    type: "must-visit",
+    image: bogathaWaterfalls,
+
+    description:
+      "One of the largest waterfalls in Telangana, often called the 'Niagara of Telangana'.",
+
+    about:
+      "Located deep within forest terrain near Wazeedu Mandal, Bogatha Waterfalls is among the most spectacular natural attractions in the district. The cascading water over rocky cliffs creates a dramatic landscape, especially after the monsoon season.",
+
+    distance: "120 km from Bhupalpally",
+
+    highlights: [
+      "Largest waterfall in Telangana",
+      "Forest trekking trails",
+      "Scenic photography spot",
+    ],
+
+    bestTime: "July – February",
+
+    travelTips: [
+      "Visit after monsoon for full waterfall flow.",
+      "Wear trekking shoes as rocks can be slippery.",
+      "Carry drinking water and snacks.",
+    ],
+
+    mapsQuery: "Bogatha Waterfalls Telangana",
+  },
+  {
+    destination: "Jayashankar Bhupalpally",
+    state: "telangana",
+    name: "Laknavaram Lake",
+    slug: "laknavaram-lake",
+    type: "must-visit",
+    image: laknavaramLake,
+
+    description:
+      "A scenic lake surrounded by forested hills, famous for its long suspension bridge connecting small islands.",
+
+    about:
+      "Built during the Kakatiya dynasty in the 13th century, Laknavaram Lake is one of the most picturesque lakes in Telangana. The lake is surrounded by thick forests and dotted with islands connected by a suspension bridge, making it a popular eco-tourism destination.",
+
+    distance: "65 km from Bhupalpally",
+
+    highlights: [
+      "Hanging suspension bridge",
+      "Boating and island viewpoints",
+      "Forest picnic spots",
+    ],
+
+    bestTime: "September – February",
+
+    travelTips: [
+      "Visit during sunset for scenic views.",
+      "Try boating across the lake islands.",
+      "Post-monsoon months offer the best greenery.",
+    ],
+
+    mapsQuery: "Laknavaram Lake Telangana",
+  },
+  {
+    destination: "Rajanna Sircilla",
+    state: "telangana",
+    name: "Vemulawada Rajarajeshwara Temple",
+    slug: "vemulawada-rajarajeshwara-temple",
+    type: "must-visit",
+    image: vemulawadaTemple,
+
+    description:
+      "One of the most important Shiva temples in Telangana, attracting thousands of devotees every year.",
+
+    about:
+      "Located in Vemulawada town, this ancient temple dedicated to Lord Rajarajeshwara (Shiva) is a major pilgrimage center. Devotees perform rituals such as 'Kode Mokku' and take holy dips in the Dharma Gundam temple tank before entering the shrine.",
+
+    distance: "35 km from Sircilla",
+
+    highlights: [
+      "Historic Shiva temple",
+      "Dharma Gundam sacred pond",
+      "Major pilgrimage center in Telangana",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for peaceful darshan.",
+      "Explore nearby temple streets for traditional shops.",
+      "Expect large crowds during Maha Shivaratri.",
+    ],
+
+    mapsQuery: "Vemulawada Rajarajeshwara Temple",
+  },
+  {
+    destination: "Rajanna Sircilla",
+    state: "telangana",
+    name: "Lower Manair Dam",
+    slug: "lower-manair-dam",
+    type: "must-visit",
+    image: lowerManairDam,
+
+    description:
+      "A scenic reservoir and recreational spot built across the Manair River.",
+
+    about:
+      "Lower Manair Dam is an important irrigation project near Karimnagar. Surrounded by landscaped parks and viewpoints, it has become a popular destination for evening walks and scenic views of the water reservoir.",
+
+    distance: "40 km from Sircilla",
+
+    highlights: [
+      "Large irrigation reservoir",
+      "Sunset viewpoints",
+      "Gardens and walking paths",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during sunset for the best views.",
+      "Combine with a Karimnagar city visit.",
+      "Ideal for photography.",
+    ],
+
+    mapsQuery: "Lower Manair Dam Karimnagar",
+  },
+  {
+    destination: "Rajanna Sircilla",
+    state: "telangana",
+    name: "Kondagattu Anjaneya Swamy Temple",
+    slug: "kondagattu-anjaneya-temple",
+    type: "must-visit",
+    image: kondagattuTemple,
+
+    description:
+      "A famous hilltop temple dedicated to Lord Hanuman surrounded by scenic hills.",
+
+    about:
+      "Kondagattu Temple is one of the most visited Hanuman temples in Telangana. Located on a hill surrounded by forest landscapes, it attracts thousands of pilgrims, especially during Hanuman Jayanti.",
+
+    distance: "55 km from Sircilla",
+
+    highlights: [
+      "Hilltop temple setting",
+      "Panoramic views of surrounding hills",
+      "Important pilgrimage center",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Climb the temple steps for scenic hill views.",
+      "Visit early morning to avoid crowds.",
+      "Carry water if trekking.",
+    ],
+
+    mapsQuery: "Kondagattu Anjaneya Swamy Temple",
+  },
+  {
+    destination: "Rajanna Sircilla",
+    state: "telangana",
+    name: "Sircilla Textile Park",
+    slug: "sircilla-textile-park",
+    type: "underrated",
+    image: sircillaTextilePark,
+
+    description:
+      "A major textile hub showcasing the weaving industry that made Sircilla famous.",
+
+    about:
+      "Sircilla is known as the 'Textile Town of Telangana'. The textile park and weaving clusters provide insight into the district’s thriving garment and fabric industry, where thousands of looms operate daily.",
+
+    distance: "Within Sircilla",
+
+    highlights: [
+      "Power loom weaving clusters",
+      "Textile production units",
+      "Insight into local weaving culture",
+    ],
+
+    bestTime: "All year",
+
+    travelTips: [
+      "Visit with a local guide to understand weaving processes.",
+      "Explore nearby markets for textiles.",
+      "Respect safety guidelines in factory areas.",
+    ],
+
+    mapsQuery: "Sircilla Textile Park Telangana",
+  },
+  {
+    destination: "Rajanna Sircilla",
+    state: "telangana",
+    name: "Mid Manair Dam",
+    slug: "mid-manair-dam",
+    type: "underrated",
+    image: midManairDam,
+
+    description:
+      "A large irrigation reservoir surrounded by scenic countryside landscapes.",
+
+    about:
+      "Mid Manair Dam is an important water storage project built across the Manair River. The vast reservoir and peaceful rural surroundings make it a relaxing spot for nature lovers and photographers.",
+
+    distance: "30 km from Sircilla",
+
+    highlights: [
+      "Large water reservoir",
+      "Peaceful countryside views",
+      "Photography and scenic drives",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Best visited during winter evenings.",
+      "Carry water and snacks as facilities are limited.",
+      "Good stop during road trips.",
+    ],
+
+    mapsQuery: "Mid Manair Dam Telangana",
+  },
+  {
+    destination: "Rajanna Sircilla",
+    state: "telangana",
+    name: "Singasamudram Cheruvu",
+    slug: "singasamudram-cheruvu",
+    type: "underrated",
+    image: singasamudramCheruvu,
+
+    description:
+      "A scenic irrigation lake surrounded by peaceful countryside landscapes near Sircilla.",
+
+    about:
+      "Singasamudram Cheruvu is an important irrigation tank that supports agriculture in nearby villages. The calm water body and surrounding greenery make it a quiet spot for nature lovers and photographers.",
+
+    distance: "15 km from Sircilla",
+
+    highlights: [
+      "Large village irrigation lake",
+      "Scenic countryside views",
+      "Sunrise and sunset photography",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during early morning or sunset for the best views.",
+      "Ideal stop during countryside drives.",
+      "Carry water and snacks as facilities are limited.",
+    ],
+
+    mapsQuery: "Singasamudram Cheruvu Rajanna Sircilla",
+  },
+  {
+    destination: "Rajanna Sircilla",
+    state: "telangana",
+    name: "Nampally Gutta Lakshmi Narasimha Swamy Temple",
+    slug: "nampally-gutta-lakshmi-narasimha-swamy-temple",
+    type: "must-visit",
+    image: nampallyGuttaTemple,
+
+    description:
+      "A famous hilltop temple dedicated to Lord Lakshmi Narasimha offering panoramic views of the surrounding countryside.",
+
+    about:
+      "Located atop Nampally hill near Vemulawada, this temple is an important spiritual site for devotees. Visitors climb a series of steps to reach the shrine, where they are rewarded with breathtaking views of the surrounding landscape.",
+
+    distance: "10 km from Vemulawada",
+
+    highlights: [
+      "Hilltop temple setting",
+      "Panoramic countryside views",
+      "Spiritual pilgrimage site",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Climb the steps early in the morning to avoid heat.",
+      "Carry water during the climb.",
+      "Combine the visit with Vemulawada temple nearby.",
+    ],
+
+    mapsQuery: "Nampally Gutta Lakshmi Narasimha Swamy Temple",
   },
 ];
