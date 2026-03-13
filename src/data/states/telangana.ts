@@ -8,6 +8,8 @@ import badhradriHero from "@/assets/TG/Destinations/badhradri.jpg";
 import bupalapallyHero from "@/assets/TG/Destinations/bhupalapally.jpg";
 import sircillaHero from "@/assets/TG/Destinations/sirisilla.jpg";
 import naraynaHero from "@/assets/TG/Destinations/narayanapet.jpg";
+import nizamabadHero from "@/assets/TG/Destinations/nizamabad.jpg";
+
 /* =================== WARANGAL ======================== */
 import warangalDurriesHero from "@/assets/TG/Products/WDH.jpg";
 import warangalDurriesMaking from "@/assets/TG/Products/WDM.jpg";
@@ -1721,7 +1723,7 @@ export const telanganaDestinations: Destination[] = [
     state: "telangana",
     name: "Nizamabad",
     tagline: "Turmeric Capital of Telangana",
-    image: "/images/destinations/nizamabad.jpg",
+    image: nizamabadHero,
     mapsQuery: "Nizamabad Telangana",
 
     heroDescription:

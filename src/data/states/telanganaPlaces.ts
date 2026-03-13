@@ -78,6 +78,21 @@ import chincholiSanctuary from "@/assets/TG/Places/NCS.jpg";
 import manyamkondaTemple from "@/assets/TG/Places/NMT.jpg";
 import koilsagarDam from "@/assets/TG/Places/NKD.jpg";
 
+/*=================== NIZAMABAD ======================= */
+import nizamSagarDam from "@/assets/TG/Places/NNSD.jpg";
+import dichpallyTemple from "@/assets/TG/Places/NDRT.jpg";
+import alisagarReservoir from "@/assets/TG/Places/NARG.jpg";
+import pocharamSanctuary from "@/assets/TG/Places/NPWS.jpg";
+import ashokSagarLake from "@/assets/TG/Places/NASL.jpg";
+import nizamabadFort from "@/assets/TG/Places/NNF.jpg";
+import bodhanFort from "@/assets/TG/Places/NBF.jpg";
+import sarangapurTemple from "@/assets/TG/Places/NST.jpg";
+import kanteshwarTemple from "@/assets/TG/Places/NKT.jpg";
+import aliSagarDeerPark from "@/assets/TG/Places/NASDP.jpg";
+import pocharamReservoir from "@/assets/TG/Places/NPR.jpg";
+import janampetTempleRuins from "@/assets/TG/Places/NJT.jpg";
+import bodhanSugarFactory from "@/assets/TG/Places/NKF.jpg";
+
 export const telanganaPlaces: Place[] = [
   {
     destination: "Warangal",
@@ -2517,8 +2532,8 @@ export const telanganaPlaces: Place[] = [
   {
     destination: "Nizamabad",
     state: "telangana",
-    name: "Janampet Temple Ruins",
-    slug: "janampet-temple-ruins",
+    name: "Jankampet Temple Ruins",
+    slug: "jankampet-temple-ruins",
     type: "underrated",
     image: janampetTempleRuins,
 
@@ -2545,37 +2560,5 @@ export const telanganaPlaces: Place[] = [
     ],
 
     mapsQuery: "Janampet Temple Ruins Telangana",
-  },
-  {
-    destination: "Nizamabad",
-    state: "telangana",
-    name: "Bodhan Sugar Factory Area",
-    slug: "bodhan-sugar-factory",
-    type: "underrated",
-    image: bodhanSugarFactory,
-
-    description:
-      "A historic industrial landmark associated with Telangana’s sugar production industry.",
-
-    about:
-      "The Bodhan Sugar Factory once played a major role in the regional economy and reflects the industrial heritage of northern Telangana.",
-
-    distance: "30 km from Nizamabad",
-
-    highlights: [
-      "Historic industrial site",
-      "Important regional economic landmark",
-      "Historic Bodhan town surroundings",
-    ],
-
-    bestTime: "October – February",
-
-    travelTips: [
-      "Combine with Bodhan Fort visit.",
-      "Explore nearby local markets.",
-      "Great for history enthusiasts.",
-    ],
-
-    mapsQuery: "Bodhan Sugar Factory Telangana",
   },
 ];
