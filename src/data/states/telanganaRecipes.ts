@@ -39,6 +39,11 @@ import isukaDonthuluFry from "@/assets/TG/Recipes/BIDF.jpg";
 /* ============== BUPALAPALLY ================== */
 import chiliPickle from "@/assets/TG/Recipes/JBCP.jpg";
 
+/* ============== SIRCILLA ================== */
+import jonnaGatka from "@/assets/TG/Recipes/RSJG.jpg";
+
+/* ==============  ================== */
+
 export const telanganaRecipes: Recipe[] = [
   {
     name: "Sarvapindi",
@@ -1124,6 +1129,211 @@ export const telanganaRecipes: Recipe[] = [
 
     story:
       "Pickles are an essential part of Telangana cuisine. In Bhupalpally villages, chili pickle is often prepared during harvest seasons and stored for months to accompany simple millet meals.",
+
+    season: "Summer",
+    buyLink: "",
+  },
+  {
+    name: "Siricilla Sarvapindi",
+    state: "telangana",
+    id: "rajanna-sircilla",
+    destination: "Rajanna Sircilla",
+
+    description:
+      "A traditional Telangana rice flour pancake mixed with peanuts, onions, and spices, slowly roasted in an iron pan until crisp and golden.",
+
+    image: sarvapindi,
+
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Rice flour",
+      "1/4 cup Peanuts (crushed)",
+      "1 Onion (finely chopped)",
+      "2 Green chillies (chopped)",
+      "1 tbsp Sesame seeds",
+      "Curry leaves (chopped)",
+      "Salt to taste",
+      "2 tbsp Oil",
+    ],
+
+    steps: [
+      "In a bowl, mix rice flour, crushed peanuts, chopped onions, green chillies, sesame seeds, curry leaves, and salt.",
+      "Add a little water to form a thick dough-like mixture.",
+      "Heat an iron pan and grease lightly with oil.",
+      "Spread the dough evenly on the pan using your fingers, making small holes across the surface.",
+      "Drizzle oil into the holes and along the edges.",
+      "Cook on low flame until the bottom becomes crisp and golden.",
+      "Flip carefully and cook the other side until fully cooked.",
+      "Serve hot with chutney or pickle.",
+    ],
+
+    story:
+      "Sarvapindi is a beloved homemade snack in Telangana households, especially in the Warangal region. Traditionally cooked in heavy iron pans, it was often prepared as an evening meal for farmers returning from fields. The dish reflects the region's simple, hearty cooking style using pantry staples.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Jonna Gatka",
+    state: "telangana",
+    id: "rajanna-sircilla",
+    destination: "Rajanna Sircilla",
+
+    description:
+      "A traditional sorghum-based porridge made from jowar flour, commonly eaten in rural Telangana as a nutritious staple meal.",
+
+    image: jonnaGatka,
+
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Jowar flour (Sorghum flour)",
+      "3 cups Water",
+      "Salt to taste",
+      "1 cup Buttermilk (optional)",
+      "1 Small onion (optional, chopped)",
+    ],
+
+    steps: [
+      "Bring water to a boil in a pot.",
+      "Slowly add jowar flour while stirring continuously to avoid lumps.",
+      "Cook on low flame until the mixture thickens into a smooth porridge.",
+      "Add salt and mix well.",
+      "Serve hot, optionally with buttermilk or chopped onions.",
+      "Traditionally eaten with spicy chutney or pickle.",
+    ],
+
+    story:
+      "Jonna Gatka has been a staple meal for farmers in Telangana for generations. Made from locally grown sorghum, it provides long-lasting energy and keeps the body cool during hot summer days.",
+
+    season: "Summer",
+    buyLink: "",
+  },
+  {
+    name: "Sarvapindi",
+    state: "telangana",
+    id: "narayanpet",
+    destination: "Narayanpet",
+
+    description:
+      "A traditional Telangana rice flour pancake mixed with peanuts, onions, and spices, slowly roasted in an iron pan until crisp and golden.",
+
+    image: sarvapindi,
+
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Rice flour",
+      "1/4 cup Peanuts (crushed)",
+      "1 Onion (finely chopped)",
+      "2 Green chillies (chopped)",
+      "1 tbsp Sesame seeds",
+      "Curry leaves (chopped)",
+      "Salt to taste",
+      "2 tbsp Oil",
+    ],
+
+    steps: [
+      "In a bowl, mix rice flour, crushed peanuts, chopped onions, green chillies, sesame seeds, curry leaves, and salt.",
+      "Add a little water to form a thick dough-like mixture.",
+      "Heat an iron pan and grease lightly with oil.",
+      "Spread the dough evenly on the pan using your fingers, making small holes across the surface.",
+      "Drizzle oil into the holes and along the edges.",
+      "Cook on low flame until the bottom becomes crisp and golden.",
+      "Flip carefully and cook the other side until fully cooked.",
+      "Serve hot with chutney or pickle.",
+    ],
+
+    story:
+      "Sarvapindi is a beloved homemade snack in Telangana households, especially in the Warangal region. Traditionally cooked in heavy iron pans, it was often prepared as an evening meal for farmers returning from fields. The dish reflects the region's simple, hearty cooking style using pantry staples.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Jonna Rotte",
+    state: "telangana",
+    id: "narayanpet",
+    destination: "Narayanpet",
+
+    description:
+      "A rustic sorghum flatbread that has been a staple food of Telangana farmers for generations, often served with spicy chutneys or curries.",
+
+    image: jonnaRotte,
+
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup Sorghum flour (Jowar flour)",
+      "Warm water as needed",
+      "Salt to taste",
+      "1 tsp Oil or ghee (optional)",
+    ],
+
+    steps: [
+      "In a bowl, mix sorghum flour and salt.",
+      "Slowly add warm water and knead into a soft dough.",
+      "Take a small ball of dough and flatten it gently using your hands.",
+      "Pat it into a thin circular roti on a flat surface.",
+      "Heat a tawa or iron griddle and place the roti carefully.",
+      "Cook both sides until light brown spots appear.",
+      "Apply a little ghee if desired and serve hot.",
+    ],
+
+    story:
+      "Jonna Rotte is deeply connected to Telangana's dryland farming culture. Sorghum grows well in the semi-arid climate of the region, making it a traditional staple grain for centuries. In villages around Warangal, these rotis are commonly eaten with gongura chutney or spicy curries.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Jonna Ambali",
+    state: "telangana",
+    id: "narayanpet",
+    destination: "Narayanpet",
+
+    description:
+      "A traditional fermented drink made from sorghum flour, known for its cooling effect and nutritional benefits during hot summers.",
+
+    image: jonnaAmbali,
+
+    prepTime: "10 mins",
+    cookTime: "10 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1/2 cup Sorghum flour (Jowar flour)",
+      "3 cups Water",
+      "Salt to taste",
+      "1 cup Buttermilk",
+      "1 Small onion (optional, chopped)",
+    ],
+
+    steps: [
+      "Mix sorghum flour with water to form a smooth mixture.",
+      "Cook the mixture on low flame, stirring continuously to avoid lumps.",
+      "Once it thickens, remove from heat and allow it to cool.",
+      "Add buttermilk and salt, mixing thoroughly.",
+      "Optional: add chopped onions for extra flavor.",
+      "Serve chilled as a refreshing summer drink.",
+    ],
+
+    story:
+      "Jonna Ambali has been a staple drink among farmers and tribal communities in Adilabad for generations. Made from locally grown sorghum, it provides hydration, energy, and natural probiotics, making it ideal for the region’s hot climate.",
 
     season: "Summer",
     buyLink: "",

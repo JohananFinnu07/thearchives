@@ -71,6 +71,13 @@ import midManairDam from "@/assets/TG/Places/SMMD.jpg";
 import singasamudramCheruvu from "@/assets/TG/Places/SSSC.jpg";
 import nampallyGuttaTemple from "@/assets/TG/Places/SGNT.jpg";
 
+/*=================== NARAYANPET ======================= */
+import koilkondaFort from "@/assets/TG/Places/NKF.jpg";
+import krishnaRiverMakthal from "@/assets/TG/Places/NKRV.jpg";
+import chincholiSanctuary from "@/assets/TG/Places/NCS.jpg";
+import manyamkondaTemple from "@/assets/TG/Places/NMT.jpg";
+import koilsagarDam from "@/assets/TG/Places/NKD.jpg";
+
 export const telanganaPlaces: Place[] = [
   {
     destination: "Warangal",
@@ -1907,5 +1914,668 @@ export const telanganaPlaces: Place[] = [
     ],
 
     mapsQuery: "Nampally Gutta Lakshmi Narasimha Swamy Temple",
+  },
+  {
+    destination: "Narayanpet",
+    state: "telangana",
+    name: "Koilkonda Fort",
+    slug: "koilkonda-fort",
+    type: "must-visit",
+    image: koilkondaFort,
+
+    description:
+      "A historic hill fort known for its seven ancient gateways, massive stone walls, and scenic trekking route to the top.",
+
+    about:
+      "Located near Narayanpet in the Mahabubnagar region, Koilkonda Fort dates back to the Qutb Shahi era. The fort features seven successive gates leading to the summit, along with remnants of temples, mosques, and water tanks that reveal its strategic and cultural importance.",
+
+    distance: "45 km from Narayanpet",
+
+    highlights: [
+      "Seven historic gateways",
+      "Ancient hill fort architecture",
+      "Scenic trekking route",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear comfortable footwear for the climb.",
+      "Start the trek early morning or late afternoon.",
+      "Carry water and snacks as facilities are limited.",
+    ],
+
+    mapsQuery: "Koilkonda Fort Telangana",
+  },
+  {
+    destination: "Narayanpet",
+    state: "telangana",
+    name: "Krishna River Viewpoints",
+    slug: "krishna-river-viewpoints-makthal",
+    type: "underrated",
+    image: krishnaRiverMakthal,
+
+    description:
+      "Peaceful riverbank viewpoints along the Krishna River offering scenic landscapes and tranquil countryside surroundings.",
+
+    about:
+      "Near Makthal in Narayanpet district, the Krishna River flows through scenic rural landscapes. The riverbanks provide quiet spots for photography, nature walks, and experiencing the calm agricultural countryside of southern Telangana.",
+
+    distance: "30 km from Narayanpet",
+
+    highlights: [
+      "Scenic Krishna River views",
+      "Quiet countryside landscapes",
+      "Ideal for photography and nature walks",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Visit during sunrise or sunset for the best views.",
+      "Carry drinking water and snacks.",
+      "Be cautious near riverbanks during monsoon season.",
+    ],
+
+    mapsQuery: "Krishna River Makthal Telangana",
+  },
+  {
+    destination: "Narayanpet",
+    state: "telangana",
+    name: "Chincholi Wildlife Sanctuary",
+    slug: "chincholi-wildlife-sanctuary",
+    type: "underrated",
+    image: chincholiSanctuary,
+
+    description:
+      "A vast dry deciduous forest sanctuary known for its rich biodiversity, trekking trails, and peaceful wilderness near the Telangana–Karnataka border.",
+
+    about:
+      "Chincholi Wildlife Sanctuary, located near the Karnataka border, is one of the largest protected forest regions in the Deccan plateau. The sanctuary features dry deciduous forests, rocky landscapes, and diverse wildlife including deer, wild boars, foxes, and several bird species. It is also known for scenic trekking routes, natural streams, and the historic Chandrampalli Dam nearby.",
+
+    distance: "Approximately 70 km from Narayanapet",
+
+    highlights: [
+      "Largest wildlife sanctuary in the Hyderabad–Karnataka region",
+      "Rich biodiversity and birdwatching opportunities",
+      "Forest trekking and nature trails",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit early morning for the best wildlife sightings.",
+      "Carry sufficient water and snacks when trekking.",
+      "Check local forest permissions if planning deep forest exploration.",
+    ],
+
+    mapsQuery: "Chincholi Wildlife Sanctuary",
+  },
+  {
+    destination: "Narayanpet",
+    state: "telangana",
+    name: "Manyamkonda Sri Lakshmi Venkateshwara Swamy Temple",
+    slug: "manyamkonda-sri-lakshmi-venkateshwara-swamy-temple",
+    type: "must-visit",
+    image: manyamkondaTemple,
+
+    description:
+      "Known as 'Palamoor Tirupati,' this ancient cave temple is perched atop three hills and is a major spiritual hub in the region.",
+
+    about:
+      "The Manyamkonda Sri Lakshmi Venkateshwara Swamy Temple is a unique 'Harihara Kshetra' where the deity is located inside a natural cave. Historically known as 'Munulakonda' (Hill of Sages), it was once a site for meditation by spiritual gurus. It is also the first temple in Telangana to feature a ropeway for pilgrims.",
+
+    distance: "16 km from Mahabubnagar / Approximately 60 km from Narayanapet",
+
+    highlights: [
+      "Natural cave shrine architecture",
+      "First temple ropeway in Telangana",
+      "Scenic panoramic views from the hilltop",
+    ],
+
+    bestTime: "February (during Magha Purnima festival) – March",
+
+    travelTips: [
+      "Use the ropeway for a scenic and easier ascent to the cave.",
+      "Visit during Magha Purnima to witness the vibrant annual Jathara.",
+      "Explore the ancient meditation caves nearby used by historical sages.",
+    ],
+
+    mapsQuery: "Manyamkonda Sri Lakshmi Venkateshwara Swamy Temple",
+  },
+  {
+    destination: "Narayanpet",
+    state: "telangana",
+    name: "Koilsagar Project and Reservoir",
+    slug: "koilsagar-project-and-reservoir",
+    type: "must-visit",
+    image: koilsagarDam,
+
+    description:
+      "A scenic irrigation project built on the Peddavagu River, surrounded by hills and offering peaceful water vistas.",
+
+    about:
+      "The Koilsagar Project and Reservoir is an impressive irrigation project situated amidst lush greenery and rolling hills. It serves as a popular weekend getaway for nature lovers and photography enthusiasts, known for its tranquil atmosphere and the nearby Koilkonda Fort.",
+
+    distance: "Approximately 45 km from Narayanapet",
+
+    highlights: [
+      "Picturesque embankment walks",
+      "Proximity to the historic Koilkonda Fort",
+      "Birdwatching and photography opportunities",
+    ],
+
+    bestTime: "August – October (post-monsoon for full water levels)",
+
+    travelTips: [
+      "Plan a combined trip to include a trek up to Koilkonda Fort.",
+      "Carry your own food as restaurant options are limited near the reservoir.",
+      "Evening visits offer the best sunset views over the water.",
+    ],
+
+    mapsQuery: "Koilsagar Project and Reservoir",
+  },
+  {
+    destination: "Narayanpet",
+    state: "telangana",
+    name: "Priyadarshini Jurala Project",
+    slug: "priyadarshini-jurala-project",
+    type: "must-visit",
+    image: juralaDam,
+
+    description:
+      "A massive hydroelectric project across the Krishna River, featuring a scenic dam, a deer park, and nearby temples.",
+
+    about:
+      "The Priyadarshini Jurala Project is the only hydroelectric project in Telangana that maintains water throughout the year. Beyond its industrial significance, it is a major tourist spot featuring a Deer Park, the Ramalayam temple in the colony, and stunning views when the crest gates are open.",
+
+    distance: "Approximately 60 km from Narayanapet",
+
+    highlights: [
+      "Walking trail across the one-kilometer-long dam",
+      "Deer Park located just 1.5 km from the reservoir",
+      "Nearby spiritual sites like the Parthasaradhi Temple",
+    ],
+
+    bestTime: "July – September (monsoon season)",
+
+    travelTips: [
+      "Check the water release schedule to see the gates open during peak monsoon.",
+      "Visit the nearby Chandraghad Fort for a dose of local history.",
+      "The site is best reached by private vehicle or cab from Gadwal or Mahabubnagar.",
+    ],
+
+    mapsQuery: "Priyadarshini Jurala Project",
+  },
+  {
+    destination: "Narayanpet",
+    state: "telangana",
+    name: "Chincholi Wildlife Sanctuary",
+    slug: "chincholi-wildlife-sanctuary",
+    type: "underrated",
+    image: chincholiSanctuary,
+
+    description:
+      "A vast dry deciduous forest sanctuary known for its rich biodiversity, trekking trails, and peaceful wilderness near the Telangana–Karnataka border.",
+
+    about:
+      "Chincholi Wildlife Sanctuary lies near the Telangana–Karnataka border and is one of the largest protected forest areas in the Deccan plateau region. The sanctuary features dry deciduous forests, rocky landscapes, and diverse wildlife including deer, foxes, wild boars, and numerous bird species. It is also known for scenic trekking trails and nearby attractions like Chandrampalli Dam.",
+
+    distance: "Approximately 70 km from Narayanapet",
+
+    highlights: [
+      "Large dry deciduous forest ecosystem",
+      "Rich biodiversity and birdwatching opportunities",
+      "Scenic trekking routes through Deccan forests",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit early morning for the best wildlife spotting opportunities.",
+      "Carry sufficient water and snacks for forest treks.",
+      "Check local forest guidelines before exploring deeper sanctuary areas.",
+    ],
+
+    mapsQuery: "Chincholi Wildlife Sanctuary",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Basar Gnana Saraswati Temple",
+    slug: "basar-gnana-saraswati-temple",
+    type: "must-visit",
+    image: basarTemple,
+
+    description:
+      "One of the few temples in India dedicated to Goddess Saraswati, located on the banks of the Godavari River.",
+
+    about:
+      "Basar Saraswati Temple is a major pilgrimage center where families perform the Aksharabhyasam ceremony for children beginning their education.",
+
+    distance: "35 km from Nizamabad",
+
+    highlights: [
+      "Sacred Saraswati temple",
+      "Aksharabhyasam ritual",
+      "Beautiful Godavari riverbanks",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit early morning to avoid crowds.",
+      "Participate in Aksharabhyasam ceremonies.",
+      "Explore the Godavari riverbanks nearby.",
+    ],
+
+    mapsQuery: "Basar Gnana Saraswati Temple",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Nizam Sagar Dam",
+    slug: "nizam-sagar-dam",
+    type: "must-visit",
+    image: nizamSagarDam,
+
+    description:
+      "A historic irrigation dam built across the Manjira River during the Nizam era.",
+
+    about:
+      "Nizam Sagar was one of the largest reservoirs in southern India when constructed and remains an important irrigation project.",
+
+    distance: "55 km from Nizamabad",
+
+    highlights: [
+      "Historic dam architecture",
+      "Scenic reservoir views",
+      "Sunset photography",
+    ],
+
+    bestTime: "August – February",
+
+    travelTips: [
+      "Visit during sunset for the best views.",
+      "Carry water and snacks.",
+      "Combine the visit with nearby villages.",
+    ],
+
+    mapsQuery: "Nizam Sagar Dam Telangana",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Dichpally Ramalayam",
+    slug: "dichpally-ramalayam",
+    type: "must-visit",
+    image: dichpallyTemple,
+
+    description:
+      "An ancient temple known for intricate stone carvings and historic architecture.",
+
+    about:
+      "Often called the 'Khajuraho of Nizamabad', the temple showcases detailed sculptures and classic temple design.",
+
+    distance: "10 km from Nizamabad",
+
+    highlights: [
+      "Intricate stone carvings",
+      "Historic temple architecture",
+      "Peaceful spiritual atmosphere",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Observe the carvings on temple pillars.",
+      "Visit early morning for peaceful surroundings.",
+      "Combine with Nizamabad town visit.",
+    ],
+
+    mapsQuery: "Dichpally Ramalayam Nizamabad",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Alisagar Reservoir and Gardens",
+    slug: "alisagar-reservoir-and-gardens",
+    type: "must-visit",
+    image: alisagarReservoir,
+
+    description:
+      "A scenic reservoir surrounded by gardens and greenery, popular for picnics.",
+
+    about:
+      "Built during the Nizam era, Alisagar offers peaceful lake views and landscaped gardens.",
+
+    distance: "13 km from Nizamabad",
+
+    highlights: ["Reservoir views", "Picnic gardens", "Peaceful nature spot"],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Ideal for evening visits.",
+      "Bring snacks for picnics.",
+      "Great photography location.",
+    ],
+
+    mapsQuery: "Alisagar Reservoir Nizamabad",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Pocharam Wildlife Sanctuary",
+    slug: "pocharam-wildlife-sanctuary",
+    type: "must-visit",
+    image: pocharamSanctuary,
+
+    description:
+      "A wildlife sanctuary featuring forests, a reservoir, and diverse bird species.",
+
+    about:
+      "Pocharam Sanctuary protects a wide range of wildlife including deer, wild boar, and migratory birds.",
+
+    distance: "45 km from Nizamabad",
+
+    highlights: [
+      "Wildlife sightings",
+      "Birdwatching opportunities",
+      "Forest trekking trails",
+    ],
+
+    bestTime: "November – March",
+
+    travelTips: [
+      "Visit early morning for wildlife spotting.",
+      "Carry binoculars for birdwatching.",
+      "Respect forest guidelines.",
+    ],
+
+    mapsQuery: "Pocharam Wildlife Sanctuary Telangana",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Ashok Sagar Lake",
+    slug: "ashok-sagar-lake",
+    type: "underrated",
+    image: ashokSagarLake,
+
+    description:
+      "A scenic lake featuring a large Saraswati statue on a hilltop island.",
+
+    about:
+      "Ashok Sagar is a peaceful tourist spot known for its scenic surroundings and beautiful lake views.",
+
+    distance: "7 km from Nizamabad",
+
+    highlights: ["Large Saraswati statue", "Lake views", "Sunset photography"],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Best visited during sunset.",
+      "Carry a camera for lake photography.",
+      "Explore nearby gardens.",
+    ],
+
+    mapsQuery: "Ashok Sagar Lake Nizamabad",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Nizamabad Fort",
+    slug: "nizamabad-fort",
+    type: "underrated",
+    image: nizamabadFort,
+
+    description: "Historic hilltop fort offering panoramic views of the city.",
+
+    about:
+      "The fort was originally built during the Rashtrakuta period and later renovated during the Nizam era.",
+
+    distance: "Within Nizamabad",
+
+    highlights: [
+      "Historic hilltop fort",
+      "City panoramic views",
+      "Historic architecture",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit early morning or evening.",
+      "Wear comfortable footwear.",
+      "Explore nearby temples.",
+    ],
+
+    mapsQuery: "Nizamabad Fort Telangana",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Bodhan Fort",
+    slug: "bodhan-fort",
+    type: "underrated",
+    image: bodhanFort,
+
+    description:
+      "An ancient fort connected to the Rashtrakuta and Chalukya dynasties.",
+
+    about:
+      "Bodhan Fort reflects the historic importance of Bodhan as a major cultural and trading center.",
+
+    distance: "30 km from Nizamabad",
+
+    highlights: [
+      "Historic fort ruins",
+      "Ancient architecture",
+      "Regional history",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Explore during daylight hours.",
+      "Carry water during exploration.",
+      "Combine with local Bodhan markets.",
+    ],
+
+    mapsQuery: "Bodhan Fort Telangana",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Sarangapur Hanuman Temple",
+    slug: "sarangapur-hanuman-temple",
+    type: "must-visit",
+    image: sarangapurTemple,
+
+    description:
+      "A famous Hanuman temple attracting devotees from across Telangana.",
+
+    about:
+      "Sarangapur Hanuman Temple is one of the most visited temples near Nizamabad and is known for its spiritual significance and peaceful surroundings.",
+
+    distance: "8 km from Nizamabad",
+
+    highlights: [
+      "Popular Hanuman temple",
+      "Peaceful spiritual environment",
+      "Large gatherings during festivals",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for a calm experience.",
+      "Festivals attract large crowds.",
+      "Combine with nearby Nizamabad attractions.",
+    ],
+
+    mapsQuery: "Sarangapur Hanuman Temple Nizamabad",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Kanteshwar Temple",
+    slug: "kanteshwar-temple",
+    type: "must-visit",
+    image: kanteshwarTemple,
+
+    description:
+      "An ancient Shiva temple believed to date back to the Satavahana period.",
+
+    about:
+      "Kanteshwar Temple is one of the oldest temples in the region and holds great religious significance for devotees during Maha Shivaratri.",
+
+    distance: "5 km from Nizamabad",
+
+    highlights: [
+      "Historic Shiva temple",
+      "Important Maha Shivaratri celebrations",
+      "Traditional temple architecture",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during Maha Shivaratri for special celebrations.",
+      "Morning visits offer a peaceful atmosphere.",
+      "Respect temple customs and traditions.",
+    ],
+
+    mapsQuery: "Kanteshwar Temple Nizamabad",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Ali Sagar Deer Park",
+    slug: "ali-sagar-deer-park",
+    type: "underrated",
+    image: aliSagarDeerPark,
+
+    description:
+      "A small wildlife park located near the Alisagar Reservoir featuring deer and natural greenery.",
+
+    about:
+      "The Deer Park is a peaceful recreational area where visitors can observe deer in a natural environment while enjoying the greenery surrounding the reservoir.",
+
+    distance: "14 km from Nizamabad",
+
+    highlights: [
+      "Deer park wildlife viewing",
+      "Green forest surroundings",
+      "Family-friendly picnic location",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit in the evening for cooler weather.",
+      "Great for family outings.",
+      "Combine with Alisagar Reservoir visit.",
+    ],
+
+    mapsQuery: "Ali Sagar Deer Park Nizamabad",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Pocharam Reservoir",
+    slug: "pocharam-reservoir",
+    type: "underrated",
+    image: pocharamReservoir,
+
+    description:
+      "A scenic reservoir located within Pocharam Wildlife Sanctuary, attracting migratory birds and nature lovers.",
+
+    about:
+      "Pocharam Reservoir enhances the biodiversity of the surrounding sanctuary and serves as a peaceful nature destination.",
+
+    distance: "45 km from Nizamabad",
+
+    highlights: [
+      "Scenic lake views",
+      "Migratory bird sightings",
+      "Peaceful nature environment",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Carry binoculars for birdwatching.",
+      "Visit early morning for wildlife sightings.",
+      "Follow sanctuary rules.",
+    ],
+
+    mapsQuery: "Pocharam Reservoir Telangana",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Janampet Temple Ruins",
+    slug: "janampet-temple-ruins",
+    type: "underrated",
+    image: janampetTempleRuins,
+
+    description:
+      "Ancient temple ruins showcasing historic architecture and regional heritage.",
+
+    about:
+      "These ruins reflect the historical presence of early temple architecture in the region and attract history enthusiasts.",
+
+    distance: "20 km from Nizamabad",
+
+    highlights: [
+      "Ancient temple ruins",
+      "Historic regional heritage",
+      "Quiet exploration site",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during daylight hours.",
+      "Wear comfortable footwear.",
+      "Great for history and photography enthusiasts.",
+    ],
+
+    mapsQuery: "Janampet Temple Ruins Telangana",
+  },
+  {
+    destination: "Nizamabad",
+    state: "telangana",
+    name: "Bodhan Sugar Factory Area",
+    slug: "bodhan-sugar-factory",
+    type: "underrated",
+    image: bodhanSugarFactory,
+
+    description:
+      "A historic industrial landmark associated with Telangana’s sugar production industry.",
+
+    about:
+      "The Bodhan Sugar Factory once played a major role in the regional economy and reflects the industrial heritage of northern Telangana.",
+
+    distance: "30 km from Nizamabad",
+
+    highlights: [
+      "Historic industrial site",
+      "Important regional economic landmark",
+      "Historic Bodhan town surroundings",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Combine with Bodhan Fort visit.",
+      "Explore nearby local markets.",
+      "Great for history enthusiasts.",
+    ],
+
+    mapsQuery: "Bodhan Sugar Factory Telangana",
   },
 ];

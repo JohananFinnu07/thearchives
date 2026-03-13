@@ -7,7 +7,7 @@ import gadwalHero from "@/assets/TG/Destinations/gadwal.jpg";
 import badhradriHero from "@/assets/TG/Destinations/badhradri.jpg";
 import bupalapallyHero from "@/assets/TG/Destinations/bhupalapally.jpg";
 import sircillaHero from "@/assets/TG/Destinations/sirisilla.jpg";
-
+import naraynaHero from "@/assets/TG/Destinations/narayanapet.jpg";
 /* =================== WARANGAL ======================== */
 import warangalDurriesHero from "@/assets/TG/Products/WDH.jpg";
 import warangalDurriesMaking from "@/assets/TG/Products/WDM.jpg";
@@ -165,6 +165,68 @@ import earthyClayTexture from "@/assets/TG/Products/JBTFF.jpg";
 import mahuaFlowers from "@/assets/TG/Products/JBMFH.jpg";
 import mahuaDrying from "@/assets/TG/Products/JBMFM.jpg";
 import mahuaSyrup from "@/assets/TG/Products/JBMFF.jpg";
+
+/* =================== SIRCILLA ======================== */
+import sircillaHandloomSaree from "@/assets/TG/Products/RSHSH.jpg";
+import sareeWeaving from "@/assets/TG/Products/RSHSM.jpg";
+import sareeFabricTexture from "@/assets/TG/Products/RSHSF.jpg";
+
+import sircillaPowerloomFabric from "@/assets/TG/Products/RSPFH.jpg";
+import powerloomMachines from "@/assets/TG/Products/RSPFM.jpg";
+import fabricRollTexture from "@/assets/TG/Products/RSPFF.jpg";
+
+import cottonYarn from "@/assets/TG/Products/RSCYH.jpg";
+import yarnProcessing from "@/assets/TG/Products/RSCYM.jpg";
+import yarnTexture from "@/assets/TG/Products/RSCYF.jpg";
+
+import sircillaMatchboxSaree from "@/assets/TG/Products/RSMSH.jpg";
+import weavingProcessSircilla from "@/assets/TG/Products/RSMBSM.jpg";
+import silkTextureFine from "@/assets/TG/Products/RSMSF.jpg";
+
+import nanoSilverFabric from "@/assets/TG/Products/RSNFH.jpg";
+import textileInnovation from "@/assets/TG/Products/RSNFM.jpg";
+import fabricSheen from "@/assets/TG/Products/RSNFF.jpg";
+
+import organicCottonBoxers from "@/assets/TG/Products/RSOCBH.jpg";
+import garmentStitchingUnit from "@/assets/TG/Products/RSOCBM.jpg";
+import cottonFabricTexture from "@/assets/TG/Products/RSOCBF.jpg";
+
+import bathukammaSaree from "@/assets/TG/Products/RSBSH.jpg";
+import powerloomWeaving from "@/assets/TG/Products/RSBSM.jpg";
+import colorfulSareeTexture from "@/assets/TG/Products/RSBSF.jpg";
+
+import rajannaSiripattu from "@/assets/TG/Products/RSRPH.jpg";
+import siripattuWeaving from "@/assets/TG/Products/RSRPM.jpg";
+import sareePatternTexture from "@/assets/TG/Products/RSRPF.jpg";
+
+import gongadiWool from "@/assets/TG/Products/RSGWH.jpg";
+import woolWeavingProcess from "@/assets/TG/Products/RSGWM.jpg";
+import gongadiTexture from "@/assets/TG/Products/RSGWF.jpg";
+
+import naturalDyeFabric from "@/assets/TG/Products/RSNDFH.jpg";
+import dyeingProcess from "@/assets/TG/Products/RSNDFM.jpg";
+import dyedCottonTexture from "@/assets/TG/Products/RSNDFF.jpg";
+
+import loomShuttle from "@/assets/TG/Products/RSLSH.jpg";
+import shuttleCarving from "@/assets/TG/Products/RSLSM.jpg";
+import woodenToolTexture from "@/assets/TG/Products/RSLSF.jpg";
+
+import templeBrassLamp from "@/assets/TG/Products/RSBLH.jpg";
+import brassCasting from "@/assets/TG/Products/RSBLM.jpg";
+import brassTexture from "@/assets/TG/Products/RSBLF.jpg";
+
+import cottonGamcha from "@/assets/TG/Products/RSCGH.jpg";
+import gamchaWeaving from "@/assets/TG/Products/RSCGM.jpg";
+import cottonPatternTexture from "@/assets/TG/Products/RSGGF.jpg";
+
+/* =================== NARAYANPET ======================== */
+import narayanpetSilkSaree from "@/assets/TG/Products/NSSH.jpg";
+import narayanpetSilkWeaving from "@/assets/TG/Products/NSSM.jpg";
+import narayanpetSilkBorder from "@/assets/TG/Products/NSSF.jpg";
+
+import narayanpetShawl from "@/assets/TG/Products/NSH.jpg";
+import shawlWeavingNarayanpet from "@/assets/TG/Products/NSM.jpg";
+import shawlTextureNarayanpet from "@/assets/TG/Products/NSF.jpg";
 
 export const telanganaDestinations: Destination[] = [
   {
@@ -1268,7 +1330,414 @@ export const telanganaDestinations: Destination[] = [
       "Rajanna Sircilla district is a major textile hub of Telangana, often referred to as the 'Textile Town'. Thousands of weavers here produce traditional fabrics and garments on both handlooms and power looms. Alongside its industrial identity, the district is also home to the historic Vemulawada Rajarajeshwara Temple, one of the most important pilgrimage centers in the region.",
 
     culture:
-      "Weaving traditions define everyday life in Sircilla, where generations of families have worked in the textile industry. Festivals and temple rituals at Vemulawada bring together pilgrims and local communities, while the rhythms of loom weaving remain a defining sound of the town.",
+      "Sircilla stands as the quintessential textile town of Telangana, where a rich cultural tapestry is woven by the industrious Padmashali community. Its identity is inseparable from the maggam illu weaving houses that function as living museums of craftsmanship, producing everything from the delicate matchbox sarees to vibrant Bathukamma silks. This industrious spirit is complemented by a profound spiritual atmosphere, anchored by landmarks like the Sri Harihara Ayyappa Swamy Temple. Cultural life is punctuated by the rhythmic celebrations of Bathukamma, where ecological and religious devotion converge through floral artistry. From the piquant flavors of local Gongura Pachadi to the collective pride in its handloom heritage, Sircilla represents a resilient blend of traditional artistry and modern industrial energy, deeply rooted in the heart of rural Telangana.",
+
+    products: [
+      {
+        name: "Sircilla Handloom Sarees",
+        type: "famous",
+
+        image: sircillaHandloomSaree,
+        makingImage: sareeWeaving,
+        flavorImage: sareeFabricTexture,
+
+        description:
+          "Traditional cotton sarees woven by skilled artisans in the handloom clusters of Sircilla.",
+
+        significance:
+          "Rajanna Sircilla is one of Telangana’s largest weaving hubs. Generations of weaver families have produced handloom sarees known for their comfort, durability, and traditional designs.",
+
+        makingProcess:
+          "Cotton yarn is dyed and arranged on handlooms where artisans carefully weave the fabric using traditional shuttle techniques. The sarees are finished and pressed before reaching markets.",
+
+        uses: [
+          "Traditional daily wear sarees",
+          "Cultural attire",
+          "Handloom fashion collections",
+          "Textile markets across Telangana",
+        ],
+      },
+      {
+        name: "Sircilla Powerloom Fabrics",
+        type: "famous",
+
+        image: sircillaPowerloomFabric,
+        makingImage: powerloomMachines,
+        flavorImage: fabricRollTexture,
+
+        description:
+          "Mass-produced cotton fabrics woven on powerlooms in the textile clusters of Sircilla.",
+
+        significance:
+          "Sircilla has thousands of powerlooms that supply fabrics to garment manufacturers across India. The town has become one of the major textile production centers in Telangana.",
+
+        makingProcess:
+          "Processed cotton yarn is loaded into automated powerlooms where large quantities of fabric are woven quickly. The fabric is then rolled, dyed, and shipped to garment factories.",
+
+        uses: [
+          "Garment manufacturing",
+          "Uniform fabrics",
+          "Retail textile markets",
+          "Industrial textile supply",
+        ],
+      },
+      {
+        name: "Cotton Yarn & Textile Threads",
+        type: "famous",
+
+        image: cottonYarn,
+        makingImage: yarnProcessing,
+        flavorImage: yarnTexture,
+
+        description:
+          "Processed cotton yarn used as the raw material for the weaving industry in Sircilla.",
+
+        significance:
+          "The textile ecosystem in Rajanna Sircilla depends heavily on cotton yarn supplied to thousands of looms operating in the district.",
+
+        makingProcess:
+          "Raw cotton is spun into yarn in spinning mills. The yarn is dyed, wound into cones, and supplied to handlooms and powerlooms for weaving.",
+
+        uses: [
+          "Handloom weaving",
+          "Powerloom textile production",
+          "Garment manufacturing",
+          "Textile industry supply chain",
+        ],
+      },
+      {
+        name: "Sircilla Matchbox Saree",
+        type: "famous",
+
+        image: sircillaMatchboxSaree,
+        makingImage: weavingProcessSircilla,
+        flavorImage: silkTextureFine,
+
+        description:
+          "A marvel of handloom engineering—these superfine silk sarees are so delicate they can be folded to fit inside a matchbox.",
+
+        significance:
+          "Sircilla is widely known as the 'Textile Town of Telangana'. The matchbox saree showcases the extraordinary craftsmanship of local weavers. This textile innovation gained global recognition when master weaver Veldi Hari Prasad presented one to members of the British royal family.",
+
+        makingProcess:
+          "Artisans use ultra-fine silk yarn and traditional handlooms to weave an extremely thin yet durable fabric. The weaving process demands exceptional precision and can take nearly a month to complete a single saree.",
+
+        uses: [
+          "Luxury ethnic fashion",
+          "Traditional cultural gifts",
+          "Museum and heritage showcases",
+          "Special occasion attire",
+        ],
+      },
+      {
+        name: "Nano-Silver Coated Fabrics",
+        type: "famous",
+
+        image: nanoSilverFabric,
+        makingImage: textileInnovation,
+        flavorImage: fabricSheen,
+
+        description:
+          "Innovative anti-bacterial textiles produced using nano-silver technology integrated with Sircilla's textile manufacturing.",
+
+        significance:
+          "Sircilla is not only known for traditional weaving but also for textile innovation. Nano-silver coated fabrics represent the district's evolution into technical textiles used in healthcare, sportswear, and advanced garments.",
+
+        makingProcess:
+          "Finished cotton fabrics are treated with microscopic silver nanoparticles during the textile finishing stage. This coating forms an anti-microbial layer that resists odor and bacteria even after multiple washes.",
+
+        uses: [
+          "Medical uniforms and surgical textiles",
+          "Sportswear and performance clothing",
+          "Technical and industrial fabrics",
+          "Modern lifestyle apparel",
+        ],
+      },
+      {
+        name: "Organic Cotton Boxers",
+        type: "famous",
+
+        image: organicCottonBoxers,
+        makingImage: garmentStitchingUnit,
+        flavorImage: cottonFabricTexture,
+
+        description:
+          "Eco-friendly boxer shorts manufactured using organic cotton in the garment clusters of Sircilla.",
+
+        significance:
+          "Sircilla’s textile industry has expanded into global garment manufacturing. Organic cotton boxers produced here are exported internationally, especially to markets such as the United States.",
+
+        makingProcess:
+          "Organic cotton fabric is cut, stitched, and finished in modern garment units. Strict quality standards ensure durability and sustainability.",
+
+        uses: [
+          "Sustainable fashion",
+          "Daily wear garments",
+          "International apparel export",
+          "Eco-friendly clothing markets",
+        ],
+      },
+      {
+        name: "Bathukamma Sarees",
+        type: "famous",
+
+        image: bathukammaSaree,
+        makingImage: powerloomWeaving,
+        flavorImage: colorfulSareeTexture,
+
+        description:
+          "Vibrant sarees specially produced for the Bathukamma festival celebrations across Telangana.",
+
+        significance:
+          "These sarees are widely distributed during the Bathukamma festival, one of Telangana's most important cultural celebrations. Sircilla powerlooms play a key role in producing these colorful garments.",
+
+        makingProcess:
+          "Cotton yarn is dyed in bright colors and woven on powerlooms to produce large quantities of festival sarees.",
+
+        uses: [
+          "Bathukamma festival attire",
+          "Cultural celebrations",
+          "Traditional Telangana clothing",
+          "State distribution programs",
+        ],
+      },
+      {
+        name: "Rajanna Siripattu Sarees",
+        type: "famous",
+
+        image: rajannaSiripattu,
+        makingImage: siripattuWeaving,
+        flavorImage: sareePatternTexture,
+
+        description:
+          "Durable sarees woven in Sircilla that blend traditional motifs with semi-powerloom weaving techniques.",
+
+        significance:
+          "Rajanna Siripattu sarees represent the district’s blend of heritage weaving and modern production methods, making them popular in regional textile markets.",
+
+        makingProcess:
+          "Cotton yarn is woven using semi-powerloom technology, allowing higher durability while maintaining traditional patterns.",
+
+        uses: [
+          "Traditional daily wear",
+          "Regional textile markets",
+          "Affordable cultural sarees",
+          "Domestic clothing trade",
+        ],
+      },
+      {
+        name: "Gongadi Wool",
+        type: "underrated",
+
+        image: gongadiWool,
+        makingImage: woolWeavingProcess,
+        flavorImage: gongadiTexture,
+
+        description:
+          "A thick, handwoven black wool blanket traditionally used by shepherd communities across the Deccan region.",
+
+        significance:
+          "The Gongadi blanket has been a symbol of Telangana’s pastoral culture for centuries. Shepherd communities such as the Kuruma and Golla used these durable wool blankets for protection against cold nights in open fields.",
+
+        makingProcess:
+          "Raw sheep wool is cleaned, spun into coarse yarn, and woven on simple looms to create thick blankets. The natural black or dark brown color of the wool gives Gongadi its distinctive appearance.",
+
+        uses: [
+          "Traditional shepherd blanket",
+          "Winter bedding in rural areas",
+          "Pastoral community clothing",
+          "Cultural and heritage textile",
+        ],
+      },
+      {
+        name: "Natural Dye Handloom Fabrics",
+        type: "underrated",
+
+        image: naturalDyeFabric,
+        makingImage: dyeingProcess,
+        flavorImage: dyedCottonTexture,
+
+        description:
+          "Handloom fabrics dyed using natural plant-based colors such as indigo, turmeric, and madder.",
+
+        significance:
+          "Although powerlooms dominate the Sircilla textile industry today, some weavers continue the older tradition of natural dyeing. These fabrics reflect sustainable textile practices once common across Telangana.",
+
+        makingProcess:
+          "Cotton yarn is soaked in natural dyes derived from plants and minerals. The dyed threads are then woven on handlooms into fabrics with earthy tones and subtle textures.",
+
+        uses: [
+          "Eco-friendly fashion textiles",
+          "Handloom clothing",
+          "Sustainable design collections",
+          "Traditional artisan products",
+        ],
+      },
+      {
+        name: "Traditional Loom Shuttles (Magga Tools)",
+        type: "underrated",
+
+        image: loomShuttle,
+        makingImage: shuttleCarving,
+        flavorImage: woodenToolTexture,
+
+        description:
+          "Hand-carved wooden shuttles used by weavers to pass thread through handlooms.",
+
+        significance:
+          "Before the rise of automated looms, every weaving household in Sircilla depended on handcrafted magga tools. These simple yet essential instruments remain symbols of the district’s weaving heritage.",
+
+        makingProcess:
+          "Local carpenters carve hardwood into aerodynamic shuttle shapes and polish them to ensure smooth movement across the loom threads.",
+
+        uses: [
+          "Handloom weaving",
+          "Textile craft demonstrations",
+          "Heritage craft displays",
+          "Museum and educational exhibits",
+        ],
+      },
+      {
+        name: "Vemulawada Brass Temple Lamps",
+        type: "underrated",
+
+        image: templeBrassLamp,
+        makingImage: brassCasting,
+        flavorImage: brassTexture,
+
+        description:
+          "Traditional brass oil lamps used in temple rituals and household worship.",
+
+        significance:
+          "Pilgrims visiting Vemulawada often purchase brass lamps as sacred souvenirs. These lamps symbolize light and devotion and are widely used in temple rituals across Telangana.",
+
+        makingProcess:
+          "Molten brass is poured into molds to create lamp shapes. The pieces are then polished and engraved before being sold in temple markets.",
+
+        uses: [
+          "Temple rituals",
+          "Household worship",
+          "Spiritual gifting",
+          "Decorative religious artifacts",
+        ],
+      },
+      {
+        name: "Sircilla Cotton Gamchas",
+        type: "underrated",
+
+        image: cottonGamcha,
+        makingImage: gamchaWeaving,
+        flavorImage: cottonPatternTexture,
+
+        description:
+          "Lightweight cotton cloths traditionally used as towels or scarves in rural Telangana.",
+
+        significance:
+          "While Sircilla is famous for towels and sarees, small woven cloths like gamchas remain everyday essentials in villages and are still produced by local weaving units.",
+
+        makingProcess:
+          "Cotton yarn is woven on small looms to produce thin striped cloths that are later cut and finished for daily use.",
+
+        uses: [
+          "Traditional cotton towel",
+          "Head scarf or shoulder cloth",
+          "Agricultural work accessory",
+          "Everyday household textile",
+        ],
+      },
+    ],
+  },
+  {
+    id: "narayanpet",
+    slug: "narayanpet",
+    state: "telangana",
+    name: "Narayanpet",
+    tagline: "Land of the Famous Narayanpet Handloom Sarees",
+    image: naraynaHero,
+    mapsQuery: "Narayanpet Telangana",
+    heroDescription:
+      "Narayanpet is celebrated for its vibrant handloom sarees, weaving traditions, and cultural heritage rooted in centuries-old craftsmanship.",
+    elevation: "381 m",
+    bestTime: "October – February",
+    temperature: "20°C – 38°C",
+    about:
+      "Located in southern Telangana near the Karnataka border, Narayanpet is widely known for its traditional Narayanpet handloom sarees. The town has a long weaving history dating back to the Maratha period, and its textiles are prized for their durability, simple elegance, and distinctive borders.",
+    culture:
+      "Narayanpet represents a remarkable cultural crossroads where the legacies of the Maratha Empire, Telangana, and Karnataka converge. This fusion is most visible in the 17th-century handloom tradition, initiated by weavers who arrived with Chhatrapati Shivaji Maharaj's army. These artisans perfected the iconic Narayanpet saree, now a GI-tagged masterpiece known for its interlocked-weft technique and temple-style gopuram motifs. The town's religious identity is equally vibrant, earning it a reputation as a temple town centered around sacred sites like the Sri Ksheera Lingeswara Temple. Festivals such as Bathukamma and Bonalu are celebrated alongside rituals reflecting Marathi influence, creating a unique social fabric. As a hub for the Padma-shali and Devanga communities, Narayanpet’s heritage remains a living, breathing economy where ancient craftsmanship and multi-linguistic traditions define the daily rhythm of life on the border.",
+    products: [
+      {
+        name: "Narayanpet Silk Sarees",
+        type: "famous",
+
+        image: narayanpetSilkSaree,
+        makingImage: narayanpetSilkWeaving,
+        flavorImage: narayanpetSilkBorder,
+
+        description:
+          "Elegant silk sarees featuring vibrant colors, simple zari borders, and traditional motifs characteristic of Narayanpet weaving.",
+
+        significance:
+          "These silk sarees represent the premium segment of Narayanpet’s textile tradition and are often worn during festivals, weddings, and special ceremonies.",
+
+        makingProcess:
+          "Silk yarn is dyed in vibrant colors and woven on handlooms with contrasting zari borders and patterned pallus, reflecting traditional weaving techniques passed down through generations.",
+
+        uses: [
+          "Wedding and festive attire",
+          "Traditional ceremonial wear",
+          "Handloom heritage garment",
+          "Cultural textile of Telangana",
+        ],
+      },
+      {
+        name: "Narayanpet Handloom Shawls",
+        type: "underrated",
+
+        image: narayanpetShawl,
+        makingImage: shawlWeavingNarayanpet,
+        flavorImage: shawlTextureNarayanpet,
+
+        description:
+          "Lightweight handwoven shawls crafted using the same weaving techniques as Narayanpet sarees.",
+
+        significance:
+          "Though overshadowed by the region’s famous sarees, these shawls showcase the versatility of Narayanpet’s weaving tradition and are valued as practical and elegant textiles.",
+
+        makingProcess:
+          "Cotton yarn is dyed and woven into narrow fabrics on handlooms, incorporating simple borders and traditional patterns similar to those found in Narayanpet sarees.",
+
+        uses: [
+          "Light shoulder wrap",
+          "Traditional winter accessory",
+          "Cultural textile souvenir",
+          "Handloom fashion accessory",
+        ],
+      },
+    ],
+  },
+  {
+    id: "nizamabad",
+    slug: "nizamabad",
+    state: "telangana",
+    name: "Nizamabad",
+    tagline: "Turmeric Capital of Telangana",
+    image: "/images/destinations/nizamabad.jpg",
+    mapsQuery: "Nizamabad Telangana",
+
+    heroDescription:
+      "Nizamabad is known for its vast turmeric fields, historic temples, and scenic reservoirs that reflect the agricultural heart of northern Telangana.",
+
+    elevation: "384 m",
+
+    bestTime: "October – February",
+
+    temperature: "18°C – 36°C",
+
+    about:
+      "Situated in northern Telangana, Nizamabad is a vibrant district known for its fertile agricultural lands and large-scale turmeric cultivation. The region also features historic temples, ancient forts, and scenic water bodies like Nizam Sagar, making it a blend of culture, agriculture, and heritage.",
+
+    culture:
+      "Agriculture strongly shapes the lifestyle of Nizamabad, with turmeric, rice, and maize being major crops. The region’s festivals, markets, and cuisine reflect the agrarian traditions and rich cultural heritage of Telangana.",
 
     products: [],
   },
@@ -1289,26 +1758,6 @@ export const telanganaDestinations: Destination[] = [
       "Situated along the Manair River, Karimnagar is known for Elgandal Fort, rural farming landscapes, and silver filigree artistry.",
     culture:
       "The district blends agrarian traditions with skilled craftsmanship, especially intricate silver filigree work passed through generations.",
-    products: [],
-  },
-
-  {
-    id: "nizamabad",
-    slug: "nizamabad",
-    state: "telangana",
-    name: "Nizamabad",
-    tagline: "Turmeric Capital of Telangana",
-    image: "/images/destinations/nizamabad.jpg",
-    mapsQuery: "",
-    heroDescription:
-      "Nizamabad is renowned for its turmeric farms, historic forts, and lush agricultural fields that define its identity.",
-    elevation: "384 m",
-    bestTime: "October – February",
-    temperature: "18°C – 37°C",
-    about:
-      "The district thrives on agriculture, especially turmeric cultivation. It also houses Nizamabad Fort and scenic lakes that attract visitors.",
-    culture:
-      "Agriculture shapes daily life here, with turmeric and rice farming central to both economy and tradition.",
     products: [],
   },
 ];
