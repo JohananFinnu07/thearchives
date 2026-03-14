@@ -97,13 +97,16 @@ const StateHeader = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      {/* Mobile Menu */}
+      <AnimatePresence mode="wait">
         {isMenuOpen && (
           <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            className="md:hidden bg-white border-t"
+            key="mobile-menu"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-white border-t absolute left-0 right-0"
           >
             <nav className="flex flex-col p-4 gap-3">
               {navLinks.map((link) => (
@@ -111,6 +114,7 @@ const StateHeader = () => {
                   key={link.name}
                   to={link.global ? link.href : prefix(link.href)}
                   onClick={() => setIsMenuOpen(false)}
+                  className="py-2"
                 >
                   {link.name}
                 </Link>

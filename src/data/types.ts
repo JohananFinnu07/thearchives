@@ -44,7 +44,7 @@ export interface Recipe {
   steps: string[];
 
   story?: string;
-  season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal";
+  season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal" | "Spring";
   buyLink?: string;
 }
 

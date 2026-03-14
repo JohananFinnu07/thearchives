@@ -10,10 +10,13 @@ import {
 } from "lucide-react";
 import Header from "@/components/StateHeader";
 import Footer from "@/components/Footer";
+
 import { getDestinationBySlug } from "@/data/destinations";
+
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/slugify";
 import { stateConfig } from "@/data/stateConfig";
+
 const ProductDetailPage = () => {
   const { state, slug, productSlug } = useParams<{
     state: string;
