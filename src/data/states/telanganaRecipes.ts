@@ -42,7 +42,37 @@ import chiliPickle from "@/assets/TG/Recipes/JBCP.jpg";
 /* ============== SIRCILLA ================== */
 import jonnaGatka from "@/assets/TG/Recipes/RSJG.jpg";
 
-/* ==============  ================== */
+/* ============== NIZAMABAD ================== */
+import pesaraGarelu from "@/assets/TG/Recipes/NPG.jpg";
+import malidalu from "@/assets/TG/Recipes/NML.jpg";
+
+/* ============== RANGAREDDY ================== */
+import bellamGavvalu from "@/assets/TG/Recipes/RBG.jpg";
+
+/* ============== KARIMNAGAR ================== */
+import karivepakuRice from "@/assets/TG/Recipes/KCLR.jpg";
+import jilebi from "@/assets/TG/Recipes/KJ.jpg";
+import bebbariPappuGarelu from "@/assets/TG/Recipes/KBPG.jpg";
+import sattuPindi from "@/assets/TG/Recipes/KESP.jpg";
+
+/* ============== SANGAREDDY ================== */
+import bellamParamannam from "@/assets/TG/Recipes/SBP.jpg";
+import gingerPachadi from "@/assets/TG/Recipes/SGP.jpg";
+import sorakayaCurry from "@/assets/TG/Recipes/SSC.jpg";
+import makkaGarelu from "@/assets/TG/Recipes/SMG.jpg";
+
+/* ============== MEDAK ================== */
+import pesaraPappuCharu from "@/assets/TG/Recipes/MPC.jpg";
+
+/* ============== NALGONDA ================== */
+import mosambiThokku from "@/assets/TG/Recipes/NSLP.jpg";
+import gummadikayaBellamVadiyalu from "@/assets/TG/Recipes/NGV.jpg";
+
+/* ============== BHUVANAGIRI ================== */
+import yadadriPulihora from "@/assets/TG/Recipes/BP.jpg";
+import vadaPappuChalimidi from "@/assets/TG/Recipes/BCVP.jpg";
+import natuKodiIguru from "@/assets/TG/Recipes/BNC.jpg";
+import bhuvanagiriPoornalu from "@/assets/TG/Recipes/BPOO.jpg";
 
 export const telanganaRecipes: Recipe[] = [
   {
@@ -1336,6 +1366,906 @@ export const telanganaRecipes: Recipe[] = [
       "Jonna Ambali has been a staple drink among farmers and tribal communities in Adilabad for generations. Made from locally grown sorghum, it provides hydration, energy, and natural probiotics, making it ideal for the region’s hot climate.",
 
     season: "Summer",
+    buyLink: "",
+  },
+  {
+    name: "Sajja Rotte (Pearl Millet Flatbread)",
+    state: "telangana",
+    id: "nizamabad",
+    destination: "Nizamabad",
+
+    description:
+      "A hearty, gluten-free flatbread made from pearl millet, providing essential warmth and energy.",
+
+    image: sajjaRotte,
+
+    prepTime: "20 mins",
+    cookTime: "15 mins",
+    servings: "Serves 2",
+    difficulty: "Hard",
+
+    ingredients: [
+      "2 cups Pearl Millet flour (Sajja pindi)",
+      "1 cup Hot water",
+      "A pinch of salt",
+      "1 tsp Sesame seeds (optional)",
+    ],
+
+    steps: [
+      "Sieve the flour into a wide mixing bowl and add salt.",
+      "Gradually add hot water and knead into a soft, pliable dough while it's still warm.",
+      "Take a small ball of dough and pat it into a thin circle using your palms on a dusted surface (the tapping method).",
+      "Optional: sprinkle sesame seeds on top while patting.",
+      "Place the rotte on a hot iron tawa.",
+      "Apply a little water on the top surface with a cloth and cook both sides until brown spots appear.",
+    ],
+
+    story:
+      "Sajja Rotte is the strength food of Gadwal's farming community. Tapping the rotte by hand is a traditional skill passed down through generations. It is famously paired with Jonna Ambali or spicy garlic chutneys.",
+
+    season: "Winter",
+    buyLink: "",
+  },
+  {
+    name: "Pesara Garelu",
+    state: "telangana",
+    id: "nizamabad",
+    destination: "Nizamabad",
+
+    description:
+      "Crispy fritters made from soaked green gram batter, a popular breakfast and festive snack in Telangana households.",
+
+    image: pesaraGarelu,
+
+    prepTime: "2 hrs (soaking)",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup Green gram (Moong dal)",
+      "2 Green chilies (finely chopped)",
+      "1 Small onion (finely chopped)",
+      "1 tsp Ginger (grated)",
+      "Salt to taste",
+      "Oil for deep frying",
+      "Curry leaves (optional)",
+    ],
+
+    steps: [
+      "Soak green gram for about 2 hours and drain the water.",
+      "Grind it into a thick batter without adding much water.",
+      "Add chopped onions, green chilies, ginger, curry leaves, and salt.",
+      "Heat oil in a deep pan.",
+      "Take small portions of batter, shape into discs, and gently place in hot oil.",
+      "Fry until golden brown and crispy.",
+      "Serve hot with coconut chutney or ginger chutney.",
+    ],
+
+    story:
+      "Pesara Garelu is a beloved snack across Telangana, often served during festivals, family gatherings, and weekend breakfasts. Its crisp exterior and soft interior make it a comforting traditional dish enjoyed with chutneys.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Malidalu (Zero-Waste Sweet)",
+    state: "telangana",
+    id: "nizamabad",
+    destination: "Nizamabad",
+
+    description:
+      "A traditional Telangana sweet made by transforming leftover rotis or jonna rotte into delicious jaggery laddus.",
+
+    image: malidalu,
+
+    prepTime: "10 mins",
+    cookTime: "10 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "3–4 leftover chapatis or jonna rotte",
+      "1/2 cup Jaggery (grated)",
+      "2 tbsp Ghee",
+      "1/2 tsp Fennel seeds",
+      "2 tbsp Grated coconut (optional)",
+      "1 tbsp Cashews (optional)",
+    ],
+
+    steps: [
+      "Tear leftover chapatis or jonna rotte into small pieces.",
+      "Pound or grind them into coarse crumbs.",
+      "Heat ghee in a pan and melt jaggery until slightly sticky.",
+      "Add fennel seeds and optional coconut or nuts.",
+      "Mix the roti crumbs into the jaggery mixture.",
+      "While warm, shape the mixture into small laddus.",
+      "Allow them to cool and store in an airtight container.",
+    ],
+
+    story:
+      "Malidalu reflects the ingenuity of Telangana kitchens, where leftover food is never wasted. By combining leftover rotis with jaggery and ghee, families create energy-rich sweets that stay fresh for days and are perfect for travel or farm work.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Bellam Gavvalu",
+    state: "telangana",
+    id: "rangareddy",
+    destination: "Rangareddy",
+
+    description:
+      "A crunchy shell-shaped sweet coated in jaggery syrup, popular during festivals and celebrations.",
+
+    image: bellamGavvalu,
+
+    prepTime: "20 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup All-purpose flour",
+      "2 tbsp Semolina",
+      "1/2 cup Jaggery",
+      "2 tbsp Grated coconut",
+      "Cardamom powder",
+      "Oil for frying",
+    ],
+
+    steps: [
+      "Mix flour and semolina to form a soft dough.",
+      "Shape small pieces into shell-like patterns.",
+      "Deep fry until golden and crispy.",
+      "Prepare jaggery syrup with cardamom.",
+      "Coat the fried shells in the syrup.",
+      "Allow them to cool and harden.",
+    ],
+
+    story:
+      "Bellam Gavvalu is a beloved festive sweet in Telangana homes. Made using jaggery instead of refined sugar, it reflects the traditional flavors of the countryside.",
+
+    season: "Seasonal",
+    buyLink: "",
+  },
+  {
+    name: "Sarvapindi",
+    state: "telangana",
+    id: "rangareddy",
+    destination: "Rangareddy",
+
+    description:
+      "A traditional Telangana rice flour pancake mixed with peanuts, onions, and spices, slowly roasted in an iron pan until crisp and golden.",
+
+    image: sarvapindi,
+
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Rice flour",
+      "1/4 cup Peanuts (crushed)",
+      "1 Onion (finely chopped)",
+      "2 Green chillies (chopped)",
+      "1 tbsp Sesame seeds",
+      "Curry leaves (chopped)",
+      "Salt to taste",
+      "2 tbsp Oil",
+    ],
+
+    steps: [
+      "In a bowl, mix rice flour, crushed peanuts, chopped onions, green chillies, sesame seeds, curry leaves, and salt.",
+      "Add a little water to form a thick dough-like mixture.",
+      "Heat an iron pan and grease lightly with oil.",
+      "Spread the dough evenly on the pan using your fingers, making small holes across the surface.",
+      "Drizzle oil into the holes and along the edges.",
+      "Cook on low flame until the bottom becomes crisp and golden.",
+      "Flip carefully and cook the other side until fully cooked.",
+      "Serve hot with chutney or pickle.",
+    ],
+
+    story:
+      "Sarvapindi is a beloved homemade snack in Telangana households, especially in the Warangal region. Traditionally cooked in heavy iron pans, it was often prepared as an evening meal for farmers returning from fields. The dish reflects the region's simple, hearty cooking style using pantry staples.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Jonna Rotte",
+    state: "telangana",
+    id: "rangareddy",
+    destination: "Rangareddy",
+
+    description:
+      "A rustic sorghum flatbread that has been a staple food of Telangana farmers for generations, often served with spicy chutneys or curries.",
+
+    image: jonnaRotte,
+
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup Sorghum flour (Jowar flour)",
+      "Warm water as needed",
+      "Salt to taste",
+      "1 tsp Oil or ghee (optional)",
+    ],
+
+    steps: [
+      "In a bowl, mix sorghum flour and salt.",
+      "Slowly add warm water and knead into a soft dough.",
+      "Take a small ball of dough and flatten it gently using your hands.",
+      "Pat it into a thin circular roti on a flat surface.",
+      "Heat a tawa or iron griddle and place the roti carefully.",
+      "Cook both sides until light brown spots appear.",
+      "Apply a little ghee if desired and serve hot.",
+    ],
+
+    story:
+      "Jonna Rotte is deeply connected to Telangana's dryland farming culture. Sorghum grows well in the semi-arid climate of the region, making it a traditional staple grain for centuries. In villages around Warangal, these rotis are commonly eaten with gongura chutney or spicy curries.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Karivepaku Rice",
+    state: "telangana",
+    id: "karimnagar",
+    destination: "Karimnagar",
+
+    description:
+      "A fragrant rice dish flavored with fresh curry leaves, spices, and roasted lentils.",
+
+    image: karivepakuRice,
+
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 3",
+    difficulty: "Easy",
+
+    ingredients: [
+      "2 cups Cooked rice",
+      "1 cup Fresh curry leaves",
+      "2 tbsp Oil",
+      "1 tsp Mustard seeds",
+      "1 tbsp Chana dal",
+      "1 tbsp Urad dal",
+      "2 Dry red chilies",
+      "1 Green chili",
+      "Salt to taste",
+      "1 tsp Tamarind pulp (optional)",
+    ],
+
+    steps: [
+      "Heat oil in a pan and add mustard seeds.",
+      "Add chana dal, urad dal, and red chilies and sauté.",
+      "Add curry leaves and green chili, sauté until aromatic.",
+      "Add tamarind pulp and salt.",
+      "Mix cooked rice into the seasoning.",
+      "Stir well until rice is evenly coated.",
+      "Serve warm.",
+    ],
+
+    story:
+      "Karivepaku Rice is a flavorful household dish in Telangana kitchens. The abundance of curry leaf trees in villages around Karimnagar makes this simple dish both aromatic and nutritious.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Jilebi",
+    state: "telangana",
+    id: "karimnagar",
+    destination: "Karimnagar",
+
+    description:
+      "A crispy spiral-shaped sweet soaked in sugar syrup, popular in Karimnagar sweet shops and festivals.",
+
+    image: jilebi,
+
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup All-purpose flour",
+      "2 tbsp Corn flour",
+      "1 cup Sugar",
+      "1/2 cup Water",
+      "1 tsp Cardamom powder",
+      "Oil for frying",
+      "Saffron or food color (optional)",
+    ],
+
+    steps: [
+      "Prepare batter using flour and corn flour with water.",
+      "Heat oil in a deep pan.",
+      "Pipe the batter in spiral shapes into hot oil.",
+      "Fry until golden and crispy.",
+      "Prepare sugar syrup with sugar, water, and cardamom.",
+      "Dip fried spirals into warm syrup.",
+      "Serve hot or warm.",
+    ],
+
+    story:
+      "Jilebi is a festive favorite across Telangana and is commonly enjoyed during temple festivals and celebrations in Karimnagar.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Bebbari Pappu Garelu",
+    state: "telangana",
+    id: "karimnagar",
+    destination: "Karimnagar",
+
+    description:
+      "A crunchy variation of garelu made from split black-eyed peas, rice flour, and spices.",
+
+    image: bebbariPappuGarelu,
+
+    prepTime: "1 hr soaking",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup Split black-eyed peas (Bebbari pappu)",
+      "2 tbsp Rice flour",
+      "1 tbsp Sesame seeds",
+      "1/2 tsp Carom seeds (ajwain)",
+      "1 Green chili (finely chopped)",
+      "Salt to taste",
+      "Oil for frying",
+    ],
+
+    steps: [
+      "Soak the black-eyed peas for about one hour.",
+      "Grind them coarsely without adding much water.",
+      "Mix rice flour, sesame seeds, carom seeds, chili, and salt.",
+      "Shape the mixture into small discs with a hole in the center.",
+      "Heat oil in a deep pan.",
+      "Fry until they turn dark golden brown and crispy.",
+      "Serve hot with chutney.",
+    ],
+
+    story:
+      "Bebbari Pappu Garelu is a regional specialty of Karimnagar where black-eyed peas are widely cultivated. The addition of sesame seeds and carom seeds gives these fritters their signature crunch and aroma.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Esarla Sattu Pindi",
+    state: "telangana",
+    id: "karimnagar",
+    destination: "Karimnagar",
+
+    description:
+      "A traditional high-protein sweet powder prepared from roasted green gram and jaggery, commonly offered during the Bathukamma festival.",
+
+    image: sattuPindi,
+
+    prepTime: "10 mins",
+    cookTime: "10 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Whole green gram (moong dal)",
+      "1/2 cup Powdered jaggery or sugar",
+      "2 tbsp Ghee",
+      "1/2 tsp Cardamom powder",
+    ],
+
+    steps: [
+      "Dry roast the green gram in a pan until golden and aromatic.",
+      "Allow it to cool completely.",
+      "Grind the roasted dal into a fine powder.",
+      "Mix the powder with jaggery or sugar and cardamom.",
+      "Add melted ghee and mix thoroughly.",
+      "Serve as a dry powder or shape into small laddus (muddalu).",
+    ],
+
+    story:
+      "Esarla Sattu Pindi is traditionally prepared in Karimnagar during the Bathukamma festival as a sacred offering. The roasted moong dal gives the dish a nutty flavor while also making it rich in protein.",
+
+    season: "Seasonal",
+    buyLink: "",
+  },
+  {
+    name: "Manjeera Bellam Paramannam",
+    state: "telangana",
+    id: "sangareddy",
+    destination: "Sangareddy",
+
+    description:
+      "A traditional jaggery sweet rice prepared during temple festivals and celebrations near the Manjeera River region.",
+
+    image: bellamParamannam,
+
+    prepTime: "10 mins",
+    cookTime: "25 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Rice",
+      "3/4 cup Jaggery (bellam)",
+      "2 cups Milk",
+      "2 tbsp Ghee",
+      "10 Cashews",
+      "10 Raisins",
+      "1/2 tsp Cardamom powder",
+    ],
+
+    steps: [
+      "Cook the rice in milk until soft.",
+      "Melt jaggery with a little water and strain impurities.",
+      "Add the jaggery syrup to the cooked rice.",
+      "Cook for a few minutes until the mixture thickens.",
+      "Heat ghee in a pan and fry cashews and raisins.",
+      "Add them along with cardamom powder to the paramannam and mix well.",
+    ],
+
+    story:
+      "Paramannam is one of the most sacred sweet dishes in South India. In Sangareddy villages near the Manjeera River, it is prepared during temple rituals and festive gatherings.",
+
+    season: "Seasonal",
+    buyLink: "",
+  },
+  {
+    name: "Ginger Pachadi",
+    state: "telangana",
+    id: "sangareddy",
+    destination: "Sangareddy",
+
+    description:
+      "A bold and spicy ginger chutney prepared with tamarind, jaggery, and red chilies, served as a flavorful accompaniment to rice and snacks.",
+
+    image: gingerPachadi,
+
+    prepTime: "10 mins",
+    cookTime: "10 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1/2 cup Fresh ginger",
+      "2 tbsp Tamarind pulp",
+      "2 tbsp Jaggery",
+      "3 Dry red chilies",
+      "1 tbsp Oil",
+      "1 tsp Mustard seeds",
+      "1 sprig Curry leaves",
+      "Salt to taste",
+    ],
+
+    steps: [
+      "Chop ginger into small pieces.",
+      "Heat oil and sauté ginger and red chilies until aromatic.",
+      "Grind the sautéed mixture with tamarind, jaggery, and salt into a paste.",
+      "Prepare tempering with mustard seeds and curry leaves.",
+      "Pour the tempering over the chutney and mix well.",
+    ],
+
+    story:
+      "Ginger Pachadi is a traditional chutney enjoyed across Telangana villages. Its spicy and tangy taste pairs perfectly with rice, dosa, or millet rotte.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Sorakaya Curry",
+    state: "telangana",
+    id: "sangareddy",
+    destination: "Sangareddy",
+
+    description:
+      "A light and comforting curry made from bottle gourd cooked with spices and lentils, commonly served with rice.",
+
+    image: sorakayaCurry,
+
+    prepTime: "10 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "2 cups Bottle gourd (sorakaya), chopped",
+      "1/4 cup Split moong dal",
+      "1 Onion, chopped",
+      "2 Green chilies",
+      "1 tsp Mustard seeds",
+      "1 tsp Cumin seeds",
+      "1/2 tsp Turmeric powder",
+      "2 tbsp Oil",
+      "Salt to taste",
+    ],
+
+    steps: [
+      "Cook the moong dal until soft and set aside.",
+      "Heat oil and add mustard and cumin seeds.",
+      "Add onions and green chilies and sauté until soft.",
+      "Add chopped bottle gourd and turmeric.",
+      "Cook until the vegetable becomes tender.",
+      "Mix in the cooked dal and simmer for a few minutes.",
+    ],
+
+    story:
+      "Sorakaya curry is a staple in Telangana homes. Its mild flavor and nutritious ingredients make it a common everyday dish served with hot rice and ghee.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Makka Garelu (Corn Fritters)",
+    state: "telangana",
+    id: "sangareddy",
+    destination: "Sangareddy",
+
+    description:
+      "Crispy fritters made from fresh corn kernels and spices, commonly enjoyed as a snack during the monsoon season.",
+
+    image: makkaGarelu,
+
+    prepTime: "15 mins",
+    cookTime: "15 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Fresh corn kernels",
+      "1/2 cup Rice flour",
+      "1 Onion, finely chopped",
+      "2 Green chilies, chopped",
+      "1 tbsp Ginger, minced",
+      "2 tbsp Coriander leaves",
+      "Salt to taste",
+      "Oil for deep frying",
+    ],
+
+    steps: [
+      "Grind half the corn kernels into a coarse paste.",
+      "Mix the paste with remaining kernels, rice flour, onions, chilies, ginger, and coriander.",
+      "Add salt and mix into a thick batter.",
+      "Heat oil in a deep pan.",
+      "Drop small portions of batter into hot oil and fry until golden and crispy.",
+      "Serve hot with chutney.",
+    ],
+
+    story:
+      "Makka Garelu are a popular snack in Telangana during the rainy season when fresh corn becomes widely available in rural markets.",
+
+    season: "Monsoon",
+    buyLink: "",
+  },
+  {
+    name: "Pesara Pappu Charu",
+    state: "telangana",
+    id: "medak",
+    destination: "Medak",
+
+    description:
+      "A comforting lentil-based soup made from moong dal and spices, commonly served with rice.",
+
+    image: pesaraPappuCharu,
+
+    prepTime: "10 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1/2 cup Moong dal",
+      "1 Tomato, chopped",
+      "2 Green chilies",
+      "1 tsp Mustard seeds",
+      "1 tsp Cumin seeds",
+      "1 sprig Curry leaves",
+      "1/2 tsp Turmeric powder",
+      "Salt to taste",
+    ],
+
+    steps: [
+      "Cook moong dal until soft.",
+      "Heat oil and add mustard seeds, cumin seeds, and curry leaves.",
+      "Add chopped tomato and green chilies and sauté.",
+      "Add cooked dal and turmeric.",
+      "Simmer for a few minutes and adjust salt.",
+    ],
+
+    story:
+      "Pesara Pappu Charu is a light and nutritious dish widely prepared in Telangana homes and served with hot rice and ghee.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Bellam Paramannam",
+    state: "telangana",
+    id: "medak",
+    destination: "Medak",
+
+    description:
+      "A traditional jaggery sweet rice prepared during temple festivals and celebrations near the Manjeera River region.",
+
+    image: bellamParamannam,
+
+    prepTime: "10 mins",
+    cookTime: "25 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Rice",
+      "3/4 cup Jaggery (bellam)",
+      "2 cups Milk",
+      "2 tbsp Ghee",
+      "10 Cashews",
+      "10 Raisins",
+      "1/2 tsp Cardamom powder",
+    ],
+
+    steps: [
+      "Cook the rice in milk until soft.",
+      "Melt jaggery with a little water and strain impurities.",
+      "Add the jaggery syrup to the cooked rice.",
+      "Cook for a few minutes until the mixture thickens.",
+      "Heat ghee in a pan and fry cashews and raisins.",
+      "Add them along with cardamom powder to the paramannam and mix well.",
+    ],
+
+    story:
+      "Paramannam is one of the most sacred sweet dishes in South India. In Sangareddy villages near the Manjeera River, it is prepared during temple rituals and festive gatherings.",
+
+    season: "Seasonal",
+    buyLink: "",
+  },
+  {
+    name: "Sweet Lime Pickle",
+    state: "telangana",
+    id: "nalgonda",
+    destination: "Nalgonda",
+
+    description:
+      "A tangy and slightly sweet pickle made from sweet lime peels and spices, traditionally prepared in Telangana households.",
+
+    image: mosambiThokku,
+
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "3 Sweet limes (mosambi)",
+      "2 tbsp Red chili powder",
+      "1 tsp Mustard seeds",
+      "1/2 tsp Fenugreek powder",
+      "3 tbsp Sesame oil",
+      "Salt to taste",
+      "1 tbsp Jaggery (optional)",
+    ],
+
+    steps: [
+      "Peel the sweet limes and cut the peel into small pieces.",
+      "Boil the peels briefly to soften them and drain.",
+      "Heat sesame oil and add mustard seeds.",
+      "Add chili powder, fenugreek powder, and salt.",
+      "Mix in the sweet lime peels and cook for a few minutes.",
+      "Add jaggery for a mild sweetness and allow the pickle to cool.",
+    ],
+
+    story:
+      "Mosambi Thokku is a unique regional pickle prepared in Telangana homes where citrus fruits are abundant. The dish balances tangy, spicy, and slightly sweet flavors.",
+
+    season: "Seasonal",
+    buyLink: "",
+  },
+  {
+    name: "Gummadikaya Bellam Vadiyalu",
+    state: "telangana",
+    id: "nalgonda",
+    destination: "Nalgonda",
+
+    description:
+      "Sweet fritters made from pumpkin and jaggery, deep-fried until golden and crispy.",
+
+    image: gummadikayaBellamVadiyalu,
+
+    prepTime: "15 mins",
+    cookTime: "15 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1 cup Grated pumpkin (gummadikaya)",
+      "1/2 cup Jaggery",
+      "1/2 cup Rice flour",
+      "1/4 tsp Cardamom powder",
+      "Oil for deep frying",
+    ],
+
+    steps: [
+      "Mix grated pumpkin with jaggery until the jaggery dissolves.",
+      "Add rice flour and cardamom powder to form a thick batter.",
+      "Heat oil in a deep pan.",
+      "Drop small portions of the batter into hot oil.",
+      "Fry until golden brown and crispy.",
+      "Remove and drain excess oil before serving.",
+    ],
+
+    story:
+      "Gummadikaya Bellam Vadiyalu is a traditional sweet snack prepared in Telangana villages using seasonal pumpkin and jaggery, often enjoyed during festive occasions.",
+
+    season: "Seasonal",
+    buyLink: "",
+  },
+  {
+    name: "Yadadri Temple Pulihora",
+    state: "telangana",
+    id: "yadadri-bhuvanagiri",
+    destination: "Yadadri Bhuvanagiri",
+
+    description:
+      "A tangy tamarind rice prepared as prasadam in the Yadadri Temple and widely served during temple festivals.",
+
+    image: yadadriPulihora,
+
+    prepTime: "10 mins",
+    cookTime: "15 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "2 cups Cooked rice",
+      "2 tbsp Tamarind pulp",
+      "2 tbsp Peanuts",
+      "1 tsp Mustard seeds",
+      "2 Dry red chilies",
+      "1 sprig Curry leaves",
+      "1/4 tsp Turmeric powder",
+      "2 tbsp Oil",
+      "Salt to taste",
+    ],
+
+    steps: [
+      "Heat oil and add mustard seeds, peanuts, and red chilies.",
+      "Add curry leaves and turmeric powder.",
+      "Mix in tamarind pulp and cook briefly.",
+      "Add cooked rice and salt.",
+      "Mix gently until the rice absorbs the flavors.",
+    ],
+
+    story:
+      "Pulihora is a sacred temple dish offered as prasadam in many South Indian temples. At Yadadri Temple, it is a popular offering served to thousands of devotees.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Bhuvanagiri Vada Pappu & Chalimidi",
+    state: "telangana",
+    id: "yadadri-bhuvanagiri",
+    destination: "Yadadri Bhuvanagiri",
+
+    description:
+      "A traditional prasadam combination made from soaked moong dal and sweet rice flour mixed with jaggery.",
+
+    image: vadaPappuChalimidi,
+
+    prepTime: "15 mins",
+    cookTime: "10 mins",
+    servings: "Serves 4",
+    difficulty: "Easy",
+
+    ingredients: [
+      "1/2 cup Moong dal",
+      "1/2 cup Rice flour",
+      "1/3 cup Jaggery",
+      "1/4 tsp Cardamom powder",
+      "2 tbsp Grated coconut",
+    ],
+
+    steps: [
+      "Soak moong dal for about 30 minutes and drain.",
+      "Mix rice flour with grated jaggery and cardamom powder.",
+      "Add grated coconut to the mixture.",
+      "Serve soaked dal and sweet chalimidi together as prasadam.",
+    ],
+
+    story:
+      "Vada Pappu and Chalimidi are traditional offerings during Telugu festivals such as Sri Rama Navami. The dish symbolizes purity and simplicity in temple cuisine.",
+
+    season: "Seasonal",
+    buyLink: "",
+  },
+  {
+    name: "Alair Natu Kodi Iguru",
+    state: "telangana",
+    id: "yadadri-bhuvanagiri",
+    destination: "Yadadri Bhuvanagiri",
+
+    description:
+      "A rich and spicy country chicken curry cooked with traditional Telangana spices.",
+
+    image: natuKodiIguru,
+
+    prepTime: "20 mins",
+    cookTime: "40 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "500 g Country chicken pieces",
+      "2 Onions, chopped",
+      "2 Tomatoes, chopped",
+      "2 tbsp Ginger garlic paste",
+      "2 tsp Red chili powder",
+      "1 tsp Turmeric powder",
+      "2 tbsp Oil",
+      "Salt to taste",
+      "Fresh coriander leaves",
+    ],
+
+    steps: [
+      "Heat oil and sauté onions until golden.",
+      "Add ginger garlic paste and cook until fragrant.",
+      "Add tomatoes and cook until soft.",
+      "Mix in spices and chicken pieces.",
+      "Cook covered until the chicken is tender and thick gravy forms.",
+      "Garnish with coriander leaves.",
+    ],
+
+    story:
+      "Natu Kodi Iguru is a beloved rural Telangana dish, often prepared during special family gatherings and festive occasions.",
+
+    season: "All Year",
+    buyLink: "",
+  },
+  {
+    name: "Bhuvanagiri Poornalu",
+    state: "telangana",
+    id: "yadadri-bhuvanagiri",
+    destination: "Yadadri Bhuvanagiri",
+
+    description:
+      "Sweet dumplings filled with jaggery and lentils, deep-fried until golden and crispy.",
+
+    image: bhuvanagiriPoornalu,
+
+    prepTime: "20 mins",
+    cookTime: "20 mins",
+    servings: "Serves 4",
+    difficulty: "Medium",
+
+    ingredients: [
+      "1 cup Chana dal",
+      "3/4 cup Jaggery",
+      "1 cup Rice flour batter",
+      "1/2 tsp Cardamom powder",
+      "Oil for deep frying",
+    ],
+
+    steps: [
+      "Cook chana dal until soft and mash lightly.",
+      "Mix jaggery and cardamom powder with the dal.",
+      "Shape the mixture into small balls.",
+      "Dip each ball into rice flour batter.",
+      "Deep fry until golden brown.",
+    ],
+
+    story:
+      "Poornalu, also known as Boorelu, are festive sweets in Telangana and Andhra households and are often prepared during festivals and temple celebrations.",
+
+    season: "Seasonal",
     buyLink: "",
   },
 ];

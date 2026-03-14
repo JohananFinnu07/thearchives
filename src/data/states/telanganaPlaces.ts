@@ -91,7 +91,49 @@ import kanteshwarTemple from "@/assets/TG/Places/NKT.jpg";
 import aliSagarDeerPark from "@/assets/TG/Places/NASDP.jpg";
 import pocharamReservoir from "@/assets/TG/Places/NPR.jpg";
 import janampetTempleRuins from "@/assets/TG/Places/NJT.jpg";
-import bodhanSugarFactory from "@/assets/TG/Places/NKF.jpg";
+
+/*=================== RANGAREDDY ======================= */
+import osmanSagar from "@/assets/TG/Places/RGL.jpg";
+import himayatSagar from "@/assets/TG/Places/RHSL.jpg";
+import chilkurBalajiTemple from "@/assets/TG/Places/RCBT.jpg";
+import keesaraguttaTemple from "@/assets/TG/Places/RKGT.jpg";
+import mrugavaniPark from "@/assets/TG/Places/RMP.jpg";
+import rachakondaFort from "@/assets/TG/Places/RRF.jpg";
+import harinaVanasthali from "@/assets/TG/Places/RMS.jpg";
+import shamirpetLake from "@/assets/TG/Places/RSL.jpg";
+
+/*=================== KARIMNAGAR ======================= */
+import elgandalFort from "@/assets/TG/Places/KEF.jpg";
+import ujwalaPark from "@/assets/TG/Places/KUP.jpg";
+import kothapalliDeerPark from "@/assets/TG/Places/KKDP.jpg";
+import manairRiver from "@/assets/TG/Places/KMRF.jpeg";
+import molangurFort from "@/assets/TG/Places/KMF.jpg";
+import nagunurFortTemples from "@/assets/TG/Places/KNF.jpg";
+
+/*=================== SANGAREDDY ======================= */
+import sangareddyJailMuseum from "@/assets/TG/Places/SJM.jpg";
+import singurDam from "@/assets/TG/Places/SSD.jpg";
+import manjeeraSanctuary from "@/assets/TG/Places/SMS.jpg";
+import edupayalaTemple from "@/assets/TG/Places/SET.jpg";
+import kondapurMuseum from "@/assets/TG/Places/SKM.jpg";
+
+/*=================== MEDAK ======================= */
+import medakCathedral from "@/assets/TG/Places/MCC.jpg";
+import medakFort from "@/assets/TG/Places/MMF.jpg";
+import wargalTemple from "@/assets/TG/Places/MWT.jpg";
+import pocharamDam from "@/assets/TG/Places/MPD.jpg";
+
+/*=================== NALGONDA ======================= */
+import nagarjunaSagarDam from "@/assets/TG/Places/NNS.jpg";
+import nagarjunakonda from "@/assets/TG/Places/NNK.jpg";
+import devarakondaFort from "@/assets/TG/Places/NDF.jpg";
+import kolanupakaTemple from "@/assets/TG/Places/NKJT.jpg";
+
+/*=================== BHUVANAGIRI ======================= */
+import byadadriTemple from "@/assets/TG/Places/BYT.jpg";
+import bhuvanagiriFort from "@/assets/TG/Places/BBF.jpg";
+import bhongirClimbing from "@/assets/TG/Places/BBFC.jpg";
+import surendrapuriMuseum from "@/assets/TG/Places/BSP.jpg";
 
 export const telanganaPlaces: Place[] = [
   {
@@ -2560,5 +2602,1273 @@ export const telanganaPlaces: Place[] = [
     ],
 
     mapsQuery: "Janampet Temple Ruins Telangana",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Ananthagiri Hills",
+    slug: "ananthagiri-hills",
+    type: "must-visit",
+    image: ananthagiriHills,
+
+    description:
+      "A scenic hill station known for forest trekking trails, caves, and the historic Anantha Padmanabha Swamy Temple.",
+
+    about:
+      "Located near Vikarabad, Ananthagiri Hills is one of the closest hill getaways from Hyderabad, offering dense forests, viewpoints, and trekking routes.",
+
+    distance: "80 km from Hyderabad",
+
+    highlights: [
+      "Forest trekking trails",
+      "Anantha Padmanabha Swamy Temple",
+      "Beautiful sunrise viewpoints",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Start trekking early morning.",
+      "Monsoon brings lush greenery.",
+      "Carry water and snacks.",
+    ],
+
+    mapsQuery: "Ananthagiri Hills Telangana",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Osman Sagar (Gandipet Lake)",
+    slug: "osman-sagar",
+    type: "must-visit",
+    image: osmanSagar,
+
+    description:
+      "A historic reservoir built during the Nizam era across the Musi River.",
+
+    about:
+      "Osman Sagar is a scenic lake popular for picnics and sunset views, originally built to protect Hyderabad from floods.",
+
+    distance: "20 km from Hyderabad",
+
+    highlights: [
+      "Historic Nizam-era reservoir",
+      "Beautiful sunset views",
+      "Popular picnic spot",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Best visited during sunset.",
+      "Ideal for short weekend trips.",
+      "Combine with nearby resorts.",
+    ],
+
+    mapsQuery: "Osman Sagar Gandipet",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Himayat Sagar",
+    slug: "himayat-sagar",
+    type: "must-visit",
+    image: himayatSagar,
+
+    description:
+      "A serene reservoir built during the Nizam era offering peaceful lake views.",
+
+    about:
+      "Constructed to prevent floods in Hyderabad, Himayat Sagar is now a scenic spot for nature lovers.",
+
+    distance: "22 km from Hyderabad",
+
+    highlights: [
+      "Historic dam",
+      "Peaceful lake views",
+      "Birdwatching opportunities",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit early morning for calm views.",
+      "Great photography location.",
+      "Carry snacks.",
+    ],
+
+    mapsQuery: "Himayat Sagar Hyderabad",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Chilkur Balaji Temple",
+    slug: "chilkur-balaji-temple",
+    type: "must-visit",
+    image: chilkurBalajiTemple,
+
+    description: "A famous temple popularly known as the 'Visa Balaji Temple'.",
+
+    about:
+      "Chilkur Balaji Temple attracts devotees seeking blessings for overseas opportunities and is one of the most visited temples near Hyderabad.",
+
+    distance: "25 km from Hyderabad",
+
+    highlights: [
+      "Visa Balaji temple belief",
+      "Historic temple",
+      "Popular pilgrimage site",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit on weekdays to avoid crowds.",
+      "Devotees perform pradakshinas.",
+      "Maintain temple dress code.",
+    ],
+
+    mapsQuery: "Chilkur Balaji Temple",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Keesaragutta Temple",
+    slug: "keesaragutta-temple",
+    type: "must-visit",
+    image: keesaraguttaTemple,
+
+    description: "An ancient hilltop temple dedicated to Lord Shiva.",
+
+    about:
+      "Keesaragutta Temple offers spiritual significance and panoramic views of the surrounding region.",
+
+    distance: "40 km from Hyderabad",
+
+    highlights: [
+      "Hilltop temple",
+      "Historic Shiva shrine",
+      "Panoramic countryside views",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during sunrise.",
+      "Carry water for climbing.",
+      "Festivals attract large crowds.",
+    ],
+
+    mapsQuery: "Keesaragutta Temple Telangana",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Mrugavani National Park",
+    slug: "mrugavani-national-park",
+    type: "must-visit",
+    image: mrugavaniPark,
+
+    description:
+      "A wildlife park featuring deer, birds, and forest trekking trails.",
+
+    about:
+      "Located near Chilkur, Mrugavani National Park preserves native flora and fauna and is a peaceful nature destination.",
+
+    distance: "25 km from Hyderabad",
+
+    highlights: [
+      "Forest trekking trails",
+      "Wildlife sightings",
+      "Nature photography",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Visit early morning.",
+      "Carry binoculars for birdwatching.",
+      "Follow park rules.",
+    ],
+
+    mapsQuery: "Mrugavani National Park Hyderabad",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Mahavir Harina Vanasthali National Park",
+    slug: "mahavir-harina-vanasthali",
+    type: "must-visit",
+    image: harinaVanasthali,
+
+    description:
+      "A wildlife sanctuary known for its population of blackbuck deer.",
+
+    about:
+      "Mahavir Harina Vanasthali is a protected forest area offering wildlife viewing and nature trails.",
+
+    distance: "15 km from Hyderabad",
+
+    highlights: [
+      "Blackbuck deer sanctuary",
+      "Nature trails",
+      "Wildlife photography",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit early morning.",
+      "Carry binoculars.",
+      "Follow wildlife safety rules.",
+    ],
+
+    mapsQuery: "Mahavir Harina Vanasthali National Park",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Rachakonda Fort",
+    slug: "rachakonda-fort",
+    type: "underrated",
+    image: rachakondaFort,
+
+    description:
+      "A historic hill fortress built during the Recherla Nayaka dynasty.",
+
+    about:
+      "Rachakonda Fort features massive stone walls, gateways, and scenic hilltop views, making it a great trekking destination.",
+
+    distance: "60 km from Hyderabad",
+
+    highlights: ["Historic hill fort", "Trekking trails", "Scenic views"],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Start trek early morning.",
+      "Wear comfortable shoes.",
+      "Carry sufficient water.",
+    ],
+
+    mapsQuery: "Rachakonda Fort Telangana",
+  },
+
+  {
+    destination: "Rangareddy",
+    state: "telangana",
+    name: "Shamirpet Lake",
+    slug: "shamirpet-lake",
+    type: "underrated",
+    image: shamirpetLake,
+
+    description:
+      "A picturesque lake known for peaceful sunsets and birdwatching.",
+
+    about:
+      "Shamirpet Lake is a relaxing nature getaway popular among photographers and bird lovers.",
+
+    distance: "27 km from Hyderabad",
+
+    highlights: ["Scenic lake views", "Birdwatching", "Peaceful picnic spot"],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Best during sunset.",
+      "Carry camera.",
+      "Ideal for weekend picnics.",
+    ],
+
+    mapsQuery: "Shamirpet Lake Telangana",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Lower Manair Dam",
+    slug: "lower-manair-dam",
+    type: "must-visit",
+    image: lowerManairDam,
+
+    description:
+      "A scenic reservoir built across the Manair River and one of the most prominent landmarks of Karimnagar.",
+
+    about:
+      "Lower Manair Dam supplies irrigation water to surrounding farmlands and offers beautiful lake views and a peaceful promenade.",
+
+    distance: "5 km from Karimnagar",
+
+    highlights: [
+      "Scenic reservoir views",
+      "Evening sunset viewpoints",
+      "Popular local picnic spot",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during sunset for the best views.",
+      "Great place for evening walks.",
+      "Carry camera for photography.",
+    ],
+
+    mapsQuery: "Lower Manair Dam Karimnagar",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Elgandal Fort",
+    slug: "elgandal-fort",
+    type: "must-visit",
+    image: elgandalFort,
+
+    description:
+      "A historic hilltop fort overlooking the Manair River with centuries of regional history.",
+
+    about:
+      "Elgandal Fort was built by the Kakatiyas and later expanded by the Qutb Shahi rulers. Its massive stone walls and gateways reflect medieval architecture.",
+
+    distance: "10 km from Karimnagar",
+
+    highlights: [
+      "Historic fort ruins",
+      "Panoramic river views",
+      "Medieval architecture",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Explore early morning to avoid heat.",
+      "Wear comfortable footwear.",
+      "Carry water during exploration.",
+    ],
+
+    mapsQuery: "Elgandal Fort Karimnagar",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Kondagattu Anjaneya Swamy Temple",
+    slug: "kondagattu-anjaneya-swamy-temple",
+    type: "must-visit",
+    image: kondagattuTemple,
+
+    description:
+      "A famous hilltop temple dedicated to Lord Hanuman attracting devotees from across Telangana.",
+
+    about:
+      "Located on a hill surrounded by forested landscapes, Kondagattu Temple is one of the most visited spiritual destinations in the region.",
+
+    distance: "35 km from Karimnagar",
+
+    highlights: [
+      "Hilltop temple views",
+      "Major pilgrimage destination",
+      "Scenic surrounding hills",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning for peaceful darshan.",
+      "Festivals attract large crowds.",
+      "Combine with nearby forts.",
+    ],
+
+    mapsQuery: "Kondagattu Anjaneya Swamy Temple",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Molangur Fort",
+    slug: "molangur-fort",
+    type: "underrated",
+    image: molangurFort,
+
+    description:
+      "A lesser-known hill fortress known for its scenic trekking routes and historic ruins.",
+
+    about:
+      "Molangur Fort is believed to date back to the Kakatiya period and offers panoramic views of surrounding hills.",
+
+    distance: "30 km from Karimnagar",
+
+    highlights: [
+      "Hilltop trekking destination",
+      "Historic fort ruins",
+      "Panoramic landscape views",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Start trekking early morning.",
+      "Carry sufficient water.",
+      "Wear hiking shoes.",
+    ],
+
+    mapsQuery: "Molangur Fort Telangana",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Ujwala Park",
+    slug: "ujwala-park",
+    type: "must-visit",
+    image: ujwalaPark,
+
+    description:
+      "A popular city park known for landscaped gardens, fountains, and family recreation spaces.",
+
+    about:
+      "Ujwala Park is a relaxing green space in Karimnagar city featuring musical fountains, walking paths, and children's play areas.",
+
+    distance: "Within Karimnagar",
+
+    highlights: [
+      "Musical fountain shows",
+      "Beautiful gardens",
+      "Family recreation spot",
+    ],
+
+    bestTime: "Evenings",
+
+    travelTips: [
+      "Best visited during evening hours.",
+      "Great for family outings.",
+      "Check fountain timings.",
+    ],
+
+    mapsQuery: "Ujwala Park Karimnagar",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Manair Riverfront",
+    slug: "manair-riverfront",
+    type: "underrated",
+    image: manairRiver,
+
+    description:
+      "A scenic riverside stretch offering peaceful landscapes and photography spots.",
+
+    about:
+      "The Manair River flows through Karimnagar district and creates picturesque riverbanks and viewpoints.",
+
+    distance: "Within Karimnagar",
+
+    highlights: [
+      "River landscapes",
+      "Photography spots",
+      "Relaxing evening views",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Best visited during sunset.",
+      "Great for evening walks.",
+      "Carry camera.",
+    ],
+
+    mapsQuery: "Manair River Karimnagar",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Kothapalli Deer Park",
+    slug: "kothapalli-deer-park",
+    type: "underrated",
+    image: kothapalliDeerPark,
+
+    description:
+      "An ecological park known for deer sightings and natural greenery.",
+
+    about:
+      "Kothapalli Deer Park is a peaceful nature destination offering wildlife viewing and scenic walking trails.",
+
+    distance: "15 km from Karimnagar",
+
+    highlights: [
+      "Deer wildlife viewing",
+      "Forest walking trails",
+      "Peaceful nature environment",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit early morning.",
+      "Carry binoculars.",
+      "Respect wildlife rules.",
+    ],
+    mapsQuery: "Kothapalli Deer Park Karimnagar",
+  },
+  {
+    destination: "Karimnagar",
+    state: "telangana",
+    name: "Nagunur Fort & Temples",
+    slug: "nagunur-fort-and-temples",
+    type: "must-visit",
+    image: nagunurFortTemples,
+
+    description:
+      "An ancient fort and temple complex showcasing the architectural brilliance of the Kakatiya dynasty.",
+
+    about:
+      "Located near Karimnagar city, Nagunur was once a major settlement during the Kakatiya period. The site features remnants of a fort and a remarkable cluster of temples with intricately carved pillars and stone structures. Archaeological records suggest that the area once had more than 400 temples.",
+
+    distance: "8 km from Karimnagar",
+
+    highlights: [
+      "Kakatiya-era temple architecture",
+      "Ancient fort ruins",
+      "Intricate stone carvings and pillars",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during morning hours to explore comfortably.",
+      "Carry water and sun protection.",
+      "Ideal spot for history and architecture enthusiasts.",
+    ],
+
+    mapsQuery: "Nagunur Temples Karimnagar",
+  },
+  {
+    destination: "Sangareddy",
+    state: "telangana",
+    name: "Sangareddy Jail Museum",
+    slug: "sangareddy-jail-museum",
+    type: "must-visit",
+
+    image: sangareddyJailMuseum,
+
+    description:
+      "A historic Nizam-era prison transformed into an interactive museum about jail life.",
+
+    about:
+      "Constructed in 1796 during the Nizam rule, Sangareddy Jail is one of the oldest prisons in southern India. It has been converted into a museum where visitors can experience the life of prisoners through preserved cells, exhibits, and historical artifacts. It is also known for allowing visitors to stay overnight in prison cells as part of a unique heritage experience.",
+
+    distance: "Within Sangareddy town",
+
+    highlights: [
+      "Historic Nizam-era prison architecture",
+      "Interactive overnight jail experience",
+      "Museum displays about prison history",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Try the overnight stay experience if available.",
+      "Visit during daytime for guided tours.",
+      "Carry water while exploring the complex.",
+    ],
+
+    mapsQuery: "Sangareddy Jail Museum Telangana",
+  },
+  {
+    destination: "Sangareddy",
+    state: "telangana",
+    name: "Singur Dam",
+    slug: "singur-dam",
+    type: "must-visit",
+
+    image: singurDam,
+
+    description:
+      "A massive reservoir on the Manjeera River surrounded by peaceful hills and countryside.",
+
+    about:
+      "Singur Dam is an important reservoir built across the Manjeera River and serves as one of Hyderabad's primary drinking water sources. Surrounded by green hills and rural landscapes, the dam offers scenic viewpoints and tranquil natural surroundings.",
+
+    distance: "35 km from Sangareddy",
+
+    highlights: [
+      "Large scenic reservoir",
+      "Important water source for Hyderabad",
+      "Beautiful sunset photography spots",
+    ],
+
+    bestTime: "September – February",
+
+    travelTips: [
+      "Sunrise and sunset provide the best views.",
+      "Carry food and water as facilities are limited.",
+      "Avoid visiting during heavy monsoon periods.",
+    ],
+
+    mapsQuery: "Singur Dam Telangana",
+  },
+  {
+    destination: "Sangareddy",
+    state: "telangana",
+    name: "Manjeera Wildlife Sanctuary",
+    slug: "manjeera-wildlife-sanctuary",
+    type: "must-visit",
+
+    image: manjeeraSanctuary,
+
+    description:
+      "A protected wetland sanctuary famous for migratory birds and freshwater crocodiles.",
+
+    about:
+      "Spread across islands in the Manjeera River reservoir, the Manjeera Wildlife Sanctuary is home to numerous migratory birds including pelicans, herons, and storks. The sanctuary also supports conservation programs for freshwater crocodiles and other aquatic wildlife.",
+
+    distance: "50 km from Sangareddy",
+
+    highlights: [
+      "Migratory bird watching",
+      "Freshwater crocodile conservation",
+      "Island wetland ecosystem",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Carry binoculars for bird watching.",
+      "Visit early morning for best wildlife sightings.",
+      "Follow sanctuary rules to protect wildlife.",
+    ],
+
+    mapsQuery: "Manjeera Wildlife Sanctuary Telangana",
+  },
+  {
+    destination: "Sangareddy",
+    state: "telangana",
+    name: "Edupayala Vana Durga Bhavani Temple",
+    slug: "edupayala-durga-bhavani-temple",
+    type: "must-visit",
+
+    image: edupayalaTemple,
+
+    description:
+      "A sacred temple located where the Manjeera River divides into seven streams.",
+
+    about:
+      "Edupayala Temple is one of the most important Durga temples in Telangana. The temple derives its name from the seven streams formed by the Manjeera River surrounding the shrine. It becomes a major pilgrimage center during the annual Edupayala Jatara festival.",
+
+    distance: "30 km from Sangareddy",
+
+    highlights: [
+      "Temple surrounded by seven river streams",
+      "Major pilgrimage destination",
+      "Famous Edupayala Jatara festival",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Expect large crowds during festival season.",
+      "Visit early morning for peaceful darshan.",
+      "Wear comfortable footwear while walking around.",
+    ],
+
+    mapsQuery: "Edupayala Durga Bhavani Temple Telangana",
+  },
+  {
+    destination: "Sangareddy",
+    state: "telangana",
+    name: "Kondapur Archaeological Museum",
+    slug: "kondapur-archaeological-museum",
+    type: "must-visit",
+
+    image: kondapurMuseum,
+
+    description:
+      "A museum preserving ancient artifacts from a major Satavahana-era settlement.",
+
+    about:
+      "Kondapur is an important archaeological site dating back to the Satavahana period around 200 BCE. Excavations have revealed coins, terracotta figurines, pottery, beads, and tools that indicate a thriving ancient trade center in the Deccan region.",
+
+    distance: "20 km from Sangareddy",
+
+    highlights: [
+      "Satavahana-era artifacts",
+      "Terracotta sculptures and pottery",
+      "Insights into ancient Deccan trade",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit during museum working hours.",
+      "Combine with nearby village exploration.",
+      "Photography rules may vary inside the museum.",
+    ],
+
+    mapsQuery: "Kondapur Archaeological Museum Telangana",
+  },
+  {
+    destination: "Sangareddy",
+    state: "telangana",
+    name: "Pocharam Wildlife Sanctuary",
+    slug: "pocharam-wildlife-sanctuary",
+    type: "underrated",
+
+    image: pocharamSanctuary,
+
+    description:
+      "A quiet forest sanctuary surrounding the Pocharam Lake and dam.",
+
+    about:
+      "Pocharam Wildlife Sanctuary protects forest landscapes around Pocharam Lake. The sanctuary supports species such as deer, wild boars, birds, and reptiles. It is one of the lesser-known wildlife destinations near Hyderabad.",
+
+    distance: "60 km from Sangareddy",
+
+    highlights: [
+      "Peaceful forest landscapes",
+      "Bird watching near Pocharam Lake",
+      "Less crowded wildlife destination",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Carry binoculars for bird watching.",
+      "Visit early morning for wildlife sightings.",
+      "Respect forest regulations.",
+    ],
+
+    mapsQuery: "Pocharam Wildlife Sanctuary Telangana",
+  },
+  {
+    destination: "Medak",
+    state: "telangana",
+    name: "Medak Cathedral",
+    slug: "medak-cathedral",
+    type: "must-visit",
+
+    image: medakCathedral,
+
+    description:
+      "One of the largest churches in Asia known for its stunning Gothic architecture and stained glass windows.",
+
+    about:
+      "Built in 1914 during the British era, Medak Cathedral is a magnificent example of Gothic Revival architecture. The cathedral can accommodate thousands of worshippers and features beautiful stained glass panels that depict scenes from the Bible.",
+
+    distance: "Within Medak town",
+
+    highlights: [
+      "One of the largest churches in Asia",
+      "Beautiful stained glass windows",
+      "Historic British-era architecture",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit during daylight to appreciate the stained glass windows.",
+      "Dress modestly as it is an active place of worship.",
+      "Combine with a visit to Medak Fort nearby.",
+    ],
+
+    mapsQuery: "Medak Cathedral Telangana",
+  },
+  {
+    destination: "Medak",
+    state: "telangana",
+    name: "Medak Fort",
+    slug: "medak-fort",
+    type: "must-visit",
+
+    image: medakFort,
+
+    description:
+      "A historic hilltop fort originally built during the Kakatiya dynasty.",
+
+    about:
+      "Medak Fort dates back to the 12th century during the Kakatiya period. The fort later saw modifications by the Qutb Shahi and Nizam rulers. The site includes ancient gateways, mosques, and scenic views of the surrounding plains.",
+
+    distance: "1 km from Medak Cathedral",
+
+    highlights: [
+      "Kakatiya-era hilltop fort",
+      "Panoramic views of Medak town",
+      "Historic gateways and fort walls",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear comfortable shoes for the uphill walk.",
+      "Visit during sunrise or sunset for views.",
+      "Carry water as facilities are limited.",
+    ],
+
+    mapsQuery: "Medak Fort Telangana",
+  },
+  {
+    destination: "Medak",
+    state: "telangana",
+    name: "Pocharam Wildlife Sanctuary",
+    slug: "pocharam-wildlife-sanctuary-medak",
+    type: "must-visit",
+
+    image: pocharamSanctuary,
+
+    description:
+      "A peaceful forest sanctuary surrounding Pocharam Lake known for birds and wildlife.",
+
+    about:
+      "Spread across forest landscapes around Pocharam Lake, this sanctuary was once a hunting reserve for the Nizams. Today it protects a variety of wildlife including deer, wild boar, and numerous bird species.",
+
+    distance: "15 km from Medak",
+
+    highlights: [
+      "Bird watching near Pocharam Lake",
+      "Peaceful forest landscapes",
+      "Historic Nizam-era hunting reserve",
+    ],
+
+    bestTime: "November – February",
+
+    travelTips: [
+      "Visit early morning for wildlife sightings.",
+      "Carry binoculars for bird watching.",
+      "Respect sanctuary rules.",
+    ],
+
+    mapsQuery: "Pocharam Wildlife Sanctuary Telangana",
+  },
+  {
+    destination: "Medak",
+    state: "telangana",
+    name: "Pocharam Dam",
+    slug: "pocharam-dam",
+    type: "must-visit",
+
+    image: pocharamDam,
+
+    description:
+      "A scenic reservoir built across the Allair River surrounded by forests and wildlife sanctuary.",
+
+    about:
+      "Pocharam Dam was built during the Nizam era to support irrigation in the region. Today the lake and surrounding forests provide a peaceful natural escape and a habitat for birds and wildlife.",
+
+    distance: "14 km from Medak",
+
+    highlights: [
+      "Scenic reservoir views",
+      "Surrounded by Pocharam Wildlife Sanctuary",
+      "Popular nature photography spot",
+    ],
+
+    bestTime: "September – February",
+
+    travelTips: [
+      "Sunset offers the best photography.",
+      "Carry snacks and water.",
+      "Avoid visiting during heavy rains.",
+    ],
+
+    mapsQuery: "Pocharam Dam Telangana",
+  },
+  {
+    destination: "Medak",
+    state: "telangana",
+    name: "Edupayala Vana Durga Bhavani Temple",
+    slug: "edupayala-temple",
+    type: "must-visit",
+
+    image: edupayalaTemple,
+
+    description:
+      "A famous Durga temple located where the Manjeera River splits into seven streams.",
+
+    about:
+      "Edupayala Temple is one of Telangana's most important pilgrimage sites. The temple's name refers to the seven streams formed by the Manjeera River around the shrine.",
+
+    distance: "40 km from Medak",
+
+    highlights: [
+      "Temple surrounded by seven streams",
+      "Major pilgrimage destination",
+      "Edupayala Jatara festival",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Expect crowds during the annual festival.",
+      "Visit early morning for peaceful darshan.",
+      "Wear comfortable footwear.",
+    ],
+
+    mapsQuery: "Edupayala Temple Telangana",
+  },
+  {
+    destination: "Medak",
+    state: "telangana",
+    name: "Wargal Saraswati Temple",
+    slug: "wargal-saraswati-temple",
+    type: "underrated",
+
+    image: wargalTemple,
+
+    description:
+      "A hilltop temple dedicated to Goddess Saraswati, popular among students seeking blessings.",
+
+    about:
+      "The Vidya Saraswati Temple in Wargal is an important pilgrimage site where parents bring children to perform the Aksharabhyasam ceremony before starting education.",
+
+    distance: "50 km from Medak",
+
+    highlights: [
+      "Temple dedicated to Goddess Saraswati",
+      "Famous for Aksharabhyasam ceremony",
+      "Hilltop views of surrounding countryside",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during morning hours.",
+      "Be prepared to climb steps to reach the temple.",
+      "Combine with nearby temples.",
+    ],
+
+    mapsQuery: "Wargal Saraswati Temple Telangana",
+  },
+  {
+    destination: "Nalgonda",
+    state: "telangana",
+    name: "Nagarjuna Sagar Dam",
+    slug: "nagarjuna-sagar-dam",
+    type: "must-visit",
+
+    image: nagarjunaSagarDam,
+
+    description:
+      "One of the largest masonry dams in the world built across the Krishna River.",
+
+    about:
+      "Constructed during the 1960s, Nagarjuna Sagar Dam is a massive irrigation and hydroelectric project that transformed agriculture across Telangana and Andhra Pradesh. The vast reservoir and surrounding hills make it one of the most scenic destinations in the region.",
+
+    distance: "60 km from Nalgonda",
+
+    highlights: [
+      "Massive masonry dam structure",
+      "Panoramic reservoir views",
+      "Important irrigation project",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Visit during monsoon when water levels are high.",
+      "Sunset views over the reservoir are spectacular.",
+      "Combine with a visit to Nagarjunakonda Island Museum.",
+    ],
+
+    mapsQuery: "Nagarjuna Sagar Dam Telangana",
+  },
+  {
+    destination: "Nalgonda",
+    state: "telangana",
+    name: "Nagarjunakonda",
+    slug: "nagarjunakonda-island",
+    type: "must-visit",
+
+    image: nagarjunakonda,
+
+    description:
+      "An island museum preserving ancient Buddhist ruins and artifacts from the Nagarjuna valley.",
+
+    about:
+      "Nagarjunakonda was once a thriving center of Buddhist learning during the Ikshvaku dynasty. Today, the island museum displays excavated monasteries, stupas, inscriptions, and sculptures discovered during archaeological excavations.",
+
+    distance: "65 km from Nalgonda",
+
+    highlights: [
+      "Ancient Buddhist monastery ruins",
+      "Boat ride across Nagarjuna Sagar reservoir",
+      "Archaeological museum and artifacts",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Boat rides are required to reach the island.",
+      "Carry water and sun protection.",
+      "Visit along with Nagarjuna Sagar Dam.",
+    ],
+
+    mapsQuery: "Nagarjunakonda Island Museum",
+  },
+  {
+    destination: "Nalgonda",
+    state: "telangana",
+    name: "Devarakonda Fort",
+    slug: "devarakonda-fort",
+    type: "must-visit",
+
+    image: devarakondaFort,
+
+    description:
+      "A massive hilltop fort built during the medieval period with seven defensive gates.",
+
+    about:
+      "Devarakonda Fort was constructed by the Recherla Velama kings during the 14th century. The fort spreads across several hills and features strong stone walls, gateways, and reservoirs that once served as a powerful defensive structure.",
+
+    distance: "65 km from Nalgonda",
+
+    highlights: [
+      "Seven fortified gateways",
+      "Hilltop panoramic views",
+      "Medieval military architecture",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear comfortable shoes for hiking.",
+      "Carry water during the climb.",
+      "Visit during early morning or evening.",
+    ],
+
+    mapsQuery: "Devarakonda Fort Telangana",
+  },
+  {
+    destination: "Nalgonda",
+    state: "telangana",
+    name: "Yadadri Lakshmi Narasimha Temple",
+    slug: "yadadri-temple",
+    type: "must-visit",
+
+    image: yadadriTemple,
+
+    description:
+      "A famous hill temple dedicated to Lord Lakshmi Narasimha, recently rebuilt as a grand temple complex.",
+
+    about:
+      "Located at Yadagirigutta near Nalgonda, the temple has become one of the most important pilgrimage centers in Telangana. The temple complex was recently renovated with elaborate architecture inspired by traditional South Indian temples.",
+
+    distance: "55 km from Nalgonda",
+
+    highlights: [
+      "Major Telangana pilgrimage site",
+      "Grand temple architecture",
+      "Hilltop spiritual atmosphere",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning to avoid crowds.",
+      "Follow temple dress code.",
+      "Weekdays are less crowded than weekends.",
+    ],
+
+    mapsQuery: "Yadadri Temple Telangana",
+  },
+  {
+    destination: "Nalgonda",
+    state: "telangana",
+    name: "Kolanupaka Jain Temple",
+    slug: "kolanupaka-jain-temple",
+    type: "underrated",
+
+    image: kolanupakaTemple,
+
+    description:
+      "An ancient Jain temple famous for its beautiful marble architecture and historic idols.",
+
+    about:
+      "Kolanupaka Jain Temple, also known as Kulpakji, is believed to be more than 2,000 years old. It houses a stunning idol of Lord Mahavira carved from jade stone and remains an important pilgrimage center for Jains.",
+
+    distance: "70 km from Nalgonda",
+
+    highlights: [
+      "Ancient Jain pilgrimage site",
+      "Beautiful marble temple architecture",
+      "Historic jade idol of Mahavira",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Maintain silence inside the temple.",
+      "Photography restrictions may apply.",
+      "Combine with Yadadri temple visit.",
+    ],
+
+    mapsQuery: "Kolanupaka Jain Temple Telangana",
+  },
+  {
+    destination: "Yadadri Bhuvanagiri",
+    state: "telangana",
+    name: "Yadadri Lakshmi Narasimha Temple",
+    slug: "yadadri-lakshmi-narasimha-temple",
+    type: "must-visit",
+
+    image: byadadriTemple,
+
+    description:
+      "A grand hill temple dedicated to Lord Lakshmi Narasimha and one of the most important pilgrimage centers in Telangana.",
+
+    about:
+      "Yadadri Temple, located on Yadagirigutta hill, has been transformed into a magnificent temple complex with architecture inspired by traditional South Indian temple design. Devotees visit year-round to seek blessings from Lord Narasimha.",
+
+    distance: "Within Yadadri town",
+
+    highlights: [
+      "Major pilgrimage destination in Telangana",
+      "Grand temple architecture and carvings",
+      "Spiritual hilltop setting",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Visit early morning to avoid long queues.",
+      "Follow temple dress code.",
+      "Weekdays are less crowded than weekends.",
+    ],
+
+    mapsQuery: "Yadadri Lakshmi Narasimha Temple Telangana",
+  },
+  {
+    destination: "Yadadri Bhuvanagiri",
+    state: "telangana",
+    name: "Bhuvanagiri Fort",
+    slug: "bhuvanagiri-fort",
+    type: "must-visit",
+
+    image: bhuvanagiriFort,
+
+    description:
+      "A historic hilltop fort built on a massive monolithic rock with panoramic views of the surrounding plains.",
+
+    about:
+      "Built during the Western Chalukya period in the 10th century, Bhuvanagiri Fort sits atop a massive egg-shaped rock hill. The fort features strong stone walls, gateways, and an impressive climb to the summit.",
+
+    distance: "5 km from Yadadri Temple",
+
+    highlights: [
+      "Monolithic hilltop fort",
+      "Panoramic countryside views",
+      "Historic medieval architecture",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Wear comfortable shoes for the climb.",
+      "Visit early morning or sunset for best views.",
+      "Carry water while trekking.",
+    ],
+
+    mapsQuery: "Bhuvanagiri Fort Telangana",
+  },
+  {
+    destination: "Yadadri Bhuvanagiri",
+    state: "telangana",
+    name: "Kolanupaka Jain Temple",
+    slug: "kolanupaka-jain-temple",
+    type: "must-visit",
+
+    image: kolanupakaTemple,
+
+    description:
+      "An ancient Jain temple known for its beautiful marble architecture and historic idol of Lord Mahavira.",
+
+    about:
+      "The Kolanupaka Jain Temple, also known as Kulpakji, is believed to be over 2,000 years old. It houses a remarkable jade idol of Lord Mahavira and remains an important pilgrimage site for Jain devotees.",
+
+    distance: "25 km from Yadadri",
+
+    highlights: [
+      "Ancient Jain pilgrimage site",
+      "Jade idol of Lord Mahavira",
+      "Beautiful marble temple architecture",
+    ],
+
+    bestTime: "October – March",
+
+    travelTips: [
+      "Maintain silence inside the temple.",
+      "Photography restrictions may apply.",
+      "Combine with Yadadri temple visit.",
+    ],
+
+    mapsQuery: "Kolanupaka Jain Temple Telangana",
+  },
+  {
+    destination: "Yadadri Bhuvanagiri",
+    state: "telangana",
+    name: "Surendrapuri Mythological Museum",
+    slug: "surendrapuri-museum",
+    type: "must-visit",
+
+    image: surendrapuriMuseum,
+
+    description:
+      "A unique mythological theme park featuring sculptures and models of Hindu temples and stories.",
+
+    about:
+      "Surendrapuri is a cultural museum that presents scenes from Indian epics and mythology through life-size sculptures. Visitors can explore replicas of famous temples and learn about mythological stories.",
+
+    distance: "10 km from Yadadri",
+
+    highlights: [
+      "Large mythological sculpture park",
+      "Replicas of famous Indian temples",
+      "Educational cultural attraction",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Allow at least 2 hours to explore.",
+      "Good destination for families.",
+      "Visit along with Yadadri temple.",
+    ],
+
+    mapsQuery: "Surendrapuri Mythological Museum Telangana",
+  },
+  {
+    destination: "Yadadri Bhuvanagiri",
+    state: "telangana",
+    name: "Bhongir Rock Climbing School",
+    slug: "bhongir-rock-climbing-school",
+    type: "underrated",
+
+    image: bhongirClimbing,
+
+    description:
+      "An adventure training center where visitors can experience rock climbing on the massive Bhongir monolithic hill.",
+
+    about:
+      "The Bhongir Rock Climbing School offers adventure training programs and attracts climbers due to the region's massive granite hill formations.",
+
+    distance: "5 km from Bhuvanagiri Fort",
+
+    highlights: [
+      "Adventure rock climbing destination",
+      "Training programs for beginners",
+      "Unique monolithic rock terrain",
+    ],
+
+    bestTime: "October – February",
+
+    travelTips: [
+      "Book in advance for training sessions.",
+      "Wear comfortable sports clothing.",
+      "Visit early morning to avoid heat.",
+    ],
+
+    mapsQuery: "Bhongir Rock Climbing School Telangana",
   },
 ];

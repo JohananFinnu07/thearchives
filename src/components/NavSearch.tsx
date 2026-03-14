@@ -21,6 +21,20 @@ const slugify = (text: string) =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
+/* Remove duplicates helper */
+const uniqueBy = <T, K extends keyof T>(array: T[], key: K): T[] => {
+  const map = new Map<string, T>();
+
+  array.forEach((item) => {
+    const value = String(item[key]).toLowerCase();
+    if (!map.has(value)) {
+      map.set(value, item);
+    }
+  });
+
+  return Array.from(map.values());
+};
+
 const NavSearch = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -37,16 +51,18 @@ const NavSearch = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  /* Data Memoization (Kept same) */
+  /* Destinations */
   const filteredDestinations = useMemo(() => {
     if (!state) return allDestinations;
+
     return allDestinations.filter(
       (d) => d.state?.toLowerCase() === state.toLowerCase(),
     );
   }, [state]);
 
+  /* Famous Products */
   const famousProducts = useMemo(() => {
-    return filteredDestinations.flatMap((d) =>
+    const items = filteredDestinations.flatMap((d) =>
       d.products
         .filter((p) => p.type === "famous")
         .map((p) => ({
@@ -54,10 +70,13 @@ const NavSearch = () => {
           route: `/hidden-gems/${d.id}/${slugify(p.name)}`,
         })),
     );
+
+    return uniqueBy(items, "name");
   }, [filteredDestinations]);
 
+  /* Hidden Gems */
   const hiddenProducts = useMemo(() => {
-    return filteredDestinations.flatMap((d) =>
+    const items = filteredDestinations.flatMap((d) =>
       d.products
         .filter((p) => p.type === "underrated")
         .map((p) => ({
@@ -65,19 +84,26 @@ const NavSearch = () => {
           route: `/hidden-gems/${d.id}/${slugify(p.name)}`,
         })),
     );
+
+    return uniqueBy(items, "name");
   }, [filteredDestinations]);
 
+  /* Recipes */
   const filteredRecipes = useMemo(() => {
-    if (!state) return recipes;
-    return recipes.filter(
-      (r) => r.state?.toLowerCase() === state.toLowerCase(),
-    );
+    const list = !state
+      ? recipes
+      : recipes.filter((r) => r.state?.toLowerCase() === state.toLowerCase());
+
+    return uniqueBy(list, "name");
   }, [state]);
 
+  /* Places */
   const filteredPlaces = useMemo(() => {
-    if (!state) return places;
+    const list = !state
+      ? places
+      : places.filter((p) => p.state?.toLowerCase() === state.toLowerCase());
 
-    return places.filter((p) => p.state?.toLowerCase() === state.toLowerCase());
+    return uniqueBy(list, "name");
   }, [state]);
 
   const handleSelect = (route: string) => {
@@ -101,7 +127,7 @@ const NavSearch = () => {
 
       <CommandDialog open={open} onOpenChange={setOpen}>
         <div className="flex flex-col max-h-[85vh] md:max-h-[70vh] w-full max-w-lg overflow-hidden">
-          {/* Sticky Search Input */}
+          {/* Search Input */}
           <div className="sticky top-0 z-10 bg-background border-b">
             <CommandInput
               placeholder="Search destinations, foods, recipes..."
@@ -109,7 +135,7 @@ const NavSearch = () => {
             />
           </div>
 
-          {/* Scrollable Results */}
+          {/* Results */}
           <CommandList
             className="flex-1 overflow-y-auto overscroll-contain"
             style={{
@@ -166,6 +192,7 @@ const NavSearch = () => {
                 ))}
               </CommandGroup>
             )}
+
             {/* Places */}
             {filteredPlaces.length > 0 && (
               <CommandGroup heading="Places">
@@ -185,6 +212,7 @@ const NavSearch = () => {
                 ))}
               </CommandGroup>
             )}
+
             {/* Recipes */}
             {filteredRecipes.length > 0 && (
               <CommandGroup heading="Recipes">

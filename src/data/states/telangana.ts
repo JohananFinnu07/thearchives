@@ -9,6 +9,12 @@ import bupalapallyHero from "@/assets/TG/Destinations/bhupalapally.jpg";
 import sircillaHero from "@/assets/TG/Destinations/sirisilla.jpg";
 import naraynaHero from "@/assets/TG/Destinations/narayanapet.jpg";
 import nizamabadHero from "@/assets/TG/Destinations/nizamabad.jpg";
+import rangareddyHero from "@/assets/TG/Destinations/rangareddy.jpg";
+import karimnagarHero from "@/assets/TG/Destinations/karimnagar.jpg";
+import sangareddyHero from "@/assets/TG/Destinations/sangareddy.jpg";
+import medakHero from "@/assets/TG/Destinations/medak.jpg";
+import nalgondaHero from "@/assets/TG/Destinations/nalgonda.jpg";
+import yadadriHero from "@/assets/TG/Destinations/bhuvanagiri.jpg";
 
 /* =================== WARANGAL ======================== */
 import warangalDurriesHero from "@/assets/TG/Products/WDH.jpg";
@@ -229,6 +235,184 @@ import narayanpetSilkBorder from "@/assets/TG/Products/NSSF.jpg";
 import narayanpetShawl from "@/assets/TG/Products/NSH.jpg";
 import shawlWeavingNarayanpet from "@/assets/TG/Products/NSM.jpg";
 import shawlTextureNarayanpet from "@/assets/TG/Products/NSF.jpg";
+
+/* =================== NIZAMABAD ======================== */
+import nizamabadTurmeric from "@/assets/TG/Products/NTH.jpg";
+import turmericProcessing from "@/assets/TG/Products/NTM.jpg";
+import turmericPowderTexture from "@/assets/TG/Products/NTF.jpg";
+
+import nizamabadRice from "@/assets/TG/Products/NRH.jpg";
+import riceMilling from "@/assets/TG/Products/NRM.jpg";
+import riceGrainsTexture from "@/assets/TG/Products/NRF.jpg";
+
+import nizamabadJaggery from "@/assets/TG/Products/NJH.jpg";
+import jaggeryMaking from "@/assets/TG/Products/NJM.jpg";
+import jaggeryTexture from "@/assets/TG/Products/NJF.jpg";
+
+import telanganaChilli from "@/assets/TG/Products/NTCH.jpg";
+
+import turmericPickle from "@/assets/TG/Products/NTPH.jpg";
+import turmericPickleMaking from "@/assets/TG/Products/NTPM.jpg";
+import turmericPickleTexture from "@/assets/TG/Products/NTPF.jpg";
+
+import jaggerySweets from "@/assets/TG/Products/NJSH.jpg";
+import jaggerySweetMaking from "@/assets/TG/Products/NJSM.jpg";
+import jaggerySweetTexture from "@/assets/TG/Products/NJSF.jpg";
+
+import sesameLaddus from "@/assets/TG/Products/NSLH.jpg";
+import sesameLadduMaking from "@/assets/TG/Products/NSLM.jpg";
+import sesameLadduTexture from "@/assets/TG/Products/NSLF.jpg";
+
+import nandiwadaTextiles from "@/assets/TG/Products/NHTH.jpg";
+import nandiwadaWeaving from "@/assets/TG/Products/NHSM.jpg";
+import nandiwadaFabricPattern from "@/assets/TG/Products/NHTF.jpg";
+
+/* =================== RANGAREDDY ======================== */
+import chevellaTomatoes from "@/assets/TG/Products/RCTH.jpg";
+import tomatoHarvest from "@/assets/TG/Products/RCTM.jpg";
+import tomatoTexture from "@/assets/TG/Products/RCTF.jpg";
+
+import vikarabadHoney from "@/assets/TG/Products/RVHH.jpg";
+import honeyHarvesting from "@/assets/TG/Products/RVHM.jpg";
+import honeyTexture from "@/assets/TG/Products/RVHF.jpg";
+
+import banjaraEmbroidery from "@/assets/TG/Products/RBEH.jpg";
+import banjaraEmbroideryMaking from "@/assets/TG/Products/RBEM.jpg";
+import banjaraEmbroideryPattern from "@/assets/TG/Products/RBEF.jpg";
+
+import anabEShahiGrapes from "@/assets/TG/Products/RAGH.jpg";
+import grapeHarvest from "@/assets/TG/Products/RAGM.jpg";
+import grapeTexture from "@/assets/TG/Products/RAGF.jpg";
+
+import genomeValleyBiotech from "@/assets/TG/Products/RGBH.jpg";
+import vaccineManufacturing from "@/assets/TG/Products/RGBM.jpg";
+import biotechLab from "@/assets/TG/Products/RGBF.jpg";
+
+import rawSilkFilature from "@/assets/TG/Products/RRSH.jpg";
+import silkReeling from "@/assets/TG/Products/RRSM.jpg";
+import silkThreadTexture from "@/assets/TG/Products/RRSF.jpg";
+
+import milletSnacks from "@/assets/TG/Products/RMSH.jpg";
+import milletSnackMaking from "@/assets/TG/Products/RMSM.jpg";
+import milletSnackTexture from "@/assets/TG/Products/RMSF.jpg";
+
+import pachiMirchiTiffins from "@/assets/TG/Products/RPMTH.jpg";
+import karamPodiMaking from "@/assets/TG/Products/RPMTM.jpg";
+import greenChilliTexture from "@/assets/TG/Products/RPMTF.jpg";
+
+import rangareddySitaphal from "@/assets/TG/Products/RSH.jpg";
+import sitaphalHarvest from "@/assets/TG/Products/RSM.jpg";
+import sitaphalTexture from "@/assets/TG/Products/RSF.jpg";
+
+import hydroponicFlowers from "@/assets/TG/Products/RHFH.jpg";
+import flowerPolyhouse from "@/assets/TG/Products/RHFM.jpg";
+import roseBloomTexture from "@/assets/TG/Products/RHFF.jpg";
+
+/* =================== KARIMNAGAR ======================== */
+import silverFiligree from "@/assets/TG/Products/KSFH.jpg";
+import filigreeMaking from "@/assets/TG/Products/KSFM.jpg";
+import filigreePattern from "@/assets/TG/Products/KSFF.jpg";
+
+import karimnagarGranite from "@/assets/TG/Products/KGH.jpg";
+import graniteQuarry from "@/assets/TG/Products/KGM.jpg";
+import graniteTexture from "@/assets/TG/Products/KGF.jpg.jpg";
+
+import karimnagarRice from "@/assets/TG/Products/KRF.jpeg";
+
+import palaKova from "@/assets/TG/Products/KPKH.jpg";
+import kovaMaking from "@/assets/TG/Products/KPKM.jpg";
+import kovaTexture from "@/assets/TG/Products/KPKF.jpg";
+
+import lacBangles from "@/assets/TG/Products/KLBH.jpg";
+import lacBangleMaking from "@/assets/TG/Products/KLBM.jpg";
+import lacBangleTexture from "@/assets/TG/Products/KLBF.jpg";
+
+/* =================== SANGAREDDY ======================== */
+import jogipetSaree from "@/assets/TG/Products/SJSH.jpg";
+import jogipetSareeWeaving from "@/assets/TG/Products/SJSM.jpg";
+import jogipetSareeTexture from "@/assets/TG/Products/SJSF.jpg";
+
+import telanganaMillets from "@/assets/TG/Products/STMH.jpg";
+import milletHarvest from "@/assets/TG/Products/STMM.jpg";
+import milletGrainsTexture from "@/assets/TG/Products/STMF.jpg";
+
+import malkapurHandicrafts from "@/assets/TG/Products/SMHCH.jpg";
+import malkapurCraftMaking from "@/assets/TG/Products/SMHCM.jpg";
+import malkapurCraftTexture from "@/assets/TG/Products/SMHCF.jpg";
+
+import zaheerabadGinger from "@/assets/TG/Products/SZGH.jpg";
+import gingerHarvest from "@/assets/TG/Products/SZGM.jpg";
+import gingerTexture from "@/assets/TG/Products/SZGF.jpg";
+
+import nyalkalCoirMats from "@/assets/TG/Products/SCMH.jpg";
+import coirMatWeaving from "@/assets/TG/Products/SNMM.jpg";
+import coirMatTexture from "@/assets/TG/Products/SNMF.jpg";
+
+/* =================== MEDAK ======================== */
+import cathedralStainedGlass from "@/assets/TG/Products/MCGH.jpg";
+import glassPaintingProcess from "@/assets/TG/Products/MCGM.jpg";
+import vibrantLightTexture from "@/assets/TG/Products/MCGF.jpg";
+
+import roastedCashewBowl from "@/assets/TG/Products/MRCH.jpg";
+import traditionalRoasting from "@/assets/TG/Products/MRCM.jpg";
+import crunchyGoldenTexture from "@/assets/TG/Products/MRCF.jpg";
+
+import riceGrainPile from "@/assets/TG/Products/MRPH.jpg";
+import paddyFieldHarvest from "@/assets/TG/Products/MRPM.jpg";
+import aromaticFluffyTexture from "@/assets/TG/Products/MRPF.jpg";
+
+import cottonSareeFold from "@/assets/TG/Products/MCSH.jpg";
+import handloomWeaving from "@/assets/TG/Products/MCSM.jpg.webp";
+import softBreathableTexture from "@/assets/TG/Products/MCSF.jpg";
+
+import thickPotCurd from "@/assets/TG/Products/MPCH.jpg";
+import milkBoilingInPot from "@/assets/TG/Products/MPCM.jpg.jpg";
+import creamyLayerTexture from "@/assets/TG/Products/MPCF.jpg";
+
+import wildSitaphalBasket from "@/assets/TG/Products/MSH.jpg";
+import forestForaging from "@/assets/TG/Products/MSM.jpg";
+import grittyCreamyPulp from "@/assets/TG/Products/MSF.jpg";
+
+import gollabhamaSaree from "@/assets/TG/Products/MGBSH.jpg";
+import inlayWeavingProcess from "@/assets/TG/Products/MGBSM.jpg";
+import cottonThreadDetail from "@/assets/TG/Products/MGBSF.jpg";
+
+/* =================== NALGONDA ======================== */
+import teliaRumalMain from "@/assets/TG/Products/NTRH.jpg";
+import oilSoakingProcess from "@/assets/TG/Products/NTRM.jpg";
+import ikatPatternTexture from "@/assets/TG/Products/NTRF.jpg";
+
+import mosambiOrchard from "@/assets/TG/Products/NMOH.jpg";
+import fruitGrading from "@/assets/TG/Products/NMOM.jpg";
+import juicyCitrusTexture from "@/assets/TG/Products/NMOF.jpg";
+
+import limestoneSlabs from "@/assets/TG/Products/NLSH.jpg";
+import stonePolishing from "@/assets/TG/Products/NLSM.jpg";
+import matteStoneTexture from "@/assets/TG/Products/NLSF.jpg";
+
+import wadapallyPottery from "@/assets/TG/Products/NWPH.jpg.jpg";
+import clayKneading from "@/assets/TG/Products/NWPM.jpg";
+import mineralRichTexture from "@/assets/TG/Products/NWPF.jpg";
+
+import chandurBells from "@/assets/TG/Products/NCBH.jpg";
+import sandCastingProcess from "@/assets/TG/Products/NCBM.jpg";
+import resonantMetalTexture from "@/assets/TG/Products/NCBF.jpg";
+
+import yadadriLaduMain from "@/assets/TG/Products/BYTLH.jpg";
+import laduPreparation from "@/assets/TG/Products/BYLM.jpg";
+import grainySweetTexture from "@/assets/TG/Products/BYTLF.jpg";
+
+import pochampallySaree from "@/assets/TG/Products/BPIH.jpg";
+import tieDyeProcess from "@/assets/TG/Products/BPIM.jpg";
+import silkWeaveTexture from "@/assets/TG/Products/BPIF.jpg";
+
+import eggBondaPlate from "@/assets/TG/Products/BEBH.jpg";
+import deepFryingBonda from "@/assets/TG/Products/BEBM.jpg";
+import crispySpicedTexture from "@/assets/TG/Products/BEBF.jpg";
+
+import panjeereMix from "@/assets/TG/Products/BPH.jpg";
+import handGrindingMix from "@/assets/TG/Products/BPM.png";
+import coarseGrainyTexture from "@/assets/TG/Products/BPF.jpg";
 
 export const telanganaDestinations: Destination[] = [
   {
@@ -1739,27 +1923,1187 @@ export const telanganaDestinations: Destination[] = [
       "Situated in northern Telangana, Nizamabad is a vibrant district known for its fertile agricultural lands and large-scale turmeric cultivation. The region also features historic temples, ancient forts, and scenic water bodies like Nizam Sagar, making it a blend of culture, agriculture, and heritage.",
 
     culture:
-      "Agriculture strongly shapes the lifestyle of Nizamabad, with turmeric, rice, and maize being major crops. The region’s festivals, markets, and cuisine reflect the agrarian traditions and rich cultural heritage of Telangana.",
+      "The culture of Nizamabad is a vibrant tapestry woven from its ancient roots as Indur and its later development under the Nizams. This heritage fosters a unique syncretic environment where Hindu and Muslim traditions coexist harmoniously. Residents celebrate Bathukamma and Bonalu with the same fervor as Eid-ul-Fitr, reflecting a diverse demographic. As a major agricultural hub for turmeric, the city’s lifestyle is deeply connected to the land, which influences its spicy Deccani cuisine. Historical landmarks like the 10th-century Nizamabad Fort and the Dichpally Ramalayam stand as silent witnesses to this transition from medieval kingdom to modern industrial center. Today, the region remains a vital cultural crossroad where traditional craftsmanship and agrarian pride define the daily rhythm of its people.",
 
-    products: [],
+    products: [
+      {
+        name: "Nizamabad Turmeric",
+        type: "famous",
+
+        image: nizamabadTurmeric,
+        makingImage: turmericProcessing,
+        flavorImage: turmericPowderTexture,
+
+        description:
+          "High-quality turmeric grown in the fertile soils of Nizamabad, known for its rich color, aroma, and medicinal value.",
+
+        significance:
+          "Nizamabad is one of India’s major turmeric-producing regions and hosts a large turmeric market that influences prices across the country.",
+
+        makingProcess:
+          "Turmeric rhizomes are harvested, boiled, dried in the sun, and polished before being sold whole or ground into bright yellow powder.",
+
+        uses: [
+          "Essential spice in Indian cooking",
+          "Traditional medicinal ingredient",
+          "Natural food coloring",
+          "Ayurvedic remedies",
+        ],
+      },
+      {
+        name: "Nizamabad Rice",
+        type: "famous",
+
+        image: nizamabadRice,
+        makingImage: riceMilling,
+        flavorImage: riceGrainsTexture,
+
+        description:
+          "Premium rice varieties cultivated in the irrigated farmlands of Nizamabad.",
+
+        significance:
+          "The region’s irrigation projects and fertile soils make it one of Telangana’s key rice-producing districts, supplying grains to markets across the state.",
+
+        makingProcess:
+          "Rice is harvested from paddy fields, dried, milled to remove husk layers, and processed into polished grains ready for consumption.",
+
+        uses: [
+          "Staple grain in Telangana cuisine",
+          "Used in daily meals and festivals",
+          "Base ingredient for many traditional dishes",
+          "Rice flour and snacks production",
+        ],
+      },
+      {
+        name: "Nizamabad Jaggery",
+        type: "famous",
+
+        image: nizamabadJaggery,
+        makingImage: jaggeryMaking,
+        flavorImage: jaggeryTexture,
+
+        description:
+          "Traditional unrefined sugar made from sugarcane juice, known for its rich caramel flavor.",
+
+        significance:
+          "Jaggery production has long been part of the agricultural economy of northern Telangana, supporting many rural farming communities.",
+
+        makingProcess:
+          "Sugarcane juice is extracted, boiled in large pans, and slowly thickened until it solidifies into golden jaggery blocks.",
+
+        uses: [
+          "Natural sweetener in desserts",
+          "Traditional sweets and snacks",
+          "Energy-rich rural food",
+          "Ingredient in festive dishes",
+        ],
+      },
+      {
+        name: "Telangana Red Chilli",
+        type: "famous",
+
+        image: telanganaChilli,
+        makingImage: chilliDrying,
+        flavorImage: chilliPowderTexture,
+
+        description:
+          "Spicy red chillies cultivated in Telangana and widely traded through regional markets including Nizamabad.",
+
+        significance:
+          "Chilli cultivation contributes to the spice economy of the region and is a key ingredient in Telangana cuisine.",
+
+        makingProcess:
+          "Chillies are harvested, sun-dried in large fields, sorted, and sold whole or ground into powder.",
+
+        uses: [
+          "Essential spice in Telangana cuisine",
+          "Base for chutneys and pickles",
+          "Flavoring for curries and snacks",
+          "Powdered spice blends",
+        ],
+      },
+      {
+        name: "Turmeric Pickle (Pasupu Pachadi)",
+        type: "underrated",
+
+        image: turmericPickle,
+        makingImage: turmericPickleMaking,
+        flavorImage: turmericPickleTexture,
+
+        description:
+          "A flavorful homemade pickle prepared from fresh turmeric roots mixed with spices and oil.",
+
+        significance:
+          "In turmeric-growing regions like Nizamabad, households prepare this seasonal pickle using freshly harvested turmeric, preserving both flavor and medicinal benefits.",
+
+        makingProcess:
+          "Fresh turmeric roots are cleaned, chopped, and mixed with chili powder, mustard seeds, salt, and oil. The mixture is stored in jars to develop rich flavor.",
+
+        uses: [
+          "Side dish with rice and roti",
+          "Seasonal homemade pickle",
+          "Traditional medicinal food",
+          "Flavorful accompaniment for meals",
+        ],
+      },
+      {
+        name: "Village Jaggery Sweets",
+        type: "underrated",
+
+        image: jaggerySweets,
+        makingImage: jaggerySweetMaking,
+        flavorImage: jaggerySweetTexture,
+
+        description:
+          "Traditional sweets made from jaggery and grains, commonly prepared in rural households.",
+
+        significance:
+          "These homemade sweets reflect Telangana’s rural food traditions where jaggery is used instead of refined sugar for natural sweetness.",
+
+        makingProcess:
+          "Jaggery is melted and mixed with roasted grains, nuts, or sesame seeds before being shaped into laddus or bars.",
+
+        uses: [
+          "Festival sweets",
+          "Energy-rich rural snack",
+          "Traditional dessert",
+          "Homemade celebrations",
+        ],
+      },
+      {
+        name: "Sesame Seed Laddus (Nuvvula Undalu)",
+        type: "underrated",
+
+        image: sesameLaddus,
+        makingImage: sesameLadduMaking,
+        flavorImage: sesameLadduTexture,
+
+        description:
+          "Nutritious sweet balls made from roasted sesame seeds and jaggery.",
+
+        significance:
+          "These sweets are commonly prepared during festivals like Sankranti and are valued for their nutritional benefits.",
+
+        makingProcess:
+          "Sesame seeds are roasted and mixed with melted jaggery before being shaped into small laddus.",
+
+        uses: [
+          "Festival sweet",
+          "Healthy energy snack",
+          "Traditional homemade dessert",
+          "Winter seasonal food",
+        ],
+      },
+      {
+        name: "Nandiwada Handwoven Textiles",
+        type: "underrated",
+
+        image: nandiwadaTextiles,
+        makingImage: nandiwadaWeaving,
+        flavorImage: nandiwadaFabricPattern,
+
+        description:
+          "A lesser-known weaving village producing beautiful handwoven sarees and dupattas with intricate geometric patterns.",
+
+        significance:
+          "While Sircilla receives global recognition for textiles, Nandiwada quietly preserves traditional handloom craftsmanship through generations of artisan families.",
+
+        makingProcess:
+          "Cotton and silk yarns are dyed and woven on traditional looms to create patterned sarees and dupattas, maintaining techniques passed down through generations.",
+
+        uses: [
+          "Traditional sarees and dupattas",
+          "Handloom heritage textiles",
+          "Local artisan craftsmanship",
+          "Affordable alternative to major textile hubs",
+        ],
+      },
+    ],
+  },
+  {
+    id: "rangareddy",
+    slug: "rangareddy",
+    state: "telangana",
+    name: "Rangareddy",
+    tagline: "Hyderabad’s Green Escape of Lakes, Hills & Heritage",
+    image: rangareddyHero,
+    mapsQuery: "Rangareddy district Telangana",
+
+    heroDescription:
+      "Surrounding Hyderabad, Rangareddy district is known for its scenic lakes, forested hills, historic forts, and peaceful countryside escapes.",
+
+    elevation: "542 m",
+
+    bestTime: "October – February",
+
+    temperature: "18°C – 40°C",
+
+    about:
+      "Rangareddy district forms the green outskirts of Hyderabad and offers a mix of nature, history, and modern attractions. From the forested Ananthagiri Hills to historic forts and serene reservoirs like Osman Sagar, the region provides refreshing escapes from city life.",
+
+    culture:
+      "Rangareddy district embodies a dynamic fusion of rustic Telangana heritage and modern cosmopolitanism, largely shaped by its proximity to Hyderabad. This multicultural landscape is defined by religious harmony, where Hindus and Muslims actively participate in each other’s festivities, from the floral elegance of Bathukamma and the ritualistic fervor of Bonalu to the spiritual celebrations of Eid. Folk traditions like the Lambadi dance and Perini Sivatandavam thrive alongside ancient artisanal crafts such as 400-year-old Cherial Nakashi scroll paintings. Unique events like the Sadar festival further highlight the region's diverse communal pride. This cultural blend extends to a spicy Deccani cuisine and a lifestyle that seamlessly bridges traditional village customs with a fast-paced, tech-oriented urban reality, creating a truly syncretic identity.",
+
+    products: [
+      {
+        name: "Chevella Tomatoes",
+        type: "famous",
+
+        image: chevellaTomatoes,
+        makingImage: tomatoHarvest,
+        flavorImage: tomatoTexture,
+
+        description:
+          "Fresh, juicy tomatoes cultivated in the fertile agricultural lands around Chevella in Rangareddy district.",
+
+        significance:
+          "Chevella has become one of the major tomato-producing areas supplying Hyderabad’s markets and supporting local farmers.",
+
+        makingProcess:
+          "Tomatoes are cultivated in irrigated farms, harvested when fully ripe, sorted, and transported to wholesale vegetable markets.",
+
+        uses: [
+          "Daily cooking ingredient",
+          "Used in chutneys and curries",
+          "Fresh salads and sauces",
+          "Base ingredient in Telangana dishes",
+        ],
+      },
+      {
+        name: "Vikarabad Forest Honey",
+        type: "famous",
+
+        image: vikarabadHoney,
+        makingImage: honeyHarvesting,
+        flavorImage: honeyTexture,
+
+        description:
+          "Natural forest honey collected from the forests around Vikarabad and Ananthagiri Hills.",
+
+        significance:
+          "Local communities harvest honey from forest beehives using traditional techniques, making it a valued natural product of the region.",
+
+        makingProcess:
+          "Honey is collected from natural beehives in forest areas, filtered, and stored without heavy processing to preserve its natural flavor.",
+
+        uses: [
+          "Natural sweetener",
+          "Traditional medicinal ingredient",
+          "Health drink additive",
+          "Ingredient in desserts and sweets",
+        ],
+      },
+      {
+        name: "Banjara Embroidery",
+        type: "famous",
+
+        image: banjaraEmbroidery,
+        makingImage: banjaraEmbroideryMaking,
+        flavorImage: banjaraEmbroideryPattern,
+
+        description:
+          "Colorful tribal embroidery created by Banjara (Lambani) communities using mirrors, beads, and vibrant threads.",
+
+        significance:
+          "Banjara embroidery represents the rich nomadic heritage of Telangana. Artisan communities around Ibrahimpatnam and cultural hubs like Shilparamam continue to preserve this traditional craft.",
+
+        makingProcess:
+          "Artisans stitch bright cotton fabrics with mirror work, beads, and geometric patterns using traditional hand embroidery techniques.",
+
+        uses: [
+          "Traditional garments",
+          "Fashion accessories",
+          "Handcrafted bags and textiles",
+          "Decorative home fabrics",
+        ],
+      },
+      {
+        name: "Anab-e-Shahi Grapes",
+        type: "famous",
+
+        image: anabEShahiGrapes,
+        makingImage: grapeHarvest,
+        flavorImage: grapeTexture,
+
+        description:
+          "Large, juicy green grapes grown in vineyards around Moinabad and Shamshabad.",
+
+        significance:
+          "Anab-e-Shahi grapes are among the most widely cultivated table grape varieties in Telangana and supply fresh fruit to markets across the region.",
+
+        makingProcess:
+          "Grapes are cultivated in vineyard trellis systems, carefully pruned and irrigated before being harvested and sorted for fresh markets.",
+
+        uses: [
+          "Fresh table fruit",
+          "Juices and beverages",
+          "Fruit salads",
+          "Local fruit markets",
+        ],
+      },
+      {
+        name: "Vaccines & Bulk Drugs",
+        type: "famous",
+
+        image: genomeValleyBiotech,
+        makingImage: vaccineManufacturing,
+        flavorImage: biotechLab,
+
+        description:
+          "Pharmaceutical and biotechnology products developed in the Genome Valley cluster near Hyderabad.",
+
+        significance:
+          "Genome Valley in Rangareddy district is one of India’s leading biotech hubs, housing global pharmaceutical companies and vaccine manufacturers.",
+
+        makingProcess:
+          "Advanced biotechnology research, pharmaceutical formulation, and large-scale manufacturing facilities produce vaccines, medicines, and bulk drugs for global healthcare markets.",
+
+        uses: [
+          "Global vaccine supply",
+          "Pharmaceutical medicines",
+          "Biotechnology research",
+          "Healthcare products",
+        ],
+      },
+      {
+        name: "Raw Silk Filatures",
+        type: "famous",
+
+        image: rawSilkFilature,
+        makingImage: silkReeling,
+        flavorImage: silkThreadTexture,
+
+        description:
+          "Silk processing units that reel raw silk threads from cocoons, supplying yarn to weaving industries.",
+
+        significance:
+          "Filature units around Shadnagar contribute to Telangana’s silk supply chain, supporting traditional textile production across the region.",
+
+        makingProcess:
+          "Silk cocoons are boiled and reeled into fine threads using reeling machines before being processed into yarn for weaving.",
+
+        uses: [
+          "Silk saree weaving",
+          "Textile yarn production",
+          "Handloom and powerloom fabrics",
+          "Garment manufacturing",
+        ],
+      },
+      {
+        name: "Traditional Millet Snacks",
+        type: "underrated",
+
+        image: milletSnacks,
+        makingImage: milletSnackMaking,
+        flavorImage: milletSnackTexture,
+
+        description:
+          "Healthy snacks made from millets such as jowar, bajra, and ragi prepared in village households.",
+
+        significance:
+          "Millets have been staple crops of Telangana for centuries, and these snacks represent traditional food wisdom and sustainable agriculture.",
+
+        makingProcess:
+          "Millet flour is roasted, mixed with jaggery or spices, and shaped into laddus or crispy snacks.",
+
+        uses: [
+          "Healthy snack option",
+          "Traditional festival food",
+          "Energy-rich rural food",
+          "Millet-based nutrition",
+        ],
+      },
+      {
+        name: "Pachi Mirchi Tiffins",
+        type: "underrated",
+
+        image: pachiMirchiTiffins,
+        makingImage: karamPodiMaking,
+        flavorImage: greenChilliTexture,
+
+        description:
+          "A fiery breakfast tradition where idlis and dosas are served with a rustic green chili karam podi made from fresh chilies and garlic.",
+
+        significance:
+          "Small towns like Ibrahimpatnam and Maheshwaram maintain a strong tiffin culture where spicy karam podi reflects the bold flavors of rural Telangana.",
+
+        makingProcess:
+          "Fresh green chilies, garlic, lentils, and spices are roasted and ground into a coarse powder, which is mixed with oil or ghee and served with morning tiffins.",
+
+        uses: [
+          "Spicy accompaniment for idli and dosa",
+          "Traditional Telangana breakfast condiment",
+          "Flavorful podi mixed with ghee or oil",
+          "Street-style tiffin culture",
+        ],
+      },
+      {
+        name: "Rangareddy Sitaphal",
+        type: "underrated",
+
+        image: rangareddySitaphal,
+        makingImage: sitaphalHarvest,
+        flavorImage: sitaphalTexture,
+
+        description:
+          "Wild-grown custard apples found in the hills around Moinabad and Chevella, prized for their intense sweetness.",
+
+        significance:
+          "Unlike commercial varieties, these smaller wild fruits have a richer flavor and creamy texture that locals consider superior.",
+
+        makingProcess:
+          "The fruits grow naturally on hillside trees and are harvested during the monsoon and early winter seasons before being sold in roadside markets.",
+
+        uses: [
+          "Fresh seasonal fruit",
+          "Desserts and milkshakes",
+          "Traditional fruit snack",
+          "Local roadside market produce",
+        ],
+      },
+      {
+        name: "Hydroponic Flowers of Shamshabad",
+        type: "underrated",
+
+        image: hydroponicFlowers,
+        makingImage: flowerPolyhouse,
+        flavorImage: roseBloomTexture,
+
+        description:
+          "Exotic flowers such as Dutch roses and lilies grown in climate-controlled polyhouses near Shamshabad.",
+
+        significance:
+          "These farms quietly supply premium flowers to Hyderabad’s boutique florists and event decorators, reducing reliance on imported blooms.",
+
+        makingProcess:
+          "Flowers are cultivated in hydroponic or controlled soil systems inside polyhouses, ensuring optimal temperature, humidity, and nutrient supply.",
+
+        uses: [
+          "Luxury floral arrangements",
+          "Wedding and event decoration",
+          "Boutique florist supplies",
+          "Premium flower exports",
+        ],
+      },
+    ],
   },
   {
     id: "karimnagar",
     slug: "karimnagar",
     state: "telangana",
     name: "Karimnagar",
-    tagline: "Heartland of Crafts and Agriculture",
-    image: "/images/destinations/karimnagar.jpg",
-    mapsQuery: "",
+    tagline: "The Land of Silver Filigree and Riverfront Heritage",
+    image: karimnagarHero,
+    mapsQuery: "Karimnagar Telangana",
+
     heroDescription:
-      "Karimnagar represents the agricultural backbone of Telangana, enriched with historic forts and traditional silver craftsmanship.",
-    elevation: "332 m",
+      "Karimnagar is known for its historic forts, sacred temples, scenic reservoirs, and the famous silver filigree craft that reflects Telangana’s rich heritage.",
+
+    elevation: "273 m",
+
     bestTime: "October – February",
-    temperature: "20°C – 39°C",
+
+    temperature: "20°C – 40°C",
+
     about:
-      "Situated along the Manair River, Karimnagar is known for Elgandal Fort, rural farming landscapes, and silver filigree artistry.",
+      "Situated along the Manair River in northern Telangana, Karimnagar blends ancient history with vibrant cultural traditions. From historic forts like Elgandal to spiritual centers such as Kondagattu Temple, the region offers a mix of heritage, nature, and craftsmanship.",
+
     culture:
-      "The district blends agrarian traditions with skilled craftsmanship, especially intricate silver filigree work passed through generations.",
-    products: [],
+      "Karimnagar serves as a vital cultural bridge in Telangana, where the architectural and social influences of the Kakatiya, Qutb Shahi, and Nizam dynasties converge. Named historically as the town of Karim, its identity is anchored by the 10th-century Elgandal Fort and the delicate artistry of its GI-tagged silver filigree. This heritage is mirrored in a festive calendar where residents celebrate Bathukamma and Bonalu alongside local traditions like the Sammakka Saralamma Jatara. The region's culinary landscape features authentic staples such as Sarvapindi and Sakinalu, reflecting its deep agricultural roots along the Manair River. From the spiritual significance of the Vemulawada temple to the preservation of folk arts like Chindu Bhagavatam, Karimnagar remains a hub where ancient history seamlessly integrates with modern regional pride.",
+
+    products: [
+      {
+        name: "Karimnagar Silver Filigree",
+        type: "famous",
+
+        image: silverFiligree,
+        makingImage: filigreeMaking,
+        flavorImage: filigreePattern,
+
+        description:
+          "A delicate metal craft where thin silver wires are twisted into intricate designs to create jewelry and decorative objects.",
+
+        significance:
+          "Karimnagar’s silver filigree craft dates back centuries and is one of Telangana’s most celebrated traditional art forms.",
+
+        makingProcess:
+          "Artisans draw pure silver into extremely fine wires, twist them into elaborate patterns, and solder them together to create detailed ornaments and artifacts.",
+
+        uses: [
+          "Jewelry and ornaments",
+          "Decorative artifacts",
+          "Gift items",
+          "Cultural handicrafts",
+        ],
+      },
+      {
+        name: "Karimnagar Granite",
+        type: "famous",
+
+        image: karimnagarGranite,
+        makingImage: graniteQuarry,
+        flavorImage: graniteTexture,
+
+        description:
+          "High-quality granite extracted from quarries in Karimnagar district and exported worldwide.",
+
+        significance:
+          "Karimnagar is one of the major granite-producing regions in Telangana, supplying polished stone for construction and export markets.",
+
+        makingProcess:
+          "Granite blocks are mined from quarries, cut into slabs using large machines, polished, and prepared for architectural and decorative use.",
+
+        uses: [
+          "Building construction",
+          "Flooring and tiles",
+          "Kitchen countertops",
+          "Architectural stone",
+        ],
+      },
+      {
+        name: "Karimnagar Rice",
+        type: "famous",
+
+        image: karimnagarRice,
+        makingImage: riceHarvest,
+        flavorImage: riceGrainsTexture,
+
+        description:
+          "Rice cultivated in the fertile agricultural lands of Karimnagar district along the Manair River basin.",
+
+        significance:
+          "Irrigation from projects like Lower Manair Dam supports large-scale paddy cultivation in Karimnagar.",
+
+        makingProcess:
+          "Paddy crops are harvested, dried, and milled to remove husk layers before the grains are polished and packed for markets.",
+
+        uses: [
+          "Staple grain for daily meals",
+          "Festival dishes",
+          "Rice flour products",
+          "Regional cuisine",
+        ],
+      },
+      {
+        name: "Karimnagar Milk Sweet (Pala Kova)",
+        type: "famous",
+
+        image: palaKova,
+        makingImage: kovaMaking,
+        flavorImage: kovaTexture,
+
+        description:
+          "A rich traditional milk sweet made by slowly simmering milk until it thickens into a soft caramelized dessert.",
+
+        significance:
+          "Pala Kova is a beloved sweet across Telangana, and Karimnagar’s dairy farms provide fresh milk that contributes to its creamy texture and flavor.",
+
+        makingProcess:
+          "Fresh milk is simmered for hours while continuously stirred until it thickens and caramelizes into a dense, sweet kova mixture.",
+
+        uses: [
+          "Traditional dessert",
+          "Festival sweet",
+          "Temple offerings",
+          "Ingredient in other sweets",
+        ],
+      },
+      {
+        name: "Karimnagar Lac Bangles",
+        type: "underrated",
+
+        image: lacBangles,
+        makingImage: lacBangleMaking,
+        flavorImage: lacBangleTexture,
+
+        description:
+          "Colorful handcrafted bangles made from lac resin and decorated with stones and beads.",
+
+        significance:
+          "These bangles reflect Telangana’s traditional jewelry craft and are popular during weddings and festivals.",
+
+        makingProcess:
+          "Lac resin is heated and molded into circular shapes, then decorated with colorful stones and designs.",
+
+        uses: [
+          "Traditional jewelry",
+          "Wedding accessories",
+          "Festival wear",
+          "Handcrafted souvenir",
+        ],
+      },
+    ],
+  },
+  {
+    id: "sangareddy",
+    slug: "sangareddy",
+    state: "telangana",
+    name: "Sangareddy",
+    tagline: "The Historic Gateway of Hyderabad’s Western Plateau",
+    image: sangareddyHero,
+    mapsQuery: "Sangareddy Telangana",
+
+    heroDescription:
+      "Sangareddy blends historical landmarks, serene reservoirs, and cultural heritage, serving as a tranquil escape near Hyderabad with roots in the Nizam era.",
+
+    elevation: "538 m",
+
+    bestTime: "October – February",
+
+    temperature: "18°C – 38°C",
+
+    about:
+      "Located west of Hyderabad, Sangareddy is a district known for its blend of history, nature, and emerging industry. Once an important administrative center during the Nizam period, the town is home to landmarks like the Sangareddy Jail Museum and scenic water bodies such as Singur Dam and Manjeera Reservoir. The region also serves as a gateway to wildlife sanctuaries and rural Telangana landscapes.",
+
+    culture:
+      "Sangareddy reflects the rural traditions and cultural vibrancy of Telangana. Festivals such as Bathukamma, Bonalu, and Sankranti are celebrated with community gatherings, folk music, and traditional cuisine. The district’s culture is deeply tied to agriculture and the Manjeera River basin, with millet-based dishes and seasonal specialties forming an essential part of local life. Handicrafts, temple fairs, and village markets showcase Telangana’s grassroots heritage while the town’s historic jail museum preserves stories from the Nizam era and India’s freedom movement.",
+
+    products: [
+      {
+        name: "Jogipet Handloom Sarees",
+        type: "famous",
+
+        image: jogipetSaree,
+        makingImage: jogipetSareeWeaving,
+        flavorImage: jogipetSareeTexture,
+
+        description:
+          "Traditional cotton sarees handwoven in Jogipet, known for their breathable fabric and simple elegant borders.",
+
+        significance:
+          "Jogipet is historically associated with Telangana’s handloom weaving traditions, where artisan families have passed down weaving skills for generations.",
+
+        makingProcess:
+          "Cotton yarn is dyed and stretched across wooden handlooms where artisans weave sarees using shuttle-based weaving techniques.",
+
+        uses: [
+          "Daily traditional wear",
+          "Handloom heritage clothing",
+          "Comfortable cotton sarees for warm climates",
+          "Cultural attire during festivals",
+        ],
+      },
+      {
+        name: "Telangana Millets",
+        type: "famous",
+
+        image: telanganaMillets,
+        makingImage: milletHarvest,
+        flavorImage: milletGrainsTexture,
+
+        description:
+          "Locally grown millets such as jowar, bajra, and foxtail millet that form the backbone of traditional Telangana cuisine.",
+
+        significance:
+          "Millets have been cultivated in the semi-arid lands of Sangareddy for centuries, supporting sustainable agriculture and traditional diets.",
+
+        makingProcess:
+          "Millets are grown in dryland farms, harvested during the season, sun-dried, and processed into grains or flour.",
+
+        uses: [
+          "Jonna Rotte (sorghum flatbread)",
+          "Millet porridge and upma",
+          "Healthy gluten-free flour",
+          "Traditional Telangana meals",
+        ],
+      },
+      {
+        name: "Malkapur Handicrafts",
+        type: "famous",
+
+        image: malkapurHandicrafts,
+        makingImage: malkapurCraftMaking,
+        flavorImage: malkapurCraftTexture,
+
+        description:
+          "Traditional bamboo and natural fiber handicrafts produced by artisans in Malkapur village.",
+
+        significance:
+          "These crafts represent rural Telangana craftsmanship where artisans transform locally available bamboo and natural materials into useful household items.",
+
+        makingProcess:
+          "Bamboo is cut, split into thin strips, and carefully woven by hand into baskets, trays, and storage containers using traditional techniques.",
+
+        uses: [
+          "Household storage baskets",
+          "Agricultural utility baskets",
+          "Decorative handicrafts",
+          "Eco-friendly handmade products",
+        ],
+      },
+      {
+        name: "Zaheerabad 'Red Gold' Ginger",
+        type: "underrated",
+
+        image: zaheerabadGinger,
+        makingImage: gingerHarvest,
+        flavorImage: gingerTexture,
+
+        description:
+          "A locally grown variety of ginger from the fertile farmlands around Zaheerabad, valued for its strong aroma and spicy flavor.",
+
+        significance:
+          "Often called 'Red Gold' by farmers, this ginger crop is an important source of livelihood in the Zaheerabad region and is widely used in regional cooking and traditional remedies.",
+
+        makingProcess:
+          "Ginger rhizomes are cultivated in well-drained soil during the monsoon season. After several months of growth, the roots are harvested, cleaned, and sold fresh or dried in regional markets.",
+
+        uses: [
+          "Traditional cooking spice",
+          "Ginger tea and herbal drinks",
+          "Ayurvedic remedies",
+          "Flavoring for pickles and chutneys",
+        ],
+      },
+      {
+        name: "Nyalkal Hand-Knotted Coir Mats",
+        type: "underrated",
+
+        image: nyalkalCoirMats,
+        makingImage: coirMatWeaving,
+        flavorImage: coirMatTexture,
+
+        description:
+          "Durable floor mats woven from natural coconut fibers by artisans in Nyalkal villages.",
+
+        significance:
+          "These eco-friendly mats represent rural craftsmanship where natural fibers are transformed into useful household products.",
+
+        makingProcess:
+          "Coconut husks are processed into coir fibers which are twisted into yarn. Artisans then knot and weave the fibers by hand to create sturdy floor mats.",
+
+        uses: [
+          "Entrance door mats",
+          "Eco-friendly home decor",
+          "Floor protection mats",
+          "Traditional household utility product",
+        ],
+      },
+    ],
+  },
+  {
+    id: "medak",
+    slug: "medak",
+    state: "telangana",
+    name: "Medak",
+    tagline: "The Land of the Grand Cathedral and Kakatiya Heritage",
+    image: medakHero,
+    mapsQuery: "Medak Telangana",
+
+    heroDescription:
+      "Medak is known for its majestic cathedral, historic forts, and scenic reservoirs that reflect centuries of Telangana’s architectural and cultural heritage.",
+
+    elevation: "442 m",
+
+    bestTime: "October – February",
+
+    temperature: "18°C – 38°C",
+
+    about:
+      "Located about 100 kilometers from Hyderabad, Medak is a historic town that blends spiritual landmarks, medieval forts, and rural Telangana culture. The town gained prominence during the Kakatiya period and later flourished under the Qutb Shahi and Nizam rulers. Medak is most famous for the magnificent Medak Cathedral, one of the largest churches in Asia, and the ancient Medak Fort that overlooks the surrounding plains.",
+
+    culture:
+      "Medak’s cultural identity reflects the layered influences of the Kakatiya, Qutb Shahi, and Nizam dynasties. The region celebrates Telangana festivals such as Bathukamma, Bonalu, and Sankranti with vibrant community gatherings, traditional music, and local cuisine. Rural traditions remain strong in Medak’s villages, where agriculture and temple fairs form the backbone of community life. The town’s historic landmarks, including the Medak Cathedral and the Kakatiya-era Medak Fort, symbolize the district’s blend of spiritual devotion and architectural heritage.",
+
+    products: [
+      {
+        name: "Medak Cathedral Stained Glass",
+        type: "famous",
+        image: cathedralStainedGlass,
+        makingImage: glassPaintingProcess,
+        flavorImage: vibrantLightTexture,
+        description:
+          "Massive, intricate stained-glass windows depicting biblical scenes through a vivid play of light and color.",
+        significance:
+          "The artistic soul of Medak Cathedral, one of Asia's largest. The craftsmanship allows the glass to glow even in minimal sunlight, attracting global visitors.",
+        makingProcess:
+          "Imported from Britain in the early 20th century, mineral oxides were hand-painted onto glass and fired for permanent translucency before being leaded into Gothic frames.",
+        uses: [
+          "Architectural wonder",
+          "Spiritual storytelling",
+          "Historical documentation",
+          "Photography subject",
+        ],
+      },
+      {
+        name: "Medak Premium Cashews",
+        type: "famous",
+        image: roastedCashewBowl,
+        makingImage: traditionalRoasting,
+        flavorImage: crunchyGoldenTexture,
+        description:
+          "Locally sourced cashews slow-roasted in pure buffalo ghee and seasoned with hand-pounded black pepper.",
+        significance:
+          "Medak is a major hub for cashew processing. The 'ghee-roast' style is a signature gift item for travelers on the district's major highways.",
+        makingProcess:
+          "Raw cashews are sun-dried, shelled, and small-batch roasted in iron vats to allow the ghee to permeate the nut for a rich, buttery finish.",
+        uses: [
+          "Travel snack",
+          "Wedding gifts",
+          "Culinary ingredient",
+          "Health supplement",
+        ],
+      },
+      {
+        name: "Manjeera Sona Masuri Rice",
+        type: "famous",
+        image: riceGrainPile,
+        makingImage: paddyFieldHarvest,
+        flavorImage: aromaticFluffyTexture,
+        description:
+          "Lightweight, aromatic, and low-starch medium-grain rice grown in the fertile Manjeera river belt.",
+        significance:
+          "Medak’s economy is anchored by this 'White Gold.' The mineral-rich water from local dams makes the rice exceptionally fluffy and flavorful.",
+        makingProcess:
+          "Cultivated in clay-loam soil, the paddy is aged for several months post-harvest to enhance cooking quality and texture.",
+        uses: [
+          "Daily staple",
+          "Biryani base",
+          "Export commodity",
+          "Temple offerings",
+        ],
+      },
+      {
+        name: "Medak Khadi & Cotton",
+        type: "famous",
+        image: cottonSareeFold,
+        makingImage: handloomWeaving,
+        flavorImage: softBreathableTexture,
+        description:
+          "Durable, breathable hand-spun cotton fabrics and sarees featuring simple, elegant geometric borders.",
+        significance:
+          "Local weaving clusters preserve the 'Telangana Khadi' identity, prioritizing comfort and rustic aesthetics for the hot Deccan climate.",
+        makingProcess:
+          "Locally grown cotton is hand-carded, spun into yarn, dyed with vegetable colors, and woven on traditional pit looms.",
+        uses: [
+          "Summer clothing",
+          "Traditional attire",
+          "Sustainable fashion",
+          "Daily wear",
+        ],
+      },
+      {
+        name: "Medak Clay-Pot Curd",
+        type: "underrated",
+        image: thickPotCurd,
+        makingImage: milkBoilingInPot,
+        flavorImage: creamyLayerTexture,
+        description:
+          "Extraordinarily thick curd featuring a deep 'Meegada' (cream) layer, set in local unglazed clay pots.",
+        significance:
+          "The porous Medak clay absorbs excess moisture, creating a density that commercial curd cannot replicate.",
+        makingProcess:
+          "Full-cream buffalo milk is reduced, cooled, and set naturally in terracotta pots for 8 hours.",
+        uses: ["Probiotic snack", "Summer cooling", "Gourmet ingredient"],
+      },
+      {
+        name: "Gollabhama Handloom",
+        type: "underrated",
+        image: gollabhamaSaree,
+        makingImage: inlayWeavingProcess,
+        flavorImage: cottonThreadDetail,
+        description:
+          "Cotton sarees featuring the iconic 'Gollabhama' (milkmaid) motif manually woven into the borders.",
+        significance:
+          "A GI-tagged craft representing the pastoral culture of the Medak-Siddipet region.",
+        makingProcess:
+          "Artisans use a specialized 'inlay' technique to manually insert extra weft threads for the motifs.",
+        uses: ["Traditional attire", "Cultural gift", "Sustainable fashion"],
+      },
+      {
+        name: "Medak Wild Custard Apples",
+        type: "underrated",
+
+        image: wildSitaphalBasket,
+        makingImage: forestForaging,
+        flavorImage: grittyCreamyPulp,
+
+        description:
+          "Wild-harvested custard apples (Sitaphal) from the hilly forest tracts near the Ghanpur Anicut.",
+
+        significance:
+          "Unlike commercial varieties, these forest-grown fruits are prized by locals for their intense sweetness and the absence of chemical ripening.",
+
+        makingProcess:
+          "Foraged by local tribal communities at daybreak, these fruits are naturally ripened in hay and sold in bamboo baskets along the Medak-Bodhan highway.",
+
+        uses: [
+          "Seasonal fruit",
+          "Sitaphal Rabri (dessert)",
+          "Natural snack",
+          "Community livelihood",
+        ],
+      },
+    ],
+  },
+  {
+    id: "nalgonda",
+    slug: "nalgonda",
+    state: "telangana",
+    name: "Nalgonda",
+    tagline: "The Land of Ancient Forts and the Nagarjuna Sagar Legacy",
+    image: nalgondaHero,
+    mapsQuery: "Nalgonda Telangana",
+
+    heroDescription:
+      "Nalgonda is known for its historic forts, ancient Buddhist heritage, and the majestic Nagarjuna Sagar Dam that shapes the region’s landscape.",
+
+    elevation: "317 m",
+
+    bestTime: "October – February",
+
+    temperature: "20°C – 41°C",
+
+    about:
+      "Located in southern Telangana, Nalgonda is a district rich in history, spirituality, and natural landscapes. The region has deep historical roots dating back to the Satavahana and Ikshvaku periods and later flourished under the Kakatiya and Qutb Shahi dynasties. Nalgonda is home to remarkable landmarks such as the Nagarjuna Sagar Dam, one of India’s largest masonry dams, and ancient Buddhist sites that reflect the region’s connection to early Buddhist learning.",
+
+    culture:
+      "Nalgonda’s culture reflects a vibrant blend of Telangana traditions shaped by centuries of historical influences. Festivals such as Bathukamma, Bonalu, and Sankranti are celebrated with music, traditional food, and community gatherings. The region’s cultural landscape also preserves traces of its Buddhist past through archaeological sites around Nagarjuna Sagar. Rural life in Nalgonda revolves around agriculture, temple fairs, and local crafts, while traditional Telangana cuisine featuring millet-based dishes and spicy curries remains an integral part of daily life.",
+
+    products: [
+      {
+        name: "Puttapaka Telia Rumal",
+        type: "famous",
+
+        image: teliaRumalMain,
+        makingImage: oilSoakingProcess,
+        flavorImage: ikatPatternTexture,
+
+        description:
+          "An intricate double-ikat weave characterized by its geometric patterns and a unique oily texture.",
+
+        significance:
+          "This GI-tagged craft is a precursor to the famous Pochampally Ikat. The name 'Telia' comes from the use of oil in the treatment of the yarn, which makes the fabric water-repellent and cooling.",
+
+        makingProcess:
+          "Yarn is soaked in a mixture of castor oil and ash for 21 days before being tie-dyed and woven on traditional handlooms to create identical patterns on both sides.",
+
+        uses: [
+          "Heritage sarees",
+          "Traditional headgear",
+          "Luxury home decor",
+          "International fashion",
+        ],
+      },
+      {
+        name: "Nalgonda Mosambi",
+        type: "famous",
+
+        image: mosambiOrchard,
+        makingImage: fruitGrading,
+        flavorImage: juicyCitrusTexture,
+
+        description:
+          "High-quality, thin-skinned sweet limes known for their high juice content and natural sweetness.",
+
+        significance:
+          "Nalgonda is the largest producer of sweet lime in Telangana. The fruit from this region is exported across India and is a vital source of vitamin C for the state.",
+
+        makingProcess:
+          "Grown in the well-drained loamy soils of the district, the fruits are harvested carefully to prevent bruising and sorted by size for the national markets.",
+
+        uses: [
+          "Fresh juice",
+          "Citrus concentrates",
+          "Traditional pickles",
+          "Health supplements",
+        ],
+      },
+      {
+        name: "Nalgonda Natural Stone",
+        type: "underrated",
+
+        image: limestoneSlabs,
+        makingImage: stonePolishing,
+        flavorImage: matteStoneTexture,
+
+        description:
+          "Durable, colorful limestone slabs available in shades of black, green, and buff, used extensively in construction.",
+
+        significance:
+          "The district is a massive hub for 'Shahabad' and 'Nalgonda' stone. It has defined the architectural look of many South Indian homes and public irrigation projects.",
+
+        makingProcess:
+          "The stone is quarried in large blocks, then machine-cut into thin slabs and polished to various finishes, from rough-hewn to mirror-smooth.",
+
+        uses: [
+          "Durable flooring",
+          "Wall cladding",
+          "Canal lining",
+          "Pavement stones",
+        ],
+      },
+      {
+        name: "Wadapally River Clay Pottery",
+        type: "underrated",
+
+        image: wadapallyPottery,
+        makingImage: clayKneading,
+        flavorImage: mineralRichTexture,
+
+        description:
+          "Unglazed, durable earthenware made from the silt collected at the 'Sangam' (confluence) of the Krishna and Musi rivers.",
+
+        significance:
+          "Locals believe the clay from the confluence is spiritually pure and mineral-rich. Pots made here are preferred for storing water as they keep it exceptionally cool and impart a distinct earthy scent.",
+
+        makingProcess:
+          "The silt is refined through multiple filtration stages, hand-thrown on a traditional wheel, and pit-fired using local biomass to achieve a rustic, dark-red finish.",
+
+        uses: [
+          "Water storage",
+          "Traditional cooking",
+          "Ritual pottery",
+          "Eco-friendly cooling",
+        ],
+      },
+      {
+        name: "Chandur Ritual Bells",
+        type: "underrated",
+
+        image: chandurBells,
+        makingImage: sandCastingProcess,
+        flavorImage: resonantMetalTexture,
+
+        description:
+          "Heavy, resonant brass bells and lamps traditionally made for village deities and the famous regional 'Jataras' (fairs).",
+
+        significance:
+          "While Pembarthi is famous for sheet metal, Chandur artisans specialize in 'Lost Wax' and sand-casting. These bells are known for a specific acoustic resonance that locals can identify from a distance.",
+
+        makingProcess:
+          "A mixture of brass and bronze is melted in crucibles and poured into hand-packed sand molds, then hand-polished until they achieve a deep, golden luster.",
+
+        uses: [
+          "Temple architecture",
+          "Home shrines",
+          "Livestock bells",
+          "Traditional signaling",
+        ],
+      },
+    ],
+  },
+  {
+    id: "yadadri-bhuvanagiri",
+    slug: "yadadri-bhuvanagiri",
+    state: "telangana",
+    name: "Yadadri Bhuvanagiri",
+    tagline: "The Sacred Hills of Narasimha and the Historic Bhuvanagiri Fort",
+    image: yadadriHero,
+    mapsQuery: "Yadadri Bhuvanagiri Telangana",
+
+    heroDescription:
+      "Yadadri Bhuvanagiri is a spiritual and historic destination known for the grand Yadadri Lakshmi Narasimha Temple and the ancient hilltop Bhuvanagiri Fort.",
+
+    elevation: "500 m",
+
+    bestTime: "October – February",
+
+    temperature: "20°C – 40°C",
+
+    about:
+      "Located close to Hyderabad, Yadadri Bhuvanagiri district blends spirituality, history, and scenic hill landscapes. The region is best known for the Yadadri Lakshmi Narasimha Temple, one of the most important pilgrimage centers in Telangana. The district also preserves historical landmarks such as the medieval Bhuvanagiri Fort, built on a massive monolithic hill that offers panoramic views of the surrounding countryside.",
+
+    culture:
+      "Yadadri Bhuvanagiri reflects the spiritual traditions and cultural heritage of Telangana. Devotees from across the state visit the Yadadri temple to seek blessings of Lord Narasimha, especially during festivals and special temple events. The region celebrates Telangana festivals like Bathukamma, Bonalu, and Sankranti with vibrant community participation. Local culture also includes temple fairs, traditional foods, and crafts practiced in surrounding villages, while the historic Bhuvanagiri Fort stands as a reminder of the region’s medieval heritage.",
+
+    products: [
+      {
+        name: "Yadadri Temple Ladu",
+        type: "famous",
+
+        image: yadadriLaduMain,
+        makingImage: laduPreparation,
+        flavorImage: grainySweetTexture,
+
+        description:
+          "A rich, aromatic sweet made from gram flour, pure ghee, and sugar, infused with cardamom and garnished with cashews.",
+
+        significance:
+          "This is the sacred signature of the Sri Lakshmi Narasimha Swamy Temple. For millions of devotees, the pilgrimage is incomplete without carrying this 'Prasadam' back to their homes.",
+
+        makingProcess:
+          "Boondi (tiny fried gram flour balls) is prepared in pure ghee, soaked in a flavored sugar syrup, and hand-pressed into spheres while still warm to retain moisture.",
+
+        uses: [
+          "Sacred offering",
+          "Traditional sweet",
+          "Pilgrimage souvenir",
+          "Religious gift",
+        ],
+      },
+      {
+        name: "Pochampally Ikat Textiles",
+        type: "famous",
+
+        image: pochampallySaree,
+        makingImage: tieDyeProcess,
+        flavorImage: silkWeaveTexture,
+
+        description:
+          "A world-famous textile recognized for its complex geometric patterns created through the 'Tie-and-Dye' (Ikat) technique.",
+
+        significance:
+          "Bhuvanagiri is the gateway to Pochampally, the first craft in India to receive a GI tag. It is known globally as the 'Silk City of India' for its mesmerizing, blurry-edged patterns.",
+
+        makingProcess:
+          "The design is envisioned first; the warp and weft yarns are tied into bundles and dyed multiple times to create the pattern before the actual weaving begins on the loom.",
+
+        uses: [
+          "Luxury sarees",
+          "Fashion apparel",
+          "Home furnishings",
+          "National heritage wear",
+        ],
+      },
+      {
+        name: "Bhuvanagiri Special Egg Bonda",
+        type: "famous",
+
+        image: eggBondaPlate,
+        makingImage: deepFryingBonda,
+        flavorImage: crispySpicedTexture,
+
+        description:
+          "A legendary street food snack featuring hard-boiled eggs dipped in a spicy chickpea batter and deep-fried until golden.",
+
+        significance:
+          "Travelers on the Hyderabad-Warangal highway consider a stop at Bhuvanagiri mandatory for this specific snack. It has earned a cult status among foodies in Telangana.",
+
+        makingProcess:
+          "Boiled eggs are slit and stuffed with a secret onion-chili masala, coated in a seasoned 'Besan' batter, and double-fried for maximum crispness.",
+
+        uses: [
+          "Highway snack",
+          "Evening delicacy",
+          "Local street food",
+          "Culinary landmark",
+        ],
+      },
+      {
+        name: "Raigiri Traditional Panjeere",
+        type: "underrated",
+
+        image: panjeereMix,
+        makingImage: handGrindingMix,
+        flavorImage: coarseGrainyTexture,
+
+        description:
+          "A nutritious, dry energy mix made from roasted wheat, dry ginger, jaggery, and local seeds.",
+
+        significance:
+          "An underrated health gem, this was traditionally given to nursing mothers and athletes in the Raigiri area. It is a 'power food' that locals swear by for joint health and recovery.",
+
+        makingProcess:
+          "The ingredients are individually slow-roasted on iron tawas, hand-pounded in stone mortars to a coarse consistency, and mixed with fresh ghee.",
+
+        uses: [
+          "Health supplement",
+          "Nutritional snack",
+          "Traditional medicine",
+          "Energy booster",
+        ],
+      },
+    ],
   },
 ];

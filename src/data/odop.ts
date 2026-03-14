@@ -271,7 +271,17 @@ export const odopTelangana: ODOPDistrict[] = [
       "Soybean cultivation supports oil extraction and protein-rich food production.",
     culturalSignificance:
       "Soybean farming contributes significantly to the district’s agrarian economy.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Mahua Flower Sweets",
+        description:
+          "Traditional tribal sweets made from fermented mahua flowers.",
+      },
+      {
+        name: "Jowar Rotte",
+        description: "Soft sorghum flatbreads central to rural Adilabad meals.",
+      },
+    ],
   },
   {
     id: "bhadadri-kothagudem",
@@ -281,7 +291,17 @@ export const odopTelangana: ODOPDistrict[] = [
       "Locally grown chillies known for their heat and vibrant color.",
     culturalSignificance:
       "Chilli cultivation supports tribal and rural livelihoods.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Bamboo Chicken",
+        description:
+          "Forest-style chicken cooked inside bamboo tubes by tribal communities.",
+      },
+      {
+        name: "Tamarind Leaf Dal",
+        description: "Tangy lentil preparation using tender tamarind leaves.",
+      },
+    ],
   },
   {
     id: "hyderabad",
@@ -291,7 +311,17 @@ export const odopTelangana: ODOPDistrict[] = [
       "Processed snacks and savory products catering to urban markets.",
     culturalSignificance:
       "Hyderabad’s food industry blends tradition with large-scale processing.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Hyderabadi Lukhmi",
+        description: "Square pastry snack stuffed with spiced minced meat.",
+      },
+      {
+        name: "Osmania Biscuits",
+        description:
+          "Buttery tea biscuits created in the kitchens of the Nizams.",
+      },
+    ],
   },
   {
     id: "jagitial",
@@ -301,7 +331,18 @@ export const odopTelangana: ODOPDistrict[] = [
       "Seasonal mango cultivation used for pulp, pickles, and processed goods.",
     culturalSignificance:
       "Mango farming is deeply integrated into rural income cycles.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Mamidi Thandra",
+        description:
+          "Traditional sun-dried mango fruit leather made during summer.",
+      },
+      {
+        name: "Avakaya Pickle",
+        description:
+          "Spicy mango pickle prepared in large batches for the year.",
+      },
+    ],
   },
   {
     id: "jangaon",
@@ -311,7 +352,18 @@ export const odopTelangana: ODOPDistrict[] = [
       "Traditional aromatic rice variety known for its fragrance and taste.",
     culturalSignificance:
       "Chittimuthyalu rice represents Telangana’s native grain heritage.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Sakinalu",
+        description:
+          "Crispy spiral snack made during Sankranti using rice flour.",
+      },
+      {
+        name: "Sarva Pindi",
+        description:
+          "Savory Telangana rice flour pancake with peanuts and spices.",
+      },
+    ],
   },
   {
     id: "jayashankar-bhupalpally",
@@ -321,7 +373,17 @@ export const odopTelangana: ODOPDistrict[] = [
       "Spice cultivation contributing to regional spice trade.",
     culturalSignificance:
       "Chillies form a key agricultural output for small farmers.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Bamboo Shoot Curry",
+        description:
+          "Forest bamboo shoots cooked with spices by tribal families.",
+      },
+      {
+        name: "Ragi Sangati",
+        description: "Nutritious finger millet ball eaten with spicy curries.",
+      },
+    ],
   },
   {
     id: "jogulamba-gadwal",
@@ -331,7 +393,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "Groundnut farming supports oil and snack production.",
     culturalSignificance:
       "Groundnut cultivation sustains dryland farming communities.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Gadwal Groundnut Chikki",
+        description: "Traditional peanut brittle made with jaggery.",
+      },
+      {
+        name: "Jonna Rotte",
+        description: "Sorghum flatbread served with spicy chutneys.",
+      },
+    ],
   },
   {
     id: "kamareddy",
@@ -341,7 +412,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "Soybean used for oil extraction and protein-based products.",
     culturalSignificance:
       "Soybean farming plays a key role in local agriculture.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Sajja Rotte",
+        description: "Pearl millet flatbread eaten with chutney or dal.",
+      },
+      {
+        name: "Bellam Garelu",
+        description: "Sweet jaggery fritters prepared during festivals.",
+      },
+    ],
   },
   {
     id: "karimnagar",
@@ -351,7 +431,18 @@ export const odopTelangana: ODOPDistrict[] = [
       "Rice processing and milling units serve domestic markets.",
     culturalSignificance:
       "Rice cultivation has shaped Karimnagar’s agrarian identity.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Esarla Sattu Pindi",
+        description:
+          "Protein-rich roasted moong flour mixture offered during Bathukamma.",
+      },
+      {
+        name: "Karimnagar Sakinalu",
+        description:
+          "Crispy festive snack prepared with rice flour and sesame.",
+      },
+    ],
   },
   {
     id: "khammam",
@@ -361,7 +452,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "High-quality red chillies grown for spice markets.",
     culturalSignificance:
       "Chilli trade has historically connected Khammam to regional markets.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Gongura Mutton",
+        description: "Tangy sorrel leaf curry with tender mutton pieces.",
+      },
+      {
+        name: "Chintha Chiguru Pappu",
+        description: "Dal cooked with fresh tamarind leaves.",
+      },
+    ],
   },
   {
     id: "komaram-bheem",
@@ -371,7 +471,17 @@ export const odopTelangana: ODOPDistrict[] = [
       "Millets cultivated in tribal regions for nutrition and resilience.",
     culturalSignificance:
       "Millets are integral to tribal diets and sustainable farming.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Bajra Ambali",
+        description: "Cooling fermented millet porridge consumed in summers.",
+      },
+      {
+        name: "Forest Honey",
+        description:
+          "Wild honey collected by tribal communities from forest hives.",
+      },
+    ],
   },
   {
     id: "mahabubabad",
@@ -381,7 +491,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "Chilli farming supports small-scale cultivators.",
     culturalSignificance:
       "Chillies contribute significantly to local spice production.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Jonna Gatka",
+        description: "Traditional sorghum meal cooked into a thick porridge.",
+      },
+      {
+        name: "Country Chicken Pulusu",
+        description: "Spicy rustic chicken curry cooked with village spices.",
+      },
+    ],
   },
   {
     id: "mahabubnagar",
@@ -391,7 +510,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "Nutritious millets grown in semi-arid conditions.",
     culturalSignificance:
       "Millet farming has sustained generations in drought-prone regions.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Sajja Ambali",
+        description: "Fermented pearl millet drink that cools the body.",
+      },
+      {
+        name: "Korivi Karam",
+        description: "Extremely spicy chilli chutney famous in the region.",
+      },
+    ],
   },
   {
     id: "mancherial",
@@ -400,7 +528,17 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription:
       "Mango orchards produce fruit for fresh and processed markets.",
     culturalSignificance: "Mango cultivation boosts seasonal employment.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Mamidi Pulihora",
+        description: "Tangy raw mango rice prepared during mango season.",
+      },
+      {
+        name: "Mango Pickle",
+        description:
+          "Local households prepare large jars of spicy mango pickle.",
+      },
+    ],
   },
   {
     id: "medak",
@@ -410,7 +548,17 @@ export const odopTelangana: ODOPDistrict[] = [
       "Snack production units catering to regional demand.",
     culturalSignificance:
       "Food processing adds value to local agricultural produce.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Sarva Pindi",
+        description:
+          "Pan-roasted Telangana snack made with rice flour and peanuts.",
+      },
+      {
+        name: "Chegodilu",
+        description: "Crunchy ring-shaped savory snack made from rice flour.",
+      },
+    ],
   },
   {
     id: "medchal-malkajgiri",
@@ -420,7 +568,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "Processed food sector supporting urban consumption.",
     culturalSignificance:
       "Proximity to Hyderabad fuels packaged snack industries.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Karampodi Snacks",
+        description: "Spicy lentil powder used with snacks and idlis.",
+      },
+      {
+        name: "Murukulu",
+        description: "Deep-fried crunchy spiral snack popular in homes.",
+      },
+    ],
   },
   {
     id: "mulugu",
@@ -429,7 +586,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription: "Chillies cultivated in forest-adjacent regions.",
     culturalSignificance:
       "Agriculture supports tribal communities in the district.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Bamboo Chicken",
+        description: "Tribal delicacy cooked in bamboo over open fire.",
+      },
+      {
+        name: "Forest Mushroom Curry",
+        description: "Seasonal wild mushrooms cooked with tribal spices.",
+      },
+    ],
   },
   {
     id: "nagarkurnool",
@@ -437,7 +603,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProduct: "Mango based Products",
     anchorProductDescription: "Mango cultivation for pulp and pickles.",
     culturalSignificance: "Mango orchards are key to seasonal farm income.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Raw Mango Chutney",
+        description: "Spicy chutney prepared with stone-ground spices.",
+      },
+      {
+        name: "Mango Dal",
+        description: "Tangy dal cooked with seasonal raw mango pieces.",
+      },
+    ],
   },
   {
     id: "nalgonda",
@@ -447,7 +622,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "Citrus orchards produce sweet oranges for fresh and processed markets.",
     culturalSignificance:
       "Citrus cultivation strengthens horticulture in the district.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Orange Peel Candy",
+        description: "Candied citrus peels prepared using local oranges.",
+      },
+      {
+        name: "Orange Marmalade",
+        description: "Homemade citrus preserve popular in farm households.",
+      },
+    ],
   },
   {
     id: "narayanpet",
@@ -456,7 +640,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription:
       "Groundnuts processed into oil and snack products.",
     culturalSignificance: "Groundnut farming supports dryland agriculture.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Groundnut Chikki",
+        description: "Jaggery peanut brittle widely sold in local markets.",
+      },
+      {
+        name: "Peanut Chutney",
+        description: "Creamy chutney served with breakfast dishes.",
+      },
+    ],
   },
   {
     id: "nirmal",
@@ -465,7 +658,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription:
       "Soybean contributes to edible oil and feed industries.",
     culturalSignificance: "Soybean cultivation supports farmer livelihoods.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Jowar Rotte",
+        description: "Traditional sorghum bread eaten with spicy curries.",
+      },
+      {
+        name: "Mahua Laddu",
+        description: "Sweet tribal laddus made from forest mahua flowers.",
+      },
+    ],
   },
   {
     id: "nizamabad",
@@ -475,7 +677,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "High-curcumin turmeric known for quality and export potential.",
     culturalSignificance:
       "Turmeric farming plays a central role in the district’s spice economy.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Turmeric Pickle",
+        description: "Fresh turmeric roots pickled with mustard and spices.",
+      },
+      {
+        name: "Haldi Milk Mix",
+        description: "Traditional turmeric blend used for immunity drinks.",
+      },
+    ],
   },
   {
     id: "peddapalli",
@@ -484,7 +695,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription: "Rice processing supports local grain markets.",
     culturalSignificance:
       "Rice cultivation forms a major part of the rural economy.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Pulihora",
+        description: "Tangy tamarind rice served during festivals.",
+      },
+      {
+        name: "Bellam Pongali",
+        description: "Sweet jaggery rice dish prepared during Sankranti.",
+      },
+    ],
   },
   {
     id: "rajanna-sircilla",
@@ -493,7 +713,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription: "Inland fisheries and processed fish products.",
     culturalSignificance:
       "Aquaculture supports livelihoods across water bodies.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Jonna Gatka",
+        description: "Traditional millet dish served with spicy chutneys.",
+      },
+      {
+        name: "Dry Fish Curry",
+        description: "Rustic curry made with sun-dried fish and spices.",
+      },
+    ],
   },
   {
     id: "ranga-reddy",
@@ -503,7 +732,17 @@ export const odopTelangana: ODOPDistrict[] = [
       "Processing of vegetables for urban supply chains.",
     culturalSignificance:
       "Proximity to Hyderabad supports agri-processing growth.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Tomato Pickle",
+        description:
+          "Spicy preserved tomato pickle popular in Telangana homes.",
+      },
+      {
+        name: "Mixed Vegetable Kurma",
+        description: "Rich curry using locally grown vegetables.",
+      },
+    ],
   },
   {
     id: "sangareddy",
@@ -512,7 +751,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription:
       "Dairy processing including milk and value-added products.",
     culturalSignificance: "Dairy farming strengthens rural household incomes.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Palkova",
+        description: "Slow-cooked condensed milk sweet.",
+      },
+      {
+        name: "Junnu",
+        description: "Traditional colostrum milk pudding delicacy.",
+      },
+    ],
   },
   {
     id: "siddipet",
@@ -521,7 +769,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription:
       "Vegetable cultivation and processing for regional markets.",
     culturalSignificance: "Vegetable farming supports diversified agriculture.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Sarva Pindi",
+        description: "Spiced rice flour pancake with peanuts and chillies.",
+      },
+      {
+        name: "Vegetable Kurma",
+        description: "Home-style curry made with fresh farm vegetables.",
+      },
+    ],
   },
   {
     id: "suryapet",
@@ -529,7 +786,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProduct: "Milk based Products",
     anchorProductDescription: "Dairy and milk-based food production.",
     culturalSignificance: "Dairy cooperatives contribute to rural prosperity.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Milk Kova",
+        description: "Dense milk sweet prepared in local dairies.",
+      },
+      {
+        name: "Paneer Curry",
+        description: "Fresh cottage cheese used in rich curries.",
+      },
+    ],
   },
   {
     id: "vikarabad",
@@ -537,7 +803,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProduct: "Vegetable processing",
     anchorProductDescription: "Processing units for locally grown vegetables.",
     culturalSignificance: "Vegetable farming supports small farmers.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Ananthagiri Honey",
+        description: "Forest honey collected from the Ananthagiri hills.",
+      },
+      {
+        name: "Wild Mushroom Fry",
+        description: "Seasonal mushrooms sautéed with local spices.",
+      },
+    ],
   },
   {
     id: "wanaparthy",
@@ -545,7 +820,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProduct: "Groundnut products",
     anchorProductDescription: "Groundnut oil and snack production.",
     culturalSignificance: "Groundnut farming thrives in semi-arid soils.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Groundnut Chikki",
+        description: "Sweet peanut brittle made with jaggery.",
+      },
+      {
+        name: "Peanut Laddu",
+        description: "Nutty laddus prepared during village fairs.",
+      },
+    ],
   },
   {
     id: "warangal-rural",
@@ -554,7 +838,16 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription: "Specialty bamboo chillies grown in rural belts.",
     culturalSignificance:
       "Unique chilli varieties contribute to regional spice identity.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Sarva Pindi",
+        description: "Popular Telangana snack cooked on iron griddles.",
+      },
+      {
+        name: "Jonna Rotte",
+        description: "Rustic sorghum bread eaten with chilli chutney.",
+      },
+    ],
   },
   {
     id: "warangal-urban",
@@ -564,7 +857,16 @@ export const odopTelangana: ODOPDistrict[] = [
       "Snack processing industries catering to urban demand.",
     culturalSignificance:
       "Urban food enterprises connect tradition with scale.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Warangal Mixture",
+        description: "Spicy crunchy snack mix popular in local shops.",
+      },
+      {
+        name: "Sakinalu",
+        description: "Festival snack made from rice flour spirals.",
+      },
+    ],
   },
   {
     id: "yadadri-bhuvanagiri",
@@ -573,7 +875,17 @@ export const odopTelangana: ODOPDistrict[] = [
     anchorProductDescription: "Dairy farming and milk-based processing.",
     culturalSignificance:
       "Dairy supports agricultural livelihoods across the district.",
-    hiddenGems: [],
+    hiddenGems: [
+      {
+        name: "Temple Pulihora",
+        description:
+          "Sacred tamarind rice served as prasadam at Yadadri temple.",
+      },
+      {
+        name: "Poornalu",
+        description: "Sweet lentil-stuffed dumplings fried in ghee.",
+      },
+    ],
   },
 ];
 /* ---------------- SCALABLE STATE REGISTRY ---------------- */
