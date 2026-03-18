@@ -6,7 +6,13 @@ interface RecipeCardProps {
     name: string;
     description: string;
     image?: string;
-    season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal";
+    season?:
+      | "All Year"
+      | "Monsoon"
+      | "Winter"
+      | "Summer"
+      | "Seasonal"
+      | "Spring";
   };
 }
 
