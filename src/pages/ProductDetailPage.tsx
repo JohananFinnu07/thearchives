@@ -165,7 +165,7 @@ const ProductDetailPage = () => {
                 {/* Cultivation & Significance Cards */}
                 <div>
                   <h2 className="font-serif text-2xl font-semibold mb-8">
-                    Cultivation & Significance
+                    The Roots & Legacy
                   </h2>
 
                   <div className="grid sm:grid-cols-2 gap-8">
@@ -184,7 +184,7 @@ const ProductDetailPage = () => {
                       </div>
 
                       <h3 className="font-serif text-lg font-semibold mb-2">
-                        Cultivation & Making
+                        The Genesis & Craft
                       </h3>
 
                       <p className="text-muted-foreground text-sm leading-relaxed">
@@ -207,7 +207,7 @@ const ProductDetailPage = () => {
                       </div>
 
                       <h3 className="font-serif text-lg font-semibold mb-2">
-                        Cultural Significance
+                        The Living Heritage
                       </h3>
 
                       <p className="text-muted-foreground text-sm leading-relaxed">

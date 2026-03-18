@@ -2,6 +2,7 @@ import APHeroImage from "@/assets/hero-araku.jpg";
 import TGHeroImage from "@/assets/State Hero/TGHero.jpg";
 import ARHeroImage from "@/assets/State Hero/ARHero.jpg";
 import ANHeroImage from "@/assets/State Hero/ANHero.jpg";
+import PYHeroImage from "@/assets/State Hero/PYHero.jpg";
 
 export interface StateConfig {
   slug: string;
@@ -34,5 +35,11 @@ export const stateConfig: Record<string, StateConfig> = {
     name: "Andaman",
     heroImage: ANHeroImage,
     theme: "gold",
+  },
+  py: {
+    slug: "py",
+    name: "Puducherry",
+    heroImage: PYHeroImage,
+    theme: "french-coastal",
   },
 };

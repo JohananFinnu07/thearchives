@@ -1,10 +1,12 @@
 import { Destination } from "./types";
 import { andhraDestinations } from "./states/andhra";
 import { telanganaDestinations } from "./states/telangana";
+import { puducherryDestinations } from "./states/pondi";
 
 export const allDestinations: Destination[] = [
   ...andhraDestinations,
   ...telanganaDestinations,
+  ...puducherryDestinations,
 ];
 
 export const getDestinationBySlug = (

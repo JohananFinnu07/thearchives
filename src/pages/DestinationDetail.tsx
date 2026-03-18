@@ -391,12 +391,12 @@ const DestinationDetail = () => {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-              Signature Products of {destination.name}
+              Signature of {destination.name}
             </h2>
 
             <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed mb-10">
-              Discover the celebrated items that have put this region on the
-              map.
+              Discover the defining experiences, flavors, crafts, and stories
+              that have put this region on the map.
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -423,8 +423,8 @@ const DestinationDetail = () => {
             </h2>
 
             <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed mb-10">
-              Lesser-known products that locals cherish but few visitors know
-              about.
+              Beyond the obvious — uncover the quiet, authentic pieces of this
+              place known best to locals.
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
