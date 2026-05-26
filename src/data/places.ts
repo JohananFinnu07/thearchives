@@ -3,8 +3,13 @@
 import { Place } from "./types";
 import { andhraPlaces } from "./states/andhraPlaces";
 import { telanganaPlaces } from "./states/telanganaPlaces";
+import { pondiPlaces } from "./states/pondiPlaces";
 
-export const places: Place[] = [...andhraPlaces, ...telanganaPlaces];
+export const places: Place[] = [
+  ...andhraPlaces,
+  ...telanganaPlaces,
+  ...pondiPlaces,
+];
 
 /* ================= GET BY STATE ================= */
 

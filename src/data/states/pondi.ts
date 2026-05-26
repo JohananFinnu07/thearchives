@@ -411,7 +411,7 @@ export const puducherryDestinations: Destination[] = [
   {
     id: "paradise-beach",
     slug: "paradise-beach",
-    state: "puducherry",
+    state: "py",
     name: "Paradise Beach",
     tagline: "The Secluded Coastal Escape by the Backwaters",
     image: paradiseHero,
@@ -443,6 +443,11 @@ export const puducherryDestinations: Destination[] = [
           "This boat ride is not just transport but a defining experience of the destination. It highlights Puducherry’s lesser-known backwater ecosystems and supports local livelihoods, making it an essential part of the region’s eco-tourism narrative.",
         makingProcess:
           "Motorboats operated by trained locals navigate narrow water channels surrounded by mangroves. The ride is carefully regulated to ensure safety while preserving the ecosystem. Timing, route familiarity, and water conditions play a key role in delivering a smooth experience.",
+        uses: [
+          "Scenic eco-tourism transit to the isolated beach front",
+          "Birdwatching and photography of estuarine wildlife",
+          "Guided educational tours of mangrove root ecosystems",
+        ],
       },
       {
         name: "Beachside Local Snacks",
@@ -456,13 +461,18 @@ export const puducherryDestinations: Destination[] = [
           "Though often overlooked, these snack stalls represent the grassroots tourism economy. They provide livelihood opportunities for local communities and offer visitors an authentic taste of coastal Puducherry beyond formal restaurants.",
         makingProcess:
           "Fresh ingredients are sourced locally and prepared in small batches using traditional frying and seasoning techniques. Cooking is done on-site with simple equipment, ensuring freshness and immediate serving to visitors.",
+        uses: [
+          "Quick, high-energy beachside refreshments for travelers",
+          "Experiencing authentic local Tamil-French coastal culinary flavors",
+          "Supporting grassroots micro-economies and community vendors",
+        ],
       },
     ],
   },
   {
     id: "ousteri-lake",
     slug: "ousteri-lake",
-    state: "puducherry",
+    state: "py",
     name: "Ousteri Lake",
     tagline: "The Wetland Sanctuary of Migratory Life",
     image: ousteriHero,
@@ -494,6 +504,11 @@ export const puducherryDestinations: Destination[] = [
           "This experience highlights Puducherry’s ecological richness beyond beaches and heritage. It promotes eco-tourism while raising awareness about wetland conservation and biodiversity preservation.",
         makingProcess:
           "Guided visits or independent exploration take place during early mornings or evenings. Observers use binoculars and cameras to spot species, while maintaining distance to avoid disturbing wildlife.",
+        uses: [
+          "Avian photography and professional wildlife documenting",
+          "Educational field trips for wetland ecology and conservation awareness",
+          "Recreational eco-tourism and nature-based therapeutic wellness",
+        ],
       },
     ],
   },
