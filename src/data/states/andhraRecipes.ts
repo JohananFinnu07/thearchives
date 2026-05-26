@@ -1,5 +1,5 @@
 // src/data/recipes.ts
-import { Recipe } from "../../types";
+import { Recipe } from "../types";
 
 import nigerseedChutneyImage from "@/assets/Recipes/NSCH.jpg";
 import bambooChickenImage from "@/assets/Recipes/BCH.jpg";

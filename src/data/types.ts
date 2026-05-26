@@ -44,7 +44,7 @@ export interface Recipe {
   steps: string[];
 
   story?: string;
-  season?: "All Year" | "Monsoon" | "Winter" | "Summer" | "Seasonal" | "Spring";
+  season?: string;
   buyLink?: string;
 }
 
@@ -53,7 +53,7 @@ export interface Place {
   destination: string;
   name: string;
   slug: string;
-  type: "must-visit" | "underrated";
+  type: string;
   image: string;
   description: string;
   about: string;
