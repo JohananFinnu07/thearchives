@@ -1,28 +1,28 @@
 import { Place } from "../types";
 
 /* ============== AUROVILLE ================== */
-import matrimandir from "@/assets/Pondi/Places/AM.jpg";
-import aurovilleVisitorCentre from "@/assets/Pondi/Places/AVC.jpg";
-import sadhanaForest from "@/assets/Pondi/Places/SF.jpg";
+import matrimandir from "@/assets/PD/Places/MM.jpg";
+import aurovilleVisitorCentre from "@/assets/PD/Places/AVC.jpg";
+import sadhanaForest from "@/assets/PD/Places/SF.jpg";
 
 /* ============== SERENITY BEACH ================== */
-import kottakuppamBeachRoad from "@/assets/Pondi/Places/KBR.jpg";
-import auroBeach from "@/assets/Pondi/Places/AB.jpg";
-import serenitySurfSchool from "@/assets/Pondi/Places/SSS.jpg";
+import kottakuppamBeachRoad from "@/assets/PD/Places/KB.jpg";
+import auroBeach from "@/assets/PD/Places/AB.jpg";
+import serenitySurfSchool from "@/assets/PD/Places/SSS.jpg";
 
 /* ============== OUSTERI LAKE ================== */
-import ousteriBirdSanctuary from "@/assets/Pondi/Places/OBS.jpg";
-import bahourLake from "@/assets/Pondi/Places/BL.jpg";
+import ousteriBirdSanctuary from "@/assets/PD/Places/OLBS.jpg";
+import bahourLake from "@/assets/PD/Places/BL.jpg";
 
 /* ============== PARADISE BEACH ================== */
-import chunnambarBoatHouse from "@/assets/Pondi/Places/CBH.jpg";
-import veerampattinamBeach from "@/assets/Pondi/Places/VB.jpg";
-import arikamedu from "@/assets/Pondi/Places/AR.jpg";
+import chunnambarBoatHouse from "@/assets/PD/Places/CBH.jpg";
+import veerampattinamBeach from "@/assets/PD/Places/VB.jpg";
+import arikamedu from "@/assets/PD/Places/AA.jpg";
 
 /* ============== WHITE TOWN ================== */
-import promenadeBeach from "@/assets/Pondi/Places/PB.jpg";
-import sriAurobindoAshram from "@/assets/Pondi/Places/SAA.jpg";
-import sacredHeartBasilica from "@/assets/Pondi/Places/SHB.jpg";
+import promenadeBeach from "@/assets/PD/Places/PB.jpg";
+import sriAurobindoAshram from "@/assets/PD/Places/AAM.jpg";
+import sacredHeartBasilica from "@/assets/PD/Places/BC.jpg";
 
 export const pondiPlaces: Place[] = [
   {
