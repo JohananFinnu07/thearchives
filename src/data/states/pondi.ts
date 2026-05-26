@@ -3,6 +3,8 @@ import { Destination } from "../types";
 import whiteTownHero from "@/assets/PD/Destinations/WTH.jpg";
 import aurovilleHero from "@/assets/PD/Destinations/AH.jpg";
 import serenityHero from "@/assets/PD/Destinations/SB.jpg";
+import paradiseHero from "@/assets/PD/Destinations/PB.jpg";
+import ousteriHero from "@/assets/PD/Destinations/OL.jpg";
 
 /* ============ WHITE TOWN ===================== */
 import cafeHero from "@/assets/PD/Products/WTCH.jpg";
@@ -62,6 +64,21 @@ import yogaDetail from "@/assets/PD/Products/SSYH.jpg";
 import shellHero from "@/assets/PD/Products/SSSHH.jpg";
 import shellMaking from "@/assets/PD/Products/SSSHM.jpg";
 import shellDetail from "@/assets/PD/Products/SSSHF.jpg";
+
+/* ============ PARADISE BEACH ===================== */
+import boatHero from "@/assets/PD/Products/PBBWH.jpg";
+import boatMaking from "@/assets/PD/Products/PBBWM.jpg";
+import mangroveView from "@/assets/PD/Products/PBBWF.jpg";
+
+import snackHero from "@/assets/PD/Products/PBSH.jpg";
+import snackMaking from "@/assets/PD/Products/PBSM.jpg";
+import snackDetail from "@/assets/PD/Products/PBSF.jpg";
+
+/* ============ OUSTERI LAKE ===================== */
+
+import birdHero from "@/assets/PD/Products/OLBEH.jpg";
+import birdWatching from "@/assets/PD/Products/OLBWM.jpg";
+import birdDetail from "@/assets/PD/Products/OLBWF.jpg";
 
 export const puducherryDestinations: Destination[] = [
   {
@@ -443,57 +460,6 @@ export const puducherryDestinations: Destination[] = [
     ],
   },
   {
-    id: "tamil-quarter",
-    slug: "tamil-quarter",
-    state: "puducherry",
-    name: "Tamil Quarter",
-    tagline: "The Living Soul of Local Puducherry",
-    image: tamilHero,
-    mapsQuery: "Muthialpet Puducherry",
-
-    heroDescription:
-      "The Tamil Quarter reveals the authentic heartbeat of Puducherry, where vibrant streets, traditional courtyard homes, and temple rhythms shape everyday life. Unlike the polished French Quarter, this area offers a raw, immersive experience rooted in local culture and community.",
-
-    elevation: "Sea level",
-    bestTime: "All year",
-    temperature: "24°C – 35°C",
-
-    about:
-      "Located beyond White Town, the Tamil Quarter is characterized by heritage Tamil houses, bustling streets, and local markets. It reflects the everyday life of Puducherry’s residents, offering deeper cultural insights through architecture, food, and traditions often missed by tourists.",
-
-    culture:
-      "The culture here is deeply rooted in Tamil traditions, with daily rituals, temple visits, and strong community interactions. Kolam designs decorate entrances, and local festivals bring streets alive, preserving a lifestyle that has remained unchanged for generations.",
-
-    products: [
-      {
-        name: "Tamil Street Food",
-        type: "famous",
-        image: streetFoodHero,
-        makingImage: streetFoodMaking,
-        flavorImage: streetFoodDetail,
-        description:
-          "Street food in the Tamil Quarter offers authentic flavors ranging from idli and dosa to spicy snacks and sweets. Prepared fresh in small stalls, these dishes reflect the everyday culinary traditions of Puducherry’s local communities.",
-        significance:
-          "This food represents the real taste of Puducherry beyond tourist cafés. It connects visitors to local lifestyles and traditions, making it an essential cultural experience that highlights the region’s culinary diversity and affordability.",
-        makingProcess:
-          "Batter for dishes like dosa and idli is fermented overnight, while snacks are prepared fresh using local ingredients. Cooking is done on small stoves or griddles, ensuring quick preparation and immediate serving.",
-      },
-      {
-        name: "Temple Brass & Ritual Items",
-        type: "underrated",
-        image: brassHero,
-        makingImage: brassMaking,
-        flavorImage: brassDetail,
-        description:
-          "Local shops in the Tamil Quarter sell brass lamps, pooja items, and ritual accessories used in daily worship. These handcrafted items are both functional and symbolic, reflecting the spiritual practices of the region.",
-        significance:
-          "These items are deeply tied to household and temple rituals, representing an important but under-recognized craft economy. They preserve traditional metalworking skills while supporting local artisans and religious practices.",
-        makingProcess:
-          "Brass is melted and cast into molds before being shaped and polished. Artisans refine each piece through engraving and finishing processes, ensuring durability and aesthetic appeal for ritual use.",
-      },
-    ],
-  },
-  {
     id: "ousteri-lake",
     slug: "ousteri-lake",
     state: "puducherry",
@@ -528,196 +494,6 @@ export const puducherryDestinations: Destination[] = [
           "This experience highlights Puducherry’s ecological richness beyond beaches and heritage. It promotes eco-tourism while raising awareness about wetland conservation and biodiversity preservation.",
         makingProcess:
           "Guided visits or independent exploration take place during early mornings or evenings. Observers use binoculars and cameras to spot species, while maintaining distance to avoid disturbing wildlife.",
-      },
-    ],
-  },
-  {
-    id: "villianur",
-    slug: "villianur",
-    state: "puducherry",
-    name: "Villianur",
-    tagline: "The Spiritual and Festive Heartland",
-    image: villianurHero,
-    mapsQuery: "Villianur Puducherry",
-
-    heroDescription:
-      "Villianur is where Puducherry’s spiritual traditions come alive through grand temple festivals, rituals, and community gatherings that reflect deep-rooted cultural heritage.",
-
-    elevation: "20 m",
-    bestTime: "Festival season",
-    temperature: "24°C – 36°C",
-
-    about:
-      "Known for the Thirukameswarar Temple, Villianur is a key religious center. Its annual chariot festival draws thousands of devotees, making it one of the most vibrant cultural events in the region.",
-
-    culture:
-      "The culture here revolves around temple rituals, festivals, and agricultural life, creating a strong sense of community and tradition.",
-
-    products: [
-      {
-        name: "Temple Prasadam",
-        type: "famous",
-        image: prasadamHero,
-        makingImage: prasadamMaking,
-        flavorImage: prasadamDetail,
-        description:
-          "Temple prasadam in Villianur includes traditional offerings prepared during rituals and festivals. These items are simple yet spiritually significant, often made using rice, jaggery, and ghee.",
-        significance:
-          "Prasadam represents devotion and community participation, making it an integral part of temple culture and spiritual life in the region.",
-        makingProcess:
-          "Ingredients are prepared within temple kitchens following ritual guidelines. Cooking is done in large batches, and offerings are distributed among devotees after ceremonies.",
-      },
-    ],
-  },
-  {
-    id: "veerampattinam",
-    slug: "veerampattinam",
-    state: "puducherry",
-    name: "Veerampattinam",
-    tagline: "The Coastal Village of Festivals and Fishing",
-    image: veeramHero,
-    mapsQuery: "Veerampattinam Puducherry",
-
-    heroDescription:
-      "Veerampattinam offers a glimpse into Puducherry’s traditional coastal life, where fishing practices, temple festivals, and community living define the rhythm of everyday life.",
-
-    elevation: "Sea level",
-    bestTime: "October – March",
-    temperature: "25°C – 34°C",
-
-    about:
-      "One of the largest fishing villages near Puducherry, Veerampattinam is known for its beach, temple, and annual festivals that attract thousands of devotees and visitors.",
-
-    culture:
-      "The culture here is deeply tied to the sea, with fishing as the primary livelihood and festivals celebrating both faith and community.",
-
-    products: [
-      {
-        name: "Fresh Seafood",
-        type: "famous",
-        image: fishHero,
-        makingImage: fishingMaking,
-        flavorImage: fishDetail,
-        description:
-          "Fresh seafood from Veerampattinam is sourced daily by local fishermen, offering a variety of fish and shellfish that reflect the richness of coastal waters.",
-        significance:
-          "Seafood forms the backbone of the local economy and cuisine, making it an essential aspect of coastal identity.",
-        makingProcess:
-          "Fishing boats head out early morning, and the catch is sorted, cleaned, and sold in local markets or prepared fresh in homes and eateries.",
-      },
-    ],
-  },
-  {
-    id: "goubert-market",
-    slug: "goubert-market",
-    state: "puducherry",
-    name: "Goubert Market",
-    tagline: "The Pulse of Everyday Puducherry",
-    image: marketHero,
-    mapsQuery: "Goubert Market Puducherry",
-
-    heroDescription:
-      "Goubert Market is where Puducherry’s everyday life unfolds through bustling stalls of vegetables, flowers, and spices, offering a sensory-rich glimpse into local commerce and culture.",
-
-    elevation: "Sea level",
-    bestTime: "Morning",
-    temperature: "25°C – 35°C",
-
-    about:
-      "This central market serves as a hub for fresh produce and local trade. It reflects the daily rhythm of the city, connecting farmers, vendors, and consumers.",
-
-    culture:
-      "The market represents the social and economic fabric of Puducherry, where interactions, bargaining, and community exchanges define the experience.",
-
-    products: [
-      {
-        name: "Fresh Local Produce",
-        type: "famous",
-        image: vegHero,
-        makingImage: marketMaking,
-        flavorImage: vegDetail,
-        description:
-          "Goubert Market is known for its fresh vegetables, fruits, flowers, and spices sourced from nearby villages. The vibrant displays and variety reflect the agricultural richness of the region.",
-        significance:
-          "It supports local farmers and serves as a vital link between rural producers and urban consumers, making it an essential part of Puducherry’s food ecosystem.",
-        makingProcess:
-          "Produce is harvested early morning and transported directly to the market, where vendors sort, display, and sell it throughout the day.",
-      },
-    ],
-  },
-  {
-    id: "bahour",
-    slug: "bahour",
-    state: "puducherry",
-    name: "Bahour",
-    tagline: "The Agricultural Landscape of Quiet Waters",
-    image: bahourHero,
-    mapsQuery: "Bahour Puducherry",
-
-    heroDescription:
-      "Bahour offers a peaceful rural escape defined by agricultural fields, water bodies, and traditional village life that moves at a slower, grounded pace.",
-
-    elevation: "10 m",
-    bestTime: "November – February",
-    temperature: "22°C – 34°C",
-
-    about:
-      "Known for Bahour Lake and surrounding farmland, this region highlights Puducherry’s agricultural side, often overlooked by tourists.",
-
-    culture:
-      "Life here revolves around farming, seasonal cycles, and close-knit communities, preserving traditional practices.",
-
-    products: [
-      {
-        name: "Paddy & Rice Cultivation",
-        type: "famous",
-        image: paddyHero,
-        makingImage: paddyMaking,
-        flavorImage: riceDetail,
-        description:
-          "Bahour’s agricultural fields produce rice and other crops using traditional farming methods. The region’s fertile soil and water resources support a strong agrarian economy.",
-        significance:
-          "Agriculture forms the backbone of rural Puducherry, sustaining livelihoods and preserving traditional farming knowledge.",
-        makingProcess:
-          "Fields are prepared, seeds are sown, and crops are cultivated through seasonal irrigation cycles before harvesting and processing.",
-      },
-    ],
-  },
-  {
-    id: "ariyankuppam",
-    slug: "ariyankuppam",
-    state: "puducherry",
-    name: "Ariyankuppam",
-    tagline: "The Riverfront of History and Coastal Trade",
-    image: ariyanHero,
-    mapsQuery: "Ariyankuppam Puducherry",
-
-    heroDescription:
-      "Ariyankuppam blends river life, fishing culture, and ancient trade history, offering a unique perspective of Puducherry beyond its beaches and colonial streets.",
-
-    elevation: "Sea level",
-    bestTime: "October – March",
-    temperature: "24°C – 34°C",
-
-    about:
-      "Located along a river estuary, Ariyankuppam is historically significant as an ancient trading port. Today, it continues to thrive as a fishing and riverside community.",
-
-    culture:
-      "The culture reflects a mix of history and livelihood, where fishing traditions and river-based activities shape daily life.",
-
-    products: [
-      {
-        name: "River & Estuary Fishing",
-        type: "famous",
-        image: riverFishHero,
-        makingImage: riverFishing,
-        flavorImage: riverFishDetail,
-        description:
-          "Fishing in Ariyankuppam takes place in both river and estuary environments, producing a variety of freshwater and brackish fish. This dual ecosystem supports a diverse and sustainable fishing practice.",
-        significance:
-          "It represents a unique livelihood system that combines river and sea resources, sustaining local communities while preserving traditional fishing knowledge.",
-        makingProcess:
-          "Fishermen use nets and small boats to navigate calm waters, catching fish based on seasonal patterns and tidal movements.",
       },
     ],
   },
